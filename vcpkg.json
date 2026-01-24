@@ -1,6 +1,0 @@
-{
-  "name": "reaction-data-consistency-thesis",
-  "version-string": "0.1.0",
-  "dependencies": ["nlohmann-json",
-                   "ceres"]
-}
