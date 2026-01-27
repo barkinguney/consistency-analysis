@@ -8,6 +8,8 @@ import time
 import copy
 
 import read_data
+import cantera_related_functions
+
 
 mechanism_path= "C:\\Users\\barki\\Desktop\\master thesis\\papers\\mechanism\\ScienceDirect_files_18Dec2025_16-58-12.343\\C2H4_2021.yaml"
 
@@ -35,12 +37,6 @@ def lhs_sampling(rxns, n):
     u_bounds = 1*np.pow(10, factors_list)
     qmc.scale(sample, l_bounds, u_bounds)
     return sample
-
-def find_reaction_index_by_equation(gas, equation: str) -> int:
-    for i, rxn in enumerate(gas.reactions()):
-        if rxn.equation == equation:
-            return i
-    raise ValueError(f"Reaction not found (exact match): {equation}")
 
 def get_A(ct_rxn, operating_conditions=None):
     if ct_rxn.reaction_type == 'Arrhenius' or ct_rxn.reaction_type == 'three-body-Arrhenius':
@@ -125,41 +121,6 @@ def calculate_ignition_delay_constV_batch_reactor(gas, T5_list, P5_list, reactan
         plt.show()
         
     return ignition_delay_times
-
-def calculate_igintion_delay_at_one_condition(gas, T5, P5, reactants, t_max = 0.1 , ignition_type="d/dtmax"):
-    # batch reactor const volume
-    
-    # Define the reactor temperature and pressure
-    reactor_temperature = T5  # Kelvin
-    reactor_pressure_atm = P5  # atm
-    reactor_pressure = reactor_pressure_atm * 101325  # Pascals
-
-    gas.TPX = reactor_temperature, reactor_pressure, reactants
-
-    reactor = ct.IdealGasReactor(gas, energy='on')  # constant volume if volume not changed
-    reactor_network = ct.ReactorNet([reactor])
-    
-    time_history = ct.SolutionArray(gas, extra="t")
-
-    t0 = time.time()
-    t = 0
-
-    counter = 1
-    while t < t_max:
-        t = reactor_network.step()
-        if not counter % 10:
-            time_history.append(reactor.thermo.state, t=t)
-        counter += 1
-
-    # Ignition delay time defined as the time corresponding to the maximum temperature rise rate
-    if ignition_type == "d/dtmax":
-        tau = time_history.t[np.argmax(np.gradient(time_history.T, time_history.t))]
-    
-    t1 = time.time()
-
-    print(f"T5 = {T5} K, P5 = {P5} atm, Computed Ignition Delay: {tau:.3e} seconds. Took {t1-t0:3.2f}s to compute")
-    
-    return tau
 
 def fit_linear_least_squares(X: np.ndarray, y: np.ndarray):
     """
@@ -282,7 +243,7 @@ def stratified_sample_operating_conditions(
 #Setup mechanism
 gas = ct.Solution('C2H4_2021.yaml')
 rxns_df = pd.DataFrame.from_dict(uncertain_rxns)
-rxns_df["id"] = rxns_df["equation"].apply(lambda eq: find_reaction_index_by_equation(gas, eq))
+rxns_df["id"] = rxns_df["equation"].apply(lambda eq: cantera_related_functions.find_reaction_index_by_equation(gas, eq))
 #rxns_df["base_A"] = rxns_df["id"].apply(lambda i: get_A(gas.reaction(i)))
 rxns_df["f_value"] = rxns_df["f_range"].apply(lambda fr: np.mean(fr))
 print("Uncertain reactions with IDs and base A values:")
@@ -322,7 +283,7 @@ reactants = 'C2H4:0.01, O2:0.03, AR:0.96'
 # get operationg conditions from real data to make it meaningful 
 operating_condition_range = [[700,1600], [1,40], [0.5,3]]  # T5 in K, P5 in atm, phi
 
-idt_data_folder = "C:\\Users\\barki\\Desktop\\master thesis\\reaction-data-consistency-thesis\\surrogate\\idt_data\\xmls"
+idt_data_folder = "sensitivity\\idt_data\\xmls"
 idt_data_df = read_data.extract_idt_data_to_dataframe(idt_data_folder)
 
 operating_conditions_df = stratified_sample_operating_conditions(idt_data_df, n_T_bins=5, n_logP_bins=4, n_phi_bins=4, cap_per_bin=1, random_state=42)
@@ -335,7 +296,7 @@ for operating_condition in operating_conditions:
     ls_data = []
     for multipliers_sample in param_multipliers_samples:
         multiply_all_A(gas, rxns_df, multipliers_sample, method="cantera_built_in")
-        tau = calculate_igintion_delay_at_one_condition(gas=gas, T5=operating_condition[0], P5=operating_condition[1], reactants=operating_condition[2], t_max=0.5, ignition_type="d/dtmax")
+        tau = cantera_related_functions.calc_IDT_constV(gas=gas, operating_condition=operating_condition, t_max=0.001, ignition_target="T", ignition_type="d/dt max")
         ls_data.append([multipliers_sample, tau])
 
     # now we do ls fit 

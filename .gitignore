@@ -4,3 +4,6 @@ build/
 libs/
 *.xml
 *.csv
+results/idt/plots
+runs/
+*.pyc

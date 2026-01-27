@@ -1,3 +1,5 @@
+"""Disclaimer: Created this script mostly with LLMs. Might not cover all cases."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -90,11 +92,15 @@ class IDTExperiment:
     initial_composition: List[Dict[str, Any]]
     data_groups: List[IDTDataGroup]
     ignition_type: Optional[IgnitionType]
+    common_properties: Dict[str, Any]
+    common_property_units: Dict[str, Optional[str]]
     
 @dataclass
 class IgnitionType:
     target: Optional[str]
     type: Optional[str]
+    amount: Optional[str]
+    units: Optional[str]
 
 
 def parse_idt_xml(path: Union[str, Path]) -> IDTExperiment:
@@ -174,6 +180,8 @@ def parse_idt_xml(path: Union[str, Path]) -> IDTExperiment:
         ignition_type = IgnitionType(
             target=ign_el.attrib.get("target"),
             type=ign_el.attrib.get("type"),
+            amount=ign_el.attrib.get("amount"),  # Ensure amount is included
+            units=ign_el.attrib.get("units")     # Ensure units is included
         )
 
     # Parse data groups
@@ -220,6 +228,21 @@ def parse_idt_xml(path: Union[str, Path]) -> IDTExperiment:
 
         data_groups.append(IDTDataGroup(group_id=group_id, properties=props, rows=rows))
 
+    # Parse common properties (temperature, pressure outside dataGroups)
+    common_properties: Dict[str, Any] = {}
+    common_property_units: Dict[str, Optional[str]] = {}
+    common_props = _find_first(exp, "commonProperties")
+    if common_props is not None:
+        for prop in list(common_props):
+            if _strip_ns(prop.tag) != "property":
+                continue
+            prop_name = prop.attrib.get("name", "").strip().lower()
+            if prop_name in ["temperature", "pressure"]:
+                value_el = _find_first(prop, "value")
+                if value_el is not None and value_el.text:
+                    common_properties[prop_name] = _as_number(value_el.text)
+                    common_property_units[prop_name] = prop.attrib.get("units") or value_el.attrib.get("units") if hasattr(value_el, "attrib") else None
+    
     return IDTExperiment(
         file_author=file_author,
         file_doi=file_doi,
@@ -229,6 +252,8 @@ def parse_idt_xml(path: Union[str, Path]) -> IDTExperiment:
         initial_composition=initial_composition,
         data_groups=data_groups,
         ignition_type=ignition_type,
+        common_properties=common_properties,
+        common_property_units=common_property_units,
     )
 
 
@@ -370,30 +395,57 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
             
             # Format ignition type
             ignition_type_str = ""
+            ignition_amount = ""
+            ignition_units = ""
             if exp.ignition_type:
-                target = exp.ignition_type.target or ""
+                target = exp.ignition_type.target or ""              
                 type_val = exp.ignition_type.type or ""
+                ignition_amount = exp.ignition_type.amount if exp.ignition_type.amount is not None else ""
+                ignition_units = exp.ignition_type.units if exp.ignition_type.units is not None else ""
                 ignition_type_str = f"{target}{type_val}"
             
             # Calculate phi using Cantera
             phi = calculate_phi_cantera(exp.initial_composition, mechanism=mechanism)
             
+            # Extract units from data group properties
+            T_units = ""
+            P_units = ""
+            Tau_units = ""
+            for group in exp.data_groups:
+                for prop_id, prop_def in group.properties.items():
+                    if prop_def.name.lower() == "temperature" or (prop_def.label and prop_def.label.lower() == "t"):
+                        T_units = prop_def.units or T_units
+                    elif prop_def.name.lower() == "pressure" or (prop_def.label and prop_def.label.lower() == "p"):
+                        P_units = prop_def.units or P_units
+                    elif prop_def.name.lower() == "ignition delay" or (prop_def.label and prop_def.label.lower() == "tau"):
+                        Tau_units = prop_def.units or Tau_units
+            if not T_units:
+                T_units = exp.common_property_units.get("temperature") or ""
+            if not P_units:
+                P_units = exp.common_property_units.get("pressure") or ""
             # Extract data from all data groups
             for group in exp.data_groups:
                 for row in group.rows:
                     # Look for temperature (T), pressure (P), and ignition delay (tau)
-                    # These can be in various property names/labels
-                    T = row.get("T") or row.get("temperature") or row.get("Temperature")
-                    P = row.get("P") or row.get("pressure") or row.get("Pressure")
+                    # Use common properties if not in row, otherwise use row values
+                    T = row.get("T") or row.get("temperature") or row.get("Temperature") or exp.common_properties.get("temperature")
+                    P = row.get("P") or row.get("pressure") or row.get("Pressure") or exp.common_properties.get("pressure")
                     Tau = row.get("tau") or row.get("ignition delay") or row.get("Ignition Delay")
                     
                     all_data.append({
                         "T5": T,
+                        "T5_units": T_units,
                         "P5": P,
+                        "P5_units": P_units,
                         "composition": composition_str,
                         "phi": phi,
                         "tau": Tau,
+                        "tau_units": Tau_units,
                         "ignition_type": ignition_type_str,
+                        "ignition_target": exp.ignition_type.target.upper(),
+                        "ignition_type": exp.ignition_type.type,
+                        "ignition_amount": ignition_amount,
+                        "ignition_units": ignition_units,
                         "filename": file_path.name
                     })
         except Exception as e:
@@ -404,7 +456,7 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
 
 if __name__ == "__main__":
     # Example usage
-    folder_path = "surrogate/idt_data/xmls"
+    folder_path = "data/idt_data/syngas"
     
     # Create DataFrame with all IDT data
     df = extract_idt_data_to_dataframe(folder_path)
@@ -412,14 +464,7 @@ if __name__ == "__main__":
     print("\nIDT Data Summary:")
     print(df.head(10))
     print(f"\nTotal data points: {len(df)}")
-    
-    # Print unique compositions
-    print("\n" + "="*60)
-    print("UNIQUE COMPOSITIONS:")
-    print("="*60)
-    unique_compositions = df["composition"].unique()
-    for i, comp in enumerate(unique_compositions, 1):
-        print(f"{i}. {comp}, phi examples: {df[df['composition'] == comp]['phi'].unique()}")
-    print(f"\nTotal unique compositions: {len(unique_compositions)}")
+
+
 
 
