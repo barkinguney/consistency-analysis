@@ -270,10 +270,11 @@ for reaction_name in important_reactions:
                 print(f" Unsupported kinetics type {type(kinetics).__name__}")
     
     
+    reaction_name_sanitized = reaction_name.replace("<=>", "=")
     rate_coeff_dfs = pd.DataFrame(rate_coeff_rows)
-    rate_coeff_dfs.to_csv(f"{out_dir_rate_coeff}/rate_coefficients_{reaction_name}.csv", index=False)
+    rate_coeff_dfs.to_csv(f"{out_dir_rate_coeff}/rate_coefficients_{reaction_name_sanitized}.csv", index=False)
     arrhenius_param_dfs = pd.DataFrame(arrhenius_param_rows)
-    arrhenius_param_dfs.to_csv(f"{out_dir_params}/arrhenius_params_{reaction_name}.csv", index=False)
+    arrhenius_param_dfs.to_csv(f"{out_dir_params}/arrhenius_params_{reaction_name_sanitized}.csv", index=False)
     
 
 
