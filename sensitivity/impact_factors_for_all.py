@@ -13,15 +13,20 @@ import cantera_related_functions
 
 
 def lhs_sampling(factors_list, n):
+    # log uniform samples
     dim = len(factors_list)
 
     seed = 1327
     sampler = qmc.LatinHypercube(d=dim, seed=seed)
     sample = sampler.random(n=n)
-    l_bounds = 1/np.pow(10, factors_list)
-    u_bounds = 1*np.pow(10, factors_list)
-    qmc.scale(sample, l_bounds, u_bounds)
-    return sample
+    z = qmc.scale(sample, -factors_list, factors_list)
+    m = 10.0 ** z
+    return m
+    
+    # l_bounds = 1/np.pow(10, factors_list)
+    # u_bounds = 1*np.pow(10, factors_list)
+    # scaled_sample = qmc.scale(sample, l_bounds, u_bounds)
+    # return scaled_sample
 
 def get_A(ct_rxn, operating_conditions=None):
     if ct_rxn.reaction_type == 'Arrhenius' or ct_rxn.reaction_type == 'three-body-Arrhenius':
@@ -224,68 +229,102 @@ def stratified_sample_operating_conditions(
 
     return sampled_df
 
-#Setup mechanism
-gas = ct.Solution('Supplementary-3_syngas.yaml')
-no_reactions = len(gas.reactions())
-prior_uncertainty_factor = 0.3
-
-rxns_df = pd.DataFrame()
-rxns_df["equation"] = gas.reaction_equations()
-rxns_df["id"] = rxns_df["equation"].apply(lambda eq: cantera_related_functions.find_reaction_index_by_equation(gas, eq))
-rxns_df["f_value"] = prior_uncertainty_factor
 
 
+if __name__ == "__main__":
 
-# ok that works. NOw
-# get operationg conditions from real data to make it meaningful 
-idt_data_folders = ["data\\idt_data\\hydrogen", "data\\idt_data\\syngas"]
-idt_data_df = pd.DataFrame()
-for idt_data_folder in idt_data_folders:
-    idt_data_df = pd.concat([idt_data_df, read_data.extract_idt_data_to_dataframe(idt_data_folder)], ignore_index=True)
+    #Setup mechanism
+    gas = ct.Solution('Supplementary-3_syngas.yaml')
+    # get operationg conditions from real data to make it meaningful
+    idt_data_folders = ["data\\idt_data\\hydrogen", "data\\idt_data\\syngas"]
+    # gas = ct.Solution('C2H4_2021.yaml')
+    # # get operationg conditions from real data to make it meaningful
+    # idt_data_folders = ["data\\idt_data\\ethylene"]
     
-operating_conditions_df = stratified_sample_operating_conditions(idt_data_df, n_T_bins=4, n_logP_bins=3, n_phi_bins=3, cap_per_bin=1, random_state=42)
-print(operating_conditions_df.columns.tolist())
-print(operating_conditions_df)
+    no_reactions = len(gas.reactions())
+    prior_uncertainty_factor = 0.1
 
-uncertainty_factors = np.full(no_reactions, prior_uncertainty_factor)
-param_multipliers_samples = lhs_sampling(factors_list=uncertainty_factors, n=no_reactions*3)
-if_df = pd.DataFrame()
+    rxns_df = pd.DataFrame()
+    rxns_df["equation"] = gas.reaction_equations()
+    rxns_df["id"] = rxns_df["equation"].apply(lambda eq: cantera_related_functions.find_reaction_index_by_equation(gas, eq))
+    rxns_df["f_value"] = prior_uncertainty_factor
 
-for condition_idx, operating_condition in enumerate(operating_conditions_df.itertuples(index=False)):
-    ls_data = []
-    for sample_idx, multipliers_sample in enumerate(param_multipliers_samples):
-        cantera_related_functions.multiply_rates(gas, multipliers_sample, rxn_ids=None, method="cantera_built_in")
-        tau = cantera_related_functions.calc_IDT_constV(gas=gas, operating_condition=operating_condition, t_max=0.01)
-        ls_data.append([multipliers_sample, tau])
-        if sample_idx % 20 == 0:
-            print(f"Completed {sample_idx} of {param_multipliers_samples.shape[0]} simulations for operating condition {condition_idx} of {len(operating_conditions_df)}.")
 
-    # now we do ls fit 
-    X = np.array([row[0] for row in ls_data])
-    y = np.log10(np.array([row[1] for row in ls_data])) # fit log(IDT) because we sample log multipliers for parameters
-    c0, c, y_hat, residuals = fit_linear_least_squares(X, y)
-    print("Intercept:", c0)
-    print("Coefficients:", c)
     
-    temp_df = rxns_df.copy(deep=True)
+    idt_data_df = pd.DataFrame()
+    for idt_data_folder in idt_data_folders:
+        idt_data_df = pd.concat([idt_data_df, read_data.extract_idt_data_to_dataframe(idt_data_folder)], ignore_index=True)
     
-    #now we can calculate impact factors
-    # If I vary parameter 𝑖 over its full uncertainty range, how much could IDT change?”
-    temp_df["operating_condition"] = str(operating_condition)
-    temp_df["if"] = np.abs(c) * temp_df["f_value"] *2 * np.log(10)  # factor of 2 because we consider +/-f_value range
-    temp_df["low_impact"] = temp_df["if"] < temp_df["if"].max() * 0.1 # below 10% within a sample mechanism is low impact for that operating conditoin, 
+    idt_data_df.to_csv("sensitivity/results/idt_data_for_sensitivity_analysis.csv", index=False)
+    operating_conditions_df = stratified_sample_operating_conditions(idt_data_df, n_T_bins=4, n_logP_bins=3, n_phi_bins=3, cap_per_bin=1, random_state=42)
+    operating_conditions_df.to_csv("sensitivity/results/operating_conditions_for_idt_sensitivity_analysis.csv", index=False)
+    print(operating_conditions_df.columns.tolist())
+
+    uncertainty_factors = np.full(no_reactions, prior_uncertainty_factor)
+    param_multipliers_samples = lhs_sampling(factors_list=uncertainty_factors, n=no_reactions*3)
+    if_df = pd.DataFrame()
+
+    for condition_idx, operating_condition in enumerate(operating_conditions_df.itertuples(index=False)):
+        
+        # t_max = 0.1
+        # try:
+        #     tau = cantera_related_functions.calc_IDT_constV(gas=gas, operating_condition=operating_condition, t_max=t_max, debug=True)
+        # except ValueError as e:
+        #     print(f"Error calculating IDT for operating condition {operating_condition}: {e}")
+        #     tau = t_max
+        ls_data = []
+        for sample_idx, multipliers_sample in enumerate(param_multipliers_samples):
+            cantera_related_functions.multiply_rates(gas, multipliers_sample, rxn_ids=None, method="cantera_built_in")
+            t_max = 0.1
+            try:
+                tau = cantera_related_functions.calc_IDT_constV(gas=gas, operating_condition=operating_condition, t_max=t_max)
+            except ValueError as e:
+                print(f"Error calculating IDT for operating condition {operating_condition}: {e}")
+                tau = t_max
+            ls_data.append([multipliers_sample, tau])
+            if sample_idx % 20 == 0:
+                print(f"Completed {sample_idx} of {param_multipliers_samples.shape[0]} simulations for operating condition {condition_idx} of {len(operating_conditions_df)}.")
+
+        # now we do ls fit 
+        # X = np.array([row[0] for row in ls_data])
+        # y = np.log10(np.array([row[1] for row in ls_data])) # fit log(IDT) because we sample log multipliers for parameters
+        X = np.log10(np.array([row[0] for row in ls_data]))  # log10 multipliers
+        y = np.log10(np.array([row[1] for row in ls_data]))  # log10 IDT
+        c0, c, y_hat, residuals = fit_linear_least_squares(X, y)
+        # print("Intercept:", c0)
+        # print("Coefficients:", c)
+        
+        temp_df = rxns_df.copy(deep=True)
+        
+        #now we can calculate impact factors
+        # If I vary parameter 𝑖 over its full uncertainty range, how much could IDT change?”
+        impact_threshold = 0.1 # 
+        temp_df["operating_condition"] = str(operating_condition)
+        temp_df["if"] = np.abs(c) * temp_df["f_value"] * 2  #* np.log(10)  # factor of 2 because we consider +/-f_value range
+        temp_df["low_impact"] = temp_df["if"] < (temp_df["if"].max() * impact_threshold)
+        
+        # store impact factors for this operating condition
+        if_df = pd.concat([if_df, temp_df], ignore_index=True, copy=True)
+
+    if_df.reset_index(drop=True, inplace=True)
+    # now we aggragete impact factors over operating conditions
+    #if a reaction is low impact in all operating conditoions its inactive
+    inactive_eqs = if_df.groupby("equation")["low_impact"].sum().eq(len(operating_conditions_df))
+    if_df["inactive"] = if_df["equation"].map(inactive_eqs).fillna(False)
+    active_df = if_df[~if_df["inactive"]].copy()
+    active_df['rank'] = active_df.groupby("operating_condition")["if"].rank(ascending=False, method="first")
     
-    # store impact factors for this operating condition
-    if_df = pd.concat([if_df, temp_df]).applymap(copy.deepcopy)
-
-if_df.reset_index(drop=True, inplace=True)
-# now we aggragete impact factors over operating conditions
-#if a reaction is low impact in all operating conditoions its inactive
-inactive_eqs = if_df.groupby("equation")["low_impact"].sum().eq(len(operating_conditions_df))
-if_df["inactive"] = if_df["equation"].map(inactive_eqs).fillna(False)
-
-if_df.to_csv("surrogate/impact_factors_ignition_delay.csv", index=False)
-print(if_df)
+    unique_active_eqs = active_df["equation"].unique()
+    pd.DataFrame(unique_active_eqs, columns=["equation"]).to_csv("sensitivity/results/unique_active_eqs.csv", index=False)
+    
+    print(f"Identified {len(unique_active_eqs)} active reactions out of {len(rxns_df)} across all operating conditions:")
+    for eq in unique_active_eqs:
+        print(f" - {eq}")
+         
+    active_df.to_csv("sensitivity/results/impact_factors_ignition_delay_active_reactions.csv", index=False)
+    if_df.to_csv("sensitivity/results/impact_factors_ignition_delay.csv", index=False)
+    
+    
 
   
   

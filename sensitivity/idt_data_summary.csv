@@ -1,0 +1,1160 @@
+T5,P5,composition,phi,tau,ignition_type,filename
+1112.8,20.75,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,390.0,p;d/dt max,x10014001.xml
+1084.3,19.64,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,537.0,p;d/dt max,x10014001.xml
+1042.8,19.713,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,1017.0,p;d/dt max,x10014001.xml
+1024.9,18.89,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,1165.0,p;d/dt max,x10014001.xml
+1006.3,20.2863,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,1410.0,p;d/dt max,x10014001.xml
+1004.3,20.197,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,1511.0,p;d/dt max,x10014001.xml
+987.6,19.456,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,1782.0,p;d/dt max,x10014001.xml
+945.2,39.55,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,1686.0,p;d/dt max,x10014002.xml
+1000.2,40.04,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,855.812,p;d/dt max,x10014002.xml
+1050.0,40.01,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,389.199,p;d/dt max,x10014002.xml
+1104.5,40.38,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,227.6,p;d/dt max,x10014002.xml
+1154.4,40.34,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,130.6,p;d/dt max,x10014002.xml
+1201.6,40.12,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,72.4,p;d/dt max,x10014002.xml
+1245.9,39.73,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,49.6,p;d/dt max,x10014002.xml
+1300.6,40.04,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,26.0,p;d/dt max,x10014002.xml
+1349.3,39.96,"C2H4:0.1, O2:0.15, N2:0.75",2.0000000000000004,17.6,p;d/dt max,x10014002.xml
+1349.2,39.95,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,29.2,p;d/dt max,x10014003.xml
+1295.1,39.708,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,45.6,p;d/dt max,x10014003.xml
+1250.1,40.017,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,78.0,p;d/dt max,x10014003.xml
+1252.9,40.191,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,76.5,p;d/dt max,x10014003.xml
+1200.1,40.066,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,129.6,p;d/dt max,x10014003.xml
+1190.6,41.36,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,135.0,p;d/dt max,x10014003.xml
+1201.7,40.165,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,140.0,p;d/dt max,x10014003.xml
+1201.1,40.127,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,134.0,p;d/dt max,x10014003.xml
+1152.1,40.162,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,225.8,p;d/dt max,x10014003.xml
+1151.8,40.141,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,236.0,p;d/dt max,x10014003.xml
+1102.4,40.196,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,418.6,p;d/dt max,x10014003.xml
+1102.6,40.207,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,438.0,p;d/dt max,x10014003.xml
+1054.6,40.385,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,816.2,p;d/dt max,x10014003.xml
+998.4,39.874,"C2H4:0.0375, O2:0.1125, N2:0.85",0.9999999999999999,1620.0,p;d/dt max,x10014003.xml
+1242.9,39.563,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,150.853,p;d/dt max,x10014004.xml
+1201.5,40.104,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,260.0,p;d/dt max,x10014004.xml
+1132.7,38.805,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,535.0,p;d/dt max,x10014004.xml
+1107.9,40.954,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,827.684,p;d/dt max,x10014004.xml
+1051.3,40.104,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,1596.0,p;d/dt max,x10014004.xml
+1017.9,41.524,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,2258.0,p;d/dt max,x10014004.xml
+1503.0,40.144,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,6.0,CH*;d/dt max,x10014005.xml
+1449.7,39.989,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,9.248,CH*;d/dt max,x10014005.xml
+1401.4,40.087,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,14.5,CH*;d/dt max,x10014005.xml
+1355.0,40.296,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,31.0,CH*;d/dt max,x10014005.xml
+1298.0,39.885,"C2H4:0.0143, O2:0.0857, N2:0.9",0.500583430571762,71.0,CH*;d/dt max,x10014005.xml
+1172.0,1.04,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,449.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1112.0,1.03,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1261.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1192.0,0.97,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,237.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1247.0,1.0,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,109.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1203.0,1.01,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,217.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1166.0,1.06,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,491.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1163.0,1.04,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,494.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1119.0,1.02,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1042.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1127.0,1.06,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1188.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1307.0,1.0,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,69.0,CH*;baseline min intercept from d/dt,x10014006.xml
+1163.0,3.88,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,606.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1118.0,3.96,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,992.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1174.0,3.95,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,395.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1111.0,3.93,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1075.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1072.0,3.87,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1823.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1244.0,4.01,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,92.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1194.0,3.9,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,238.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1131.0,3.96,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,785.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1220.0,4.03,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,160.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1171.0,4.09,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,387.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1154.0,3.99,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,547.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1241.0,3.95,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,100.0,CH*;baseline min intercept from d/dt,x10014007.xml
+1273.0,10.5,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,72.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1220.0,9.87,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,147.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1175.0,9.65,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,276.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1173.0,10.17,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,343.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1171.0,9.98,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,369.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1165.0,9.79,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,456.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1124.0,9.44,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,666.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1123.0,9.9,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,746.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1112.0,10.86,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,703.0,CH*;baseline min intercept from d/dt,x10014008.xml
+1042.0,10.85,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1474.0,CH*;baseline min intercept from d/dt,x10014008.xml
+980.0,9.82,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1761.0,CH*;baseline min intercept from d/dt,x10014008.xml
+931.0,9.99,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,3176.0,CH*;baseline min intercept from d/dt,x10014008.xml
+871.0,9.77,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,4307.0,CH*;baseline min intercept from d/dt,x10014008.xml
+833.0,10.08,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,7181.0,CH*;baseline min intercept from d/dt,x10014008.xml
+792.0,9.78,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,8664.0,CH*;baseline min intercept from d/dt,x10014008.xml
+859.0,18.95,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,3258.0,CH*;baseline min intercept from d/dt,x10014009.xml
+927.0,18.17,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1714.0,CH*;baseline min intercept from d/dt,x10014009.xml
+1063.0,19.32,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,880.0,CH*;baseline min intercept from d/dt,x10014009.xml
+1204.0,1.0,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,257.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1301.0,1.08,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,67.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1218.0,1.07,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,205.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1159.0,1.04,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,649.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1144.0,1.0,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,948.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1110.0,0.97,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1412.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1252.0,1.01,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,119.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1156.0,1.03,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,620.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1132.0,0.99,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1044.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1178.0,1.0,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,372.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1112.0,1.04,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1946.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1101.0,1.01,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,2031.0,CH*;baseline min intercept from d/dt,x10014010.xml
+1154.0,4.06,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,503.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1247.0,4.04,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,114.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1162.0,4.08,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,512.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1180.0,3.85,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,358.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1190.0,3.95,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,335.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1164.0,3.75,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,449.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1179.0,3.73,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,362.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1211.0,3.68,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,199.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1058.0,3.86,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,2348.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1065.0,3.87,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1857.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1110.0,3.87,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,998.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1260.0,3.93,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,90.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1271.0,3.85,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,63.0,CH*;baseline min intercept from d/dt,x10014011.xml
+1267.0,9.7,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,48.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1235.0,10.3,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,69.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1213.0,10.4,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,104.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1170.0,10.05,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,251.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1149.0,10.4,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,378.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1139.0,9.5,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,316.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1121.0,9.6,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,490.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1120.0,10.4,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,517.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1084.0,10.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,637.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1073.0,9.8,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,708.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1046.0,9.7,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,730.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1037.0,9.5,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1071.0,CH*;baseline min intercept from d/dt,x10014012.xml
+1013.0,9.5,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1645.0,CH*;baseline min intercept from d/dt,x10014012.xml
+929.0,10.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,2017.0,CH*;baseline min intercept from d/dt,x10014012.xml
+898.0,9.2,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,2337.0,CH*;baseline min intercept from d/dt,x10014012.xml
+839.0,9.8,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,3155.0,CH*;baseline min intercept from d/dt,x10014012.xml
+797.0,9.6,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,4397.0,CH*;baseline min intercept from d/dt,x10014012.xml
+768.0,10.2,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,5068.0,CH*;baseline min intercept from d/dt,x10014012.xml
+764.0,10.19,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,5718.0,CH*;baseline min intercept from d/dt,x10014012.xml
+721.0,9.3,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,8317.0,CH*;baseline min intercept from d/dt,x10014012.xml
+903.0,19.78,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,719.0,CH*;baseline min intercept from d/dt,x10014013.xml
+853.0,19.29,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1199.0,CH*;baseline min intercept from d/dt,x10014013.xml
+813.0,19.68,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1619.0,CH*;baseline min intercept from d/dt,x10014013.xml
+1009.0,19.29,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,457.0,CH*;baseline min intercept from d/dt,x10014013.xml
+767.0,20.54,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,3855.0,CH*;baseline min intercept from d/dt,x10014013.xml
+1050.0,18.57,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,330.0,CH*;baseline min intercept from d/dt,x10014013.xml
+1104.0,18.47,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,303.0,CH*;baseline min intercept from d/dt,x10014013.xml
+1096.0,0.98,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,1917.0,CH*;baseline min intercept from d/dt,x10014014.xml
+1129.0,1.0,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,1365.0,CH*;baseline min intercept from d/dt,x10014014.xml
+1164.0,0.99,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,796.0,CH*;baseline min intercept from d/dt,x10014014.xml
+1247.0,1.02,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,209.0,CH*;baseline min intercept from d/dt,x10014014.xml
+1198.0,1.0,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,463.0,CH*;baseline min intercept from d/dt,x10014014.xml
+1267.0,1.03,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,148.0,CH*;baseline min intercept from d/dt,x10014014.xml
+1287.0,0.99,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,92.0,CH*;baseline min intercept from d/dt,x10014014.xml
+1245.0,4.4,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,109.0,CH*;baseline min intercept from d/dt,x10014015.xml
+1179.0,4.24,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,351.0,CH*;baseline min intercept from d/dt,x10014015.xml
+1320.0,4.13,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,31.0,CH*;baseline min intercept from d/dt,x10014015.xml
+1126.0,4.13,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,748.0,CH*;baseline min intercept from d/dt,x10014015.xml
+1089.0,4.18,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,1297.0,CH*;baseline min intercept from d/dt,x10014015.xml
+1163.0,4.13,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,452.0,CH*;baseline min intercept from d/dt,x10014015.xml
+1265.0,4.17,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,79.0,CH*;baseline min intercept from d/dt,x10014015.xml
+1215.0,4.1,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,158.0,CH*;baseline min intercept from d/dt,x10014015.xml
+1063.0,9.42,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,730.0,CH*;baseline min intercept from d/dt,x10014016.xml
+1134.0,10.2,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,313.0,CH*;baseline min intercept from d/dt,x10014016.xml
+1216.0,10.71,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,104.0,CH*;baseline min intercept from d/dt,x10014016.xml
+1024.0,10.13,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,1164.0,CH*;baseline min intercept from d/dt,x10014016.xml
+830.0,10.38,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,3897.0,CH*;baseline min intercept from d/dt,x10014016.xml
+976.0,10.47,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,1281.0,CH*;baseline min intercept from d/dt,x10014016.xml
+884.0,10.26,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,2951.0,CH*;baseline min intercept from d/dt,x10014016.xml
+792.0,10.56,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,5892.0,CH*;baseline min intercept from d/dt,x10014016.xml
+752.0,10.33,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,7969.0,CH*;baseline min intercept from d/dt,x10014016.xml
+1190.0,10.75,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,163.0,CH*;baseline min intercept from d/dt,x10014016.xml
+971.0,10.74,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,1721.0,CH*;baseline min intercept from d/dt,x10014016.xml
+1106.0,1.3,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,798.0,p;baseline min intercept from d/dt,x10014017.xml
+1127.0,1.2,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,488.0,p;baseline min intercept from d/dt,x10014017.xml
+1178.0,1.2,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,194.0,p;baseline min intercept from d/dt,x10014017.xml
+1234.0,1.1,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,113.0,p;baseline min intercept from d/dt,x10014017.xml
+1262.0,1.1,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,76.0,p;baseline min intercept from d/dt,x10014017.xml
+1117.0,10.1,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,971.0,p;baseline min intercept from d/dt,x10014018.xml
+1171.0,10.4,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,499.0,p;baseline min intercept from d/dt,x10014018.xml
+1209.0,9.9,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,203.0,p;baseline min intercept from d/dt,x10014018.xml
+1213.0,9.2,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,210.0,p;baseline min intercept from d/dt,x10014018.xml
+1258.0,9.7,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,83.0,p;baseline min intercept from d/dt,x10014018.xml
+1281.0,9.4,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,52.0,p;baseline min intercept from d/dt,x10014018.xml
+1115.0,24.3,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,614.0,p;baseline min intercept from d/dt,x10014019.xml
+1167.0,24.1,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,334.0,p;baseline min intercept from d/dt,x10014019.xml
+1223.0,23.0,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,157.0,p;baseline min intercept from d/dt,x10014019.xml
+1284.0,21.8,"C2H4:0.0206, O2:0.2058, N2:0.7737",0.30029154518950435,68.0,p;baseline min intercept from d/dt,x10014019.xml
+1176.0,12.2,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,278.0,p;baseline min intercept from d/dt,x10014020.xml
+1178.0,12.8,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,271.0,p;baseline min intercept from d/dt,x10014020.xml
+1213.0,12.1,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,164.0,p;baseline min intercept from d/dt,x10014020.xml
+1240.0,12.1,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,75.0,p;baseline min intercept from d/dt,x10014020.xml
+1275.0,11.5,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,51.0,p;baseline min intercept from d/dt,x10014020.xml
+1289.0,11.5,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,39.0,p;baseline min intercept from d/dt,x10014020.xml
+1068.0,24.8,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,742.0,p;baseline min intercept from d/dt,x10014021.xml
+1110.0,24.9,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,444.0,p;baseline min intercept from d/dt,x10014021.xml
+1143.0,24.2,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,327.0,p;baseline min intercept from d/dt,x10014021.xml
+1174.0,24.5,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,216.0,p;baseline min intercept from d/dt,x10014021.xml
+1232.0,24.0,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,85.0,p;baseline min intercept from d/dt,x10014021.xml
+1234.0,23.4,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,105.0,p;baseline min intercept from d/dt,x10014021.xml
+1242.0,21.5,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,79.0,p;baseline min intercept from d/dt,x10014021.xml
+1298.0,22.5,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,49.0,p;baseline min intercept from d/dt,x10014021.xml
+1401.0,18.2,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,19.0,p;baseline min intercept from d/dt,x10014021.xml
+1127.0,1.2,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,1311.0,p;baseline min intercept from d/dt,x10014022.xml
+1160.0,1.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,767.0,p;baseline min intercept from d/dt,x10014022.xml
+1178.0,1.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,453.0,p;baseline min intercept from d/dt,x10014022.xml
+1215.0,1.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,245.0,p;baseline min intercept from d/dt,x10014022.xml
+1235.0,1.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,172.0,p;baseline min intercept from d/dt,x10014022.xml
+1265.0,1.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,149.0,p;baseline min intercept from d/dt,x10014022.xml
+1107.0,10.6,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,618.0,p;baseline min intercept from d/dt,x10014023.xml
+1116.0,9.2,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,594.0,p;baseline min intercept from d/dt,x10014023.xml
+1119.0,9.3,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,561.0,p;baseline min intercept from d/dt,x10014023.xml
+1148.0,10.4,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,354.0,p;baseline min intercept from d/dt,x10014023.xml
+1182.0,8.6,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,251.0,p;baseline min intercept from d/dt,x10014023.xml
+1197.0,10.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,219.0,p;baseline min intercept from d/dt,x10014023.xml
+1213.0,9.8,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,152.0,p;baseline min intercept from d/dt,x10014023.xml
+1241.0,8.6,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,118.0,p;baseline min intercept from d/dt,x10014023.xml
+1251.0,9.4,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,81.0,p;baseline min intercept from d/dt,x10014023.xml
+1287.0,8.3,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,49.0,p;baseline min intercept from d/dt,x10014023.xml
+1094.0,13.3,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,653.0,p;baseline min intercept from d/dt,x10014024.xml
+1197.0,12.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,194.0,p;baseline min intercept from d/dt,x10014024.xml
+1232.0,11.3,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,123.0,p;baseline min intercept from d/dt,x10014024.xml
+1278.0,11.0,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,43.0,p;baseline min intercept from d/dt,x10014024.xml
+1310.0,10.7,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,35.0,p;baseline min intercept from d/dt,x10014024.xml
+1125.0,1.1,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,1632.0,p;baseline min intercept from d/dt,x10014025.xml
+1166.0,1.1,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,736.0,p;baseline min intercept from d/dt,x10014025.xml
+1203.0,1.1,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,369.0,p;baseline min intercept from d/dt,x10014025.xml
+1217.0,1.1,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,288.0,p;baseline min intercept from d/dt,x10014025.xml
+1238.0,1.1,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,226.0,p;baseline min intercept from d/dt,x10014025.xml
+1268.0,1.1,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,151.0,p;baseline min intercept from d/dt,x10014025.xml
+1042.0,9.5,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,986.0,p;baseline min intercept from d/dt,x10014026.xml
+1139.0,9.3,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,344.0,p;baseline min intercept from d/dt,x10014026.xml
+1171.0,8.8,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,247.0,p;baseline min intercept from d/dt,x10014026.xml
+1237.0,8.6,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,105.0,p;baseline min intercept from d/dt,x10014026.xml
+1280.0,8.2,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,54.0,p;baseline min intercept from d/dt,x10014026.xml
+1003.0,13.5,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,1706.0,p;baseline min intercept from d/dt,x10014027.xml
+1093.0,12.8,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,490.0,p;baseline min intercept from d/dt,x10014027.xml
+1030.0,24.1,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,732.0,p;baseline min intercept from d/dt,x10014028.xml
+1085.0,23.1,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,357.0,p;baseline min intercept from d/dt,x10014028.xml
+1146.0,22.3,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,181.0,p;baseline min intercept from d/dt,x10014028.xml
+1199.0,20.7,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,94.0,p;baseline min intercept from d/dt,x10014028.xml
+1259.0,18.5,"C2H4:0.1229, O2:0.1843, N2:0.6929",2.0005425935973955,48.0,p;baseline min intercept from d/dt,x10014028.xml
+1743.0,2.7,"C2H4:1, O2:3, Ar:96",1.0,22.2,CH*;baseline min intercept from d/dt,x10014029.xml
+1667.0,1.9,"C2H4:1, O2:3, Ar:96",1.0,53.6,CH*;baseline min intercept from d/dt,x10014029.xml
+1476.0,2.1,"C2H4:1, O2:3, Ar:96",1.0,118.8,CH*;baseline min intercept from d/dt,x10014029.xml
+1396.0,2.0,"C2H4:1, O2:3, Ar:96",1.0,224.5,CH*;baseline min intercept from d/dt,x10014029.xml
+1388.0,2.0,"C2H4:1, O2:3, Ar:96",1.0,156.0,CH*;baseline min intercept from d/dt,x10014029.xml
+1378.0,1.9,"C2H4:1, O2:3, Ar:96",1.0,321.5,CH*;baseline min intercept from d/dt,x10014029.xml
+1330.0,1.9,"C2H4:1, O2:3, Ar:96",1.0,346.1,CH*;baseline min intercept from d/dt,x10014029.xml
+1304.0,1.7,"C2H4:1, O2:3, Ar:96",1.0,785.0,CH*;baseline min intercept from d/dt,x10014029.xml
+1299.0,1.8,"C2H4:1, O2:3, Ar:96",1.0,453.9,CH*;baseline min intercept from d/dt,x10014029.xml
+1272.0,1.6,"C2H4:1, O2:3, Ar:96",1.0,583.9,CH*;baseline min intercept from d/dt,x10014029.xml
+1261.0,1.7,"C2H4:1, O2:3, Ar:96",1.0,830.5,CH*;baseline min intercept from d/dt,x10014029.xml
+1257.0,2.0,"C2H4:1, O2:3, Ar:96",1.0,916.0,CH*;baseline min intercept from d/dt,x10014029.xml
+1219.0,1.8,"C2H4:1, O2:3, Ar:96",1.0,964.0,CH*;baseline min intercept from d/dt,x10014029.xml
+1216.0,1.7,"C2H4:1, O2:3, Ar:96",1.0,1571.0,CH*;baseline min intercept from d/dt,x10014029.xml
+1192.0,1.5,"C2H4:1, O2:3, Ar:96",1.0,2010.9,CH*;baseline min intercept from d/dt,x10014029.xml
+1177.0,1.4,"C2H4:1, O2:3, Ar:96",1.0,2447.8,CH*;baseline min intercept from d/dt,x10014029.xml
+1173.0,1.4,"C2H4:1, O2:3, Ar:96",1.0,2485.4,CH*;baseline min intercept from d/dt,x10014029.xml
+1124.0,1.3,"C2H4:1, O2:3, Ar:96",1.0,3256.4,CH*;baseline min intercept from d/dt,x10014029.xml
+1372.0,3.0,"C2H4:6.25, O2:18.75, Ar:75",1.0,40.0,CH*;baseline min intercept from d/dt,x10014030.xml
+1324.0,2.3,"C2H4:6.25, O2:18.75, Ar:75",1.0,80.0,CH*;baseline min intercept from d/dt,x10014030.xml
+1281.0,2.3,"C2H4:6.25, O2:18.75, Ar:75",1.0,120.0,CH*;baseline min intercept from d/dt,x10014030.xml
+1165.0,1.9,"C2H4:6.25, O2:18.75, Ar:75",1.0,269.0,CH*;baseline min intercept from d/dt,x10014030.xml
+1161.0,1.8,"C2H4:6.25, O2:18.75, Ar:75",1.0,377.0,CH*;baseline min intercept from d/dt,x10014030.xml
+1122.0,1.7,"C2H4:6.25, O2:18.75, Ar:75",1.0,822.0,CH*;baseline min intercept from d/dt,x10014030.xml
+1094.0,1.6,"C2H4:6.25, O2:18.75, Ar:75",1.0,1009.0,CH*;baseline min intercept from d/dt,x10014030.xml
+1092.0,2.0,"C2H4:6.25, O2:18.75, Ar:75",1.0,1643.0,CH*;baseline min intercept from d/dt,x10014030.xml
+1064.0,9.9,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,3090.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1102.0,9.4,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,1500.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1152.0,10.2,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,1132.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1217.0,10.0,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,513.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1281.0,10.1,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,341.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1351.0,10.2,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,112.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1351.0,10.3,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,118.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1422.0,9.4,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,52.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1450.0,9.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,39.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1505.0,9.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,25.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1526.0,9.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,21.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1579.0,9.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,12.0,CH*;baseline min intercept from d/dt,x10014031.xml
+1020.0,17.7,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,5800.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1043.0,18.1,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,4400.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1068.0,17.1,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,1900.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1115.0,18.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,1570.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1181.0,17.2,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,710.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1194.0,17.4,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,558.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1255.0,18.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,422.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1293.0,19.1,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,238.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1336.0,18.4,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,176.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1379.0,16.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,92.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1387.0,17.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,85.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1456.0,17.9,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,42.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1547.0,17.3,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,31.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1584.0,17.0,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,28.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1590.0,16.6,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,17.0,CH*;baseline min intercept from d/dt,x10014032.xml
+1198.0,2.1,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,727.0,CH*;baseline min intercept from d/dt,x10014033.xml
+1339.0,2.1,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,212.0,CH*;baseline min intercept from d/dt,x10014033.xml
+1382.0,2.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,139.0,CH*;baseline min intercept from d/dt,x10014033.xml
+1505.0,2.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,88.0,CH*;baseline min intercept from d/dt,x10014033.xml
+1563.0,2.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,46.0,CH*;baseline min intercept from d/dt,x10014033.xml
+1690.0,2.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,29.0,CH*;baseline min intercept from d/dt,x10014033.xml
+1197.0,9.9,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,880.0,CH*;baseline min intercept from d/dt,x10014034.xml
+1311.0,9.9,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,126.0,CH*;baseline min intercept from d/dt,x10014034.xml
+1397.0,10.1,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,46.0,CH*;baseline min intercept from d/dt,x10014034.xml
+1473.0,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,21.0,CH*;baseline min intercept from d/dt,x10014034.xml
+1561.0,9.8,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,12.0,CH*;baseline min intercept from d/dt,x10014034.xml
+1641.0,9.4,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,8.0,CH*;baseline min intercept from d/dt,x10014034.xml
+1064.0,9.9,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,3351.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1102.0,9.4,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,1590.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1152.0,10.2,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,1098.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1217.0,10.0,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,501.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1281.0,10.1,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,352.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1351.0,10.2,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,130.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1351.0,10.3,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,110.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1422.0,9.4,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,60.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1450.0,9.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,34.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1505.0,9.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,21.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1526.0,9.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,17.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1579.0,9.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,12.0,OH*;baseline min intercept from d/dt,x10014035.xml
+1020.0,17.7,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,6100.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1043.0,18.1,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,4900.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1068.0,17.1,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,2070.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1115.0,18.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,1700.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1181.0,17.2,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,736.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1194.0,17.4,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,570.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1255.0,18.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,418.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1293.0,19.1,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,240.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1336.0,18.4,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,162.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1379.0,16.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,77.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1387.0,17.8,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,90.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1456.0,17.9,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,41.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1547.0,17.3,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,25.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1584.0,17.0,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,14.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1590.0,16.6,"C2H4:0.035, O2:0.035, Ar:0.93",3.0,8.0,OH*;baseline min intercept from d/dt,x10014036.xml
+1479.0,8.01,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,6.0,p;d/dt max,x10014037.xml
+1364.0,7.94,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,18.0,p;d/dt max,x10014037.xml
+1312.0,7.36,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,42.0,p;d/dt max,x10014037.xml
+1279.0,7.24,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,73.0,p;d/dt max,x10014037.xml
+1219.0,6.57,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,213.5,p;d/dt max,x10014037.xml
+1167.0,6.4,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,521.0,p;d/dt max,x10014037.xml
+1123.0,6.28,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,825.0,p;d/dt max,x10014037.xml
+1372.0,15.2,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,14.0,p;d/dt max,x10014038.xml
+1322.0,14.94,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,28.0,p;d/dt max,x10014038.xml
+1283.0,14.57,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,58.0,p;d/dt max,x10014038.xml
+1249.0,13.91,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,90.0,p;d/dt max,x10014038.xml
+1202.0,13.3,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,251.0,p;d/dt max,x10014038.xml
+1148.0,13.06,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,679.0,p;d/dt max,x10014038.xml
+1130.0,13.1,"C2H4:0.0655, O2:0.1963, N2:0.7382",1.001018848700968,998.0,p;d/dt max,x10014038.xml
+1430.0,8.24,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,8.0,p;d/dt max,x10014039.xml
+1375.5,7.9,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,14.0,p;d/dt max,x10014039.xml
+1325.0,7.59,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,26.5,p;d/dt max,x10014039.xml
+1264.0,6.71,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,62.0,p;d/dt max,x10014039.xml
+1223.0,7.1,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,192.0,p;d/dt max,x10014039.xml
+1180.0,6.98,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,597.0,p;d/dt max,x10014039.xml
+1167.5,6.83,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1079.0,p;d/dt max,x10014039.xml
+1385.0,15.5,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,8.0,p;d/dt max,x10014040.xml
+1349.5,14.7,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,20.0,p;d/dt max,x10014040.xml
+1266.0,14.76,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,84.0,p;d/dt max,x10014040.xml
+1228.0,14.3,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,155.0,p;d/dt max,x10014040.xml
+1205.0,13.98,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,243.0,p;d/dt max,x10014040.xml
+1163.0,13.75,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,658.0,p;d/dt max,x10014040.xml
+1149.0,13.42,"C2H4:0.0338, O2:0.203, N2:0.7632",0.4995073891625615,1436.0,p;d/dt max,x10014040.xml
+1519.0,7.89,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,5.0,p;d/dt max,x10014041.xml
+1442.0,7.85,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,10.0,p;d/dt max,x10014041.xml
+1389.0,7.95,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,16.0,p;d/dt max,x10014041.xml
+1323.0,8.09,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,47.0,p;d/dt max,x10014041.xml
+1265.0,7.38,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,91.0,p;d/dt max,x10014041.xml
+1230.0,6.96,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,180.0,p;d/dt max,x10014041.xml
+1166.0,6.67,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,501.0,p;d/dt max,x10014041.xml
+1460.0,16.5,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,6.0,p;d/dt max,x10014042.xml
+1398.0,16.1,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,12.0,p;d/dt max,x10014042.xml
+1318.0,15.5,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,34.0,p;d/dt max,x10014042.xml
+1271.0,14.6,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,67.0,p;d/dt max,x10014042.xml
+1216.0,13.8,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,150.0,p;d/dt max,x10014042.xml
+1168.0,13.9,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,296.0,p;d/dt max,x10014042.xml
+1120.0,12.7,"C2H4:0.1228, O2:0.1843, N2:0.6929",1.998914812805209,757.0,p;d/dt max,x10014042.xml
+1479.0,8.01,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,7.0,OH;baseline min intercept from d/dt,x10014043.xml
+1364.0,7.94,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,24.0,OH;baseline min intercept from d/dt,x10014043.xml
+1312.0,7.36,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,54.0,OH;baseline min intercept from d/dt,x10014043.xml
+1279.0,7.24,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,95.0,OH;baseline min intercept from d/dt,x10014043.xml
+1219.0,6.57,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,240.5,OH;baseline min intercept from d/dt,x10014043.xml
+1167.0,6.4,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,564.0,OH;baseline min intercept from d/dt,x10014043.xml
+1123.0,6.28,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,999.0,OH;baseline min intercept from d/dt,x10014043.xml
+1372.0,15.2,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,19.0,OH;baseline min intercept from d/dt,x10014044.xml
+1322.0,14.94,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,34.0,OH;baseline min intercept from d/dt,x10014044.xml
+1283.0,14.57,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,61.0,OH;baseline min intercept from d/dt,x10014044.xml
+1249.0,13.91,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,91.5,OH;baseline min intercept from d/dt,x10014044.xml
+1202.0,13.3,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,268.0,OH;baseline min intercept from d/dt,x10014044.xml
+1148.0,13.06,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,660.0,OH;baseline min intercept from d/dt,x10014044.xml
+1130.0,13.1,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,954.0,OH;baseline min intercept from d/dt,x10014044.xml
+1430.0,8.24,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,11.5,OH;baseline min intercept from d/dt,x10014045.xml
+1375.5,7.9,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,17.0,OH;baseline min intercept from d/dt,x10014045.xml
+1325.0,7.59,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,30.0,OH;baseline min intercept from d/dt,x10014045.xml
+1264.0,6.71,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,63.0,OH;baseline min intercept from d/dt,x10014045.xml
+1223.0,7.1,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,162.0,OH;baseline min intercept from d/dt,x10014045.xml
+1180.0,6.98,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,572.0,OH;baseline min intercept from d/dt,x10014045.xml
+1167.5,6.83,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,948.0,OH;baseline min intercept from d/dt,x10014045.xml
+1385.0,15.5,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,10.5,OH;baseline min intercept from d/dt,x10014046.xml
+1349.5,14.7,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,21.5,OH;baseline min intercept from d/dt,x10014046.xml
+1266.0,14.76,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,87.0,OH;baseline min intercept from d/dt,x10014046.xml
+1228.0,14.3,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,160.0,OH;baseline min intercept from d/dt,x10014046.xml
+1205.0,13.98,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,250.0,OH;baseline min intercept from d/dt,x10014046.xml
+1163.0,13.75,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,704.0,OH;baseline min intercept from d/dt,x10014046.xml
+1149.0,13.42,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,1033.0,OH;baseline min intercept from d/dt,x10014046.xml
+1519.0,7.89,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,12.0,OH;baseline min intercept from d/dt,x10014047.xml
+1442.0,7.85,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,16.0,OH;baseline min intercept from d/dt,x10014047.xml
+1389.0,7.95,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,24.0,OH;baseline min intercept from d/dt,x10014047.xml
+1323.0,8.09,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,59.0,OH;baseline min intercept from d/dt,x10014047.xml
+1265.0,7.38,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,110.0,OH;baseline min intercept from d/dt,x10014047.xml
+1230.0,6.96,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,194.0,OH;baseline min intercept from d/dt,x10014047.xml
+1166.0,6.67,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,525.0,OH;baseline min intercept from d/dt,x10014047.xml
+1460.0,16.5,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,9.0,OH;baseline min intercept from d/dt,x10014048.xml
+1398.0,16.1,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,17.5,OH;baseline min intercept from d/dt,x10014048.xml
+1318.0,15.5,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,45.0,OH;baseline min intercept from d/dt,x10014048.xml
+1271.0,14.6,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,80.0,OH;baseline min intercept from d/dt,x10014048.xml
+1216.0,13.8,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,160.0,OH;baseline min intercept from d/dt,x10014048.xml
+1168.0,13.9,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,306.0,OH;baseline min intercept from d/dt,x10014048.xml
+1120.0,12.7,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,788.0,OH;baseline min intercept from d/dt,x10014048.xml
+1479.0,8.01,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,9.0,CH;baseline min intercept from d/dt,x10014049.xml
+1364.0,7.94,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,20.5,CH;baseline min intercept from d/dt,x10014049.xml
+1312.0,7.36,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,43.0,CH;baseline min intercept from d/dt,x10014049.xml
+1279.0,7.24,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,86.0,CH;baseline min intercept from d/dt,x10014049.xml
+1219.0,6.57,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,225.0,CH;baseline min intercept from d/dt,x10014049.xml
+1167.0,6.4,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,546.0,CH;baseline min intercept from d/dt,x10014049.xml
+1123.0,6.28,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,908.0,CH;baseline min intercept from d/dt,x10014049.xml
+1372.0,15.2,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,20.0,CH;baseline min intercept from d/dt,x10014050.xml
+1322.0,14.94,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,35.0,CH;baseline min intercept from d/dt,x10014050.xml
+1283.0,14.57,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,61.0,CH;baseline min intercept from d/dt,x10014050.xml
+1249.0,13.91,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,93.5,CH;baseline min intercept from d/dt,x10014050.xml
+1202.0,13.3,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,266.0,CH;baseline min intercept from d/dt,x10014050.xml
+1148.0,13.06,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,673.0,CH;baseline min intercept from d/dt,x10014050.xml
+1130.0,13.1,"C2H4:6.55, O2:19.63, N2:73.82",1.001018848700968,953.0,CH;baseline min intercept from d/dt,x10014050.xml
+1430.0,8.24,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,12.0,CH;baseline min intercept from d/dt,x10014051.xml
+1375.5,7.9,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,16.5,CH;baseline min intercept from d/dt,x10014051.xml
+1325.0,7.59,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,27.5,CH;baseline min intercept from d/dt,x10014051.xml
+1264.0,6.71,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,72.0,CH;baseline min intercept from d/dt,x10014051.xml
+1223.0,7.1,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,212.0,CH;baseline min intercept from d/dt,x10014051.xml
+1180.0,6.98,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,600.0,CH;baseline min intercept from d/dt,x10014051.xml
+1167.5,6.83,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,1044.0,CH;baseline min intercept from d/dt,x10014051.xml
+1385.0,15.5,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,12.5,CH;baseline min intercept from d/dt,x10014052.xml
+1349.5,14.7,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,20.0,CH;baseline min intercept from d/dt,x10014052.xml
+1266.0,14.76,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,88.0,CH;baseline min intercept from d/dt,x10014052.xml
+1228.0,14.3,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,164.0,CH;baseline min intercept from d/dt,x10014052.xml
+1205.0,13.98,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,259.0,CH;baseline min intercept from d/dt,x10014052.xml
+1163.0,13.75,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,714.0,CH;baseline min intercept from d/dt,x10014052.xml
+1149.0,13.42,"C2H4:3.38, O2:20.3, N2:76.32",0.4995073891625616,1112.0,CH;baseline min intercept from d/dt,x10014052.xml
+1519.0,7.89,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,8.0,CH;baseline min intercept from d/dt,x10014053.xml
+1442.0,7.85,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,13.0,CH;baseline min intercept from d/dt,x10014053.xml
+1389.0,7.95,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,22.0,CH;baseline min intercept from d/dt,x10014053.xml
+1323.0,8.09,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,55.0,CH;baseline min intercept from d/dt,x10014053.xml
+1265.0,7.38,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,103.0,CH;baseline min intercept from d/dt,x10014053.xml
+1230.0,6.96,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,182.0,CH;baseline min intercept from d/dt,x10014053.xml
+1166.0,6.67,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,500.0,CH;baseline min intercept from d/dt,x10014053.xml
+1460.0,16.5,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,10.0,CH;baseline min intercept from d/dt,x10014054.xml
+1398.0,16.1,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,17.0,CH;baseline min intercept from d/dt,x10014054.xml
+1318.0,15.5,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,42.0,CH;baseline min intercept from d/dt,x10014054.xml
+1271.0,14.6,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,72.0,CH;baseline min intercept from d/dt,x10014054.xml
+1216.0,13.8,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,157.0,CH;baseline min intercept from d/dt,x10014054.xml
+1168.0,13.9,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,306.0,CH;baseline min intercept from d/dt,x10014054.xml
+1120.0,12.7,"C2H4:12.28, O2:18.43, N2:69.29",1.9989148128052088,759.0,CH;baseline min intercept from d/dt,x10014054.xml
+1210.0,5.27,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000316,OH;d/dt max,x10014055.xml
+1223.0,5.82,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.00029,OH;d/dt max,x10014055.xml
+1127.0,4.83,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.0009,OH;d/dt max,x10014055.xml
+1186.0,5.45,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.0004,OH;d/dt max,x10014055.xml
+1291.0,6.46,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000106,OH;d/dt max,x10014055.xml
+1232.0,5.82,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000222,OH;d/dt max,x10014055.xml
+1308.0,6.62,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,9.35e-05,OH;d/dt max,x10014055.xml
+1158.0,5.22,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000554,OH;d/dt max,x10014055.xml
+1229.0,5.96,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000267,OH;d/dt max,x10014055.xml
+1149.0,5.73,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000742,OH;d/dt max,x10014055.xml
+1125.0,5.62,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000948,OH;d/dt max,x10014055.xml
+1201.0,6.72,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000306,OH;d/dt max,x10014055.xml
+1198.0,7.01,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000326,OH;d/dt max,x10014055.xml
+1219.0,7.62,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000264,OH;d/dt max,x10014055.xml
+1210.0,7.89,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000234,OH;d/dt max,x10014055.xml
+1176.0,7.05,"C2H4:0.007, O2:0.042, Ar:0.951",0.5,0.000537,OH;d/dt max,x10014055.xml
+1276.0,6.94,"C2H4:0.007, O2:0.028, Ar:0.965",0.75,0.000173,OH;d/dt max,x10014056.xml
+1333.0,7.07,"C2H4:0.007, O2:0.028, Ar:0.965",0.75,9.2e-05,OH;d/dt max,x10014056.xml
+1182.0,5.76,"C2H4:0.007, O2:0.028, Ar:0.965",0.75,0.000524,OH;d/dt max,x10014056.xml
+1334.0,7.53,"C2H4:0.007, O2:0.028, Ar:0.965",0.75,8.9e-05,OH;d/dt max,x10014056.xml
+1276.0,6.94,"C2H4:0.007, O2:0.028, Ar:0.965",0.75,0.000173,OH;d/dt max,x10014056.xml
+1197.0,6.16,"C2H4:0.007, O2:0.028, Ar:0.965",0.75,0.000442,OH;d/dt max,x10014056.xml
+1233.0,6.6,"C2H4:0.007, O2:0.028, Ar:0.965",0.75,0.000345,OH;d/dt max,x10014056.xml
+1191.0,6.18,"C2H4:0.007, O2:0.028, Ar:0.965",0.75,0.000636,OH;d/dt max,x10014056.xml
+1414.0,7.09,"C2H4:0.007, O2:0.021, Ar:0.972",1.0,9.05e-05,OH;d/dt max,x10014057.xml
+1346.0,6.58,"C2H4:0.007, O2:0.021, Ar:0.972",1.0,0.000136,OH;d/dt max,x10014057.xml
+1380.0,7.64,"C2H4:0.007, O2:0.021, Ar:0.972",1.0,0.000102,OH;d/dt max,x10014057.xml
+2228.764885,2.984835678,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,5.19,CH;baseline min intercept from d/dt,x10014058.xml
+2210.174316,2.951205338,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,4.51,CH;baseline min intercept from d/dt,x10014058.xml
+2156.222643,2.853606761,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,5.12,CH;baseline min intercept from d/dt,x10014058.xml
+2131.937057,2.809674136,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,5.34,CH;baseline min intercept from d/dt,x10014058.xml
+2114.925026,2.778899372,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,5.89,CH;baseline min intercept from d/dt,x10014058.xml
+2081.698333,2.718792284,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,5.97,CH;baseline min intercept from d/dt,x10014058.xml
+2059.053659,2.677828069,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,6.5,CH;baseline min intercept from d/dt,x10014058.xml
+2009.097192,2.58745682,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,6.23,CH;baseline min intercept from d/dt,x10014058.xml
+2024.447225,2.615225029,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,7.37,CH;baseline min intercept from d/dt,x10014058.xml
+2006.054272,2.581952178,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,7.68,CH;baseline min intercept from d/dt,x10014058.xml
+1976.136179,2.527830349,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,7.17,CH;baseline min intercept from d/dt,x10014058.xml
+1952.83894,2.485685642,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,7.07,CH;baseline min intercept from d/dt,x10014058.xml
+1907.847166,2.404295524,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,9.09,CH;baseline min intercept from d/dt,x10014058.xml
+1902.370353,2.394387969,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,10.2,CH;baseline min intercept from d/dt,x10014058.xml
+1833.910098,2.270543367,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,12.0,CH;baseline min intercept from d/dt,x10014058.xml
+1813.82534,2.234210039,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,12.9,CH;baseline min intercept from d/dt,x10014058.xml
+1801.496683,2.2119075,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,13.8,CH;baseline min intercept from d/dt,x10014058.xml
+1770.206017,2.155302684,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,15.9,CH;baseline min intercept from d/dt,x10014058.xml
+1746.868302,2.113084758,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,14.4,CH;baseline min intercept from d/dt,x10014058.xml
+1726.385208,2.076030842,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,16.1,CH;baseline min intercept from d/dt,x10014058.xml
+1719.66384,2.063871887,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,17.3,CH;baseline min intercept from d/dt,x10014058.xml
+1695.458376,2.020084202,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,18.6,CH;baseline min intercept from d/dt,x10014058.xml
+1674.038014,1.981334767,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,19.4,CH;baseline min intercept from d/dt,x10014058.xml
+1678.27755,1.989004088,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,15.5,CH;baseline min intercept from d/dt,x10014058.xml
+1691.128845,2.012252081,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,23.5,CH;baseline min intercept from d/dt,x10014058.xml
+1576.441656,1.804782956,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,23.9,CH;baseline min intercept from d/dt,x10014058.xml
+1570.835245,1.794640957,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,30.7,CH;baseline min intercept from d/dt,x10014058.xml
+1563.420953,1.781228503,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,32.5,CH;baseline min intercept from d/dt,x10014058.xml
+1563.420953,1.781228503,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,39.5,CH;baseline min intercept from d/dt,x10014058.xml
+1541.594533,1.74174451,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,50.1,CH;baseline min intercept from d/dt,x10014058.xml
+1525.61818,1.712843289,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,37.4,CH;baseline min intercept from d/dt,x10014058.xml
+1508.252403,1.681428597,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,46.1,CH;baseline min intercept from d/dt,x10014058.xml
+1484.59363,1.638629876,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,52.3,CH;baseline min intercept from d/dt,x10014058.xml
+1469.773376,1.611820037,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,61.0,CH;baseline min intercept from d/dt,x10014058.xml
+1463.280441,1.600074317,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,69.2,CH;baseline min intercept from d/dt,x10014058.xml
+1452.055312,1.579768059,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,55.3,CH;baseline min intercept from d/dt,x10014058.xml
+1386.708675,1.461555993,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,86.6,CH;baseline min intercept from d/dt,x10014058.xml
+1365.275315,1.422783044,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,125.0,CH;baseline min intercept from d/dt,x10014058.xml
+1359.671068,1.412644963,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,126.0,CH;baseline min intercept from d/dt,x10014058.xml
+1361.068275,1.41517251,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,179.0,CH;baseline min intercept from d/dt,x10014058.xml
+1320.37953,1.34156657,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,160.0,CH;baseline min intercept from d/dt,x10014058.xml
+1316.442498,1.33444448,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,200.0,CH;baseline min intercept from d/dt,x10014058.xml
+1306.062743,1.315667503,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,212.0,CH;baseline min intercept from d/dt,x10014058.xml
+1324.338427,1.348728214,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,265.0,CH;baseline min intercept from d/dt,x10014058.xml
+1292.053098,1.290324055,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,313.0,CH;baseline min intercept from d/dt,x10014058.xml
+1278.340816,1.265518536,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,280.0,CH;baseline min intercept from d/dt,x10014058.xml
+1275.877995,1.261063294,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,309.0,CH;baseline min intercept from d/dt,x10014058.xml
+1772.575073,3.374236938,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,4.79,CH;baseline min intercept from d/dt,x10014059.xml
+1715.209967,3.206558735,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,5.14,CH;baseline min intercept from d/dt,x10014059.xml
+1701.9915,3.167921155,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,5.67,CH;baseline min intercept from d/dt,x10014059.xml
+1632.778352,2.965611123,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,6.0,CH;baseline min intercept from d/dt,x10014059.xml
+1628.765298,2.953880967,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,6.9,CH;baseline min intercept from d/dt,x10014059.xml
+1546.993804,2.71486289,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,7.72,CH;baseline min intercept from d/dt,x10014059.xml
+1530.905929,2.66783803,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,10.7,CH;baseline min intercept from d/dt,x10014059.xml
+1509.971854,2.60664773,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,10.8,CH;baseline min intercept from d/dt,x10014059.xml
+1509.971854,2.60664773,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,11.9,CH;baseline min intercept from d/dt,x10014059.xml
+1481.2752,2.52276741,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,14.9,CH;baseline min intercept from d/dt,x10014059.xml
+1408.82573,2.310997608,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,16.9,CH;baseline min intercept from d/dt,x10014059.xml
+1398.417551,2.280574501,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,17.9,CH;baseline min intercept from d/dt,x10014059.xml
+1414.843405,2.328587273,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,20.6,CH;baseline min intercept from d/dt,x10014059.xml
+1368.095734,2.19194383,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,21.2,CH;baseline min intercept from d/dt,x10014059.xml
+1383.811071,2.237879761,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,26.8,CH;baseline min intercept from d/dt,x10014059.xml
+1339.060943,2.107075137,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,37.5,CH;baseline min intercept from d/dt,x10014059.xml
+1295.843711,1.980751167,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,37.5,CH;baseline min intercept from d/dt,x10014059.xml
+1302.210502,1.999361298,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,48.9,CH;baseline min intercept from d/dt,x10014059.xml
+1293.313054,1.973354057,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,49.0,CH;baseline min intercept from d/dt,x10014059.xml
+1266.125693,1.893885402,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,54.0,CH;baseline min intercept from d/dt,x10014059.xml
+1251.771256,1.851927382,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,75.5,CH;baseline min intercept from d/dt,x10014059.xml
+1235.431178,1.804165333,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,94.4,CH;baseline min intercept from d/dt,x10014059.xml
+1230.84043,1.790746577,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,99.9,CH;baseline min intercept from d/dt,x10014059.xml
+1248.233749,1.841587249,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,107.0,CH;baseline min intercept from d/dt,x10014059.xml
+1247.058501,1.838151998,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,132.0,CH;baseline min intercept from d/dt,x10014059.xml
+1215.038778,1.744558348,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,104.0,CH;baseline min intercept from d/dt,x10014059.xml
+1202.904774,1.709090656,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,146.0,CH;baseline min intercept from d/dt,x10014059.xml
+1219.512195,1.757634146,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,172.0,CH;baseline min intercept from d/dt,x10014059.xml
+1179.349589,1.640238848,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,228.0,CH;baseline min intercept from d/dt,x10014059.xml
+1167.915947,1.606818314,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,216.0,CH;baseline min intercept from d/dt,x10014059.xml
+1153.679314,1.565204635,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,266.0,CH;baseline min intercept from d/dt,x10014059.xml
+1147.682657,1.547676405,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,342.0,CH;baseline min intercept from d/dt,x10014059.xml
+1135.877016,1.513168519,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,310.0,CH;baseline min intercept from d/dt,x10014059.xml
+1133.932125,1.507483602,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,458.0,CH;baseline min intercept from d/dt,x10014059.xml
+1101.871308,1.413769833,"C2H4:0.0625, O2:0.1875, Ar:0.75",1.0,748.0,CH;baseline min intercept from d/dt,x10014059.xml
+1565.268569,4.738175072,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,5.6,CH;baseline min intercept from d/dt,x10014060.xml
+1479.620448,4.299656693,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,8.77,CH;baseline min intercept from d/dt,x10014060.xml
+1434.759341,4.069967824,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,11.6,CH;baseline min intercept from d/dt,x10014060.xml
+1427.032272,4.030405234,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,13.7,CH;baseline min intercept from d/dt,x10014060.xml
+1379.489203,3.786984718,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,16.9,CH;baseline min intercept from d/dt,x10014060.xml
+1358.278572,3.678386289,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,18.9,CH;baseline min intercept from d/dt,x10014060.xml
+1320.37953,3.484343193,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,20.6,CH;baseline min intercept from d/dt,x10014060.xml
+1324.338427,3.504612745,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,24.3,CH;baseline min intercept from d/dt,x10014060.xml
+1289.537211,3.32643052,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,30.0,CH;baseline min intercept from d/dt,x10014060.xml
+1268.549363,3.218972739,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,40.3,CH;baseline min intercept from d/dt,x10014060.xml
+1260.104463,3.175734849,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,41.4,CH;baseline min intercept from d/dt,x10014060.xml
+1230.84043,3.025903002,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,57.2,CH;baseline min intercept from d/dt,x10014060.xml
+1236.584603,3.055313166,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,59.6,CH;baseline min intercept from d/dt,x10014060.xml
+1227.420073,3.008390776,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,65.7,CH;baseline min intercept from d/dt,x10014060.xml
+1217.272118,2.956433242,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,93.2,CH;baseline min intercept from d/dt,x10014060.xml
+1178.301808,2.756905256,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,165.0,CH;baseline min intercept from d/dt,x10014060.xml
+1175.166844,2.740854243,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,175.0,CH;baseline min intercept from d/dt,x10014060.xml
+1161.770771,2.672266348,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,204.0,CH;baseline min intercept from d/dt,x10014060.xml
+1125.265703,2.485360401,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,352.0,CH;baseline min intercept from d/dt,x10014060.xml
+1112.043992,2.417665241,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,557.0,CH;baseline min intercept from d/dt,x10014060.xml
+1104.626951,2.379689989,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,506.0,CH;baseline min intercept from d/dt,x10014060.xml
+1071.572468,2.210451038,"C2H4:0.0625, O2:0.1875, N2:0.75",1.0,769.0,CH;baseline min intercept from d/dt,x10014060.xml
+1271.0,15.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,216.0,p;baseline min intercept from d/dt,x10014061.xml
+1269.0,15.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,212.0,p;baseline min intercept from d/dt,x10014061.xml
+1267.0,15.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,223.0,p;baseline min intercept from d/dt,x10014061.xml
+1231.0,16.1,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,332.0,p;baseline min intercept from d/dt,x10014061.xml
+1195.0,16.3,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,510.0,p;baseline min intercept from d/dt,x10014061.xml
+1186.0,15.9,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,550.0,p;baseline min intercept from d/dt,x10014061.xml
+1164.0,16.4,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,704.0,p;baseline min intercept from d/dt,x10014061.xml
+1137.0,16.6,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,1080.0,p;baseline min intercept from d/dt,x10014061.xml
+1132.0,16.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,1141.0,p;baseline min intercept from d/dt,x10014061.xml
+1311.0,59.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,69.0,p;baseline min intercept from d/dt,x10014062.xml
+1281.0,59.6,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,107.0,p;baseline min intercept from d/dt,x10014062.xml
+1261.0,60.1,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,123.0,p;baseline min intercept from d/dt,x10014062.xml
+1263.0,60.3,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,135.0,p;baseline min intercept from d/dt,x10014062.xml
+1230.0,61.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,184.0,p;baseline min intercept from d/dt,x10014062.xml
+1188.0,61.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,319.0,p;baseline min intercept from d/dt,x10014062.xml
+1156.0,62.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,452.0,p;baseline min intercept from d/dt,x10014062.xml
+1117.0,61.9,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,705.0,p;baseline min intercept from d/dt,x10014062.xml
+1109.0,63.0,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,762.0,p;baseline min intercept from d/dt,x10014062.xml
+1095.0,63.3,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,913.0,p;baseline min intercept from d/dt,x10014062.xml
+1268.0,15.7,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,214.0,p;baseline min intercept from d/dt,x10014063.xml
+1232.0,15.7,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,302.0,p;baseline min intercept from d/dt,x10014063.xml
+1213.0,16.0,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,380.0,p;baseline min intercept from d/dt,x10014063.xml
+1206.0,16.0,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,395.0,p;baseline min intercept from d/dt,x10014063.xml
+1191.0,16.0,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,470.0,p;baseline min intercept from d/dt,x10014063.xml
+1185.0,16.0,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,480.0,p;baseline min intercept from d/dt,x10014063.xml
+1180.0,16.1,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,532.0,p;baseline min intercept from d/dt,x10014063.xml
+1159.0,16.4,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,669.0,p;baseline min intercept from d/dt,x10014063.xml
+1135.0,16.2,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,881.0,p;baseline min intercept from d/dt,x10014063.xml
+1122.0,16.4,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,994.0,p;baseline min intercept from d/dt,x10014063.xml
+1317.0,15.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,91.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1303.0,15.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,116.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1295.0,15.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,127.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1275.0,15.5,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,182.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1271.0,15.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,184.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1269.0,15.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,193.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1267.0,15.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,185.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1231.0,16.1,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,322.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1195.0,16.3,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,499.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1186.0,15.9,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,540.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1164.0,16.4,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,699.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1137.0,16.6,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,1056.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1132.0,16.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,1120.0,OH*;baseline min intercept from d/dt,x10014064.xml
+1311.0,59.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,61.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1281.0,59.6,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,92.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1261.0,60.1,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,121.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1263.0,60.3,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,125.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1230.0,61.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,177.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1188.0,61.8,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,317.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1156.0,62.7,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,454.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1117.0,61.9,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,698.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1109.0,63.0,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,755.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1095.0,63.3,"C2H4:0.0132, O2:0.0395, Ar:0.9473",1.00253164556962,921.0,OH*;baseline min intercept from d/dt,x10014065.xml
+1268.0,15.7,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,211.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1232.0,15.7,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,321.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1213.0,16.0,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,390.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1206.0,16.0,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,416.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1191.0,16.0,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,496.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1185.0,16.0,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,528.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1180.0,16.1,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,548.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1159.0,16.4,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,689.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1135.0,16.2,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,912.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1122.0,16.4,"C2H4:0.0266, O2:0.0395, Ar:0.9339",2.0202531645569617,1070.0,OH*;baseline min intercept from d/dt,x10014066.xml
+1340.0,15.3,"C2H4:0.0096, O2:0.0394, Ar:0.9456, CH4:0.0054",1.0050761421319796,108.0,OH*;baseline min intercept from d/dt,x10014067.xml
+1276.0,15.2,"C2H4:0.0096, O2:0.0394, Ar:0.9456, CH4:0.0054",1.0050761421319796,258.0,OH*;baseline min intercept from d/dt,x10014067.xml
+1212.0,15.7,"C2H4:0.0096, O2:0.0394, Ar:0.9456, CH4:0.0054",1.0050761421319796,600.0,OH*;baseline min intercept from d/dt,x10014067.xml
+1165.0,16.1,"C2H4:0.0096, O2:0.0394, Ar:0.9456, CH4:0.0054",1.0050761421319796,1073.0,OH*;baseline min intercept from d/dt,x10014067.xml
+1133.0,16.3,"C2H4:0.0096, O2:0.0394, Ar:0.9456, CH4:0.0054",1.0050761421319796,1669.0,OH*;baseline min intercept from d/dt,x10014067.xml
+1238.0,15.4,"C2H4:0.0096, O2:0.0394, Ar:0.9456, CH4:0.0054",1.0050761421319796,425.0,OH*;baseline min intercept from d/dt,x10014067.xml
+1541.0,1.1,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,66.0,CH;d/dt max,x10014068.xml
+1465.0,1.14,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,93.0,CH;d/dt max,x10014068.xml
+1409.0,1.19,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,115.0,CH;d/dt max,x10014068.xml
+1316.0,1.23,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,200.0,CH;d/dt max,x10014068.xml
+1286.0,2.17,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,190.0,CH;d/dt max,x10014069.xml
+1329.0,2.13,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,132.0,CH;d/dt max,x10014069.xml
+1360.0,2.1,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,105.0,CH;d/dt max,x10014069.xml
+1395.0,2.08,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,84.0,CH;d/dt max,x10014069.xml
+1294.0,3.86,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,134.0,CH;d/dt max,x10014070.xml
+1253.0,3.98,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,221.0,CH;d/dt max,x10014070.xml
+1354.0,3.8,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,76.0,CH;d/dt max,x10014070.xml
+1314.0,1.29,"C2H4:0.04, O2:0.12, Ar:0.84",1.0,99.0,CH;d/dt max,x10014071.xml
+1336.0,1.19,"C2H4:0.04, O2:0.12, Ar:0.84",1.0,89.0,CH;d/dt max,x10014071.xml
+1311.0,1.35,"C2H4:0.04, O2:0.12, Ar:0.84",1.0,101.0,CH;d/dt max,x10014071.xml
+1276.0,1.32,"C2H4:0.04, O2:0.12, Ar:0.84",1.0,125.0,CH;d/dt max,x10014071.xml
+1280.0,1.33,"C2H4:0.04, O2:0.12, Ar:0.84",1.0,121.0,CH;d/dt max,x10014071.xml
+1257.0,2.15,"C2H4:0.04, O2:0.12, Ar:0.84",1.0,129.0,CH;d/dt max,x10014072.xml
+1283.0,2.11,"C2H4:0.04, O2:0.12, Ar:0.84",1.0,101.0,CH;d/dt max,x10014072.xml
+1296.0,2.06,"C2H4:0.04, O2:0.12, Ar:0.84",1.0,88.0,CH;d/dt max,x10014072.xml
+1477.0,1.29,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,148.0,CH;d/dt max,x10014073.xml
+1402.0,1.23,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,220.0,CH;d/dt max,x10014073.xml
+1517.0,1.26,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,120.0,CH;d/dt max,x10014073.xml
+1572.0,1.25,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,96.0,CH;d/dt max,x10014073.xml
+1347.0,2.14,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,248.0,CH;d/dt max,x10014074.xml
+1396.0,2.12,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,182.0,CH;d/dt max,x10014074.xml
+1450.0,2.11,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,123.0,CH;d/dt max,x10014074.xml
+1498.0,2.04,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,95.0,CH;d/dt max,x10014074.xml
+1116.64,15.0,"C2H4:0.0067, O2:0.04, Ar:0.9533",0.5025,1694.08,CH;d/dt max,x10014075.xml
+1145.77,15.0,"C2H4:0.0067, O2:0.04, Ar:0.9533",0.5025,1132.0,CH;d/dt max,x10014075.xml
+1158.93,15.0,"C2H4:0.0067, O2:0.04, Ar:0.9533",0.5025,960.51,CH;d/dt max,x10014075.xml
+1178.17,15.0,"C2H4:0.0067, O2:0.04, Ar:0.9533",0.5025,671.343,CH;d/dt max,x10014075.xml
+1211.52,15.0,"C2H4:0.0067, O2:0.04, Ar:0.9533",0.5025,404.113,CH;d/dt max,x10014075.xml
+1232.17,15.0,"C2H4:0.0067, O2:0.04, Ar:0.9533",0.5025,270.092,CH;d/dt max,x10014075.xml
+1251.41,15.0,"C2H4:0.0067, O2:0.04, Ar:0.9533",0.5025,181.875,CH;d/dt max,x10014075.xml
+1135.4,15.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,1123.9,CH;d/dt max,x10014076.xml
+1138.22,15.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,1050.92,CH;d/dt max,x10014076.xml
+1175.8,15.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,613.955,CH;d/dt max,x10014076.xml
+1205.87,15.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,413.309,CH;d/dt max,x10014076.xml
+1242.01,15.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,201.923,CH;d/dt max,x10014076.xml
+1272.99,15.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,117.109,CH;d/dt max,x10014076.xml
+1135.19,35.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,769.066,CH;d/dt max,x10014077.xml
+1172.83,35.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,493.338,CH;d/dt max,x10014077.xml
+1178.8,35.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,452.947,CH;d/dt max,x10014077.xml
+1208.18,35.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,316.443,CH;d/dt max,x10014077.xml
+1217.36,35.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,285.631,CH;d/dt max,x10014077.xml
+1253.17,35.0,"C2H4:0.0133, O2:0.04, Ar:0.9467",0.9974999999999999,165.33,CH;d/dt max,x10014077.xml
+1099.16,15.0,"C2H4:0.0267, O2:0.04, Ar:0.9333",2.0025,1335.28,CH;d/dt max,x10014078.xml
+1130.19,15.0,"C2H4:0.0267, O2:0.04, Ar:0.9333",2.0025,975.663,CH;d/dt max,x10014078.xml
+1141.47,15.0,"C2H4:0.0267, O2:0.04, Ar:0.9333",2.0025,859.322,CH;d/dt max,x10014078.xml
+1175.79,15.0,"C2H4:0.0267, O2:0.04, Ar:0.9333",2.0025,574.13,CH;d/dt max,x10014078.xml
+1185.66,15.0,"C2H4:0.0267, O2:0.04, Ar:0.9333",2.0025,513.281,CH;d/dt max,x10014078.xml
+1225.13,15.0,"C2H4:0.0267, O2:0.04, Ar:0.9333",2.0025,308.918,CH;d/dt max,x10014078.xml
+1647.0,2.61,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,36.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1530.0,2.96,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,56.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1487.0,3.02,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,58.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1507.0,2.77,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,59.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1388.0,2.88,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,112.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1341.0,2.91,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,159.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1295.0,2.9,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,219.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1468.0,2.77,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,71.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1732.0,2.61,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,27.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1746.0,2.61,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,24.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1652.0,2.72,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,33.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1625.0,2.79,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,40.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1554.0,2.73,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,48.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1416.0,2.99,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,98.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1331.0,3.05,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,180.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1276.0,3.16,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,312.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1228.0,3.26,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,668.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1488.0,1.21,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,123.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1388.0,1.09,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,236.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1423.0,1.12,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,204.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1452.0,1.17,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,157.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1455.0,1.17,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,152.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1357.0,1.03,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,318.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1412.0,1.11,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,196.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1439.0,1.14,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,180.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1386.0,1.08,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,254.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1414.0,1.11,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,217.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1475.0,1.19,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,149.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1400.0,1.09,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,227.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1388.0,1.1,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,247.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1416.0,1.13,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,201.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1397.0,1.1,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,220.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1426.0,1.13,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,185.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1286.0,1.27,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,537.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1683.0,0.98,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,73.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1621.0,1.16,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,78.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1481.0,1.08,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,154.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1286.0,1.17,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,499.0,OH*;baseline min intercept from d/dt,x10014079.xml
+1597.0,2.6,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,52.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1495.0,2.2,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,114.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1278.0,3.02,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,621.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1389.0,2.94,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,206.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1259.0,1.18,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1078.3,OH*;baseline min intercept from d/dt,x10014080.xml
+1418.0,1.08,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,344.4,OH*;baseline min intercept from d/dt,x10014080.xml
+1682.0,0.94,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,104.5,OH*;baseline min intercept from d/dt,x10014080.xml
+1331.0,1.13,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,693.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1650.0,1.14,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,123.5,OH*;baseline min intercept from d/dt,x10014080.xml
+1563.0,1.08,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,168.7,OH*;baseline min intercept from d/dt,x10014080.xml
+1412.0,0.99,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,380.5,OH*;baseline min intercept from d/dt,x10014080.xml
+1488.0,1.04,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,242.9,OH*;baseline min intercept from d/dt,x10014080.xml
+1223.0,1.12,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1544.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1300.0,1.1,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,762.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1223.0,1.12,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1780.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1563.0,1.04,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,146.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1733.0,0.96,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,87.0,OH*;baseline min intercept from d/dt,x10014080.xml
+1343.0,1.3,"C2H4:0.003, O2:0.017, Ar:0.98",0.5294117647058824,361.0,OH*;baseline min intercept from d/dt,x10014081.xml
+1461.0,1.12,"C2H4:0.003, O2:0.017, Ar:0.98",0.5294117647058824,202.0,OH*;baseline min intercept from d/dt,x10014081.xml
+1525.0,1.0,"C2H4:0.003, O2:0.017, Ar:0.98",0.5294117647058824,160.0,OH*;baseline min intercept from d/dt,x10014081.xml
+1404.0,1.23,"C2H4:0.003, O2:0.017, Ar:0.98",0.5294117647058824,270.0,OH*;baseline min intercept from d/dt,x10014081.xml
+1314.0,1.16,"C2H4:0.003, O2:0.017, Ar:0.98",0.5294117647058824,529.0,OH*;baseline min intercept from d/dt,x10014081.xml
+1330.0,1.28,"C2H4:0.003, O2:0.017, Ar:0.98",0.5294117647058824,396.0,OH*;baseline min intercept from d/dt,x10014081.xml
+1324.0,1.17,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,267.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1244.0,1.19,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,495.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1153.0,1.17,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,1740.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1158.0,1.22,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,1575.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1132.0,1.26,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,2539.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1129.0,1.3,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,2903.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1146.0,1.25,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,2070.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1302.0,1.18,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,389.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1308.0,1.38,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,383.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1284.0,1.34,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,384.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1339.0,1.33,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,257.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1271.0,1.23,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,485.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1214.0,1.27,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,938.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1158.0,1.22,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,1615.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1115.0,1.22,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,3397.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1147.0,1.23,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,2121.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1501.0,1.16,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,117.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1754.0,1.01,"C2H4:0.0057, O2:0.0343, Ar:0.96",0.4985422740524782,61.0,OH*;baseline min intercept from d/dt,x10014082.xml
+1443.0,1.823684211,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,93.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1677.0,2.315789474,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,30.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1600.0,2.148684211,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,35.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1645.0,2.215789474,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,30.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1633.0,2.213157895,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,36.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1508.0,1.955263158,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,68.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1506.0,1.967105263,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,63.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1474.0,1.907894737,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,79.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1508.0,1.959210526,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,80.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1811.0,2.55,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,14.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1664.0,2.305263158,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,26.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1582.0,2.1,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,49.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1597.0,1.997368421,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,41.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1459.0,1.857894737,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,108.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1575.0,2.053947368,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,45.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1534.0,2.035526316,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,68.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1422.0,1.772368421,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,108.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1720.0,2.419736842,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,19.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1735.0,2.413157895,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,24.0,CH*;baseline min intercept from d/dt,x10014083.xml
+2042.0,3.123684211,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,6.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1844.0,2.638157895,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,10.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1924.0,2.786842105,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,8.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1766.0,2.481578947,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,15.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1806.0,2.561842105,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,16.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1675.0,2.288157895,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,22.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1841.0,2.652631579,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,12.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1716.0,2.421052632,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,22.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1897.0,2.789473684,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,10.0,CH*;baseline min intercept from d/dt,x10014083.xml
+1830.0,2.655263158,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,20.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1733.0,2.380263158,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,27.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1729.0,2.382894737,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,28.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1852.0,2.632894737,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,15.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1765.0,2.444736842,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,31.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1693.0,2.330263158,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,40.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1804.0,2.592105263,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,25.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1756.0,2.435526316,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,37.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1797.0,2.598684211,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,22.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1723.0,2.372368421,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,36.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1827.0,2.559210526,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,23.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1898.0,2.728947368,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,19.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1960.0,2.902631579,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,15.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1469.0,1.856578947,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,152.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1588.0,2.128947368,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,74.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1937.0,2.809210526,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,15.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1924.0,2.943421053,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,14.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1726.0,2.380263158,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,35.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1799.0,2.553947368,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,27.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1480.0,1.894736842,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,150.0,CH*;baseline min intercept from d/dt,x10014084.xml
+2081.0,3.121052632,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,8.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1555.0,2.043421053,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,77.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1847.0,2.638157895,"C2H4:0.01, O2:0.02, Ar:0.97",1.5,16.0,CH*;baseline min intercept from d/dt,x10014084.xml
+1774.0,2.422368421,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,53.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1786.0,2.486842105,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,44.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1981.0,2.911842105,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,22.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1786.0,2.492105263,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,42.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1868.0,2.682894737,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,32.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1860.0,2.681578947,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,28.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1809.0,2.575,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,38.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1929.0,2.821052632,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,21.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1779.0,2.527631579,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,44.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1769.0,2.505263158,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,41.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1880.0,2.681578947,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,25.0,CH*;baseline min intercept from d/dt,x10014085.xml
+2007.0,2.953947368,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,16.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1939.0,2.903947368,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,18.0,CH*;baseline min intercept from d/dt,x10014085.xml
+2009.0,2.965789474,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,18.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1837.0,2.603947368,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,36.0,CH*;baseline min intercept from d/dt,x10014085.xml
+2077.0,3.031578947,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,13.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1804.0,2.553947368,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,42.0,CH*;baseline min intercept from d/dt,x10014085.xml
+1716.0,4.692105263,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,34.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1629.0,4.4,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,49.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1751.0,4.859210526,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,28.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1846.0,4.896052632,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,18.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1679.0,4.614473684,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,50.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1596.0,4.213157895,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,55.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1694.0,4.655263158,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,44.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1797.0,5.003947368,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,23.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1634.0,4.407894737,"C2H4:0.01, O2:0.01, Ar:0.98",3.0,62.0,CH*;baseline min intercept from d/dt,x10014086.xml
+1200.0,1.23,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,1512.0,OH*;baseline min intercept from d/dt,x10014087.xml
+1230.0,1.22,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,1221.0,OH*;baseline min intercept from d/dt,x10014087.xml
+1277.0,1.25,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,814.0,OH*;baseline min intercept from d/dt,x10014087.xml
+1318.0,1.19,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,500.0,OH*;baseline min intercept from d/dt,x10014087.xml
+1388.0,1.16,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,331.0,OH*;baseline min intercept from d/dt,x10014087.xml
+1459.0,1.14,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,212.0,OH*;baseline min intercept from d/dt,x10014087.xml
+1520.0,1.12,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,149.0,OH*;baseline min intercept from d/dt,x10014087.xml
+1574.0,1.1,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,119.0,OH*;baseline min intercept from d/dt,x10014087.xml
+1202.0,2.06,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,1233.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1223.0,2.06,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,931.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1235.0,2.01,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,726.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1294.0,2.07,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,479.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1302.0,1.99,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,412.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1329.0,1.96,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,348.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1385.0,1.98,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,204.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1406.0,1.93,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,202.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1451.0,1.78,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,139.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1468.0,1.94,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,125.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1534.0,1.84,"C2H4:0.00286, O2:0.01714, Ar:0.98",0.500583430571762,95.0,OH*;baseline min intercept from d/dt,x10014088.xml
+1259.0,1.19,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1509.0,OH*;baseline min intercept from d/dt,x10014089.xml
+1319.0,1.17,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,821.0,OH*;baseline min intercept from d/dt,x10014089.xml
+1402.0,1.18,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,392.0,OH*;baseline min intercept from d/dt,x10014089.xml
+1485.0,1.17,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,227.0,OH*;baseline min intercept from d/dt,x10014089.xml
+1597.0,1.17,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,135.0,OH*;baseline min intercept from d/dt,x10014089.xml
+1606.0,0.97,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,137.0,OH*;baseline min intercept from d/dt,x10014089.xml
+1633.0,1.09,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,119.0,OH*;baseline min intercept from d/dt,x10014089.xml
+1808.0,1.04,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,66.0,OH*;baseline min intercept from d/dt,x10014089.xml
+1181.0,1.99,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,2059.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1279.0,2.15,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,900.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1303.0,2.11,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,748.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1340.0,2.08,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,460.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1363.0,2.01,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,401.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1402.0,2.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,291.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1408.0,1.94,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,267.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1432.0,1.91,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,206.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1497.0,1.93,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,146.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1524.0,1.82,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,124.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1654.0,1.9,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,66.0,OH*;baseline min intercept from d/dt,x10014090.xml
+1371.0,1.21,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,910.0,OH*;baseline min intercept from d/dt,x10014091.xml
+1407.0,1.01,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,538.0,OH*;baseline min intercept from d/dt,x10014091.xml
+1481.0,1.18,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,367.0,OH*;baseline min intercept from d/dt,x10014091.xml
+1545.0,1.09,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,229.0,OH*;baseline min intercept from d/dt,x10014091.xml
+1589.0,1.05,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,145.0,OH*;baseline min intercept from d/dt,x10014091.xml
+1661.0,0.89,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,110.0,OH*;baseline min intercept from d/dt,x10014091.xml
+1706.0,0.99,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,90.0,OH*;baseline min intercept from d/dt,x10014091.xml
+1720.0,1.08,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,76.0,OH*;baseline min intercept from d/dt,x10014091.xml
+1262.0,2.06,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,1505.0,OH*;baseline min intercept from d/dt,x10014092.xml
+1313.0,2.1,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,800.0,OH*;baseline min intercept from d/dt,x10014092.xml
+1337.0,2.03,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,731.0,OH*;baseline min intercept from d/dt,x10014092.xml
+1365.0,1.98,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,540.0,OH*;baseline min intercept from d/dt,x10014092.xml
+1437.0,1.9,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,311.0,OH*;baseline min intercept from d/dt,x10014092.xml
+1529.0,1.8,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,149.0,OH*;baseline min intercept from d/dt,x10014092.xml
+1586.0,1.79,"C2H4:0.008, O2:0.012, Ar:0.98",2.0,97.0,OH*;baseline min intercept from d/dt,x10014092.xml
+1305.9,0.94,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,91.0,CH*;d/dt max,x10014093.xml
+1290.8,0.99,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,107.1,CH*;d/dt max,x10014093.xml
+1252.1,0.99,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,144.3,CH*;d/dt max,x10014093.xml
+1237.5,1.01,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,150.0,CH*;d/dt max,x10014093.xml
+1213.1,1.02,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,225.7,CH*;d/dt max,x10014093.xml
+1196.3,1.06,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,280.0,CH*;d/dt max,x10014093.xml
+1199.6,1.03,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,281.4,CH*;d/dt max,x10014093.xml
+1182.7,1.05,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,317.9,CH*;d/dt max,x10014093.xml
+1152.9,1.05,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,450.0,CH*;d/dt max,x10014093.xml
+1151.5,0.96,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,494.6,CH*;d/dt max,x10014093.xml
+1143.4,1.04,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,525.0,CH*;d/dt max,x10014093.xml
+1111.2,1.03,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,825.0,CH*;d/dt max,x10014093.xml
+1104.3,1.03,"C2H4:0.021, O2:0.206, N2:0.774",0.30582524271844663,989.3,CH*;d/dt max,x10014093.xml
+1381.2,1.08,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,52.1,CH*;d/dt max,x10014094.xml
+1382.3,1.0,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,57.1,CH*;d/dt max,x10014094.xml
+1329.3,1.09,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,80.0,CH*;d/dt max,x10014094.xml
+1329.1,0.97,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,80.7,CH*;d/dt max,x10014094.xml
+1303.5,0.93,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,85.7,CH*;d/dt max,x10014094.xml
+1309.8,0.94,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,85.7,CH*;d/dt max,x10014094.xml
+1324.7,0.96,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,87.1,CH*;d/dt max,x10014094.xml
+1280.4,0.97,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,94.3,CH*;d/dt max,x10014094.xml
+1258.9,1.05,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,128.6,CH*;d/dt max,x10014094.xml
+1206.0,1.03,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,214.3,CH*;d/dt max,x10014094.xml
+1181.4,0.89,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,250.0,CH*;d/dt max,x10014094.xml
+1188.3,1.06,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,268.6,CH*;d/dt max,x10014094.xml
+1136.9,1.03,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,458.6,CH*;d/dt max,x10014094.xml
+1105.7,1.11,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,739.3,CH*;d/dt max,x10014094.xml
+1086.6,1.07,"C2H4:0.034, O2:0.204, N2:0.762",0.5000000000000001,1003.7,CH*;d/dt max,x10014094.xml
+1340.2,1.07,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,75.7,CH*;d/dt max,x10014095.xml
+1272.8,1.05,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,127.1,CH*;d/dt max,x10014095.xml
+1235.7,1.1,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,196.4,CH*;d/dt max,x10014095.xml
+1219.7,1.09,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,239.3,CH*;d/dt max,x10014095.xml
+1194.7,0.99,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,325.0,CH*;d/dt max,x10014095.xml
+1155.8,1.03,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,642.9,CH*;d/dt max,x10014095.xml
+1141.6,1.0,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,750.0,CH*;d/dt max,x10014095.xml
+1134.3,1.04,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,839.3,CH*;d/dt max,x10014095.xml
+1107.6,0.99,"C2H4:0.065, O2:0.196, N2:0.738",0.9948979591836735,1064.3,CH*;d/dt max,x10014095.xml
+1320.393,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,399.4,OH*;baseline min intercept from d/dt,x10014096.xml
+1327.299,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,354.1,OH*;baseline min intercept from d/dt,x10014096.xml
+1423.305,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,180.5,OH*;baseline min intercept from d/dt,x10014096.xml
+1432.09,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,170.0,OH*;baseline min intercept from d/dt,x10014096.xml
+1525.204,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,103.2,OH*;baseline min intercept from d/dt,x10014096.xml
+1599.693,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,72.4,OH*;baseline min intercept from d/dt,x10014096.xml
+1189.004,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,890.5,OH*;baseline min intercept from d/dt,x10014096.xml
+1158.601,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,1461.2,OH*;baseline min intercept from d/dt,x10014096.xml
+1095.602,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,2444.0,OH*;baseline min intercept from d/dt,x10014096.xml
+1284.505,1.2,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,471.5,OH*;baseline min intercept from d/dt,x10014096.xml
+1159.098,4.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,1180.6,OH*;baseline min intercept from d/dt,x10014097.xml
+1243.503,4.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,321.2,OH*;baseline min intercept from d/dt,x10014097.xml
+1313.301,4.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,175.6,OH*;baseline min intercept from d/dt,x10014097.xml
+1334.205,4.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,178.4,OH*;baseline min intercept from d/dt,x10014097.xml
+1119.595,4.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,1759.7,OH*;baseline min intercept from d/dt,x10014097.xml
+1416.691,4.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,77.0,OH*;baseline min intercept from d/dt,x10014097.xml
+1375.497,4.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,111.1,OH*;baseline min intercept from d/dt,x10014097.xml
+1220.405,4.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,455.3,OH*;baseline min intercept from d/dt,x10014097.xml
+1286.207,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,170.3,OH*;baseline min intercept from d/dt,x10014098.xml
+1419.608,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,49.0,OH*;baseline min intercept from d/dt,x10014098.xml
+1223.496,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,393.9,OH*;baseline min intercept from d/dt,x10014098.xml
+1090.596,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,2406.8,OH*;baseline min intercept from d/dt,x10014098.xml
+1163.494,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,880.5,OH*;baseline min intercept from d/dt,x10014098.xml
+1311.303,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,132.3,OH*;baseline min intercept from d/dt,x10014098.xml
+1156.899,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,1081.9,OH*;baseline min intercept from d/dt,x10014098.xml
+1351.004,10.0,"C2H4:0.01, O2:0.03, Ar:0.96",1.0,94.6,OH*;baseline min intercept from d/dt,x10014098.xml
+1632.2,3.0,"C2H4:0.001, O2:0.006, Ar:0.993",0.5,115.588,CO2;baseline min intercept from d/dt,x10014099.xml
+1557.63,3.0,"C2H4:0.001, O2:0.006, Ar:0.993",0.5,157.837,CO2;baseline min intercept from d/dt,x10014099.xml
+1509.32,3.0,"C2H4:0.001, O2:0.006, Ar:0.993",0.5,207.23,CO2;baseline min intercept from d/dt,x10014099.xml
+1433.05,3.0,"C2H4:0.001, O2:0.006, Ar:0.993",0.5,378.281,CO2;baseline min intercept from d/dt,x10014099.xml
+1372.03,3.0,"C2H4:0.001, O2:0.006, Ar:0.993",0.5,578.609,CO2;baseline min intercept from d/dt,x10014099.xml
+1685.59,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,28.0147,CO2;baseline min intercept from d/dt,x10014100.xml
+1648.31,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,28.6577,CO2;baseline min intercept from d/dt,x10014100.xml
+1554.24,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,48.6147,CO2;baseline min intercept from d/dt,x10014100.xml
+1511.02,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,62.3149,CO2;baseline min intercept from d/dt,x10014100.xml
+1511.02,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,86.0393,CO2;baseline min intercept from d/dt,x10014100.xml
+1471.19,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,91.6263,CO2;baseline min intercept from d/dt,x10014100.xml
+1412.71,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,133.543,CO2;baseline min intercept from d/dt,x10014100.xml
+1326.27,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,290.978,CO2;baseline min intercept from d/dt,x10014100.xml
+1315.25,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,320.405,CO2;baseline min intercept from d/dt,x10014100.xml
+1240.68,3.0,"C2H4:0.005, O2:0.03, Ar:0.965",0.5,589.648,CO2;baseline min intercept from d/dt,x10014100.xml
+1655.08,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,65.2571,CO2;baseline min intercept from d/dt,x10014101.xml
+1642.37,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,76.0248,CO2;baseline min intercept from d/dt,x10014101.xml
+1573.73,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,117.191,CO2;baseline min intercept from d/dt,x10014101.xml
+1547.46,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,120.905,CO2;baseline min intercept from d/dt,x10014101.xml
+1533.9,2.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,147.834,CO2;baseline min intercept from d/dt,x10014101.xml
+1501.69,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,205.503,CO2;baseline min intercept from d/dt,x10014101.xml
+1483.05,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,235.524,CO2;baseline min intercept from d/dt,x10014101.xml
+1467.8,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,265.649,CO2;baseline min intercept from d/dt,x10014101.xml
+1425.42,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,393.726,CO2;baseline min intercept from d/dt,x10014101.xml
+1383.05,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,517.061,CO2;baseline min intercept from d/dt,x10014101.xml
+1387.29,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,642.964,CO2;baseline min intercept from d/dt,x10014101.xml
+1361.02,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,652.727,CO2;baseline min intercept from d/dt,x10014101.xml
+1321.19,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,975.361,CO2;baseline min intercept from d/dt,x10014101.xml
+1291.53,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1014.28,CO2;baseline min intercept from d/dt,x10014101.xml
+1255.08,3.0,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1398.38,CO2;baseline min intercept from d/dt,x10014101.xml
+1698.31,3.0,"C2H4:0.01, O2:0.015, Ar:0.975",2.0,47.3456,CO2;baseline min intercept from d/dt,x10014102.xml
+1661.86,3.0,"C2H4:0.01, O2:0.015, Ar:0.975",2.0,50.4269,CO2;baseline min intercept from d/dt,x10014102.xml
+1559.32,3.0,"C2H4:0.01, O2:0.015, Ar:0.975",2.0,119.991,CO2;baseline min intercept from d/dt,x10014102.xml
+1525.42,3.0,"C2H4:0.01, O2:0.015, Ar:0.975",2.0,217.646,CO2;baseline min intercept from d/dt,x10014102.xml
+1447.46,3.0,"C2H4:0.01, O2:0.015, Ar:0.975",2.0,372.445,CO2;baseline min intercept from d/dt,x10014102.xml
+1382.2,3.0,"C2H4:0.01, O2:0.015, Ar:0.975",2.0,637.669,CO2;baseline min intercept from d/dt,x10014102.xml
+1372.03,3.0,"C2H4:0.01, O2:0.015, Ar:0.975",2.0,773.535,CO2;baseline min intercept from d/dt,x10014102.xml
+1459.285213,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,6049.316431,T;relative increase,x10014103.xml
+1369.575966,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,8052.44103,T;relative increase,x10014103.xml
+1298.701299,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,12808.83643,T;relative increase,x10014103.xml
+1173.729584,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,17369.66474,T;relative increase,x10014103.xml
+1174.360883,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,23516.09967,T;relative increase,x10014103.xml
+1149.627463,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,24233.96785,T;relative increase,x10014103.xml
+1149.022469,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,26024.93922,T;relative increase,x10014103.xml
+1149.022469,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,27291.49947,T;relative increase,x10014103.xml
+1135.870565,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,28455.89313,T;relative increase,x10014103.xml
+1117.270999,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,28804.60525,T;relative increase,x10014103.xml
+1098.71637,6.42,"C2H4:0.065, O2:0.195, Ar:0.74",1.0,30215.50729,T;relative increase,x10014103.xml
+1428.726547,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,6087.121312,T;relative increase,x10014104.xml
+1379.091592,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,6697.439432,T;relative increase,x10014104.xml
+1333.605389,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,9401.086606,T;relative increase,x10014104.xml
+1324.705088,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,11169.70585,T;relative increase,x10014104.xml
+1281.926376,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,13514.93377,T;relative increase,x10014104.xml
+1234.801141,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,16451.64182,T;relative increase,x10014104.xml
+1204.819277,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,18207.16648,T;relative increase,x10014104.xml
+1203.491087,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,19669.42263,T;relative increase,x10014104.xml
+1183.270916,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,21003.62998,T;relative increase,x10014104.xml
+1155.71263,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,23106.99254,T;relative increase,x10014104.xml
+1136.461785,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,26974.31937,T;relative increase,x10014104.xml
+1092.668088,6.42,"C2H4:0.023, O2:0.207, Ar:0.77",0.33333333333333337,22320.0478,T;relative increase,x10014104.xml
+1503.499395,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,5766.211499,T;relative increase,x10014105.xml
+1428.726547,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,7231.491289,T;relative increase,x10014105.xml
+1408.450704,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,7813.674025,T;relative increase,x10014105.xml
+1388.742299,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,8697.236043,T;relative increase,x10014105.xml
+1342.626096,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,12135.98831,T;relative increase,x10014105.xml
+1274.443833,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,16152.99173,T;relative increase,x10014105.xml
+1265.577679,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,16251.01355,T;relative increase,x10014105.xml
+1265.577679,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,17348.48667,T;relative increase,x10014105.xml
+1234.103208,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,18972.96894,T;relative increase,x10014105.xml
+1204.154816,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,20142.16298,T;relative increase,x10014105.xml
+1204.819277,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,21630.30367,T;relative increase,x10014105.xml
+1175.625521,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,23376.59432,T;relative increase,x10014105.xml
+1176.258862,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,24224.51844,T;relative increase,x10014105.xml
+1156.324691,6.42,"C2H4:0.174, O2:0.174, Ar:0.652",3.0000000000000004,26647.76491,T;relative increase,x10014105.xml
+2096.8,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,33.5616,p;d/dt max,x10014106.xml
+2067.58,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,34.98,p;d/dt max,x10014106.xml
+2012.79,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,49.2192,p;d/dt max,x10014106.xml
+1970.78,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,56.3069,p;d/dt max,x10014106.xml
+1941.55,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,58.0825,p;d/dt max,x10014106.xml
+1950.68,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,61.167,p;d/dt max,x10014106.xml
+1868.49,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,67.8361,p;d/dt max,x10014106.xml
+1831.96,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,84.3029,p;d/dt max,x10014106.xml
+1802.74,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,103.688,p;d/dt max,x10014106.xml
+1782.65,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,102.621,p;d/dt max,x10014106.xml
+1744.29,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,116.19,p;d/dt max,x10014106.xml
+1726.03,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,134.304,p;d/dt max,x10014106.xml
+1707.76,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,126.219,p;d/dt max,x10014106.xml
+1702.28,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,137.113,p;d/dt max,x10014106.xml
+1625.57,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,177.598,p;d/dt max,x10014106.xml
+1550.68,0.275,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,252.492,p;d/dt max,x10014106.xml
+1994.52,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,26.1805,p;d/dt max,x10014107.xml
+1877.63,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,37.6081,p;d/dt max,x10014107.xml
+1833.79,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,43.0237,p;d/dt max,x10014107.xml
+1800.91,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,48.211,p;d/dt max,x10014107.xml
+1751.6,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,51.2994,p;d/dt max,x10014107.xml
+1614.61,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,84.3029,p;d/dt max,x10014107.xml
+1592.69,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,89.7034,p;d/dt max,x10014107.xml
+1512.33,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,112.638,p;d/dt max,x10014107.xml
+1515.98,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,114.994,p;d/dt max,x10014107.xml
+1470.32,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,127.532,p;d/dt max,x10014107.xml
+1366.21,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,192.927,p;d/dt max,x10014107.xml
+1280.37,0.275,"C2H4:0.005, O2:0.045, Ar:0.95",0.3333333333333333,237.291,p;d/dt max,x10014107.xml
+1451.134497,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,90.6886,OH;max,x10014108.xml
+1438.356361,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,90.6449,OH;max,x10014108.xml
+1412.104275,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,122.191,OH;max,x10014108.xml
+1384.180752,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,125.964,OH;max,x10014108.xml
+1346.154105,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,186.544,OH;max,x10014108.xml
+1332.729163,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,211.504,OH;max,x10014108.xml
+1311.329229,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,267.695,OH;max,x10014108.xml
+1261.802586,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,471.183,OH;max,x10014108.xml
+1248.938402,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,428.365,OH;max,x10014108.xml
+1223.979721,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,634.583,OH;max,x10014108.xml
+1196.094989,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,1190.72,OH;max,x10014108.xml
+1157.47975,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,1790.34,OH;max,x10014108.xml
+1104.432973,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,2407.97,OH;max,x10014108.xml
+1095.380234,1.48,"C2H4:0.02, O2:0.06, Ar:0.92",1.0,3351.43,OH;max,x10014108.xml
+1581.530257,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,29.9123,OH;max,x10014109.xml
+1484.152957,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,69.9744,OH;max,x10014109.xml
+1470.462813,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,69.9432,OH;max,x10014109.xml
+1421.219662,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,100.329,OH;max,x10014109.xml
+1362.444225,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,129.3,OH;max,x10014109.xml
+1371.593476,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,208.97,OH;max,x10014109.xml
+1307.976038,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,255.243,OH;max,x10014109.xml
+1310.693291,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,329.695,OH;max,x10014109.xml
+1280.886989,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,382.278,OH;max,x10014109.xml
+1237.996081,1.28,"C2H4:0.02, O2:0.03, Ar:0.95",2.0,623.029,OH;max,x10014109.xml
+1743.828156,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,37.2094,CH*;baseline max intercept from d/dt,x10014110.xml
+1673.441315,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,51.5177,CH*;baseline max intercept from d/dt,x10014110.xml
+1624.267861,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,60.619,CH*;baseline max intercept from d/dt,x10014110.xml
+1450.614553,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,122.168,CH*;baseline max intercept from d/dt,x10014110.xml
+1388.534041,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,206.641,CH*;baseline max intercept from d/dt,x10014110.xml
+1332.738044,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,308.411,CH*;baseline max intercept from d/dt,x10014110.xml
+1255.388756,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,645.331,CH*;baseline max intercept from d/dt,x10014110.xml
+1226.501759,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,975.283,CH*;baseline max intercept from d/dt,x10014110.xml
+1196.992676,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,1025.34,CH*;baseline max intercept from d/dt,x10014110.xml
+1187.469348,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,1077.98,CH*;baseline max intercept from d/dt,x10014110.xml
+1167.040898,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,1350.31,CH*;baseline max intercept from d/dt,x10014110.xml
+1161.591287,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,1221.68,CH*;baseline max intercept from d/dt,x10014110.xml
+1132.505396,,"C2H4:0.0127, O2:0.0381, Ar:0.9492",0.9999999999999998,1629.13,CH*;baseline max intercept from d/dt,x10014110.xml
+1709.866442,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,41.6452,CH*;baseline max intercept from d/dt,x10014111.xml
+1594.764071,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,52.1665,CH*;baseline max intercept from d/dt,x10014111.xml
+1469.177393,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,110.53,CH*;baseline max intercept from d/dt,x10014111.xml
+1393.720453,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,156.911,CH*;baseline max intercept from d/dt,x10014111.xml
+1344.745742,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,246.209,CH*;baseline max intercept from d/dt,x10014111.xml
+1325.635808,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,279.031,CH*;baseline max intercept from d/dt,x10014111.xml
+1269.26748,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,386.328,CH*;baseline max intercept from d/dt,x10014111.xml
+1261.756415,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,432.384,CH*;baseline max intercept from d/dt,x10014111.xml
+1260.690657,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,466.099,CH*;baseline max intercept from d/dt,x10014111.xml
+1197.953416,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,768.899,CH*;baseline max intercept from d/dt,x10014111.xml
+1147.304752,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,1268.41,CH*;baseline max intercept from d/dt,x10014111.xml
+1132.505396,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,2066.41,CH*;baseline max intercept from d/dt,x10014111.xml
+1099.143877,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,2066.41,CH*;baseline max intercept from d/dt,x10014111.xml
+1073.837034,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, N2:0.1898",0.9999999999999998,2431.47,CH*;baseline max intercept from d/dt,x10014111.xml
+1673.441315,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,36.7466,CH*;baseline max intercept from d/dt,x10014112.xml
+1645.762737,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,54.8442,CH*;baseline max intercept from d/dt,x10014112.xml
+1504.725591,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,102.534,CH*;baseline max intercept from d/dt,x10014112.xml
+1417.546963,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,140.197,CH*;baseline max intercept from d/dt,x10014112.xml
+1359.443716,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,219.984,CH*;baseline max intercept from d/dt,x10014112.xml
+1331.549058,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,308.411,CH*;baseline max intercept from d/dt,x10014112.xml
+1309.354685,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,345.178,CH*;baseline max intercept from d/dt,x10014112.xml
+1276.868506,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,437.829,CH*;baseline max intercept from d/dt,x10014112.xml
+1268.189001,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,548.442,CH*;baseline max intercept from d/dt,x10014112.xml
+1242.844324,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,502.443,CH*;baseline max intercept from d/dt,x10014112.xml
+1227.510474,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,695.651,CH*;baseline max intercept from d/dt,x10014112.xml
+1208.624259,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,818.547,CH*;baseline max intercept from d/dt,x10014112.xml
+1177.167194,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,1064.57,CH*;baseline max intercept from d/dt,x10014112.xml
+1148.187357,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,1990.27,CH*;baseline max intercept from d/dt,x10014112.xml
+1126.521931,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, He:0.1898",0.9999999999999998,2199.84,CH*;baseline max intercept from d/dt,x10014112.xml
+1429.768349,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,169.146,CH*;baseline max intercept from d/dt,x10014113.xml
+1404.210384,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,206.641,CH*;baseline max intercept from d/dt,x10014113.xml
+1382.105057,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,191.694,CH*;baseline max intercept from d/dt,x10014113.xml
+1349.609625,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,297.048,CH*;baseline max intercept from d/dt,x10014113.xml
+1282.353786,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,483.93,CH*;baseline max intercept from d/dt,x10014113.xml
+1253.280462,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,818.547,CH*;baseline max intercept from d/dt,x10014113.xml
+1230.546596,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,621.553,CH*;baseline max intercept from d/dt,x10014113.xml
+1210.58487,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,975.283,CH*;baseline max intercept from d/dt,x10014113.xml
+1150.843338,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,1691.46,CH*;baseline max intercept from d/dt,x10014113.xml
+1115.574649,,"C2H4:0.0127, O2:0.0381, Ar:0.7594, CO2:0.1898",0.9999999999999998,1965.52,CH*;baseline max intercept from d/dt,x10014113.xml
+1573.247245,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,58.9715,CH*;baseline max intercept from d/dt,x10014114.xml
+1494.705752,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,106.543,CH*;baseline max intercept from d/dt,x10014114.xml
+1391.550229,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,184.525,CH*;baseline max intercept from d/dt,x10014114.xml
+1366.529057,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,258.728,CH*;baseline max intercept from d/dt,x10014114.xml
+1303.430891,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,386.506,CH*;baseline max intercept from d/dt,x10014114.xml
+1242.767096,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,577.388,CH*;baseline max intercept from d/dt,x10014114.xml
+1236.546375,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,615.164,CH*;baseline max intercept from d/dt,x10014114.xml
+1163.721675,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,1065.43,CH*;baseline max intercept from d/dt,x10014114.xml
+1135.631928,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,1845.25,CH*;baseline max intercept from d/dt,x10014114.xml
+1124.004694,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,1845.25,CH*;baseline max intercept from d/dt,x10014114.xml
+1086.909265,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,2139.32,CH*;baseline max intercept from d/dt,x10014114.xml
+1072.747284,,"C2H4:0.0127, O2:0.0381, N2:0.9492",0.9999999999999998,2377.64,CH*;baseline max intercept from d/dt,x10014114.xml

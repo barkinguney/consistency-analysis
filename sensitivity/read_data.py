@@ -9,6 +9,8 @@ from typing import Any, Dict, List, Optional, Union
 import xml.etree.ElementTree as ET
 import cantera as ct
 
+import cantera_related_functions  # for unit conversion
+
 
 Number = Union[int, float]
 
@@ -411,6 +413,7 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
             T_units = ""
             P_units = ""
             Tau_units = ""
+            dPdt_units = ""
             for group in exp.data_groups:
                 for prop_id, prop_def in group.properties.items():
                     if prop_def.name.lower() == "temperature" or (prop_def.label and prop_def.label.lower() == "t"):
@@ -419,6 +422,8 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
                         P_units = prop_def.units or P_units
                     elif prop_def.name.lower() == "ignition delay" or (prop_def.label and prop_def.label.lower() == "tau"):
                         Tau_units = prop_def.units or Tau_units
+                    elif prop_def.name.lower() == "pressure rise" or (prop_def.label and prop_def.label.lower() == "dp/dt"):
+                        dPdt_units = prop_def.units or dPdt_units
             if not T_units:
                 T_units = exp.common_property_units.get("temperature") or ""
             if not P_units:
@@ -431,21 +436,28 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
                     T = row.get("T") or row.get("temperature") or row.get("Temperature") or exp.common_properties.get("temperature")
                     P = row.get("P") or row.get("pressure") or row.get("Pressure") or exp.common_properties.get("pressure")
                     Tau = row.get("tau") or row.get("ignition delay") or row.get("Ignition Delay")
+                    dPdt = row.get("dP/dt") or row.get("pressure rise") or row.get("Pressure rise")
+
+                    P_conv, P_units_conv, ignition_amount_conv, ignition_units_conv, Tau_conv, Tau_units_conv = cantera_related_functions.convert_units(
+                        P, P_units, ignition_amount, ignition_units, Tau, Tau_units
+                    )
                     
                     all_data.append({
                         "T5": T,
                         "T5_units": T_units,
-                        "P5": P,
-                        "P5_units": P_units,
+                        "P5": P_conv,
+                        "P5_units": P_units_conv,
                         "composition": composition_str,
                         "phi": phi,
-                        "tau": Tau,
-                        "tau_units": Tau_units,
+                        "tau": Tau_conv,
+                        "tau_units": Tau_units_conv,
+                        "pressure_rise": dPdt,
+                        "pressure_rise_units": dPdt_units,
                         "ignition_type": ignition_type_str,
                         "ignition_target": exp.ignition_type.target.upper(),
                         "ignition_type": exp.ignition_type.type,
-                        "ignition_amount": ignition_amount,
-                        "ignition_units": ignition_units,
+                        "ignition_amount": ignition_amount_conv,
+                        "ignition_units": ignition_units_conv,
                         "filename": file_path.name
                     })
         except Exception as e:

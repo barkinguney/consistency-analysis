@@ -34,9 +34,58 @@ def find_reaction_index_by_equation(gas, equation: str) -> int:
             return i   
     print(f"Warning: Reaction not found (exact match): {equation}", file=sys.stderr) 
 
+def convert_units(P5=None, P5_unit=None, ignition_amount=None, ignition_units=None, tau=None, tau_units=None): 
+        """convert pressure to Pa, ignition concentration to kmol/m3, tau to seconds"""
+        if P5 is not None:
+            if P5_unit.lower() in ['pa']:
+                pass
+            elif P5_unit.lower() in ['kpa']:
+                P5 = P5 * 1000
+            elif P5_unit.lower() in ['atm']:
+                P5 = P5 * 101325
+            elif P5_unit.lower() in ['bar']:
+                P5 = P5 * 100000
+            elif P5_unit.lower() in ["torr"]:
+                P5 = P5 * 133.322
+            else:
+                raise ValueError(f"Unknown pressure unit: {P5_unit}")
+            P5_unit = "Pa"
+
+        if ignition_amount is not None:
+            if ignition_units.lower().strip() in ["mol/cm3"]:
+                ignition_amount = float(ignition_amount) * 1e-3
+                ignition_units = "kmol/m3"
+            elif ignition_units.lower().strip() in ["kmol/m3", "unitless", ""]:
+                pass
+            else:
+                raise ValueError(f"Unknown ignition amount unit: {ignition_units}")
+            
+        
+        if tau is not None:
+            if tau_units.lower().strip() in ["s"]:
+                tau = float(tau)
+            elif tau_units.lower().strip() in ["ms"]:
+                tau = float(tau) * 1e-3
+            elif tau_units.lower().strip() in ["us", "μs"]:
+                tau = float(tau) * 1e-6
+            else:
+                raise ValueError(f"Unknown tau unit: {tau_units}")
+            tau_units = "s"
+        
+        return P5, P5_unit, ignition_amount,ignition_units, tau, tau_units
+    
 
 
-def calc_IDT_constV(gas, operating_condition, t_max = 0.001, save_time_history_plot = False):
+def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plot = False, debug=False):
+    
+    # TODO:pressure profile affect idt at low temps manually compensate, lower volume with time. i think that means to set different constv for each time.
+    # two peaks, or one mini peak might happen. take the first peak. multi fuels cause 2 peaks
+    # for sensitivity pressur profile dont matter. 
+    # pressure profile can be between 2% to 10% 
+    # do implement all igniton types present in data.
+    # this is IDT just shock tube. 
+    # const v assumption dont hold for low temp, long time, due to boundary layer growth.
+    # base,ine min intercept from d/dt means idt is the interept time of d(x)/dt with  baseline x
     """Calculate ignition delay time at given operating condition.
     batch reactor const volume"""
     
@@ -53,28 +102,6 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.001, save_time_history_p
         species_indices = {name: i for i, name in enumerate(gas.species_names)}
         return species_indices
     
-    def convert_units(P5, P5_unit,ignition_amount, ignition_units): 
-        """convert pressure to Pa and ignition concentration to kmol/m3"""
-        if P5_unit.lower() in ['kpa']:
-            P5_pa = P5 * 1000
-        elif P5_unit.lower() in ['atm']:
-            P5_pa = P5 * 101325
-        elif P5_unit.lower() in ['bar']:
-            P5_pa = P5 * 100000
-        elif P5_unit.lower() in ["torr"]:
-            P5_pa = P5 * 133.322
-        else:
-            raise ValueError(f"Unknown pressure unit: {P5_unit}")
-
-        # Ignition amount conversion can be added here if needed
-        if ignition_units.lower() in ["mol/cm3"]:
-            ignition_amount = ignition_amount * 1e-3
-        if ignition_units.lower() in ["kmol/m3", "unitless", ""]:
-            pass
-        else:
-            raise ValueError(f"Unknown ignition amount unit: {ignition_units}")
-
-        return P5_pa, ignition_amount
     
     def save_time_history_plot_to_file(time_history, ignition_target, operating_condition, tau):
         xml_name = operating_condition[12].split(".")[0]
@@ -115,10 +142,100 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.001, save_time_history_p
         )
         fig.write_html(f"{results_path}/time_history_{operating_condition[0]}{operating_condition[1]}_{operating_condition[2]}{operating_condition[3]}.html")
         
+    def calc_idt_from_type(time_history, ignition_target, ignition_type, simple=True):
+        #problems
+        #sometimes doubled for OHmax
+        #1000x for concetrations
+        #2-3x for relative concentrations
+        
+        if simple:
+            tau = time_history.t[np.argmax(np.gradient(time_history.T, time_history.t))]
+        else:
+            print(f"Calculating IDT using target: {ignition_target}, type: {ignition_type}")
+    
+            species_idxs = get_species_indices(reactor.phase)
+            
+            if ignition_target == "T" :
+                "TODO: reuse species code"
+                if ignition_type == "max":
+                    tau = time_history.t[np.nanargmax(time_history.T)]
+                elif ignition_type== "d/dt max":
+                    tau = time_history.t[np.nanargmax(np.gradient(time_history.T, time_history.t))]
+                else:
+                    raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
+            elif ignition_target == "P" :
+                "TODO: reuse species code"
+                if ignition_type == "max":
+                    tau = time_history.t[np.nanargmax(time_history.P)]
+                elif ignition_type == "d/dt max":
+                    tau = time_history.t[np.nanargmax(np.gradient(time_history.P, time_history.t))]
+                else:         
+                    raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
+            else:
+                if ignition_type == "max":
+                    "TODO: looks good but test to make sure IDT calc good"
+                    #sometimes first and highest peak is not idt.
+                    # of all local maxima, that is at least 0.8*global_max, take the latest as idt
+                    species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
+                    # print(time_history.t)
+                    # print(time_history.concentrations)
+                    # print(species_conc_history)
+                    # global_max = np.max(species_conc_history)
+                    # threshold = 0.8 * global_max
+                    # peaks, _ = find_peaks(species_conc_history, height=threshold, distance=3)
+                    # print(peaks)
+                    # latest_peak_index = peaks[-1] if peaks.size > 0 else None
+                    # print(latest_peak_index)
+                    # tau = time_history.t[latest_peak_index]
+                    # max_tau = time_history.t[np.nanargmax(species_conc_history)]
+                    
+                    # print(f"Computed max-based IDT for species {ignition_target}. Global max conc: {global_max}, Max-based tau: {max_tau}, Selected tau: {tau}")
+                    tau = time_history.t[np.nanargmax(time_history.concentrations[:, species_idxs[ignition_target]])]
+                    print(f"Computed max-based IDT for species {ignition_target}. Max-based tau: {tau}")
+                elif ignition_type == "d/dt max":
+                    "TODO: looks good but test to make sure IDT calc good"
+                    # print(reactor.phase.species_names)
+                    # print(time_history.concentrations[:, species_idxs[ignition_target]])
+                    # print(time_history.t)
+                    tau = time_history.t[np.nanargmax(np.gradient(time_history.concentrations[:, species_idxs[ignition_target]], time_history.t))]
+                elif ignition_type =="concentration":
+                    "TODO: target conc equivalent to sthereshold conc in next logic. combine"
+                    target_conc = ignition_amount
+                    tau = time_history.t[np.nanargmin(np.abs(float(target_conc) - time_history.concentrations[:, species_idxs[ignition_target]]))]
+                    print(f"Computed concentration-based IDT at {target_conc} for species {ignition_target}")
+                elif ignition_type =="relative concentration":
+                    "TODO: looks good but test to make sure IDT calc good"
+                    # ignition when target species conc > ((target species conc at t=0) + ignition_amount * (max conc - target species conc at t=0))
+                    species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
+                    baseline_conc = species_conc_history[0]
+                    max_conc = np.max(species_conc_history)
+                    threshold_conc = baseline_conc + (max_conc - baseline_conc) * ignition_amount
+                    idxs = np.where(species_conc_history >= threshold_conc)[0]
+                    if idxs.size == 0:
+                        tau = np.nan
+                        print(f"Warning: No ignition within integration time for {operating_condition}. Consider increasing t_max.")
+                        return tau
+                    idx = idxs[0]
+                    if idx == 0:
+                        tau = time_history.t[0]
+                        return tau
+                    # linear interpolation to get more accurate tau
+                    ratio = (species_conc_history[idx]- threshold_conc)/(species_conc_history[idx]-species_conc_history[idx-1])
+                    tau = time_history.t[idx] - ((time_history.t[idx]-time_history.t[idx-1])*ratio)
+                    noninterpolated_tau = time_history.t[idx]
+                    print(f"Computed relative concentration-based IDT at {ignition_amount*100:.1f}% increase for species {ignition_target}. Non-interpolated tau: {noninterpolated_tau:.3e} s, Interpolated tau: {tau:.3e} s")
+                elif ignition_type =="baseline min intercept from d/dt":
+                    "TODO: ask what this is"
+                    tau = 1
+                    #raise NotImplementedError("baseline min intercept from d/dt not implemented yet")
+                else:
+                    raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
+        
+        return tau
         
         
     T5 = operating_condition.T5  # Kelvin
-    P5, ignition_amount = convert_units(operating_condition.P5, operating_condition.P5_units, operating_condition.ignition_amount, operating_condition.ignition_units)
+    P5, P5_units, ignition_amount, ignition_units, exp_tau, tau_units = convert_units(operating_condition.P5, operating_condition.P5_units, operating_condition.ignition_amount, operating_condition.ignition_units, operating_condition.tau, operating_condition.tau_units)
     if ignition_amount != "":   
         ignition_amount = float(ignition_amount)
     composition = operating_condition.composition  # Cantera composition string
@@ -126,9 +243,30 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.001, save_time_history_p
     ignition_type = operating_condition.ignition_type
 
     gas.TPX = T5, P5, composition
-    # constant volume if volume not changed
-    reactor = ct.IdealGasReactor(gas, energy='on', clone=True)  
-    reactor_network = ct.ReactorNet([reactor])
+    if operating_condition.pressure_rise is not None and operating_condition.pressure_rise != "" and False:
+        # 2. Calculate specific heat ratio (gamma) at initial conditions
+        gamma = gas.cp_mass / gas.cv_mass
+        # 3. Convert your relative dP/dt from ms^-1 to s^-1
+        dpdt_rel_ms = operating_condition.pressure_rise  # Assuming this is in ms^-1
+        r_sec = dpdt_rel_ms * 1000.0  # Now 21.4 s^-1
+        # 4. Create the Reactor an      d a dummy Environment (Reservoir)
+        reactor = ct.IdealGasReactor(gas)
+        env = ct.Reservoir(ct.Solution('air.yaml'))
+        # 5. Connect them with a Wall
+        wall = ct.Wall(reactor, env)
+        wall.area = 1.0  # m^2 (so velocity mathematically equals dV/dt)
+        # 6. Set the Wall Velocity to compress the reactor
+        V0 = reactor.volume
+        constant_velocity = -(V0 * r_sec) / gamma
+        # In Cantera, setting the velocity to a float uses a constant speed.
+        # The negative sign ensures the volume is decreasing (compression).
+        wall.velocity = constant_velocity 
+        # 7. Set up the Reactor Network and run as usual
+        reactor_network = ct.ReactorNet([reactor])
+    else:  
+        # constant volume if volume not changed
+        reactor = ct.IdealGasReactor(gas, energy='on', clone=True)  
+        reactor_network = ct.ReactorNet([reactor])
     
     time_history = ct.SolutionArray(reactor.phase, extra="t")
 
@@ -138,135 +276,31 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.001, save_time_history_p
     counter = 1
     while t < t_max:
         t = reactor_network.step()
-        if not counter % 10:
+        if not counter % 2:
             time_history.append(reactor.phase.state, t=t)
         counter += 1
-
-    # Ignition delay time defined as the time corresponding to the maximum temperature rise rate
-
-    
-    # TARGET_MAP = {
-    #     "T": lambda th: th.T,
-    #     "P": lambda th: th.P,
-    # }
-    # TYPE_MAP = {
-    #     "max": lambda y, t: np.nanargmax(y),
-    #     "d/dt max": lambda y, t: np.nanargmax(np.gradient(y, t)),
-    # }
-    
-    # tau = time_history.t[np.argmax(np.gradient(time_history.T, time_history.t))]
-    #target_conc = ignition_type[1]
-    #tau = time_history.t[np.nanargmin(np.abs(target_conc - time_history[ignition_target]))]
-    
-    # try:
-    #     y = TARGET_MAP[ignition_target](time_history)
-    # except KeyError:
-    #     raise ValueError(f"Unknown ignition_target={ignition_target!r}")
-    # try:
-    #     idx = TYPE_MAP[ignition_type[0]](y, time_history.t)
-    # except KeyError:
-    #     raise ValueError(f"Unknown ignition_type={ignition_type!r}")   
-    
-    
-    print(f"Calculating IDT using target: {ignition_target}, type: {ignition_type}")
-    
-    species_idxs = get_species_indices(reactor.phase)
-    
-    if ignition_target == "T" :
-        "TODO: reuse species code"
-        if ignition_type == "max":
-            tau = time_history.t[np.nanargmax(time_history.T)]
-        elif ignition_type== "d/dt max":
-            tau = time_history.t[np.nanargmax(np.gradient(time_history.T, time_history.t))]
-        else:
-            raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
-    elif ignition_target == "P" :
-        "TODO: reuse species code"
-        if ignition_type == "max":
-            tau = time_history.t[np.nanargmax(time_history.P)]
-        elif ignition_type == "d/dt max":
-            tau = time_history.t[np.nanargmax(np.gradient(time_history.P, time_history.t))]
-        else:         
-            raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
-    else:
-        if ignition_type == "max":
-            "TODO: looks good but test to make sure IDT calc good"
-            #sometimes first and highest peak is not idt.
-            # of all local maxima, that is at least 0.8*global_max, take the latest as idt
-            species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
-            # print(time_history.t)
-            # print(time_history.concentrations)
-            # print(species_conc_history)
-            # global_max = np.max(species_conc_history)
-            # threshold = 0.8 * global_max
-            # peaks, _ = find_peaks(species_conc_history, height=threshold, distance=3)
-            # print(peaks)
-            # latest_peak_index = peaks[-1] if peaks.size > 0 else None
-            # print(latest_peak_index)
-            # tau = time_history.t[latest_peak_index]
-            # max_tau = time_history.t[np.nanargmax(species_conc_history)]
-            
-            # print(f"Computed max-based IDT for species {ignition_target}. Global max conc: {global_max}, Max-based tau: {max_tau}, Selected tau: {tau}")
-            tau = time_history.t[np.nanargmax(time_history.concentrations[:, species_idxs[ignition_target]])]
-            print(f"Computed max-based IDT for species {ignition_target}. Max-based tau: {tau}")
-        elif ignition_type == "d/dt max":
-            "TODO: looks good but test to make sure IDT calc good"
-            # print(reactor.phase.species_names)
-            # print(time_history.concentrations[:, species_idxs[ignition_target]])
-            # print(time_history.t)
-            tau = time_history.t[np.nanargmax(np.gradient(time_history.concentrations[:, species_idxs[ignition_target]], time_history.t))]
-        elif ignition_type =="concentration":
-            "TODO: target conc equivalent to sthereshold conc in next logic. combine"
-            target_conc = ignition_amount
-            tau = time_history.t[np.nanargmin(np.abs(float(target_conc) - time_history.concentrations[:, species_idxs[ignition_target]]))]
-            print(f"Computed concentration-based IDT at {target_conc} for species {ignition_target}")
-        elif ignition_type =="relative concentration":
-            "TODO: looks good but test to make sure IDT calc good"
-            # ignition when target species conc > ((target species conc at t=0) + ignition_amount * (max conc - target species conc at t=0))
-            species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
-            baseline_conc = species_conc_history[0]
-            max_conc = np.max(species_conc_history)
-            threshold_conc = baseline_conc + (max_conc - baseline_conc) * ignition_amount
-            idxs = np.where(species_conc_history >= threshold_conc)[0]
-            if idxs.size == 0:
-                tau = np.nan
-                print(f"Warning: No ignition within integration time for {operating_condition}. Consider increasing t_max.")
-                return tau
-            idx = idxs[0]
-            if idx == 0:
-                tau = time_history.t[0]
-                return tau
-            # linear interpolation to get more accurate tau
-            ratio = (species_conc_history[idx]- threshold_conc)/(species_conc_history[idx]-species_conc_history[idx-1])
-            tau = time_history.t[idx] - ((time_history.t[idx]-time_history.t[idx-1])*ratio)
-            noninterpolated_tau = time_history.t[idx]
-            print(f"Computed relative concentration-based IDT at {ignition_amount*100:.1f}% increase for species {ignition_target}. Non-interpolated tau: {noninterpolated_tau:.3e} s, Interpolated tau: {tau:.3e} s")
-        elif ignition_type =="baseline min intercept from d/dt":
-            "TODO: ask what this is"
-            raise NotImplementedError("baseline min intercept from d/dt not implemented yet")
-        else:
-            raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
         
-        
-    
-    
-    # tau = time_history.t[idx]
-    
-    #convert tau to microseconds
-    tau = tau * 1e6
-      
-    if tau > t_max*1e6*0.8:
-        print(f"Warning: Ignition delay time ({tau:.3e} μs) is close to the maximum simulation time ({t_max*1e6:.3e} μs). Consider increasing t_max.")
+
+    tau = calc_idt_from_type(time_history=time_history, ignition_target=ignition_target, ignition_type=ignition_type, simple=True) 
+          
+    if tau > t_max:
+        #raise ValueError(f"Warning: Ignition delay time ({tau:.3e} s) exceeds maximum simulation time ({t_max:.3e} s). Consider increasing t_max.")
+        print(f"Warning: Ignition delay time ({tau*1e6:.3e} μs) is close to the maximum simulation time ({t_max*1e6:.3e} μs). Consider increasing t_max.")
         
     t1 = time.time()
-    print(f"T5 = {T5} K, P5 = {P5} pa, Computed Ignition Delay: {tau:.3e} μs. Took {t1-t0:3.2f}s to compute")
+    if debug:
+        print(f"T5 = {T5} K, P5 = {P5:.3e} pa, Computed Ignition Delay: {tau*1e6:.3e} μs. Took {t1-t0:3.2f}s to compute")
     
     if save_time_history_plot:
         save_time_history_plot_to_file(time_history, ignition_target, operating_condition, tau)
     
     return tau
     
+    
+
 def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = True, save_time_history_plots=False):
+    
+    
     T5_list = []
     P5_list = []
     exp_tau_list = []
@@ -274,9 +308,14 @@ def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = 
     for operating_condition in operating_conditions_df.itertuples(index=False):
         T5_list.append(operating_condition[0])
         P5_list.append(operating_condition[2])
-        exp_tau_list.append(operating_condition[6])
+        _, _, _, _, exp_tau, _ = convert_units(tau=operating_condition[6], tau_units=operating_condition[7])
+        exp_tau_list.append(exp_tau)
         sim_tau = calc_IDT_constV(gas, operating_condition, t_max=2, save_time_history_plot=save_time_history_plots)
         sim_tau_list.append(sim_tau)
+        
+    sim_tau_list = [tau*1e6 for tau in sim_tau_list]  # convert to microseconds
+    exp_tau_list = [tau*1e6 for tau in exp_tau_list]  # convert to microseconds
+    
     
     if output_path is None:
         xml_name = operating_conditions_df.iloc[0, 12].split(".")[0]
