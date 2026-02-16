@@ -1,0 +1,10 @@
+A,n,Ea,T0,Tmin,Tmax,Pmin,Pmax,Library,comment,Type
+220.00000000000003,1.51,14351.12,1.0,,,,,Klippenstein_Glarborg2016,,Arrhenius
+216.00000000000003,1.51,14351.12,1.0,,,,,NIST_Fluorine/CH2F2/full,,Arrhenius
+214.00000000000003,1.52,14434.800000000001,1.0,300.0,2500.0,,,primaryH2O2,,Arrhenius
+43800000.00000001,0.0,29246.16,1.0,,,,,CurranPentane,,Arrhenius
+210.00000000000003,1.52,14430.616,1.0,,,,,Nitrogen_Glarborg_Gimenez_et_al,,Arrhenius
+173.40000000000003,1.51,14351.12,1.0,,,,,2-BTP/full,,Arrhenius
+206.71000000000004,1.51,14380.408000000001,1.0,,,,,ERC-FoundationFuelv0.9,,Arrhenius
+210.00000000000003,1.5,14430.616,1.0,,,,,Nitrogen_Glarborg_Zhang_et_al,,Arrhenius
+225.60000000000005,1.51,14380.408000000001,1.0,,,,,FFCM1(-),,Arrhenius

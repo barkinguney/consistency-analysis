@@ -8,6 +8,8 @@ import numpy as np
 from scipy.optimize import least_squares
 from scipy.stats import t
 import matplotlib.pyplot as plt
+from collections import defaultdict
+import pickle
 
 def fit_kT_logA(T, k, k_sigma=None, log10A0=0.0, n0=1.0, Ea0=0.0,
                 bounds=((-np.inf, -np.inf, -np.inf),
@@ -233,38 +235,46 @@ def convert_reparam_to_original(fit_b):
     return {"log10A": log10A, "n": n, "Ea": Ea, "cov": cov_theta,
             "log10A_std": std[0], "n_std": std[1], "Ea_std": std[2], "Tref": Tref}
 
-def plot_fit_results(T, k, fit_result, k_band=None):
-    T_plot = np.linspace(np.min(T), np.max(T), 14)
+def save_plot_fit_results(T, k, source, fit_result, output_dir, k_band=None):
+
+    T_plot = np.linspace(np.min(T), np.max(T), T.size)
     log10A = fit_result["log10A"]
     n = fit_result["n"]
     Ea = fit_result["Ea"]
     log10A_std = fit_result["log10A_std"]
     n_std = fit_result["n_std"]
     Ea_std = fit_result["Ea_std"]
-    
     k_fit = (10.0**log10A) * (T_plot**n) * np.exp(-Ea / T_plot)
     k_upper = (10.0**(log10A + log10A_std)) * (T_plot**(n + n_std)) * np.exp(-(Ea - Ea_std) / T_plot)
     k_lower = (10.0**(log10A - log10A_std)) * (T_plot**(n - n_std)) * np.exp(-(Ea + Ea_std) / T_plot)
     uncertainty_factor = np.log10(k_fit/k_lower)
-   
+
 
     T = 1000.0 / T  # Convert to 1000/T for better plotting scale
     T_plot = 1000.0 / T_plot
 
     plt.figure()
-    plt.semilogy(T, k, 'o', label='Data')
+    fig, ax = plt.subplots(figsize=(8, 6))
+
+    #Step 1: group data by source
+    grouped = defaultdict(lambda: {'T': [], 'k': []})
+    for t, ki, s in zip(T, k, source):
+        grouped[s]['T'].append(t)
+        grouped[s]['k'].append(ki)
+
+    # Step 2: plot each source with a different color
+    for s, values in grouped.items():
+        plt.semilogy(values['T'], values['k'], '-',label=s)
+
     plt.semilogy(T_plot, k_fit, '-', label='Fit')
-    # if k_band is not None:
-    #     k_med, k_lo, k_hi = k_band
-    #     plt.semilogy(T_plot, k_med, '--', label='MC median')
-    #     plt.fill_between(T_plot, k_lo, k_hi, color='gray', alpha=0.5, label='MC 95% interval')
     plt.fill_between(T_plot, k_lower, k_upper, color='gray', alpha=0.5, label='1-sigma interval')
-    plt.xlabel('Temperature (K)')
-    plt.ylabel('Rate Coefficient (m^3/(mol*s))')
+    plt.xlabel('1000/T [1/K]')
+    plt.ylabel('Rate Coefficient [m^3/(mol*s)]')
     plt.title(f'Arrhenius Fit, f ={np.min(uncertainty_factor):.3f} - {np.max(uncertainty_factor):.3f}')
     plt.legend()
     plt.grid(True, which='both', ls='--')
-    plt.show()
+    plt.tight_layout()
+    plt.savefig(output_dir)
 
 def mc_band(T, theta_hat, cov, param="log10A", n_samp=20000, q=(0.025,0.975), rng=None):
     """
@@ -300,37 +310,72 @@ def corr_from_cov(cov):
 
 if __name__ == "__main__":
 
-    folder = Path("arrhenius_uncertainty/results")
+    input_dir = Path("arrhenius_uncertainty/results/rate_coefficients")
+    out_dir_plot = Path("arrhenius_uncertainty/results/fit_plots")
+    out_dir_fit = Path("arrhenius_uncertainty/results/ls_fits")
+    out_dir_plot.mkdir(parents=True, exist_ok=True)
+    out_dir_fit.mkdir(parents=True, exist_ok=True)
 
-    for csv_file in folder.glob("*.csv"):
-        if csv_file.name.startswith("rate_coefficients_"):
-            try:
-                rate_coeff_df = pd.read_csv(csv_file)
-            except:
-                print(f"Could not read {csv_file}")
-                continue
-            print(csv_file.name, rate_coeff_df.shape)
+    for file in input_dir.glob("*.csv"):
+        print(f"\n{'='*60}")
+        try:
+            rate_coeff_df = pd.read_csv(file)
+        except:
+            print(f"Could not read {file}")
+            continue
+        print(file.name, rate_coeff_df.shape)
 
-            T = rate_coeff_df['Temperature (K)'].to_numpy(dtype=float)
-            k = rate_coeff_df['Rate Coefficient (m^3/(mol*s))'].to_numpy(dtype=float)
+        T = rate_coeff_df['Temperature (K)'].to_numpy(dtype=float)
+        k = rate_coeff_df['Rate Coefficient (m^3/(mol*s))'].to_numpy(dtype=float)
+        source = rate_coeff_df['Library'].to_numpy(dtype=str)
 
-            out = fit_kT_logspace(
-                T, k,
-                log10A0=30.0, n0=2.0, Ea0=500.0
-            )
-    
-            print("Fit results (1-sigma):")
-            print(f"log10(A) = {out['log10A']:.6g} ± {out['log10A_std']:.3g}")
-            print(f"n        = {out['n']:.6g} ± {out['n_std']:.3g}")
-            print(f"Ea       = {out['Ea']:.6g} ± {out['Ea_std']:.3g}")
+        # try:
+        #     ls_fit = fit_kT_logspace(
+        #         T, k,
+        #         log10A0=30.0, n0=2.0, Ea0=500.0
+        #     )
+        # except Exception as e:
+        #     print(f"Fit failed for {file}: {e}")
+        #     continue
+
         
+        try:
+            fit = fit_kT_logspace_reparam(
+                T, k,
+            )
+            ls_fit = convert_reparam_to_original(fit)
+        except Exception as e:
+            print(f"Fit failed for {file}: {e}")
+            continue
 
-            T_range = np.linspace(np.min(T), np.max(T), 14)   
+        print("Fit results (1-sigma):")
+        print(f"log10(A) = {ls_fit['log10A']:.6g} ± {ls_fit['log10A_std']:.3g}")
+        print(f"n        = {ls_fit['n']:.6g} ± {ls_fit['n_std']:.3g}")
+        print(f"Ea       = {ls_fit['Ea']:.6g} ± {ls_fit['Ea_std']:.3g}")
+        print(f"DoF = {fit['dof']}, reduced chi2 = {fit['red_chi2']:.3g}")
 
-            confidence_interval_result = mc_band(T_range, theta_hat=[out['log10A'], out['n'], out['Ea']], cov=out['cov'], param='log10A')
-            
-            C = corr_from_cov(out["cov"])
-            print(C)
-            plot_fit_results(T, k, out)
+        T_range = np.linspace(np.min(T), np.max(T), T.size)   
+
+        # C = corr_from_cov(ls_fit["cov"])
+        # print(C)
+        plot_name = file.stem.replace("rate_coefficients_", "")
+        plot_path = out_dir_plot / f"fit_{plot_name}.png"
+        save_plot_fit_results(T, k, source, ls_fit, plot_path)
+
+        fit_save = {
+            "reaction": rate_coeff_df['Reaction'].iloc[0],  # assuming all rows have the same reaction
+            "function": "k(T) = 10^(log10A) * T^n * exp(-Ea/T)",
+            "p_hat": [ls_fit["log10A"], ls_fit["n"], ls_fit["Ea"]],   # best-fit parameters [b0, n, Ea]
+            "cov": ls_fit["cov"],            # covariance matrix
+            "dof": fit["dof"],              # degrees of freedom
+            "red_chi2": fit["red_chi2"],    # reduced chi2
+            "Tref": ls_fit["Tref"],            # reference temperature
+        }
+
+        # Save to disk
+        with open(out_dir_fit / f"fit_{plot_name}.pkl", "wb") as f:
+            pickle.dump(fit_save, f)
+
+
 
             

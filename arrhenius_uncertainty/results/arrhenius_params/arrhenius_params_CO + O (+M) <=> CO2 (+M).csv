@@ -1,0 +1,2 @@
+A,n,Ea,T0,Tmin,Tmax,Pmin,Pmax,Library,comment,Type,efficiencies
+1540.0000000000002,0.0,12560.0,1.0,,,,,combustion_core/version2,,ThirdBody,"{Molecule(smiles=""C""): 3, Molecule(smiles=""O=C=O""): 1.5, Molecule(smiles=""CC""): 3, Molecule(smiles=""O""): 6.5, Molecule(smiles=""[O][O]""): 0.4, Molecule(smiles=""N#N""): 0.4, Molecule(smiles=""[C]=O""): 0.75, Molecule(smiles=""[Ar]""): 0.35}"
