@@ -3,7 +3,6 @@ build/
 .vscode/
 libs/
 *.xml
-*.csv
 results/idt/plots
 runs/
 *.pyc
