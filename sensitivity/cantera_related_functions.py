@@ -18,9 +18,14 @@ def multiply_rates(gas, m_sample, rxn_ids = None, method="cantera_built_in"):
     if rxn_ids is None:
         rxn_ids = range(len(gas.reactions()))
 
+    assert m_sample.shape[0] == len(rxn_ids), f"Length of m_sample ({m_sample.shape[0]}) must match number of reactions being modified ({len(rxn_ids)})"
+    
     if method == "cantera_built_in":
-        for idx in rxn_ids:
-            gas.set_multiplier(value=m_sample[idx], i_reaction=idx)
+        for i, rxn_idx in enumerate(rxn_ids):
+            #print(gas.multiplier(rxn_idx), "*************")
+            gas.set_multiplier(value=m_sample[i], i_reaction=rxn_idx)
+            #print(gas.multiplier(rxn_idx), "*************")
+            
             
 def reset_rates(gas, rxn_ids = None):
     if rxn_ids is None:
@@ -40,11 +45,11 @@ def modify_reaction(gas, target_equation: str, new_params):
     A_old = rxn.rate.pre_exponential_factor
     b_old = rxn.rate.temperature_exponent
     Ea_old = rxn.rate.activation_energy
-    print(f"Old A-factor: {A_old}")
+    #print(f"Old A-factor: {A_old}", f"Old temperature exponent: {b_old}", f"Old activation energy: {Ea_old}")
 
     rxn.rate = ct.ArrheniusRate(new_params[0], new_params[1], new_params[2])
     gas.modify_reaction(rxn_idx, rxn)
-    print(f"New A-factor applied: {gas.reaction(rxn_idx).rate.pre_exponential_factor}")
+    #print(f"New A-factor applied: {gas.reaction(rxn_idx).rate.pre_exponential_factor}, New temperature exponent applied: {gas.reaction(rxn_idx).rate.temperature_exponent}, New activation energy applied: {gas.reaction(rxn_idx).rate.activation_energy}")
     
 def convert_units(P5=None, P5_unit=None, ignition_amount=None, ignition_units=None, tau=None, tau_units=None): 
         """convert pressure to Pa, ignition concentration to kmol/m3, tau to seconds"""
@@ -297,7 +302,8 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
           
     if tau > t_max:
         #raise ValueError(f"Warning: Ignition delay time ({tau:.3e} s) exceeds maximum simulation time ({t_max:.3e} s). Consider increasing t_max.")
-        print(f"Warning: Ignition delay time ({tau*1e6:.3e} μs) is close to the maximum simulation time ({t_max*1e6:.3e} μs). Consider increasing t_max.")
+        #print(f"Warning: Ignition delay time ({tau*1e6:.3e} μs) is close to the maximum simulation time ({t_max*1e6:.3e} μs). Consider increasing t_max.")
+        print(f"Warning: Ignition delay time ({tau:.3e} s) is close to the maximum simulation time ({t_max:.3e} s). Consider increasing t_max.")
         
     t1 = time.time()
     if debug:

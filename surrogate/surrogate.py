@@ -7,7 +7,7 @@ import pandas as pd
 import pickle
 from pathlib import Path
 
-from sensitivity.cantera_related_functions import calc_IDT_constV, multiply_rates, modify_reaction
+from sensitivity.cantera_related_functions import calc_IDT_constV, multiply_rates, modify_reaction, reset_rates
 
 
 
@@ -25,6 +25,20 @@ def lhs_design(n_samples: int, lb: np.ndarray, ub: np.ndarray, seed: int = 0):
     X01 = sampler.random(n=n_samples)
     X = qmc.scale(X01, lb, ub)
     return X
+
+# def lhs_sampling(factors_list, n, seed=1327):
+#     dim = len(factors_list)
+
+#     sampler = qmc.LatinHypercube(d=dim, seed=seed)
+#     sample = sampler.random(n=n)
+#     z = qmc.scale(sample, -factors_list, factors_list)
+#     m = 10.0 ** z
+#     return m
+    
+#     # l_bounds = 1/np.pow(10, factors_list)
+#     # u_bounds = 1*np.pow(10, factors_list)
+#     # scaled_sample = qmc.scale(sample, l_bounds, u_bounds)
+#     # return scaled_sample
 
 def scale_to_unit(x, lb, ub):
     # map [lb,ub] -> [-1,1]
@@ -116,14 +130,18 @@ def cross_validate_poly(Z, y, powers, fit_fn, k=5, seed=0):
     return float(np.mean(errs)), float(np.max(errs))
 
 def build_idt_surrogate(
-    lb, ub,
+    lb, ub, active_reactions_idx, factors_list,
     gas, operating_condition,
-    n_samples=500, #use 10*n_monomials if possible 
+    n_samples=None, #use 10*n_monomials if possible 
     deg=2,
-    design="sobol",
+    design="lhs",
     fit="l2",
-    seed=0
+    seed=0, 
+    idt_t_max = 0.1
 ):
+    if n_samples is None:
+        n_monomials = len(monomial_powers(n_dim=len(active_reactions_idx), deg=deg))
+        n_samples = 10 * n_monomials
     lb = np.asarray(lb, dtype=float)
     ub = np.asarray(ub, dtype=float)
 
@@ -136,14 +154,29 @@ def build_idt_surrogate(
         raise ValueError("design must be 'sobol' or 'lhs'")
 
     # 2) Evaluate log IDT
-    for sample in X:   
-        multiply_rates(gas, X)
-    y = calc_IDT_constV(gas, operating_condition)
+    y = []
+    valid_samples = []
+    for i, sample in enumerate(X):
+        multiply_rates(gas, sample, active_reactions_idx)
+        idt = calc_IDT_constV(gas, operating_condition, t_max=idt_t_max, debug=False)
+        if idt < idt_t_max*0.99:
+            y.append(np.log(idt))
+            valid_samples.append(sample)
+        else:
+            print(f"Sample {i} failed to ignite! Skipping...")
+        
+        if (i+1) % 50 == 0:
+            print(f"Evaluated {i+1}/{len(X)} samples")
+    y = np.asarray(y, dtype=float)
+    X_filtered = np.array(valid_samples)
 
+    
     # 3) Scale inputs and build basis
-    Z = scale_to_unit(X, lb, ub)
+    Z = scale_to_unit(X_filtered, lb, ub)
+    Z = np.asarray(Z, dtype=float)
     powers = monomial_powers(n_dim=Z.shape[1], deg=deg)
     Phi = design_matrix(Z, powers)
+    
 
     # 4) Fit
     if fit == "l2":
@@ -186,17 +219,22 @@ def predict_idt(model, x):
 
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  
     
     # we need to create a surrogate for each operating condition and QOI (IDT)
     
     mechanism = 'Supplementary-3_syngas.yaml'
     unc_factors_df = pd.read_csv("arrhenius_uncertainty/results/uncertainty_factors.csv")
     ls_fit_path = Path("arrhenius_uncertainty/results/ls_fits")
-    operating_conditions = None
+    operating_conditions = pd.read_csv("sensitivity/results/operating_conditions.csv")
+    output_dir = Path("surrogate/results")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    operating_conditions =operating_conditions.fillna("")
     active_reactions = unc_factors_df['Reaction'].tolist()
-    unc_factors_df['Uncertainty Factor'].fillna(1.0, inplace=True)
+    active_reactions_idx = [i for i, rxn in enumerate(ct.Solution(mechanism).reactions()) if rxn.equation in active_reactions]
+    unc_factors_df['Uncertainty Factor'].fillna(1.0, inplace=True)# if no f, f=1
     unc_factors = unc_factors_df['Uncertainty Factor'].to_numpy()
+    #unc_factors = np.full(len(active_reactions_idx), 0.3) 
     upper_bound_multipliers = np.power(10, unc_factors)
     lower_bound_multipliers = 1 / np.power(10, unc_factors)
     #data_path = "sensitivity/results/impact_factors_ignition_delay.csv"
@@ -212,25 +250,27 @@ if __name__ == "__main__":
             A = 10 ** log10A
 
             modify_reaction(gas, ls_fit['reaction'], [A, n, Ea])
-           
+        
+    print(active_reactions)
+    print(active_reactions_idx)
     
-
+    for condition in operating_conditions.itertuples(index=False):
+     
+        model = build_idt_surrogate(
+            lb=lower_bound_multipliers,
+            ub=upper_bound_multipliers,
+            active_reactions_idx=active_reactions_idx,
+            factors_list=unc_factors,
+            gas=gas,
+            operating_condition=condition)
         
+        design_point = (1.0,) * len(active_reactions_idx)
+        pred = predict_idt(model, design_point)
+        print(f"Surrogate predicted IDT for condition {condition}: {pred}")
+        reset_rates(gas)
+        cantera_pred = calc_IDT_constV(gas, condition)
+        print(f"Cantera predicted IDT for condition {condition}: {cantera_pred}")
         
-    
-    lb= []
-    ub = []
-    for equation in active_reactions:
-        rxn_idx = gas.reaction_equations().index(equation)
-        net_rate = gas.net_rates_of_progress[rxn_idx]
-        
-    
-    for condition in operating_conditions:
-        assert (len(active_reactions)+ 1) == len(monomial_powers(n_dim=len(active_reactions), deg=2))
-        no_monomials = len(active_reactions) + 1 
-        
-        # build_idt_surrogate(
-        #     lb=lower_bound_multipliers,
-        #     ub=upper_bound_multipliers,
-        #     gas=gas,
-        #     operating_condition=condition,
+        with open(output_dir / f"{condition[0]}_{condition[1]}_{condition[2]}.pkl", "wb") as f:
+            pickle.dump(model, f)
+            print(f"Saved surrogate model for condition {condition} to {output_dir / f'{condition[0]}_{condition[1]}_{condition[2]}.pkl'}")
