@@ -1,0 +1,23 @@
+ignition_type,ignition_target,ignition_amount,ignition_units
+relative concentration,OHEX;,0.5,unitless
+max,OH;,,
+max,OH*;,,
+d/dt max,OH;,,
+d/dt max,p;,,
+d/dt max,OH*;,,
+baseline min intercept from d/dt,OH*;,,
+max,OHEX;,,
+d/dt max,OHEX;,,
+concentration,CO2;,3.985293E-008,mol/cm3
+concentration,CO2;,1.328431E-008,mol/cm3
+concentration,CO2;,4.981616E-008,mol/cm3
+concentration,CO2;,1.660539E-008,mol/cm3
+d/dt max,CH*;,,
+baseline min intercept from d/dt,CH*;,,
+baseline min intercept from d/dt,p;,,
+baseline min intercept from d/dt,OH;,,
+baseline min intercept from d/dt,CH;,,
+d/dt max,CH;,,
+baseline min intercept from d/dt,CO2;,,
+relative increase,T;,0.1,unitless
+baseline max intercept from d/dt,CH*;,,

@@ -1,5 +1,5 @@
 Temperature (K),Rate Coefficient (m^3/(mol*s)),Library,Reaction
-300,836591.0398555164,Klippenstein_Glarborg2016,OH + OH <=> H2O + O
+300,836591.0398555164,Klippenstein_Glarborg2016,2 OH <=> H2O + O
 400,702161.0153556031,Klippenstein_Glarborg2016,OH + OH <=> H2O + O
 500,723783.6913201545,Klippenstein_Glarborg2016,OH + OH <=> H2O + O
 600,819020.1059912689,Klippenstein_Glarborg2016,OH + OH <=> H2O + O

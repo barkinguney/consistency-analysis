@@ -246,6 +246,7 @@ if __name__ == "__main__":
 
     rxns_df = pd.DataFrame()
     rxns_df["equation"] = gas.reaction_equations()
+    print(rxns_df["equation"].tolist())
     rxns_df["id"] = rxns_df["equation"].apply(lambda eq: cantera_related_functions.find_reaction_index_by_equation(gas, eq))
     rxns_df["f_value"] = prior_uncertainty_factor
 

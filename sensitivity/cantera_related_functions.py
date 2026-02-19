@@ -34,6 +34,18 @@ def find_reaction_index_by_equation(gas, equation: str) -> int:
             return i   
     print(f"Warning: Reaction not found (exact match): {equation}", file=sys.stderr) 
 
+def modify_reaction(gas, target_equation: str, new_params):
+    rxn_idx = gas.reaction_equations().index(target_equation)
+    rxn = gas.reaction(rxn_idx)
+    A_old = rxn.rate.pre_exponential_factor
+    b_old = rxn.rate.temperature_exponent
+    Ea_old = rxn.rate.activation_energy
+    print(f"Old A-factor: {A_old}")
+
+    rxn.rate = ct.ArrheniusRate(new_params[0], new_params[1], new_params[2])
+    gas.modify_reaction(rxn_idx, rxn)
+    print(f"New A-factor applied: {gas.reaction(rxn_idx).rate.pre_exponential_factor}")
+    
 def convert_units(P5=None, P5_unit=None, ignition_amount=None, ignition_units=None, tau=None, tau_units=None): 
         """convert pressure to Pa, ignition concentration to kmol/m3, tau to seconds"""
         if P5 is not None:

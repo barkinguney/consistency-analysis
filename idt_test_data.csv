@@ -1,0 +1,16 @@
+T5,T5_units,P5,P5_units,composition,phi,tau,tau_units,ignition_type,ignition_target,ignition_amount,ignition_units,filename
+1260,K,2.20,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1.30E-03,s,d/dt max,P,,,hello
+1396,K,2.20,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,3.42E-04,s,d/dt max,P,,,hello
+1456,K,2.10,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,2.35E-04,s,d/dt max,P,,,hello
+1537,K,2.00,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1.58E-04,s,d/dt max,P,,,hello
+1608,K,2.00,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1.15E-04,s,d/dt max,P,,,hello
+1828,K,2.20,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,3.20E-05,s,d/dt max,P,,,hello
+1223,K,9.80,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1.31E-03,s,d/dt max,P,,,hello
+1353,K,9.90,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,2.40E-04,s,d/dt max,P,,,hello
+1529,K,10.00,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,6.20E-05,s,d/dt max,P,,,hello
+1605,K,9.70,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,3.00E-05,s,d/dt max,P,,,hello
+1719,K,9.60,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1.90E-05,s,d/dt max,P,,,hello
+1291,K,18.40,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,5.10E-04,s,d/dt max,P,,,hello
+1357,K,18.30,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1.60E-04,s,d/dt max,P,,,hello
+1495,K,18.40,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,4.90E-05,s,d/dt max,P,,,hello
+1634,K,17.90,atm,"C2H4:0.005, O2:0.015, Ar:0.98",1.0,1.70E-05,s,d/dt max,P,,,hello

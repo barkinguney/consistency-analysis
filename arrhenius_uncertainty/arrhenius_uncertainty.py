@@ -308,13 +308,30 @@ def corr_from_cov(cov):
     d = np.sqrt(np.diag(cov))
     return cov / np.outer(d, d)
 
+def calc_uncertainty_factor(T, fit_result):
+    T_plot = np.linspace(np.min(T), np.max(T), T.size)
+    log10A = fit_result["log10A"]
+    n = fit_result["n"]
+    Ea = fit_result["Ea"]
+    log10A_std = fit_result["log10A_std"]
+    n_std = fit_result["n_std"]
+    Ea_std = fit_result["Ea_std"]
+    k_fit = (10.0**log10A) * (T_plot**n) * np.exp(-Ea / T_plot)
+    k_upper = (10.0**(log10A + log10A_std)) * (T_plot**(n + n_std)) * np.exp(-(Ea - Ea_std) / T_plot)
+    k_lower = (10.0**(log10A - log10A_std)) * (T_plot**(n - n_std)) * np.exp(-(Ea + Ea_std) / T_plot)
+    uncertainty_factor = np.log10(k_fit/k_lower)
+
+    return np.max(uncertainty_factor)
+
 if __name__ == "__main__":
 
     input_dir = Path("arrhenius_uncertainty/results/rate_coefficients")
+    out_dir = Path("arrhenius_uncertainty/results")
     out_dir_plot = Path("arrhenius_uncertainty/results/fit_plots")
     out_dir_fit = Path("arrhenius_uncertainty/results/ls_fits")
     out_dir_plot.mkdir(parents=True, exist_ok=True)
     out_dir_fit.mkdir(parents=True, exist_ok=True)
+    out_unc_factor = []
 
     for file in input_dir.glob("*.csv"):
         print(f"\n{'='*60}")
@@ -322,6 +339,7 @@ if __name__ == "__main__":
             rate_coeff_df = pd.read_csv(file)
         except:
             print(f"Could not read {file}")
+            out_unc_factor.append([file.stem.replace("rate_coefficients_", "").replace("=", "<=>"), np.nan])
             continue
         print(file.name, rate_coeff_df.shape)
 
@@ -346,6 +364,7 @@ if __name__ == "__main__":
             ls_fit = convert_reparam_to_original(fit)
         except Exception as e:
             print(f"Fit failed for {file}: {e}")
+            out_unc_factor.append([rate_coeff_df['Reaction'].iloc[0], np.nan])
             continue
 
         print("Fit results (1-sigma):")
@@ -371,10 +390,17 @@ if __name__ == "__main__":
             "red_chi2": fit["red_chi2"],    # reduced chi2
             "Tref": ls_fit["Tref"],            # reference temperature
         }
+        
+        uncertainty_factor = calc_uncertainty_factor(T_range, ls_fit)
+        out_unc_factor.append([rate_coeff_df['Reaction'].iloc[0], uncertainty_factor])
 
         # Save to disk
         with open(out_dir_fit / f"fit_{plot_name}.pkl", "wb") as f:
             pickle.dump(fit_save, f)
+            
+    # Save uncertainty factors
+    unc_factor_df = pd.DataFrame(out_unc_factor, columns=["Reaction", "Uncertainty Factor"])
+    unc_factor_df.to_csv(out_dir / "uncertainty_factors.csv", index=False)
 
 
 
