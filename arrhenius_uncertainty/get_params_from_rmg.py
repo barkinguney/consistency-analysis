@@ -3,6 +3,7 @@ from rmgpy.species import Species
 from rmgpy.molecule import Molecule
 from pathlib import Path
 import math
+import re
 
 import os
 import pandas as pd
@@ -66,18 +67,53 @@ def find_reaction_in_all_libraries(database, reactant_smiles, product_smiles):
     
     return all_matches
 
+# def reaction_string_to_species_names(reaction_string):
+#     reaction_string = reaction_string.replace("<", " ")
+#     reaction_string = reaction_string.replace(">", " ")
+#     reaction_string = reaction_string.replace(" + ", " ")
+#     reactants_str, products_str = reaction_string.split("=")
+#     reactants = [s for s in reactants_str.split()]
+#     products = [s for s in products_str.split()]
+#     third_body = False
+#     if "M" in reactants or "(+M)" in reactants or "+M" in reactants:
+#         third_body = True
+#         reactants = [s for s in reactants if s not in ["M", "(+M)", "+M"]]
+#         products = [s for s in products if s not in ["M", "(+M)", "+M"]]
+#     return reactants, products, third_body
+
+def parse_side(side_string):
+    species_list = []
+    tokens = side_string.split("+")
+    
+    for token in tokens:
+        token = token.strip()
+        
+        # Match optional leading integer coefficient
+        match = re.match(r"^(\d+)\s+(.+)$", token)
+        if match:
+            coeff = int(match.group(1))
+            name = match.group(2).strip()
+            species_list.extend([name] * coeff)
+        else:
+            species_list.append(token)
+    
+    return species_list
+
+
 def reaction_string_to_species_names(reaction_string):
-    reaction_string = reaction_string.replace("<", " ")
-    reaction_string = reaction_string.replace(">", " ")
-    reaction_string = reaction_string.replace(" + ", " ")
+    reaction_string = reaction_string.replace("<=>", "=")
     reactants_str, products_str = reaction_string.split("=")
-    reactants = [s for s in reactants_str.split()]
-    products = [s for s in products_str.split()]
+    
+    reactants = parse_side(reactants_str)
+    products = parse_side(products_str)
+    
     third_body = False
-    if "M" in reactants or "(+M)" in reactants or "+M" in reactants:
-        third_body = True
-        reactants = [s for s in reactants if s not in ["M", "(+M)", "+M"]]
-        products = [s for s in products if s not in ["M", "(+M)", "+M"]]
+    for marker in ["M", "(+M)", "+M"]:
+        if marker in reactants or marker in products:
+            third_body = True
+            reactants = [s for s in reactants if s != marker]
+            products = [s for s in products if s != marker]
+    
     return reactants, products, third_body
 
 def get_smiles_from_name(xml_root, preferred_key):
@@ -163,6 +199,8 @@ for reaction_name in important_reactions:
             if type(kinetics).__name__ == "Arrhenius":
                 current_params = get_arrhenius_params_from_rmg(kinetics, library_name)
                 current_params['Type'] = type(kinetics).__name__
+                current_params["efficiencies"] = None
+                current_params['reaction'] = reaction_name
                 duplicate = False
                 for row in arrhenius_param_rows:
                     if (row['Type'] == current_params['Type'] and
@@ -199,6 +237,8 @@ for reaction_name in important_reactions:
                 for arr in kinetics.arrhenius:
                     current_params = get_arrhenius_params_from_rmg(arr, library_name)
                     current_params['Type'] = type(kinetics).__name__
+                    current_params["efficiencies"] = None
+                    current_params['reaction'] = reaction_name
                     current_rows.append(current_params)
                 duplicate = True
                 for row in current_rows:
@@ -235,6 +275,7 @@ for reaction_name in important_reactions:
                 current_params = get_arrhenius_params_from_rmg(kinetics.arrheniusLow, library_name)
                 current_params['Type'] = type(kinetics).__name__
                 current_params["efficiencies"] = kinetics.efficiencies
+                current_params['reaction'] = reaction_name
                 duplicate = False
                 for row in arrhenius_param_rows:
                     if (row['Type'] == current_params['Type'] and
@@ -271,6 +312,13 @@ for reaction_name in important_reactions:
     
     
     reaction_name_sanitized = reaction_name.replace("<=>", "=")
+    if len(rate_coeff_rows) == 0:
+        rate_coeff_rows.append({
+            'Temperature (K)': None,
+            'Rate Coefficient (m^3/(mol*s))': None,
+            'Library': None, 
+            'Reaction': reaction_name
+        })
     rate_coeff_dfs = pd.DataFrame(rate_coeff_rows)
     rate_coeff_dfs.to_csv(f"{out_dir_rate_coeff}/rate_coefficients_{reaction_name_sanitized}.csv", index=False)
     arrhenius_param_dfs = pd.DataFrame(arrhenius_param_rows)

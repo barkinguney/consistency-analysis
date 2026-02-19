@@ -343,10 +343,6 @@ if __name__ == "__main__":
             continue
         print(file.name, rate_coeff_df.shape)
 
-        T = rate_coeff_df['Temperature (K)'].to_numpy(dtype=float)
-        k = rate_coeff_df['Rate Coefficient (m^3/(mol*s))'].to_numpy(dtype=float)
-        source = rate_coeff_df['Library'].to_numpy(dtype=str)
-
         # try:
         #     ls_fit = fit_kT_logspace(
         #         T, k,
@@ -358,6 +354,10 @@ if __name__ == "__main__":
 
         
         try:
+            T = rate_coeff_df['Temperature (K)'].to_numpy(dtype=float)
+            k = rate_coeff_df['Rate Coefficient (m^3/(mol*s))'].to_numpy(dtype=float)
+            source = rate_coeff_df['Library'].to_numpy(dtype=str)
+
             fit = fit_kT_logspace_reparam(
                 T, k,
             )

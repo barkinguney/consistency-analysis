@@ -1,0 +1,10 @@
+A,n,Ea,T0,Tmin,Tmax,Pmin,Pmax,Library,comment,Type,efficiencies,reaction
+71000000.00000001,0.0,1234.28,1.0,,,,,Klippenstein_Glarborg2016,,Arrhenius,,H + HO2 <=> 2 OH
+84000000.00000001,0.0,2656.84,1.0,,,,,NIST_Fluorine/CH2F2/seed,,Arrhenius,,H + HO2 <=> 2 OH
+70790000.00000001,0.0,1234.28,1.0,300.0,1000.0,,,primaryH2O2,,Arrhenius,,H + HO2 <=> 2 OH
+84000000.00000001,0.0,1673.6000000000001,1.0,,,,,Nitrogen_Glarborg_Gimenez_et_al,,Arrhenius,,H + HO2 <=> 2 OH
+37430000.00000001,0.0,1234.28,1.0,,,,,2-BTP/seed,,Arrhenius,,H + HO2 <=> 2 OH
+169000000.00000003,0.0,3660.0,1.0,,,,,combustion_core/version2,,Arrhenius,,H + HO2 <=> 2 OH
+74850000.00000001,0.0,1234.28,1.0,,,,,JetSurF1.0,GRI3.0,Arrhenius,,H + HO2 <=> 2 OH
+62516000.00000001,0.0,1255.2,1.0,,,,,ERC-FoundationFuelv0.9,,Arrhenius,,H + HO2 <=> 2 OH
+58880000.00000001,0.0,1255.2,1.0,,,,,FFCM1(-),,Arrhenius,,H + HO2 <=> 2 OH

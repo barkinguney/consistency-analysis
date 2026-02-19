@@ -1,9 +1,9 @@
-A,n,Ea,T0,Tmin,Tmax,Pmin,Pmax,Library,comment,Type
-48000000.00000001,0.0,33262.8,1.0,,,,,Klippenstein_Glarborg2016,,Arrhenius
-12.100000000000001,2.0,21756.8,1.0,,,,,NIST_Fluorine/CH2F2/full,,Arrhenius
-5.0200000000000005,2.07,17991.2,1.0,300.0,2400.0,,,primaryH2O2,,Arrhenius
-21500.000000000004,1.0,25104.0,1.0,,,,,CurranPentane,,Arrhenius
-1700000.0000000002,0.0,15731.84,1.0,,,,,Nitrogen_Glarborg_Gimenez_et_al,,Arrhenius
-6.050000000000001,2.0,21756.8,1.0,,,,,2-BTP/full,,Arrhenius
-34318000.00000001,0.0,33262.8,1.0,,,,,ERC-FoundationFuelv0.9,,Arrhenius
-58560000.00000001,0.0,33262.8,1.0,,,,,FFCM1(-),,Arrhenius
+A,n,Ea,T0,Tmin,Tmax,Pmin,Pmax,Library,comment,Type,efficiencies,reaction
+48000000.00000001,0.0,33262.8,1.0,,,,,Klippenstein_Glarborg2016,,Arrhenius,,H + H2O2 <=> H2 + HO2
+12.100000000000001,2.0,21756.8,1.0,,,,,NIST_Fluorine/CH2F2/full,,Arrhenius,,H + H2O2 <=> H2 + HO2
+5.0200000000000005,2.07,17991.2,1.0,300.0,2400.0,,,primaryH2O2,,Arrhenius,,H + H2O2 <=> H2 + HO2
+21500.000000000004,1.0,25104.0,1.0,,,,,CurranPentane,,Arrhenius,,H + H2O2 <=> H2 + HO2
+1700000.0000000002,0.0,15731.84,1.0,,,,,Nitrogen_Glarborg_Gimenez_et_al,,Arrhenius,,H + H2O2 <=> H2 + HO2
+6.050000000000001,2.0,21756.8,1.0,,,,,2-BTP/full,,Arrhenius,,H + H2O2 <=> H2 + HO2
+34318000.00000001,0.0,33262.8,1.0,,,,,ERC-FoundationFuelv0.9,,Arrhenius,,H + H2O2 <=> H2 + HO2
+58560000.00000001,0.0,33262.8,1.0,,,,,FFCM1(-),,Arrhenius,,H + H2O2 <=> H2 + HO2
