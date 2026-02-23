@@ -129,6 +129,62 @@ def cross_validate_poly(Z, y, powers, fit_fn, k=5, seed=0):
         errs.append(np.max(np.abs(pred - yte)))  # L∞ error on fold
     return float(np.mean(errs)), float(np.max(errs))
 
+def extract_surrogate_training_data(
+    lb, ub, active_reactions_idx,
+    gas, operating_condition,
+    n_samples=None,
+    deg=2,
+    design="lhs",
+    seed=0, 
+    idt_t_max = 0.1
+):
+    """
+    Extract training data (X, y) for B2BDC surrogate fitting.
+    Returns raw multiplier samples and log(IDT) observations.
+    """
+    if n_samples is None:
+        n_monomials = len(monomial_powers(n_dim=len(active_reactions_idx), deg=deg))
+        n_samples = 10 * n_monomials
+    lb = np.asarray(lb, dtype=float)
+    ub = np.asarray(ub, dtype=float)
+
+    # 1) Design
+    if design == "sobol":
+        X = sobol_design(n_samples, lb, ub, seed=seed)
+    elif design == "lhs":
+        X = lhs_design(n_samples, lb, ub, seed=seed)
+    else:
+        raise ValueError("design must be 'sobol' or 'lhs'")
+
+    # 2) Evaluate log IDT
+    y = []
+    valid_samples = []
+    for i, sample in enumerate(X):
+        multiply_rates(gas, sample, active_reactions_idx)
+        idt = calc_IDT_constV(gas, operating_condition, t_max=idt_t_max, debug=False)
+        if idt < idt_t_max*0.99:
+            y.append(np.log(idt))
+            valid_samples.append(sample)
+        else:
+            pass
+            #print(f"Sample {i} failed to ignite! Skipping...")
+        
+        if (i+1) % 50 == 0:
+            print(f"Evaluated {i+1}/{len(X)} samples")
+    y = np.asarray(y, dtype=float)
+    X_filtered = np.array(valid_samples)
+
+    training_data = {
+        "X": X_filtered,  # (n_valid, n_reactions) multipliers in linear space
+        "y": y,           # (n_valid,) log(IDT) values
+        "lb": lb,
+        "ub": ub,
+        "deg": deg,
+        "n_samples": len(y),
+        "target": "log_idt"
+    }
+    return training_data
+
 def build_idt_surrogate(
     lb, ub, active_reactions_idx, factors_list,
     gas, operating_condition,
@@ -163,7 +219,8 @@ def build_idt_surrogate(
             y.append(np.log(idt))
             valid_samples.append(sample)
         else:
-            print(f"Sample {i} failed to ignite! Skipping...")
+            pass
+            #print(f"Sample {i} failed to ignite! Skipping...")
         
         if (i+1) % 50 == 0:
             print(f"Evaluated {i+1}/{len(X)} samples")
@@ -228,11 +285,18 @@ if __name__ == "__main__":
     ls_fit_path = Path("arrhenius_uncertainty/results/ls_fits")
     operating_conditions = pd.read_csv("sensitivity/results/operating_conditions.csv")
     output_dir = Path("surrogate/results")
+    output_dir_training = Path("surrogate/data/training")  # For B2BDC training data
     output_dir.mkdir(parents=True, exist_ok=True)
-    operating_conditions =operating_conditions.fillna("")
+    output_dir_training.mkdir(parents=True, exist_ok=True)
+    # if training folder not empty, empty it to avoid confusion with old data
+    for file in output_dir_training.glob("*"):
+        file.unlink()
+    for file in output_dir.glob("*"):
+        file.unlink()
+    operating_conditions = operating_conditions.fillna("")
     active_reactions = unc_factors_df['Reaction'].tolist()
     active_reactions_idx = [i for i, rxn in enumerate(ct.Solution(mechanism).reactions()) if rxn.equation in active_reactions]
-    unc_factors_df['Uncertainty Factor'].fillna(1.0, inplace=True)# if no f, f=1
+    unc_factors_df['Uncertainty Factor'].fillna(0.5, inplace=True)# if no f, f=1
     unc_factors = unc_factors_df['Uncertainty Factor'].to_numpy()
     #unc_factors = np.full(len(active_reactions_idx), 0.3) 
     upper_bound_multipliers = np.power(10, unc_factors)
@@ -255,7 +319,33 @@ if __name__ == "__main__":
     print(active_reactions_idx)
     
     for condition in operating_conditions.itertuples(index=False):
-     
+        # Extract training data for B2BDC
+        training_data = extract_surrogate_training_data(
+            lb=lower_bound_multipliers,
+            ub=upper_bound_multipliers,
+            active_reactions_idx=active_reactions_idx,
+            gas=gas,
+            operating_condition=condition,
+            deg=2,
+            design="lhs",
+            seed=0
+        )
+        
+        # Save training data for B2BDC (X = multipliers, y = log(IDT))
+        training_filename = f"{condition[0]}_{condition[1]}_{condition[2]}_training.pkl"
+        with open(output_dir_training / training_filename, "wb") as f:
+            pickle.dump(training_data, f)
+            print(f"Saved training data to {output_dir_training / training_filename}")
+        
+        # Also save as CSV for easier MATLAB loading
+        csv_filename = f"{condition[0]}_{condition[1]}_{condition[2]}_training.csv"
+        df_training = pd.DataFrame(training_data["X"], 
+                                   columns=[f"m_{i+1}" for i in range(len(active_reactions_idx))])
+        df_training["log_idt"] = training_data["y"]
+        df_training.to_csv(output_dir_training / csv_filename, index=False)
+        print(f"Saved training CSV to {output_dir_training / csv_filename}")
+        
+        # Optional: build and save the fitted surrogate for validation
         model = build_idt_surrogate(
             lb=lower_bound_multipliers,
             ub=upper_bound_multipliers,
@@ -274,3 +364,4 @@ if __name__ == "__main__":
         with open(output_dir / f"{condition[0]}_{condition[1]}_{condition[2]}.pkl", "wb") as f:
             pickle.dump(model, f)
             print(f"Saved surrogate model for condition {condition} to {output_dir / f'{condition[0]}_{condition[1]}_{condition[2]}.pkl'}")
+        print("-" * 80)

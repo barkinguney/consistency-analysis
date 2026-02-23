@@ -305,7 +305,7 @@ def format_composition(initial_composition: List[Dict[str, Any]]) -> str:
     return ", ".join(parts)
 
 
-def calculate_phi_cantera(
+def calculate_phi_cantera_old(
     composition: Union[str, List[Dict[str, Any]]],
     mechanism: str = "gri30.yaml",
     fuel: Optional[str] = None,  # kept for signature compatibility
@@ -372,6 +372,201 @@ def calculate_phi_cantera(
         print(f"Error calculating phi with Cantera: {e}")
         return None
 
+def calculate_phi(initial_composition):
+    """
+    Calculates the equivalence ratio (phi) for a given gas composition.
+    
+    Args:
+        composition (dict): Species names as keys, mole fractions as values.
+    """
+    
+    parts = {}
+    for comp in initial_composition:
+        species = comp.get("preferredKey", "")
+        value = comp.get("value")
+        if species and value is not None:
+            parts[species] = value
+    
+    
+    # 1. Define stoichiometric O2 coefficients (moles of O2 per mole of fuel)
+    # Formula: s = C + H/4 - O/2
+    stoich_coeffs = {
+        'H2':  0.5,   # H2 + 0.5 O2 -> H2O
+        'CO':  0.5,   # CO + 0.5 O2 -> CO2
+        'CH4': 2.0,   # CH4 + 2 O2 -> CO2 + 2 H2O
+        'C2H4': 3.0,  # C2H4 + 3 O2 -> 2 CO2 + 2 H2O
+        'C2H6': 3.5,  # C2H6 + 3.5 O2 -> 2 CO2 + 3 H2O
+        'C3H8': 5.0,  # C3H8 + 5 O2 -> 3 CO2 + 4 H2O
+        'CH3OH': 1.5, # CH3OH + 1.5 O2 -> CO2 + 2 H2O
+    }
+
+    # 2. Identify actual O2 in the mixture
+    actual_o2 = parts.get('O2', 0.0)
+    
+    if actual_o2 == 0:
+        return float('inf')  # Pure fuel / No oxidizer
+
+    # 3. Calculate total O2 required for stoichiometry
+    required_o2 = 0.0
+    for species, mole_fraction in parts.items():
+        if species in stoich_coeffs:
+            required_o2 += mole_fraction * stoich_coeffs[species]
+
+    # 4. Calculate Phi
+    # Phi = (Fuel/Oxidizer)_actual / (Fuel/Oxidizer)_stoich
+    # Which simplifies to: Required_O2 / Actual_O2
+    phi = required_o2 / actual_o2
+    
+    return phi
+
+
+def add_phi_to_xml_copy(
+    xml_path: Union[str, Path],
+    output_folder: Union[str, Path],
+) -> Path:
+    """
+    Read an IDT XML file, calculate phi from initial composition,
+    convert pressure and ignition-delay values/units, and write a copy with
+    commonProperties/property[name="phi"] added or updated.
+
+    Args:
+        xml_path: Input XML path.
+        output_folder: Directory where the updated XML copy will be written.
+        mechanism: Cantera mechanism used by phi calculation fallback.
+
+    Returns:
+        Path to the written XML copy.
+    """
+    xml_path = Path(xml_path)
+    output_folder = Path(output_folder)
+    output_folder.mkdir(parents=True, exist_ok=True)
+
+    exp = parse_idt_xml(xml_path)
+    phi_val = calculate_phi(exp.initial_composition)
+    if phi_val is None:
+        raise ValueError(f"Could not calculate phi for {xml_path}")
+
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+    exp_el = root if _strip_ns(root.tag) == "experiment" else _find_first(root, "experiment")
+    if exp_el is None:
+        raise ValueError("Could not find <experiment> root element")
+
+    common_props = None
+    for ch in list(exp_el):
+        if _strip_ns(ch.tag) == "commonProperties":
+            common_props = ch
+            break
+    if common_props is None:
+        common_props = ET.SubElement(exp_el, "commonProperties")
+
+    phi_prop = None
+    for prop in list(common_props):
+        if _strip_ns(prop.tag) != "property":
+            continue
+        if prop.attrib.get("name", "").strip().lower() == "phi":
+            phi_prop = prop
+            break
+    if phi_prop is None:
+        phi_prop = ET.SubElement(common_props, "property", {"name": "phi"})
+    else:
+        phi_prop.attrib["name"] = "phi"
+
+    value_el = None
+    for ch in list(phi_prop):
+        if _strip_ns(ch.tag) == "value":
+            value_el = ch
+            break
+    if value_el is None:
+        value_el = ET.SubElement(phi_prop, "value")
+
+    value_el.text = f"{float(phi_val):.12g}"
+
+    # Convert pressure and ignition delay data in all dataGroups.
+    for dg in _find_all(exp_el, "dataGroup"):
+        pressure_pid = None
+        tau_pid = None
+        pressure_units_src = None
+        tau_units_src = None
+        pressure_units_out = None
+        tau_units_out = None
+
+        for ch in list(dg):
+            if _strip_ns(ch.tag) != "property":
+                continue
+
+            pid = ch.attrib.get("id")
+            if not pid:
+                continue
+
+            name = (ch.attrib.get("name") or "").strip().lower()
+            label = (ch.attrib.get("label") or "").strip().lower()
+
+            if pressure_pid is None and (name == "pressure" or label == "p"):
+                pressure_pid = pid
+                pressure_units_src = ch.attrib.get("units")
+            if tau_pid is None and (name == "ignition delay" or label == "tau"):
+                tau_pid = pid
+                tau_units_src = ch.attrib.get("units")
+
+        if pressure_pid is None and tau_pid is None:
+            continue
+
+        for dp in list(dg):
+            if _strip_ns(dp.tag) != "dataPoint":
+                continue
+
+            p_el = None
+            tau_el = None
+            p_val = None
+            tau_val = None
+
+            for val_el in list(dp):
+                xid = _strip_ns(val_el.tag)
+                if pressure_pid is not None and xid == pressure_pid:
+                    p_el = val_el
+                    p_val = _as_number(val_el.text)
+                elif tau_pid is not None and xid == tau_pid:
+                    tau_el = val_el
+                    tau_val = _as_number(val_el.text)
+
+            p_input_units = pressure_units_src if pressure_units_src else None
+            tau_input_units = tau_units_src if tau_units_src else None
+            p_input_val = p_val if (p_val is not None and p_input_units) else None
+            tau_input_val = tau_val if (tau_val is not None and tau_input_units) else None
+
+            p_conv, p_units_conv, _, _, tau_conv, tau_units_conv = cantera_related_functions.convert_units(
+                p_input_val,
+                p_input_units,
+                None,
+                None,
+                tau_input_val,
+                tau_input_units,
+            )
+
+            if p_el is not None and p_conv is not None:
+                p_el.text = f"{float(p_conv):.12g}"
+            if tau_el is not None and tau_conv is not None:
+                tau_el.text = f"{float(tau_conv):.12g}"
+
+            if p_units_conv:
+                pressure_units_out = p_units_conv
+            if tau_units_conv:
+                tau_units_out = tau_units_conv
+
+        for ch in list(dg):
+            if _strip_ns(ch.tag) != "property":
+                continue
+            pid = ch.attrib.get("id")
+            if pid == pressure_pid and pressure_units_out:
+                ch.attrib["units"] = pressure_units_out
+            if pid == tau_pid and tau_units_out:
+                ch.attrib["units"] = tau_units_out
+
+    out_path = output_folder / xml_path.name
+    tree.write(out_path, encoding="utf-8", xml_declaration=True)
+    return out_path
+
 
 def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str = "gri30.yaml") -> "pd.DataFrame":
     """
@@ -407,7 +602,7 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
                 ignition_type_str = f"{target}{type_val}"
             
             # Calculate phi using Cantera
-            phi = calculate_phi_cantera(exp.initial_composition, mechanism=mechanism)
+            phi = calculate_phi(exp.initial_composition)
             
             # Extract units from data group properties
             T_units = ""
@@ -467,16 +662,28 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
 
 
 if __name__ == "__main__":
-    # Example usage
-    folder_path = "data/idt_data/syngas"
+    # # Example usage
+    # folder_path = "data/idt_data/syngas"
     
-    # Create DataFrame with all IDT data
-    df = extract_idt_data_to_dataframe(folder_path)
-    df.to_csv("idt_data_summary.csv", index=False)
-    print("\nIDT Data Summary:")
-    print(df.head(10))
-    print(f"\nTotal data points: {len(df)}")
+    # # Create DataFrame with all IDT data
+    # df = extract_idt_data_to_dataframe(folder_path)
+    # df.to_csv("idt_data_summary.csv", index=False)
+    # print("\nIDT Data Summary:")
+    # print(df.head(10))
+    # print(f"\nTotal data points: {len(df)}")
 
+    folder_path = "data/idt_data/syngas"
+    output_folder = "data/idt_data_modified/syngas_with_phi"
+    # folder_path = "data/idt_data/hydrogen"
+    # output_folder = "data/idt_data_modified/hydrogen_with_phi"
+    # folder_path = "data/idt_data/ethylene"
+    # output_folder = "data/idt_data_modified/ethylene_with_phi"
+    for file_path in Path(folder_path).glob("*.xml"):
+        try:
+            out_path = add_phi_to_xml_copy(file_path, output_folder)
+            print(f"Processed {file_path.name} -> {out_path.name}")
+        except Exception as e:
+            print(f"Error processing {file_path.name}: {e}")
 
 
 

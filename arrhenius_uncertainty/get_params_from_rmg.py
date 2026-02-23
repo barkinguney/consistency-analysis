@@ -157,6 +157,10 @@ out_dir_params = Path("arrhenius_uncertainty/results/arrhenius_params")
 out_dir_rate_coeff = Path("arrhenius_uncertainty/results/rate_coefficients")
 out_dir_params.mkdir(parents=True, exist_ok=True)
 out_dir_rate_coeff.mkdir(parents=True, exist_ok=True)
+for file in out_dir_params.glob("*"):
+    file.unlink()
+for file in out_dir_rate_coeff.glob("*"):
+    file.unlink()
 
 species_database = ET.parse("arrhenius_uncertainty/speciesDatabase.xml")
 root = species_database.getroot()

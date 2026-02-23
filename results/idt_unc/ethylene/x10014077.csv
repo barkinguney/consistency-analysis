@@ -1,0 +1,7 @@
+ignition_delay_time,T5_K,P5_atm,systematic,random,combined,final_expanded,expanded_relative
+769.07,1135.19,35.00,2061.37,0.00,2061.37,90.80,11.81
+493.34,1172.83,35.00,677.23,0.00,677.23,52.05,10.55
+452.95,1178.80,35.00,570.87,0.00,570.87,47.79,10.55
+316.44,1208.18,35.00,278.64,-nan(ind),-nan(ind),-nan(ind),-nan(ind)
+285.63,1217.36,35.00,227.02,-nan(ind),-nan(ind),-nan(ind),-nan(ind)
+165.33,1253.17,35.00,76.06,-nan(ind),-nan(ind),-nan(ind),-nan(ind)

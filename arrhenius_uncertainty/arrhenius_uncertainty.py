@@ -331,6 +331,10 @@ if __name__ == "__main__":
     out_dir_fit = Path("arrhenius_uncertainty/results/ls_fits")
     out_dir_plot.mkdir(parents=True, exist_ok=True)
     out_dir_fit.mkdir(parents=True, exist_ok=True)
+    for file in out_dir_fit.glob("*"):
+        file.unlink()
+    for file in out_dir_plot.glob("*"):
+        file.unlink()
     out_unc_factor = []
 
     for file in input_dir.glob("*.csv"):
@@ -391,6 +395,7 @@ if __name__ == "__main__":
             "Tref": ls_fit["Tref"],            # reference temperature
         }
         
+        nominal_k = (10.0**ls_fit["log10A"]) * (T_range**ls_fit["n"]) * np.exp(-ls_fit["Ea"] / T_range)
         uncertainty_factor = calc_uncertainty_factor(T_range, ls_fit)
         out_unc_factor.append([rate_coeff_df['Reaction'].iloc[0], uncertainty_factor])
 
@@ -398,8 +403,11 @@ if __name__ == "__main__":
         with open(out_dir_fit / f"fit_{plot_name}.pkl", "wb") as f:
             pickle.dump(fit_save, f)
             
-    # Save uncertainty factors
+    
+    max_uncertainty_factor = 0.5
     unc_factor_df = pd.DataFrame(out_unc_factor, columns=["Reaction", "Uncertainty Factor"])
+    unc_factor_df["Uncertainty Factor"] = unc_factor_df["Uncertainty Factor"].clip(upper=max_uncertainty_factor)
+    unc_factor_df["Uncertainty Factor"] = unc_factor_df["Uncertainty Factor"].fillna(0.5)
     unc_factor_df.to_csv(out_dir / "uncertainty_factors.csv", index=False)
 
 

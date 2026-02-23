@@ -6,6 +6,7 @@ from scipy.stats import qmc
 from scipy import linalg
 import time
 import copy
+from pathlib import Path
 
 import read_data
 import cantera_related_functions
@@ -237,6 +238,7 @@ if __name__ == "__main__":
     gas = ct.Solution('Supplementary-3_syngas.yaml')
     # get operationg conditions from real data to make it meaningful
     idt_data_folders = ["data\\idt_data\\hydrogen", "data\\idt_data\\syngas"]
+    idt_unc_data_folders = ["results\\idt_unc\\hydrogen", "results\\idt_unc\\syngas"]
     # gas = ct.Solution('C2H4_2021.yaml')
     # # get operationg conditions from real data to make it meaningful
     # idt_data_folders = ["data\\idt_data\\ethylene"]
@@ -258,6 +260,21 @@ if __name__ == "__main__":
     
     idt_data_df.to_csv("sensitivity/results/idt_data_for_sensitivity_analysis.csv", index=False)
     operating_conditions_df = stratified_sample_operating_conditions(idt_data_df, n_T_bins=4, n_logP_bins=3, n_phi_bins=3, cap_per_bin=1, random_state=42)
+    for condition in operating_conditions_df.itertuples(index=False):
+        unc_file_name = Path(condition.filename).stem + f".csv"
+        for idt_unc_data_folder in idt_unc_data_folders:
+            unc_file_path = Path(idt_unc_data_folder) / unc_file_name
+            if unc_file_path.exists():
+                unc_df = pd.read_csv(unc_file_path)
+                
+                if (unc_df["expanded_relative"] > 80.0).any():
+                    unc = 80.0
+                else:
+                    cond =  unc_df[unc_df['T5_K'] == condition.T5]
+                    unc = cond["expanded_relative"].values[0]
+                operating_conditions_df.loc[operating_conditions_df["filename"] == condition.filename, "exp_unc"] = unc  
+                break
+    operating_conditions_df["exp_unc"] = operating_conditions_df["exp_unc"].fillna(80.0)         
     operating_conditions_df.to_csv("sensitivity/results/operating_conditions.csv", index=False)
     print(operating_conditions_df.columns.tolist())
 
