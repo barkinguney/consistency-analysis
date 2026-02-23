@@ -259,7 +259,7 @@ if __name__ == "__main__":
         idt_data_df = pd.concat([idt_data_df, read_data.extract_idt_data_to_dataframe(idt_data_folder)], ignore_index=True)
     
     idt_data_df.to_csv("sensitivity/results/idt_data_for_sensitivity_analysis.csv", index=False)
-    operating_conditions_df = stratified_sample_operating_conditions(idt_data_df, n_T_bins=4, n_logP_bins=3, n_phi_bins=3, cap_per_bin=1, random_state=42)
+    operating_conditions_df = stratified_sample_operating_conditions(idt_data_df, n_T_bins=3, n_logP_bins=3, n_phi_bins=3, cap_per_bin=1, random_state=42)
     for condition in operating_conditions_df.itertuples(index=False):
         unc_file_name = Path(condition.filename).stem + f".csv"
         for idt_unc_data_folder in idt_unc_data_folders:
