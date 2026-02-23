@@ -15,7 +15,16 @@ https://github.com/sqlp/sedumi
 # Issues
 * UncertaintyQuantification.cpp doesnt work when all pressures in the dataset are the same. For that case need to fit just 2 parameters A and B. C need to be removed from model, jacobian, lsfit, and uncertainty propagation.  
 * UncertaintyQuantification.cpp reads from the old json format. We need a more comprehensive xml input format based on RESPECTH, with the addition of FixedIFS data, and T5,P5,phi uncertainty data. 
- 
+* impact_factors_for_all.py likely is not too good at doing good sensitivity analysis. its better than nothing, but needs to be tested, fail cases need to be better understood. maybe replaced by a smarter method/better implementation?
+* get_params_from_rmg.py 
+    * cant find sources for usually around 1/3 of reactions. 
+    * reaction/species name parsing and matching with rmg need to improved. 
+    * I didnt have time to implement troe/lindemann for pressure dependent equations. they are currenty just skipped. 
+    * efficiencies array is necessayry for third body reactions. I didnt have time to implement combining efficiencies from multiple sources. I dont know what makes sense phsically, put them all together and average multiple sources maybe? 
+    * we dont know yet if TUMKIN arrhenius parameter data source will be rmg in the end. Ideally it would be NIST, but i dont know how to access NIST data. 
+    * Only around 1/30 RMG data contain temperature range information. Which is bad. Temp range is important which makes the data worse.
+* 
+
 
 ## Arrhenius parameter uncertainty calculation
 Arrhenius parameters are collected from the Reaction Mechanisim Generator (RMG) database

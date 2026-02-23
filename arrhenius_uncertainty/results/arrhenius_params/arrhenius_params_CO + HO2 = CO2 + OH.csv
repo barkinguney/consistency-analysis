@@ -1,5 +1,0 @@
-A,n,Ea,T0,Tmin,Tmax,Pmin,Pmax,Library,comment,Type,efficiencies,reaction
-0.16000000000000003,2.18,75073.512,1.0,,,,,Klippenstein_Glarborg2016,,Arrhenius,,CO + HO2 <=> CO2 + OH
-150000000.00000003,0.0,98742.40000000001,1.0,,,,,NIST_Fluorine/seed,,Arrhenius,,CO + HO2 <=> CO2 + OH
-0.15700000000000003,2.18,75060.96,1.0,,,,,CurranPentane,,Arrhenius,,CO + HO2 <=> CO2 + OH
-30100000.000000004,0.0,96232.0,1.0,,,,,Dooley/methylformate_all_ARHEbathgas,,Arrhenius,,CO + HO2 <=> CO2 + OH
