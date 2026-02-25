@@ -7,7 +7,7 @@ import pandas as pd
 
 uncertainty_factors = pd.read_csv("arrhenius_uncertainty/results/uncertainty_factors.csv")
 conditions = pd.read_csv("sensitivity/results/operating_conditions.csv")
-surrogate_data = pd.read_csv("")
+#surrogate_data = pd.read_csv("")
 
 uncertainty_factors["nominal"] = 1.0
 uncertainty_factors["lb"] = 1.0 / np.pow(10, uncertainty_factors["Uncertainty Factor"])

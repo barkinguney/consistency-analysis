@@ -1,0 +1,23 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'Thesis.blg'
+[122] biber-MSWIN64:340> INFO - === 
+[165] Biber.pm:420> INFO - Reading 'Thesis.bcf'
+[294] Biber.pm:994> INFO - Found 9 citekeys in bib section 0
+[311] Biber.pm:4463> INFO - Processing section 0
+[324] Biber.pm:4654> INFO - Looking for bibtex file 'literature.bib' for section 0
+[408] bibtex.pm:1713> INFO - LaTeX decoding ...
+[615] bibtex.pm:1519> INFO - Found BibTeX data source 'literature.bib'
+[716] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[717] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[717] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[717] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[726] bbl.pm:676> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[729] bbl.pm:779> INFO - Output to Thesis.bbl
+[729] Biber.pm:131> WARN - I didn't find a database entry for 'UQ_barkin' (section 0)
+[729] Biber.pm:131> WARN - I didn't find a database entry for 'cantera' (section 0)
+[729] Biber.pm:131> WARN - I didn't find a database entry for 'Arun Hegde' (section 0)
+[729] Biber.pm:131> WARN - I didn't find a database entry for 'Consistency Analysis for Massively Inconsistent Datasets in Bound-to-Bound Data Collaboration^^C' (section 0)
+[729] Biber.pm:131> WARN - I didn't find a database entry for 'Application of Bound-to-Bound Data Collaboration approach for development and uncertainty quantification of a reduced char combustion model' (section 0)
+[729] Biber.pm:131> WARN - I didn't find a database entry for 'ralph c. smith book' (section 0)
+[729] Biber.pm:131> WARN - I didn't find a database entry for 'ISO80000' (section 0)
+[730] Biber.pm:133> INFO - WARNINGS: 7

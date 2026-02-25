@@ -1,0 +1,15 @@
+\begin{thenomenclature} 
+
+ \nomgroup{G}
+
+  \item [{$\bar{\varepsilon_{G}}$}]\begingroup Overall gas holdup\nomunit{}\nomeqref {\relax 0.1}
+		\nompageref{XI}
+  \item [{$\varepsilon_{G}$}]\begingroup Local gas holdup\nomunit{}\nomeqref {\relax 0.1}
+		\nompageref{XI}
+
+ \nomgroup{L}
+
+  \item [{$v_{SL}$}]\begingroup Slurry velocity\nomunit{\si{m/s}}\nomeqref {\relax 0.1}
+		\nompageref{XI}
+
+\end{thenomenclature}

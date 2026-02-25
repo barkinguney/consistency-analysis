@@ -1,0 +1,40 @@
+% Encoding: UTF-8
+
+@Standard{ISO80000,
+  title        = {ISO 80000-1: Quantities and units — Part 1: General},
+  organization = {International Organization for Standardization},
+  year         = {2009},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
+
+@Comment{jabref-meta: fileDirectory:Z:\\Home\\Thesis\\Literature;}
+
+@Comment{jabref-meta: fileDirectory-Emanuel.Trunzer-DEFRNB01554:Y:\\Literature;}
+
+@Comment{jabref-meta: fileDirectory-Emanuel.Trunzer-Oemil8DEsktop:Z:\\Home\\Thesis\\Literature;}
+
+@Comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 KeywordGroup:Models\;2\;keywords\;models, model\;0\;0\;;
+2 KeywordGroup:Bubbleclass\;0\;keywords\;Bubbleclass\;0\;0\;;
+2 KeywordGroup:ADM\;0\;keywords\;ADM\;0\;0\;;
+3 KeywordGroup:Dispersion coeff\;0\;keywords\;Dispersion coefficient\;1\;0\;;
+2 KeywordGroup:CFD\;0\;keywords\;CFD\;0\;0\;;
+2 KeywordGroup:Fluiddynamics\;0\;keywords\;Fluiddynamics\;0\;0\;;
+2 KeywordGroup:MCM\;0\;keywords\;MCM\;0\;0\;;
+2 KeywordGroup:Theory\;0\;keywords\;Model theory\;0\;0\;;
+2 KeywordGroup:Slug Cell\;0\;keywords\;Slug Cell\;0\;0\;;
+1 KeywordGroup:HX\;0\;keywords\;Heat exchange\;0\;0\;;
+1 KeywordGroup:Kinetics\;0\;keywords\;Kinetics\;0\;0\;;
+1 KeywordGroup:MT\;0\;keywords\;Mass transfer\;0\;0\;;
+1 KeywordGroup:TODO\;0\;keywords\;TODO\;0\;0\;;
+1 ExplicitGroup:Maitlis\;0\;;
+1 KeywordGroup:Economics\;0\;keywords\;Economics\;0\;0\;;
+}
+
+@Comment{jabref-meta: groupsversion:3;}
+
+@Comment{jabref-meta: selector_keywords:Dispersion coefficient;Heat Transfer;Heat exchange;}
+
+@Comment{jabref-entrytype: Standard: req[title;organization] opt[author;language;howpublished;type;number;revision;address;month;year;note;url]}

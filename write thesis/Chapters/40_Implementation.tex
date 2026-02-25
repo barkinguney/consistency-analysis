@@ -1,0 +1,12 @@
+\chapter{Implementation}\label{Sec:Implementation}
+
+\section{Consistency Analysis}
+
+\subsection{Data Sources}
+When TUMKIN is up  and running, uncertainty quantification and consistency analysis codes described in this thesis will use the data available in TUMKIN. The following sources has been used in the mean time to develop these modules, and  could be imported into TUMKIN if suitable. 
+Kinetics database RESPECTH  [2] collect IDT, laminar flame speed, and concentration measurement s for various fuels. They are reported in their xml format.  For testing the modules developed in this thesis I have used the RESPECTH data for shock tube IDT data for ethylene, Syngas and Hydrogen. 
+Currently Most comprehensive collection of reaction rates and Arrhenius parameters is the NIST Kinetics Database [20]. That contain many literature sources for every reaction. However, they don’t allow access to their database from code, no API or anything. It is the most comprehensive source, however, must be accessed manually. Reaction Mechanism Generator (RMG) on the other hand also contains a kinetics database that is openly accessible. For this thesis Arrhenius parameter data s taken from RMG database. To algorithmically extract kinetics data from RMG for a given reaction, SMILES or INCHI representations of the products and reactants are necessary. So, a species database that map between the widely accepted SMILES, INCHI representations and Cantera species name, and composition is necessary. An example format can be seen in OPTIMA++.  Species names for the same species can be different across mechanism files if they are consistent within the mechanism. This is however not suitable for TUMKIN database. So before ingesting Mechanism files into TUMKIN it should be validated that species in mechanism can unambiguously be found in the TUMKIN species data base. This validating step is not in the scope of this thesis however is necessary for TUMKIN.
+\cite{verma_comprehensive_2021}
+
+\cite{stocker_machine_2020}
+

@@ -1,0 +1,181 @@
+\chapter{Background and State of the Art}\label{Chap:Theory}
+
+
+\section{Background}
+\subsection{Nonlinear Least Squares}
+
+\section{Chemical Kinetics Database}
+TUMKIN, a chemical kinetic data infrastructure currently under development aims to incorporate databases and tools to facilitate analysis and optimization of reaction mechanisms of wide range of fuels. The idea is based on Process Informatics Model (PrIMe) created by Frenklach and coworkers which  was a data infrastructure concentrating on data management, data uncertainty, and data consistency. [1] However PrIMe website is not active. TUMKIN aims to revive and expand on PrIMe. A similar effort is RESPECTH [2]. Their database contains direct and indirect experimental measurements for various fuels. Relevant for this thesis are the indirect shock tube ignition delay time measurements for Ethylene, Syngas and Hydrogen. [3], [4], [5] They also share computer programs for various tasks around analysis and optimization of kinetics. Reaction Mechanism Generator (RMG) is an automatic chemical reaction mechanism generator that constructs kinetic models composed of elementary chemical reaction steps using a general understanding of how molecules react. RMG database contain kinetics information for many reactions from various sources and datasets. [6]
+
+\section{Uncertainty Quantification in Combustion}
+Uncertainty quantification (UQ) is the science for quantification and minimization of uncertainties with computer experiments and simulation. [7] The approach to developing detailed kinetic models (mechanisms) of fuel combustion involves compiling a set of elementary reactions whose rate parameters may be determined from individual rate measurements, reaction-rate theory, or a combination of both. These methods have uncertainties. A widely used method is sensitivity analysis. UQ is closely related to sensitivity analysis, and in many ways, UQ is a natural extension of sensitivity analysis. A basic objective of UQ is to analyze the uncertainty in the model response because of model parameters being uncertain, including forward uncertainty quantification and propagation and an inverse problem leading to model uncertainty constraining. When treated as a Bayesian inference problem, UQ aids the development of predictive kinetic models by constraining models with data and yielding estimates for the confidence of a model to make predictions outside of the thermodynamic regimes where the model has been tested. [7]
+
+\section{Uncertainty of reaction mechanisms}
+
+Reaction mechanisms employed in chemical kinetics models include information about the relevant species, reactions, reaction rates and the corresponding uncertainties of these reaction rates. Reactions are modeled with the Arrhenius equation with k being the reaction rate coefficient (RRC). In the literature, Arrhenius coefficients (A,n,Ea) are fitted to experimental data with a regression model and evaluated with expert opinion. Or they are calculated from fundamental calculations. Therefore, different literature sources can report different reaction rate coefficient k(T) values for a given reaction. The uncertainty factor f is a logarithmic measure of the plausible spread of k(T) around its recommended value:
+\begin{equation}
+k(T) = A T^{n} \exp\left(-\frac{E_a}{T}\right)
+\qquad (\mathrm{cm}^3\,\mathrm{mol}^{-1}\,\mathrm{s}^{-1},\,\mathrm{K})
+\end{equation}
+To perform analysis or optimization of combustion mechanisms, it is important to quantify the uncertainty of its parameters. For every reaction there are many literature sources reporting varying parameter sets. The most comprehensive source of a database compiling such sources is NIST Kinetics Database. In this thesis, to quantify the uncertainty of Arrhenius expressions, literature sources are collected from RMG database. For every active reaction, nonlinear least squares fit is performed using the selected sources from the database. Fit is performed on the following regression model:
+\begin{equation}
+k(T) = 10^{\log_{10}(A)}\, T^{n} \exp\left(-\frac{E_a}{T}\right)
+\end{equation}
+Parameter standard deviations $s\left(\log_{10}{\left(A\right)}\right), s\left(n\right), s\left(E_a\right)$ are used to calculate lower and upper uncertainty bounds for rate coefficients.
+\begin{equation}
+k_{\mathrm{low}}(T) =
+10^{\log_{10}(A) - s(\log_{10} A)}\,
+T^{\,n - s(n)}\,
+\exp\left(-\frac{E_a + s(E_a)}{T}\right)
+\end{equation}
+\begin{equation}
+k_{\mathrm{up}}(T) =
+10^{\log_{10}(A) + s(\log_{10} A)}\,
+T^{\,n + s(n)}\,
+\exp\left(-\frac{E_a - s(E_a)}{T}\right)
+\end{equation}
+The uncertainty parameter f is defined as:
+\begin{equation}
+f(T) =
+\log_{10}\!\left(\frac{k_{\mathrm{up}}(T)}{k_0(T)}\right)
+=
+\log_{10}\!\left(\frac{k_0(T)}{k_{\mathrm{low}}(T)}\right)
+\end{equation}
+Where k0 is the best fit of the rate coefficient,  klow and kup are the lower and the upper bounds respectively [8]. Rate coefficients are then sampled from the interval $\left[k_0\left(T\right)/{10}^f\left(T\right),k_0\left(T\right)\ast{10}^f\left(T\right)\right]$. Which preserves the shape of the k(T) curve and only scales it. It is also possible to use the joint multivariate distribution of Arrhenius parameters (A,n,Ea) sample reaction rate coefficients.  Covariance matrix However, authors rarely report covariance matrix or parameter standard deviations. When the covariance matrix is not available, often only preexponential factor A is varied to achieve the prescribed uncertainty band on $k\left(T\right)$ [9].  
+
+\section{Sensitivity Analysis}
+Local sensitivity analysis is a method where the response of the model to small parameter changes close to nominal values is explored. Normalized first-order sensitivity coefficients are commonly applied in combustion to provide kinetic insight into the model and its strengths and weaknesses with respect to experimental data.[10]
+
+\section{Surrogate Models}
+In the B2BDC framework, surrogate models are constructed using a solution-mapping approach over the prior uncertainty region. Active parameters are first identified through impact-factor screening and the surrogate is built only in this reduced parameter space. Training data are generated using space-filling designs, and the original model is evaluated at each design point. Polynomial, quadratic, or rational quadratic surrogate models are then fitted by minimizing either $L_2 or L_\infty$ norms. Rational quadratic surrogates are used when polynomial models are insufficiently accurate, and their coefficients are obtained through semidefinite programming [11].
+
+\section{Consistency Analysis}
+\subsection{MUM-PCE}
+In MUM-PCE, the uncertainty in the rate parameters of an as-compiled model is first quantified using stochastic spectral expansion and polynomial chaos techniques. The model is then constrained against global combustion experiments through solution mapping and least-squares optimization, combined with a consistency-screening procedure to identify incompatible experimental targets. The uncertainty of the constrained (posterior) model is subsequently calculated using an inverse spectral technique and propagated to a range of combustion conditions. [12] 
+\subsection{B2BDC}
+Bound-to-Bound Data Collaboration (B2BDC) provides a natural framework for addressing both forward and inverse uncertainty quantification problems, in which QOI models are constrained by related experimental observations with interval uncertainty. B2BDC models uncertainty deterministically and the notion of validity is encapsulated in the consistency measure, and a collection of models, experimental observations, and parameter bounds determines a feasible region in the parameter space. If the feasible region is nonempty, the dataset is said to be consistent, whereas an empty feasible set indicates that models and data are fundamentally at odds. B2BDC is used to determine the consistency between a numerical model and an experimental dataset and to achieve reduction of the uncertainty, via inference from the data [13], [14]. A MATLAB implementation of B2BDC is provided by [11].
+
+
+
+
+
+
+\section{TUMKIN Implementations}
+\subsection{Data Submission Protocol}
+Data submission protocol for experimental shock tube data is developed. Data should be given as described in template.json 
+  
+
+
+\cite{UQ_barkin}  
+
+\subsection{Sensitivity Analysis}
+\subsection{Consistency Analysis}
+Given a reaction mechanism, chemical kinetics simulation software like Cantera\cite{cantera} can simulate combustion, and predict properties like ignition delay time(IDT), laminar flame speed(LFS), etc. These properties are also measured in real life combustion experiments, and reported together with quantified uncertainties. A good reaction model should be able to predict these properties accurately under same operating conditions as the physical experiment(temperature, pressure, stoichiometric ratio, mixture content). Consistency analysis in this context are methods to validate simulation and experimental results against each other by finding a suitable set of model parameters that best explain the experiment data within their uncertainty intervals. If some data can't be explained by to model, this can suggest either the data is bad, or the model is bad.  
+\subsection{Possible Methods for consistency Analysis}
+In the example given in this B2BDC paper \cite{Arun Hegde} Scalar consistency measure is enough to identify a feasible set for slightly inconsistent datasets, while a more detailed Vector consistency measure is necessary for highly inconsistent datasets. Since we are developing this consistency analysis to be implemented in TUMKIN, we want it to follow some practical considerations. 
+- Work on different kinds of datasets.(different degrees of inconsistency, sensitivity analysis for large mecahnisms) 
+- Take domain knowledge from user as needed. 
+-  
+\subsubsection{Bayesian History Matching}
+Implausibility metric
+\subsubsection{B2BDC Scalar Consistency Measure}
+Bound-to-Bound Data Collaboration (B2BDC) \cite{Consistency Analysis for Massively Inconsistent
+	Datasets in Bound-to-Bound Data Collaboration}\cite{Application of Bound-to-Bound Data Collaboration approach for
+	development and uncertainty quantification of a reduced char combustion
+	model}
+	
+
+Bound-to-Bound Data Collaboration (B2BDC) provides a natural framework for addressing both forward and inverse uncertainty quantification problems, in which quantity-of-interest (QOI) models are constrained by related experimental observations with interval uncertainty. In this approach, uncertainty is modeled deterministically and the notion of validity is encapsulated in the consistency measure.
+
+In B2BDC, models, experimental observations, and parameter bounds are taken as “tentatively entertained” and are combined into what is termed a dataset. A dataset determines a feasible region in the parameter space, defined as the set of parameter vectors for which models and data are in complete agreement within prescribed uncertainty bounds. If the feasible region is nonempty, the dataset is consistent, whereas if the feasible set is empty, then no parameter vector can lead to agreement between the models and the data.
+
+A quantitative measure of agreement is provided by the scalar consistency measure, which characterizes this region by computing the maximal uniform constraint tightening associated with the dataset. The consistency measure is defined through an optimization problem that determines the largest simultaneous tightening of all experimental bounds for which a feasible parameter vector still exists. If the consistency measure is positive, all observation bounds can be simultaneously tightened without eliminating the feasible set. If the consistency measure is negative, the observation bounds are too restrictive and must be expanded in order for a feasible set to exist.
+
+The B2BDC framework casts the problem of model validation in an optimization setting, where uncertainties are represented by intervals. Within a given physical model, parameters are constrained by the combination of prior knowledge and uncertainties in experimental data. A collection of such constraints constitutes a dataset and determines a feasible region in the parameter space. Assertions expressing additional knowledge, such as relationships among parameters or quantities of interest, can be incorporated as additional constraints.
+
+B2BDC has been applied in several settings, including combustion science, atmospheric chemistry, quantum chemistry, system biology, and engineering design. Comparisons with Bayesian calibration approaches have shown that the two methods are similar in spirit and can yield overlapping predictions, while B2BDC provides conservative specifications and predictions when uncertainty information is limited.
+
+In applied combustion modeling, B2BDC is used within a structured uncertainty-quantification workflow that includes quantification of experimental uncertainty, development and refinement of the physics model, identification of uncertain and sensitive parameters with prior bounds, sampling of the uncertain parameter space, and training of surrogate models. The final step, also referred to as the inverse problem, is performed by applying the Bound-to-Bound Data Collaboration approach to determine the consistency between a numerical model and an experimental dataset.
+
+When datasets are inconsistent, B2BDC provides diagnostic tools to identify the sources of disagreement. Sensitivities of the consistency measure to perturbations in model-data constraints and parameter bounds are used to rank the degree to which individual constraints contribute to inconsistency. For datasets with numerous sources of inconsistency, an extension known as the vector consistency measure seeks the minimal number of independent constraint relaxations required to restore consistency.
+
+Overall, B2BDC constitutes an optimization-based approach to model validation and uncertainty quantification, in which a model is considered predictive when its outcomes are accompanied by rigorously determined uncertainty bounds, and increased predictivity corresponds to more narrowly bounded interval estimations.
+
+\subsubsection{B2BDC Vector consistency Measure}
+\subsubsection{F-Test}
+\subsubsection{MUMPCE}
+Reliable simulations of reacting flow systems require a well-characterized, detailed chemical model as a foundation; however, the inherent uncertainties in the rate data leave a model characterized by a kinetic rate parameter space which will be persistently finite in its size. Without a careful analysis of how this uncertainty space propagates into the model predictions, those predictions can at best be trusted only semi-quantitatively. To address this issue, the Method of Uncertainty Minimization using Polynomial Chaos Expansions (MUM-PCE) is proposed to quantify and constrain these uncertainties.
+
+In this method, the uncertainty in the rate parameters of the as-compiled model is quantified. The model is then subjected to a rigorous mathematical analysis by constraining the rate coefficients against the combustion data, as well as a consistency-screening process. Lastly, the uncertainty of the constrained model is calculated using an inverse spectral technique, and then propagated into a range of simulation conditions. The as-compiled model represents the prior model, while models constrained by global experiments are posterior models.
+
+Uncertainty quantification in MUM-PCE is based on the stochastic spectral expansion method. The solution of a general dynamical model is expressed as a function of a vector of independent, identically distributed random variables,
+
+\begin{equation} u = u(\mathbf{y}, t, \boldsymbol{\xi})
+\end{equation}
+ and expanded in a polynomial chaos basis. The expansion coefficients are obtained by projection using the expectation operator and orthogonality of the basis functions.
+ 
+ \begin{equation}
+ u(\mathbf{y}, t, \xi) = \sum_{i=0}^{\infty} u_i(\mathbf{y}, t) H_i(\xi)
+\end{equation}
+ 
+
+To efficiently connect uncertainty quantification with chemical kinetic modeling, MUMPCE combines stochastic spectral expansion with solution mapping. Each uncertain rate parameter is normalized into a factorial variable,
+\begin{equation}x_i = \frac{\ln(k_i/k_{i,0})}{\ln f_i}\end{equation} so that its nominal value is zero and its uncertainty is bounded between -1 and 1. Model responses are then expressed as a polynomial expansion in these variables,
+ \begin{equation}
+ 	g_r(\mathbf{x}) = g_{r,0}
+ 	+ \sum_{i=1}^{N} a_i x_i
+ 	+ \sum_{i=1}^{N}\sum_{j \ge i}^{N} b_{ij} x_i x_j
+ 	+ \cdots
+ \end{equation}
+  with coefficients determined from sensitivity analysis or regression against computational experiments.
+
+
+
+Uncertainty propagation is achieved by treating the factorial variables as random variables, which may be either uniformly or normally distributed. The uncertainty in a model prediction depends on the variance of the rate parameter but not strongly on the exact form of its distribution. For a sufficiently large number of active parameters, the resulting prediction uncertainty approaches a normal distribution by the Central Limit Theorem.
+
+Model constraining is formulated as a least-squares optimization problem in which the difference between simulated responses and experimental observations is minimized subject to uncertainty bounds.\begin{equation}
+	\Phi(\mathbf{x}^*) =
+	\min_{\mathbf{x}}
+	\sum_{r=1}^{n}
+	\left(
+	\frac{g_r(\mathbf{x}) - g_r^{\text{obs}}}
+	{\sigma_r^{\text{obs}}}
+	\right)^2
+\end{equation} A consistency analysis is introduced to evaluate whether experimental targets are internally consistent with the constrained model, using normalized scalar products and weighted residual measures to iteratively remove inconsistent targets.
+
+Finally, uncertainty minimization is performed by interpreting the objective function as a joint probability density function for the rate parameters and deriving a covariance matrix for the posterior model. The reduction in uncertainty arises from strong coupling among rate parameters as the model becomes constrained by the experimental targets. Fundamental limitations remain due to the size, accuracy, and information content of available combustion data sets.
+
+
+\subsection{Model Discrepency}
+\cite{ralph c. smith book}
+check the residuals of model v data for given mechanism for structure. If residuals are biased, model doesnt capture everything.
+solution 1: add an model discrepency term. fit it as a polynomial. 
+solution 2 : (bayes land)  
+
+if model descrepency is due to shortcomings of experiments(i.e scneario dependent) we would expect it to work best when modeled as different functions for different QoIs. however if it is a shortcoming of the model(ie. missing reactions) a  single function(e.g polynomial) fit or a single prior distrubition of the discrepency should be enought to partially compensate.?? at least me thinks thta way. 
+
+
+Shortcomings of previous work can be due to model discrepancies. Reaction mechanism does not contain all chemical reactions relevant to the combustion processs of interest. Because omitting reactions in the mecahnisms makes the computanations easier and and if there a re reactions that are not tknow to be in the combustion process it wouldn’t be in there any ways. So we assume it is not possible to improve the model to compenstate for the discrepancy. Instead I will develeop a statistical method to try to partially identify and partially compensate this discrepancy. One such method   
+
+\subsubsection{Consistency Check}
+First step of consistency analysis is to check for a given reaction model, whether its predictions fall within the uncertainties of experimental data. 
+
+\subsection{Reaction Mechanism Optimization}
+
+Mechanism with reaction rates spanning different orders of magnitude are stiff.
+
+
+\subsection{wants/constraints}
+- should be integrated into TUMKIN. that means c++/rust. and reliable libraries
+- consistency analysis should be able to run with minimal human intervention. ideally no need to choose which reactions to optimize?
+
+
+\subsection{todo}
+
+- check the bib of mcmc paper
+
+
+
+
+
+

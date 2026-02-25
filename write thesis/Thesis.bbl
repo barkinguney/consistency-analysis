@@ -1,0 +1,157 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{verma_comprehensive_2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7d190e9612210355aa928195d02822cd}{%
+           family={Verma},
+           familyi={V\bibinitperiod},
+           given={Shanu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1a128090fbdc4a5d766172979144bf55}{%
+           family={Pant},
+           familyi={P\bibinitperiod},
+           given={Millie},
+           giveni={M\bibinitperiod}}}%
+        {{hash=30bf9aa0d01fe95931c4f064c5355b43}{%
+           family={Snasel},
+           familyi={S\bibinitperiod},
+           given={Vaclav},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e834eee803bd3d851c89af49aef57b20}
+      \strng{fullhash}{0b9ab9380e49379d75a5fb8e06ff759d}
+      \strng{fullhashraw}{0b9ab9380e49379d75a5fb8e06ff759d}
+      \strng{bibnamehash}{0b9ab9380e49379d75a5fb8e06ff759d}
+      \strng{authorbibnamehash}{0b9ab9380e49379d75a5fb8e06ff759d}
+      \strng{authornamehash}{e834eee803bd3d851c89af49aef57b20}
+      \strng{authorfullhash}{0b9ab9380e49379d75a5fb8e06ff759d}
+      \strng{authorfullhashraw}{0b9ab9380e49379d75a5fb8e06ff759d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper provides an extensive review of the popular multi-objective optimization algorithm NSGA-II for selected combinatorial optimization problems viz. assignment problem, allocation problem, travelling salesman problem, vehicle routing problem, scheduling problem, and knapsack problem. It is identiﬁed that based on the manner in which NSGA-II has been implemented for solving the aforementioned group of problems, there can be three categories: Conventional NSGA-II, where the authors have implemented the basic version of NSGA-II, without making any changes in the operators; the second one is Modiﬁed NSGA-II, where the researchers have implemented NSGA-II after making some changes into it and ﬁnally, Hybrid NSGA-II variants, where the researchers have hybridized the conventional and modiﬁed NSGA-II with some other technique. The article analyses the modiﬁcations in NSGA-II and also discusses the various performance assessment techniques used by the researchers, i.e., test instances, performance metrics, statistical tests, case studies, benchmarking with other state-of-the-art algorithms. Additionally, the paper also provides a brief bibliometric analysis based on the work done in this study.}
+      \field{issn}{2169-3536}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{A {Comprehensive} {Review} on {NSGA}-{II} for {Multi}-{Objective} {Combinatorial} {Optimization} {Problems}}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{57757\bibrangedash 57791}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2021.3070634
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\J8B8NG8J\\Verma et al. - 2021 - A Comprehensive Review on NSGA-II for Multi-Objective Combinatorial Optimization Problems.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9393947/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9393947/
+      \endverb
+      \keyw{MOO}
+    \endentry
+    \entry{stocker_machine_2020}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=bd893eebcf476f67488356877ebe10b3}{%
+           family={Stocker},
+           familyi={S\bibinitperiod},
+           given={Sina},
+           giveni={S\bibinitperiod}}}%
+        {{hash=aef6628a7e1ad935b99d3d3cf7e63e20}{%
+           family={Csányi},
+           familyi={C\bibinitperiod},
+           given={Gábor},
+           giveni={G\bibinitperiod}}}%
+        {{hash=bf36b41827088c8b137fa0da9508f7fe}{%
+           family={Reuter},
+           familyi={R\bibinitperiod},
+           given={Karsten},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4a6a679baf48070a0b26525f2056c7e1}{%
+           family={Margraf},
+           familyi={M\bibinitperiod},
+           given={Johannes\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{5fcff81d0379e435a84bdc511538ba0f}
+      \strng{fullhash}{dfd658b5a9c6332bb1e61c27c258d8f9}
+      \strng{fullhashraw}{dfd658b5a9c6332bb1e61c27c258d8f9}
+      \strng{bibnamehash}{dfd658b5a9c6332bb1e61c27c258d8f9}
+      \strng{authorbibnamehash}{dfd658b5a9c6332bb1e61c27c258d8f9}
+      \strng{authornamehash}{5fcff81d0379e435a84bdc511538ba0f}
+      \strng{authorfullhash}{dfd658b5a9c6332bb1e61c27c258d8f9}
+      \strng{authorfullhashraw}{dfd658b5a9c6332bb1e61c27c258d8f9}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Chemical compound space refers to the vast set of all possible chemical compounds, estimated to contain 10 60 molecules. While intractable as a whole, modern machine learning (ML) is increasingly capable of accurately predicting molecular properties in important subsets. Here, we therefore engage in the ML-driven study of even larger reaction space. Central to chemistry as a science of transformations, this space contains all possible chemical reactions. As an important basis for ‘reactive’ ML, we establish a first-principles database (Rad-6) containing closed and open-shell organic molecules, along with an associated database of chemical reaction energies (Rad-6-RE). We show that the special topology of reaction spaces, with central hub molecules involved in multiple reactions, requires a modification of existing compound space ML-concepts. Showcased by the application to methane combustion, we demonstrate that the learned reaction energies offer a non-empirical route to rationally extract reduced reaction networks for detailed microkinetic analyses.}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{month}{10}
+      \field{number}{1}
+      \field{title}{Machine learning in chemical reaction space}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{11}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{5505}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-020-19267-x
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\JAGAVISR\\Stocker et al. - 2020 - Machine learning in chemical reaction space.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41467-020-19267-x
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41467-020-19267-x
+      \endverb
+      \keyw{model optimization}
+    \endentry
+  \enddatalist
+  \missing{Application of Bound-to-Bound Data Collaboration approach for development and uncertainty quantification of a reduced char combustion model}
+  \missing{Arun Hegde}
+  \missing{Consistency Analysis for Massively Inconsistent Datasets in Bound-to-Bound Data Collaboration^^C}
+  \missing{ISO80000}
+  \missing{UQ_barkin}
+  \missing{cantera}
+  \missing{ralph c. smith book}
+\endrefsection
+\endinput
+

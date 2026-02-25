@@ -1,6 +1,5 @@
 Reaction,Uncertainty Factor
 2 OH <=> H2O + O,0.5
-CO + HO2 <=> CO2 + OH,0.5
 CO + O (+M) <=> CO2 (+M),0.5
 CO + OH <=> CO2 + H,0.35280772655681597
 H + H2O2 <=> H2 + HO2,0.5

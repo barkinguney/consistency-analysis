@@ -1,0 +1,18 @@
+Dataset: UserDataset_2026-02-24_110006
+Units added: 14
+Fit method: qinf
+QoI space: log(IDT)
+Is consistent: 0
+Is tryConsistentAgain: 0
+Consistency measure:
+   -3.5578   -3.5477
+
+
+
+Vector consistency report:
+        Objective: [1×1 struct]
+    FeasiblePoint: [12×1 double]
+      Relaxations: [1×1 struct]
+          Weights: [1×1 struct]
+
+

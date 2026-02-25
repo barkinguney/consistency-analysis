@@ -3,22 +3,24 @@ import matlab.engine
 from pathlib import Path
 
 
-b2bdc_folder = Path("libs/B2BDC_v1.0")
+workspace_root = Path(__file__).resolve().parents[1]
+b2bdc_folder = workspace_root / "libs" / "B2BDC_v1.0"
+b2bdc_project_folder = workspace_root / "B2BDC"
 
 eng = matlab.engine.start_matlab()
 
-if b2bdc_folder.exists():
+if b2bdc_folder.exists() and b2bdc_project_folder.exists():
     eng.addpath(str(b2bdc_folder))
     eng.addpath(eng.genpath(str(b2bdc_folder)))
-    print(f"Success: Added {b2bdc_folder} to MATLAB path.")
+    eng.addpath(str(b2bdc_project_folder))
+    print(f"Success: Added {b2bdc_folder} and {b2bdc_project_folder} to MATLAB path.")
 else:
-    print(f"Error: Could not find {b2bdc_folder}")
-    
-# file = b2bdc_folder / "demo" / "vectorConsistencyDemo.m"
-# demo_result = eng.vectorConsistencyDemo(nargout=0)
+    raise FileNotFoundError(
+        f"Required folders are missing. B2BDC: {b2bdc_folder.exists()}, project B2BDC: {b2bdc_project_folder.exists()}"
+    )
 
-#file = b2bdc_folder / "demo" / "GRIMech_demo2.m"
-demo_result = eng.GRIMech_demo2(nargout=0)
+result = eng.consistency(nargout=1)
+print("B2BDC consistency run finished.")
+print(result)
 
-print(eng.sqrt(100.0))
 eng.quit()

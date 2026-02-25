@@ -294,6 +294,11 @@ if __name__ == "__main__":
     for file in output_dir.glob("*"):
         file.unlink()
     operating_conditions = operating_conditions.fillna("")
+    operating_conditions["exp_id"] = (
+        operating_conditions["filename"].astype(str).str.replace(".xml", "", regex=False)
+        + "_"
+        + operating_conditions["T5"].astype(int).astype(str)
+    )
     active_reactions = unc_factors_df['Reaction'].tolist()
     active_reactions_idx = [i for i, rxn in enumerate(ct.Solution(mechanism).reactions()) if rxn.equation in active_reactions]
     unc_factors_df['Uncertainty Factor'].fillna(0.5, inplace=True)# if no f, f=1
@@ -319,6 +324,7 @@ if __name__ == "__main__":
     print(active_reactions_idx)
     
     for condition in operating_conditions.itertuples(index=False):
+        exp_id = condition.exp_id
         # Extract training data for B2BDC
         training_data = extract_surrogate_training_data(
             lb=lower_bound_multipliers,
@@ -332,13 +338,13 @@ if __name__ == "__main__":
         )
         
         # Save training data for B2BDC (X = multipliers, y = log(IDT))
-        training_filename = f"{condition[0]}_{condition[1]}_{condition[2]}_training.pkl"
+        training_filename = f"{exp_id}_training.pkl"
         with open(output_dir_training / training_filename, "wb") as f:
             pickle.dump(training_data, f)
             print(f"Saved training data to {output_dir_training / training_filename}")
         
         # Also save as CSV for easier MATLAB loading
-        csv_filename = f"{condition[0]}_{condition[1]}_{condition[2]}_training.csv"
+        csv_filename = f"{exp_id}_training.csv"
         df_training = pd.DataFrame(training_data["X"], 
                                    columns=[f"m_{i+1}" for i in range(len(active_reactions_idx))])
         df_training["log_idt"] = training_data["y"]
