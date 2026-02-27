@@ -29,8 +29,10 @@ https://github.com/sqlp/sedumi
 * cantera_functions.py
     * for "bad" operationg conditions (we get bad conditions from random sampling) idt doesnt happen, so they are skipped. but sometimes that results in skipping too many points which likely lowers accuracy of stuff. needs to be investiged handled better possibly. mybe reject bad operating conditions in the very beginning. 
     * I didnt have time to implement pressure rise correction. It is relevant for multi species/mixed fuels. wouldn't effect sensitivity too much, maybe rankings. but still should be implemented
+    * I didnt have time to implement handling muliple local maxima
     * I implemented idt for differnt targets and types but a simple dT/dt max seem to work better. that means likely something with my implementation is wrong. Needs to be thoroughly tested.
     * currently any multiplicative factor is on the cantera net_rate. It may be useful and more powerful to modify A,n,Ea directly but someone would need to do that. 
+
 * there needs to be somethign handling units, or only input/output values with units.
 * everything needs to be tested. it is likely i have bugs everywhere. 
 

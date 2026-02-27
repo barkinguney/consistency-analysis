@@ -14,6 +14,29 @@ import os
 import plotly.graph_objects as go
 from pathlib import Path
 
+
+def apply_reference_plot_style() -> None:
+    plt.style.use("seaborn-v0_8-whitegrid")
+    plt.rcParams.update(
+        {
+            "font.size": 11,
+            "axes.titlesize": 13,
+            "axes.labelsize": 12,
+            "xtick.labelsize": 10,
+            "ytick.labelsize": 10,
+            "legend.fontsize": 10,
+            "axes.spines.top": True,
+            "axes.spines.right": True,
+            "axes.linewidth": 0.9,
+            "grid.color": "#D9D9D9",
+            "grid.linestyle": "-",
+            "grid.linewidth": 0.6,
+            "figure.dpi": 120,
+            "savefig.dpi": 400,
+            "savefig.bbox": "tight",
+        }
+    )
+
 def multiply_rates(gas, m_sample, rxn_ids = None, method="cantera_built_in"):
     if rxn_ids is None:
         rxn_ids = range(len(gas.reactions()))
@@ -112,7 +135,9 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
         if len(ignition_targets) > 1 and ignition_targets[1] != "":
             print(f"Warning: Multiple ignition targets specified ({ignition_target}). Using the first one: {target}")
         if "EX" in target:
-            target = target.replace("EX", "*")
+            target = target.replace("EX", "")
+        if "*" in target:
+            target = target.replace("*", "")
         return target
     
     def get_species_indices(gas):
@@ -164,9 +189,110 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
         #sometimes doubled for OHmax
         #1000x for concetrations
         #2-3x for relative concentrations
+        def calc_baseline_min_intercept_tau(signal_history, t_history, target_name):
+            signal_history = np.asarray(signal_history, dtype=float)
+            t_history = np.asarray(t_history, dtype=float)
+
+            grad = np.gradient(signal_history, t_history)
+            idx_ddt_max = int(np.nanargmax(grad))
+            slope = float(grad[idx_ddt_max])
+            t_ddt_max = float(t_history[idx_ddt_max])
+            y_ddt_max = float(signal_history[idx_ddt_max])
+            baseline_min = float(np.nanmin(signal_history))
+
+            if not np.isfinite(slope) or slope <= 0:
+                print(
+                    f"Warning: Non-positive or invalid max d/dt slope for {target_name}. "
+                    "Using d/dt max time directly."
+                )
+                return t_ddt_max
+
+            tau_intercept = t_ddt_max + (baseline_min - y_ddt_max) / slope
+            tau_intercept = max(float(t_history[0]), min(t_ddt_max, float(tau_intercept)))
+            return tau_intercept
         
         if simple:
-            tau = time_history.t[np.argmax(np.gradient(time_history.T, time_history.t))]
+            species_idxs = get_species_indices(reactor.phase)
+            #tau = time_history.t[np.argmax(np.gradient(time_history.T, time_history.t))]
+            if ignition_target == "T" :
+                "TODO: reuse species code"
+                if ignition_type == "max":
+                    tau = time_history.t[np.nanargmax(time_history.T)]
+                elif ignition_type== "d/dt max":
+                    tau = time_history.t[np.nanargmax(np.gradient(time_history.T, time_history.t))]
+                elif ignition_type == "baseline min intercept from d/dt":
+                    tau = calc_baseline_min_intercept_tau(time_history.T, time_history.t, "T")
+                else:
+                    raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
+            elif ignition_target == "P" :
+                "TODO: reuse species code"
+                if ignition_type == "max":
+                    tau = time_history.t[np.nanargmax(time_history.P)]
+                elif ignition_type == "d/dt max":
+                    tau = time_history.t[np.nanargmax(np.gradient(time_history.P, time_history.t))]
+                elif ignition_type == "baseline min intercept from d/dt":
+                    tau = calc_baseline_min_intercept_tau(time_history.P, time_history.t, "P")
+                else:         
+                    raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
+            else:
+                if ignition_type == "max":
+                    "TODO: looks good but test to make sure IDT calc good"
+                    #sometimes first and highest peak is not idt.
+                    # of all local maxima, that is at least 0.8*global_max, take the latest as idt
+                    species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
+                    # print(time_history.t)
+                    # print(time_history.concentrations)
+                    # print(species_conc_history)
+                    # global_max = np.max(species_conc_history)
+                    # threshold = 0.8 * global_max
+                    # peaks, _ = find_peaks(species_conc_history, height=threshold, distance=3)
+                    # print(peaks)
+                    # latest_peak_index = peaks[-1] if peaks.size > 0 else None
+                    # print(latest_peak_index)
+                    # tau = time_history.t[latest_peak_index]
+                    # max_tau = time_history.t[np.nanargmax(species_conc_history)]
+                    
+                    # print(f"Computed max-based IDT for species {ignition_target}. Global max conc: {global_max}, Max-based tau: {max_tau}, Selected tau: {tau}")
+                    tau = time_history.t[np.nanargmax(time_history.concentrations[:, species_idxs[ignition_target]])]
+                    print(f"Computed max-based IDT for species {ignition_target}. Max-based tau: {tau}")
+                elif ignition_type == "d/dt max":
+                    "TODO: looks good but test to make sure IDT calc good"
+                    # print(reactor.phase.species_names)
+                    # print(time_history.concentrations[:, species_idxs[ignition_target]])
+                    # print(time_history.t)
+                    tau = time_history.t[np.nanargmax(np.gradient(time_history.concentrations[:, species_idxs[ignition_target]], time_history.t))]
+                elif ignition_type =="concentration":
+                    "TODO: target conc equivalent to sthereshold conc in next logic. combine"
+                    target_conc = ignition_amount
+                    tau = time_history.t[np.nanargmin(np.abs(float(target_conc) - time_history.concentrations[:, species_idxs[ignition_target]]))]
+                    tau = tau * 1000 # x1000 here fixes it. it means somethig is wron with units
+                    print(f"Computed concentration-based IDT at {target_conc} for species {ignition_target}")
+                elif ignition_type =="relative concentration":
+                    "TODO: looks good but test to make sure IDT calc good"
+                    # ignition when target species conc > ((target species conc at t=0) + ignition_amount * (max conc - target species conc at t=0))
+                    species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
+                    baseline_conc = species_conc_history[0]
+                    max_conc = np.max(species_conc_history)
+                    threshold_conc = baseline_conc + (max_conc - baseline_conc) * ignition_amount
+                    idxs = np.where(species_conc_history >= threshold_conc)[0]
+                    if idxs.size == 0:
+                        tau = np.nan
+                        print(f"Warning: No ignition within integration time for {operating_condition}. Consider increasing t_max.")
+                        return tau
+                    idx = idxs[0]
+                    if idx == 0:
+                        tau = time_history.t[0]
+                        return tau
+                    # # linear interpolation to get more accurate tau
+                    # ratio = (species_conc_history[idx]- threshold_conc)/(species_conc_history[idx]-species_conc_history[idx-1])
+                    # tau = time_history.t[idx] - ((time_history.t[idx]-time_history.t[idx-1])*ratio)
+                    tau = time_history.t[idx]
+                    print(f"Computed relative concentration-based IDT at {ignition_amount*100:.1f}% increase for species {ignition_target}., tau: {tau:.3e} s")
+                elif ignition_type =="baseline min intercept from d/dt":
+                    species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
+                    tau = calc_baseline_min_intercept_tau(species_conc_history, time_history.t, ignition_target)
+                else:
+                    raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
         else:
             print(f"Calculating IDT using target: {ignition_target}, type: {ignition_type}")
     
@@ -178,6 +304,8 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
                     tau = time_history.t[np.nanargmax(time_history.T)]
                 elif ignition_type== "d/dt max":
                     tau = time_history.t[np.nanargmax(np.gradient(time_history.T, time_history.t))]
+                elif ignition_type == "baseline min intercept from d/dt":
+                    tau = calc_baseline_min_intercept_tau(time_history.T, time_history.t, "T")
                 else:
                     raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
             elif ignition_target == "P" :
@@ -186,6 +314,8 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
                     tau = time_history.t[np.nanargmax(time_history.P)]
                 elif ignition_type == "d/dt max":
                     tau = time_history.t[np.nanargmax(np.gradient(time_history.P, time_history.t))]
+                elif ignition_type == "baseline min intercept from d/dt":
+                    tau = calc_baseline_min_intercept_tau(time_history.P, time_history.t, "P")
                 else:         
                     raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
             else:
@@ -242,9 +372,8 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
                     noninterpolated_tau = time_history.t[idx]
                     print(f"Computed relative concentration-based IDT at {ignition_amount*100:.1f}% increase for species {ignition_target}. Non-interpolated tau: {noninterpolated_tau:.3e} s, Interpolated tau: {tau:.3e} s")
                 elif ignition_type =="baseline min intercept from d/dt":
-                    "TODO: ask what this is"
-                    tau = 1
-                    #raise NotImplementedError("baseline min intercept from d/dt not implemented yet")
+                    species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
+                    tau = calc_baseline_min_intercept_tau(species_conc_history, time_history.t, ignition_target)
                 else:
                     raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
         
@@ -316,7 +445,7 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
     
     
 
-def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = True, save_time_history_plots=False):
+def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = False, save_time_history_plots=False):
     
     
     T5_list = []
@@ -345,6 +474,12 @@ def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = 
     os.makedirs(results_path, exist_ok=True)
     
     scaled_inverse_T5 = [1000.0 / T for T in T5_list]
+    experiment_label = str(operating_conditions_df["filename"].iloc[0])
+    first_row = operating_conditions_df.iloc[0]
+    ignition_type = first_row["ignition_type"] if "ignition_type" in operating_conditions_df.columns else first_row.iloc[8]
+    ignition_target = first_row["ignition_target"] if "ignition_target" in operating_conditions_df.columns else first_row.iloc[9]
+    composition = first_row["composition"] if "composition" in operating_conditions_df.columns else first_row.iloc[4]
+    plot_title = f"IDT Type: {ignition_type}, IDT Target: {ignition_target}, {composition}"
     
     if interactive:
         fig = go.Figure()
@@ -355,7 +490,7 @@ def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = 
                 x=scaled_inverse_T5,
                 y=exp_tau_list,
                 mode="markers",
-                name="real experiment",
+                name=experiment_label,
                 marker=dict(color="red", size=8)
             )
         )
@@ -373,9 +508,9 @@ def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = 
 
         # Layout and axes
         fig.update_layout(
-            title=f"IDT_type:{operating_conditions_df.iloc[0,9]}{operating_conditions_df.iloc[0,8]}, {operating_conditions_df.iloc[0,4]}",
-            xaxis_title="1000/T5 (1/K)",
-            yaxis_title="Ignition Delay Time (μs)",
+            title=plot_title,
+            xaxis_title="1000/T5 [1000/K]",
+            yaxis_title="Ignition Delay [μs]",
             yaxis_type="log",
             template="plotly_white",
             width=800,
@@ -389,13 +524,50 @@ def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = 
         # Save interactive HTML (recommended)
         fig.write_html(f"{results_path}/IDT_plot_experiment_vs_cantera.html")
     else:
-        plt.figure(figsize=(8, 6))
-        plt.scatter(scaled_inverse_T5, exp_tau_list, label='real experiment', color='red')
-        plt.scatter(scaled_inverse_T5, sim_tau_list, label='Cantera', color='blue')
-        plt.xlabel('1000/T5 (1/K)')
-        plt.ylabel('Ignition Delay Time (μs)')
-        plt.yscale('log')
-        plt.legend()
-        plt.title('Ignition Delay Times Comparison')
-        plt.grid(True)
-        plt.savefig(f"{results_path}/IDT_plot_experiment_vs_cantera.svg")
+        apply_reference_plot_style()
+        fig, ax = plt.subplots(figsize=(7.2, 5.2))
+
+        exp_color = "#d62728"
+        sim_color = "#1f77b4"
+
+        ax.scatter(
+            scaled_inverse_T5,
+            exp_tau_list,
+            label=experiment_label,
+            color=exp_color,
+            marker="o",
+            s=34,
+            edgecolors=exp_color,
+            linewidths=0.9,
+            alpha=0.95,
+        )
+        ax.scatter(
+            scaled_inverse_T5,
+            sim_tau_list,
+            label="Cantera",
+            color=sim_color,
+            marker="s",
+            s=34,
+            edgecolors=sim_color,
+            linewidths=0.9,
+            alpha=0.95,
+        )
+
+        ax.set_xlabel("1000/T5 [1000/K]")
+        ax.set_ylabel("Ignition Delay [μs]")
+        ax.set_yscale("log")
+        ax.set_title(plot_title, pad=10)
+
+        legend = ax.legend(loc="best", frameon=True)
+        legend.get_frame().set_alpha(0.92)
+        legend.get_frame().set_edgecolor("#DDDDDD")
+
+        ax.grid(True, which="major", axis="both")
+        ax.minorticks_on()
+        ax.grid(True, which="minor", linestyle=":", linewidth=0.45, alpha=0.6)
+        ax.margins(x=0.03, y=0.08)
+        fig.tight_layout()
+
+        fig.savefig(f"{results_path}/IDT_plot_experiment_vs_cantera.png")
+        fig.savefig(f"{results_path}/IDT_plot_experiment_vs_cantera.svg")
+        plt.close(fig)

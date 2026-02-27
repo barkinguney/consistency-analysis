@@ -1,11 +1,11 @@
-Dataset: UserDataset_2026-02-24_110006
+Dataset: UserDataset_2026-02-27_120525
 Units added: 14
 Fit method: qinf
 QoI space: log(IDT)
 Is consistent: 0
 Is tryConsistentAgain: 0
 Consistency measure:
-   -3.5578   -3.5477
+   -5.6615   -5.4849
 
 
 

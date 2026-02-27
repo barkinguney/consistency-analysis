@@ -1,4 +1,4 @@
-\chapter{Concept and Model}\label{Chap:ProblemFormulation}
+\chapter{Methodology}\label{Chap:ProblemFormulation}
 
 
 
@@ -20,6 +20,14 @@ The workflow outputs combined and expanded uncertainties with standardized and t
 
 The proposed procedure enables standardized uncertainty reporting for shock-tube IDTs and supports database ingestion, data-consistency analysis, Bayesian parameter estimation, and mechanism optimization. The implementation is prepared for integration into the developing TUMKIN chemical-kinetics cyber-infrastructure at the Technical University of Munich.
 
+
+
+
+
+\subsection{Systematic Uncertainty}
+Systematic uncertainties are calculated by evaluating how much the experimental conditions deviate from ideal shock tube parameters. This is achieved using Harrington Desirability Functions, which transform nonidealities into a dimensionless penalty scale. 1.1 Penalty Calculation for Impacting Factors (IFs)For each impacting factor $\mu_{actual}$, a penalty $\delta_i$ is calculated based on its proximity to an ideal range $[L, U]$. If the value falls within the range, the penalty is zero. If it falls outside, the penalty increases exponentially:$$x_i = \frac{\mu_{ideal} - \mu_{actual}}{\mu_{ideal}}$$$$\xi_i = 1 - \exp(-x_i^2)$$$$\delta_i = \delta_0 \cdot \xi_i$$
+Where $\delta_0$ is a scaling constant (set to 5.0 in this study). For boolean factors (e.g., presence of impurities or tailoring), a fixed binary penalty is applied when the condition is not met.1.2 Total Systematic ErrorThe total systematic relative error for a specific data point, $\varepsilon_{sys}$, is the sum of penalties from fixed experimental factors and the specific ignition delay time (IDT) measurement:$$\varepsilon_{sys} = \sum \delta_{fixed} + \delta_{IDT} + \delta_0$$This relative error is then converted into an absolute systematic variance:$$u_{sys}^2 = \left( \frac{\tau \cdot \varepsilon_{sys}}{100 \cdot 2} \right)^2$$
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Figures/impacting_factors.png}
@@ -38,10 +46,47 @@ The proposed procedure enables standardized uncertainty reporting for shock-tube
 \end{flalign}
 
 \section{Arrhenius Parameters Uncertainty}
-Different sources report different values for the Arrhenius parameters or rate coefficients for the same reaction. Therefore, it is important to take all this information into account when analysing and optimizing reaction mechanisms. Kinetics databases like NIST chemical kinetics database and RMG database will be used to collect kinetics data, and calculate least squares fit to determine best parameters, and their distribution, specified by the covariance matrix of the least squares fit. Standard deviations of the parameters will be used to determine uncertainty bounds of the rate coefficients
+Different sources report different values for the Arrhenius parameters or rate coefficients for the same reaction. Therefore, it is important to take all this information into account when analysing and optimizing reaction mechanisms. Kinetics databases like NIST chemical kinetics database and RMG database will be used to collect kinetics data, and calculate least squares fit to determine best parameters, and their distribution, specified by the covariance matrix of the least squares fit. Standard deviations of the parameters will be used to determine uncertainty bounds of the rate coefficients.
+
+Workflow is as follows. For a given reaction equation string, reactant and product species are determined by comparing the string to known species. SMILES representations of the species are used to search RMG database libraries for matching sources. For every matching source, reaction rate coefficient is evaluated at fixed points in the valid temperature range of the source. In the RMG database most sources do not specify the valid temperature range of the reported kinetics data. In that case  reaction rate coefficient is evaluate over a wide temperature range of 300K-3100K. Valid temperature ranges not being available for most sources is not ideal and is one of the downsides of the RMG database. Collected kinetics data, and rate coefficients evaluated at fixed intervals within the temperature range are saved further processing. Currently RMG kinetics types of Arrhenius, MultiArrhenius, ThirdBody are supported. For future development PDepArrhenius should be added. Currently efficencies of ThirdBody reactions are not considered. 
+
+In standard Arrhenius fitting parameters (A,n,$E_a$) are usually highly correlated. 
+
+$$\ln k(T) = \beta_0 + n \ln\left(\frac{T}{T_{ref}}\right) - \frac{E_a}{R} \left(\frac{1}{T} - \frac{1}{T_{ref}}\right)$$
+
+The rate expression is transformed into a log linear model centered around a reference temperature, which is geometric mean of temperature unless otherwise specified. The parameters $(\beta_0, n, E_a)$ are solved using a Non-Linear Least Squares approach. The resulting covariance matrix in the reparameterized space, $\Sigma_{\beta}$, is then mapped back to the original $( \log_{10} A, n, E_a )$ space using the Jacobian transformation matrix $J$:
+
+$$\Sigma_{\theta} = J \Sigma_{\beta} J^T$$
+
+Diagonal entries of the covariance matrix of the least squares fit give parameter standard deviations $s\left(\log_{10}{\left(A\right)}\right), s\left(n\right), s\left(E_a\right)$, which are used to calculate lower and upper uncertainty bounds for rate coefficients.
+\begin{equation}
+	k_{\mathrm{low}}(T) =
+	10^{\log_{10}(A) - s(\log_{10} A)}\,
+	T^{\,n - s(n)}\,
+	\exp\left(-\frac{E_a + s(E_a)}{T}\right)
+\end{equation}
+\begin{equation}
+	k_{\mathrm{up}}(T) =
+	10^{\log_{10}(A) + s(\log_{10} A)}\,
+	T^{\,n + s(n)}\,
+	\exp\left(-\frac{E_a - s(E_a)}{T}\right)
+\end{equation}
+The uncertainty parameter f is defined as:
+\begin{equation}
+	f(T) =
+	\log_{10}\!\left(\frac{k_{\mathrm{up}}(T)}{k_0(T)}\right)
+	=
+	\log_{10}\!\left(\frac{k_0(T)}{k_{\mathrm{low}}(T)}\right)
+\end{equation}
+Where $k_0$ is the best fit of the rate coefficient, $k_low$ and $k_up$ are the lower and the upper bounds respectively [8].  This gives a temperature dependent uncertainty factor f(T). Temperature dependence of f(T) is usually low. To simplify further analysis, mean value of f(T) is selected as constant f. When rate coefficients need to be sampled in further anylysis, they are sampled from the interval 
+$\left[k_0\left(T\right)/{10}^f\left(T\right),k_0\left(T\right)\ast{10}^f\left(T\right)\right]$. In practice this can be achieved by multiplying the pre exponantial factor A witha  multiplier sampled from $\left[\left(T\right)/{10}^f\left(T\right),\left(T\right)\ast{10}^f\left(T\right)\right]$.
+Which preserves the shape of the k(T) curve and only scales it. 
 
 \section{Cantera IDT Simulations}
-Cantera is a 0D and 1D chemical kinetics software. To simulate shock tube IDT, constant volume batch reactors are used. Ignition delay times to be simulated for a given operating conditions T5, P5 phi and mechanism. The exact measurement or simulation time of IDT vary based on IDT definition.  Using the same IDT definition as reported by the physical experiment to calculate simulated IDT would yield the closest results to physical experiment. the The ignition types that can be handled by this IDT simulation code are a follow. Following the format described by RESPECTH shock tube IDT measurements, ignition type is comprised of attributes, target, type, amount and unit . Target can be pressure, temperature or concentration. Type can be “max”, “d/dt max”, “baseline max/min intercept from d/dt“, “concentration”, “relative concentration”, and “relative increase”. ”max” means IDT is at the maximum of the target property. “d/dt max” means IDT is at the maximum gradient of target property. “baseline max/min intercept from d/dt“ means the time when the max d/dt line intercepts the baseline value of target property. “concentration”: IDT is at the time target property reaches a specified concentration value. “relative concentration”: IDT is at the time when the concentration of the target property relative to its maximum concentration reach the specified value. “relative increase”:IDT is at the time when the value of  the target property increases by a given relative amount compared to its value at t=0.  Amount attribute is only used when type are “concentration”, “relative concentration” or “relative increase”. Unit attribute is only used when the type is  “concentration”, “relative concentration” or “relative increase”. Unit should have the value “unitless” for relative types. 
+Cantera is a 0D and 1D chemical kinetics simulation software. To simulate shock tube IDT, constant volume batch reactors are used. Ignition delay times to be simulated for a given operating conditions T5, P5 phi and mechanism. The exact measurement or simulation time of IDT vary based on IDT definition.  Using the same IDT definition as reported by the physical experiment to calculate simulated IDT would yield the closest results to physical experiment. the The ignition types that can be handled by this IDT simulation code are a follow. Following the format described by RESPECTH shock tube IDT measurements, ignition type is comprised of attributes, target, type, amount and unit . Target can be pressure, temperature or concentration. Type can be “max”, “d/dt max”, “baseline max/min intercept from d/dt“, “concentration”, “relative concentration”, and “relative increase”. ”max” means IDT is at the maximum of the target property. “d/dt max” means IDT is at the maximum gradient of target property. “baseline max/min intercept from d/dt“ means the time when the max d/dt line intercepts the baseline value of target property. “concentration”: IDT is at the time target property reaches a specified concentration value. “relative concentration”: IDT is at the time when the concentration of the target property relative to its maximum concentration reach the specified value. “relative increase”:IDT is at the time when the value of  the target property increases by a given relative amount compared to its value at t=0.  Amount attribute is only used when type are “concentration”, “relative concentration” or “relative increase”. Unit attribute is only used when the type is  “concentration”, “relative concentration” or “relative increase”. Unit should have the value “unitless” for relative types.  
+
+
+
 \section{Consistency analysis}
 Consistency methods, that check for a given dataset of experimental ignition delay time measurements and a mechanism with parameter bounds, whether experiments and mechanism are consistent with each other.
 \begin{figure}[htbp]
@@ -65,14 +110,7 @@ The resulting regression coefficients define impact factors, which estimate how 
 \end{equation}
 Active parameters are selected by screening the ranked impact factors with a preset threshold [11]. Depending on the use case sensitivity analysis or uncertainty analysis, $S_l$ or $\ \mathrm{I}Fi$ is used to rank parameters.
 
-
-
-
-
-
-\section{Problem Formulation}
-
-
-
-
-
+\section{Data Sources}
+When TUMKIN is up  and running, uncertainty quantification and consistency analysis codes described in this thesis will use the data available in TUMKIN. The following sources has been used in the mean time to develop these modules, and  could be imported into TUMKIN if suitable. 
+Kinetics database RESPECTH  [2] collect IDT, laminar flame speed, and concentration measurement s for various fuels. They are reported in their xml format.  For testing the modules developed in this thesis I have used the RESPECTH data for shock tube IDT data for ethylene, Syngas and Hydrogen. 
+Currently Most comprehensive collection of reaction rates and Arrhenius parameters is the NIST Kinetics Database [20]. That contain many literature sources for every reaction. However, they don’t allow access to their database from code, no API or anything. It is the most comprehensive source, however, must be accessed manually. Reaction Mechanism Generator (RMG) on the other hand also contains a kinetics database that is openly accessible. For this thesis Arrhenius parameter data s taken from RMG database. To algorithmically extract kinetics data from RMG for a given reaction, SMILES or INCHI representations of the products and reactants are necessary. So, a species database that map between the widely accepted SMILES, INCHI representations and Cantera species name, and composition is necessary. An example format can be seen in OPTIMA++.  Species names for the same species can be different across mechanism files if they are consistent within the mechanism. This is however not suitable for TUMKIN database. So before ingesting Mechanism files into TUMKIN it should be validated that species in mechanism can unambiguously be found in the TUMKIN species data base. This validating step is not in the scope of this thesis however is necessary for TUMKIN.

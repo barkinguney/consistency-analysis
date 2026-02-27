@@ -57,13 +57,35 @@ idt_data_df.to_csv("sensitivity/results/idt_data_for_sensitivity_analysis.csv", 
 
 for key, group in idt_data_df.groupby('filename'):
     print(key)
-    if True:
+    if (group["ignition_type"].iloc[0] == "baseline min intercept from d/dt" ):
         ignition_type = group["ignition_type"].iloc[0]
         xml_name = group["filename"].iloc[0].split(".")[0]
         fuel_name = group["composition"].iloc[0].split(":")[0]
         results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}"
-        cantera_related_functions.plot_IDT_vs_T(gas, group, output_path=results_path, save_time_history_plots=False)
+        cantera_related_functions.plot_IDT_vs_T(
+            gas,
+            group,
+            output_path=results_path,
+            interactive=False,
+            save_time_history_plots=False,
+        )
     
+# for key, group in idt_data_df.groupby('filename'):
+#     print(key)
+#     if "x10001084" in key:
+#         ignition_type = group["ignition_type"].iloc[0]
+#         xml_name = group["filename"].iloc[0].split(".")[0]
+#         fuel_name = group["composition"].iloc[0].split(":")[0]
+#         results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}_simple"
+#         cantera_related_functions.plot_IDT_vs_T(
+#             gas,
+#             group,
+#             output_path=results_path,
+#             interactive=False,
+#             save_time_history_plots=False,
+#         )
+    
+
 
 # for key, group in idt_data_df.groupby('filename'):
 #     if group["ignition_type"].iloc[0] == "d/dt max":

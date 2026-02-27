@@ -90,7 +90,7 @@ ds.Variables
 isConsistent = ds.isConsistent;
 ds.plotConsistencySensitivity
 
-deletedUnits = ds.deleteUnit([12,5, 6, 11]);
+deletedUnits = ds.deleteUnit([1,2,3,4,5,6,7,8,9,10]);
 tryConsistentAgain = ds.isConsistent
 ds.plotConsistencySensitivity
 

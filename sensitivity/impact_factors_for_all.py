@@ -7,6 +7,7 @@ from scipy import linalg
 import time
 import copy
 from pathlib import Path
+import re
 
 import read_data
 import cantera_related_functions
@@ -231,6 +232,74 @@ def stratified_sample_operating_conditions(
     return sampled_df
 
 
+def _safe_condition_tag(condition_idx, operating_condition):
+    t5 = getattr(operating_condition, "T5", None)
+    p5 = getattr(operating_condition, "P5", None)
+    phi = getattr(operating_condition, "phi", None)
+
+    if t5 is not None and p5 is not None and phi is not None:
+        tag = f"cond_{condition_idx:03d}_T{float(t5):.1f}_P{float(p5):.3f}_phi{float(phi):.3f}"
+    else:
+        tag = f"cond_{condition_idx:03d}"
+
+    return re.sub(r"[^A-Za-z0-9._-]", "_", tag)
+
+
+def save_sensitivity_outputs_for_condition(temp_df, condition_idx, operating_condition, output_dir):
+    """
+    Save sensitivity values for one operating condition as:
+    - CSV table listing reactions and sensitivity values
+    - Horizontal bar plot with reaction equations and sensitivity values
+    """
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    condition_tag = _safe_condition_tag(condition_idx, operating_condition)
+
+    condition_df = (
+        temp_df[["equation", "if", "low_impact"]]
+        .sort_values("if", ascending=False)
+        .reset_index(drop=True)
+    )
+    condition_df["rank"] = np.arange(1, len(condition_df) + 1)
+
+    csv_path = output_dir / f"{condition_tag}_sensitivity.csv"
+    condition_df.to_csv(csv_path, index=False)
+
+    top_n = 20
+    plot_df = condition_df.head(top_n)
+
+    fig_height = max(6, 0.35 * len(plot_df))
+    plt.figure(figsize=(12, fig_height))
+    y_labels = plot_df["equation"].tolist()
+    x_values = plot_df["if"].to_numpy(dtype=float)
+    y_pos = np.arange(len(plot_df))
+
+    plt.barh(y_pos, x_values, color="tab:blue")
+    plt.yticks(y_pos, y_labels, fontsize=8)
+    plt.gca().invert_yaxis()
+    plt.xlabel("Sensitivity value (impact factor)")
+
+    if hasattr(operating_condition, "T5") and hasattr(operating_condition, "P5") and hasattr(operating_condition, "phi"):
+        plt.title(
+            f"Top {min(top_n, len(condition_df))} sensitivity reactions | Condition {condition_idx} "
+            f"(T5={operating_condition.T5:.1f} K, P5={operating_condition.P5:.3f}, phi={operating_condition.phi:.3f})"
+        )
+    else:
+        plt.title(f"Top {min(top_n, len(condition_df))} sensitivity reactions | Condition {condition_idx}")
+
+    x_offset = max(np.max(x_values) * 0.01, 1e-12)
+    for y, x in zip(y_pos, x_values):
+        plt.text(x + x_offset, y, f"{x:.3e}", va="center", fontsize=7)
+
+    plt.grid(axis="x", alpha=0.25)
+    plt.tight_layout()
+
+    fig_path = output_dir / f"{condition_tag}_sensitivity.png"
+    plt.savefig(fig_path, dpi=300)
+    plt.close()
+
+
 
 if __name__ == "__main__":
 
@@ -282,6 +351,8 @@ if __name__ == "__main__":
     param_multipliers_samples = lhs_sampling(factors_list=uncertainty_factors, n=no_reactions*3)
     if_df = pd.DataFrame()
 
+    per_condition_output_dir = Path("sensitivity/results/per_condition_sensitivity")
+
     for condition_idx, operating_condition in enumerate(operating_conditions_df.itertuples(index=False)):
         
         # t_max = 0.1
@@ -319,7 +390,15 @@ if __name__ == "__main__":
         impact_threshold = 0.1 # 
         temp_df["operating_condition"] = str(operating_condition)
         temp_df["if"] = np.abs(c) * temp_df["f_value"] * 2  #* np.log(10)  # factor of 2 because we consider +/-f_value range
+        temp_df["rank"] = temp_df["if"].rank(ascending=False, method="first")
         temp_df["low_impact"] = temp_df["if"] < (temp_df["if"].max() * impact_threshold)
+
+        save_sensitivity_outputs_for_condition(
+            temp_df=temp_df,
+            condition_idx=condition_idx,
+            operating_condition=operating_condition,
+            output_dir=per_condition_output_dir,
+        )
         
         # store impact factors for this operating condition
         if_df = pd.concat([if_df, temp_df], ignore_index=True, copy=True)
@@ -327,10 +406,14 @@ if __name__ == "__main__":
     if_df.reset_index(drop=True, inplace=True)
     # now we aggragete impact factors over operating conditions
     #if a reaction is low impact in all operating conditoions its inactive
-    inactive_eqs = if_df.groupby("equation")["low_impact"].sum().eq(len(operating_conditions_df))
+    inactive_type = "not_top5_in_any"
+    if inactive_type == "low_impact_in_all":
+        inactive_eqs = if_df.groupby("equation")["low_impact"].sum().eq(len(operating_conditions_df))
+    if inactive_type == "not_top5_in_any":
+        inactive_eqs = if_df.groupby("equation")["rank"].min().gt(5)
     if_df["inactive"] = if_df["equation"].map(inactive_eqs).fillna(False)
     active_df = if_df[~if_df["inactive"]].copy()
-    active_df['rank'] = active_df.groupby("operating_condition")["if"].rank(ascending=False, method="first")
+    #active_df['rank'] = active_df.groupby("operating_condition")["if"].rank(ascending=False, method="first")
     
     unique_active_eqs = active_df["equation"].unique()
     pd.DataFrame(unique_active_eqs, columns=["equation"]).to_csv("sensitivity/results/unique_active_eqs.csv", index=False)

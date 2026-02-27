@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.24)  25 FEB 2026 10:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.24)  27 FEB 2026 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1568,12 +1568,11 @@ LaTeX Font Info:    Trying to load font information for T1+aer on input line 3.
 (c:/texlive/2024/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 ) (./Thesis.aux
-(./Chapters/04_Nomenclature.aux) (./Chapters/10_Introduction.aux)
-(./Chapters/20_Theory.aux) (./Chapters/30_ModelAndMethod.aux)
-(./Chapters/40_Implementation.aux) (./Chapters/50_Results.aux)
-(./Chapters/70_Summary.aux) (./Chapters/92_AppendixA.aux)
-(./Chapters/93_AppendixBFlowCharts.aux) (./Chapters/90_Bibliography.aux)
-(./Chapters/99_Statement.aux))
+(./Chapters/10_Introduction.aux) (./Chapters/20_Theory.aux)
+(./Chapters/30_ModelAndMethod.aux) (./Chapters/40_Implementation.aux)
+(./Chapters/50_Results.aux) (./Chapters/70_Summary.aux)
+(./Chapters/92_AppendixA.aux) (./Chapters/93_AppendixBFlowCharts.aux)
+(./Chapters/90_Bibliography.aux) (./Chapters/99_Statement.aux))
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1693,13 +1692,6 @@ ets in Bound-to-Bound Data Collaboration^^C
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                ISO80000
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                UQ_barkin
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1708,6 +1700,13 @@ Package biblatex Warning: The following entry could not be found
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
 (biblatex)                cantera
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                good_cantera
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1798,31 +1797,53 @@ ogo_cmyk.pdf>])
 
 
 ] (./Thesis.toc
-Overfull \hbox (3.68982pt too wide) detected at line 6
- \T1/aer/m/n/10.95 XIII
- []
-
-
 
 [7
 
 
-]
-
-[8])
+])
 \tf@toc=\write6
 \openout6 = `Thesis.toc'.
 
 
 
-[9]
+[8] (./Thesis.lof
+Overfull \hbox (30.62523pt too wide) in paragraph at lines 11--11
+ [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
+r-i-men-tal mea-sure-ment [] 
+ []
+
+
+Overfull \hbox (30.62523pt too wide) in paragraph at lines 12--12
+ [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
+r-i-men-tal mea-sure-ment [] 
+ []
+
+
+Overfull \hbox (30.62523pt too wide) in paragraph at lines 13--13
+ [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
+r-i-men-tal mea-sure-ment [] 
+ []
+
+)
+\tf@lof=\write7
+\openout7 = `Thesis.lof'.
+
+
+
+[9
+
+
+
+
+]
 
 [10
 
 
-] (./Thesis.lof)
-\tf@lof=\write7
-\openout7 = `Thesis.lof'.
+] (./Thesis.lot)
+\tf@lot=\write8
+\openout8 = `Thesis.lot'.
 
 
 
@@ -1832,42 +1853,6 @@ Overfull \hbox (3.68982pt too wide) detected at line 6
 ]
 
 [12
-
-
-] (./Thesis.lot)
-\tf@lot=\write8
-\openout8 = `Thesis.lot'.
-
-
-
-[13
-
-
-]
-
-[14
-
-
-]
-\openout2 = `Chapters/04_Nomenclature.aux'.
-
- (./Chapters/04_Nomenclature.tex
-
-[15
-
-
-
-]
-
-[16])
-
-[17
-
-]
-
-[18
-
-
 
 
 ]
@@ -1903,8 +1888,8 @@ chapter 2.
 
 [4]
 Overfull \hbox (78.44887pt too wide) in paragraph at lines 43--45
-\T1/aer/m/n/10.95 bounds re-spec-tively [8]. Rate co-ef-fi-cients are then sam-
-pled from the in-ter-val $[]$.
+\T1/aer/m/n/10.95 bounds re-spec-tively [[]8[]]. Rate co-ef-fi-cients are then 
+sam-pled from the in-ter-val $[]$.
  []
 
 
@@ -1981,55 +1966,39 @@ chapter 3.
 
 
 ]
-<Figures/impacting_factors.png, id=361, 692.5875pt x 513.92pt>
+
+[14]
+<Figures/impacting_factors.png, id=372, 692.5875pt x 513.92pt>
 File: Figures/impacting_factors.png Graphic file (type png)
 <use Figures/impacting_factors.png>
-Package pdftex.def Info: Figures/impacting_factors.png  used on input line 25.
+Package pdftex.def Info: Figures/impacting_factors.png  used on input line 33.
 (pdftex.def)             Requested size: 352.8155pt x 261.80557pt.
 
 
-[14 <./Figures/impacting_factors.png>]
+[15 <./Figures/impacting_factors.png>]
 
-[15]
+[16]
+
+[17]
 File: Figures/TUM_Logo_cmyk.pdf Graphic file (type pdf)
 <use Figures/TUM_Logo_cmyk.pdf>
-Package pdftex.def Info: Figures/TUM_Logo_cmyk.pdf  used on input line 49.
+Package pdftex.def Info: Figures/TUM_Logo_cmyk.pdf  used on input line 94.
 (pdftex.def)             Requested size: 352.8155pt x 185.94661pt.
 
 
-[16])
+[18])
 
-[17]
+[19]
 
-[18
-
-
-
-
-]
+[20]
 \openout2 = `Chapters/40_Implementation.aux'.
 
- (./Chapters/40_Implementation.tex
-chapter 4.
-)
-
-[19
-
-
-
-]
-
-[20
-
-
-
-
-]
+ (./Chapters/40_Implementation.tex)
 \openout2 = `Chapters/50_Results.aux'.
 
  (./Chapters/50_Results.tex
-chapter 5.
-<Figures/davidson_2005_shen_2009_ignition_delay.png, id=400, 510.04553pt x 366.
+chapter 4.
+<Figures/davidson_2005_shen_2009_ignition_delay.png, id=406, 510.04553pt x 366.
 04755pt>
 File: Figures/davidson_2005_shen_2009_ignition_delay.png Graphic file (type png
 )
@@ -2037,7 +2006,7 @@ File: Figures/davidson_2005_shen_2009_ignition_delay.png Graphic file (type png
 Package pdftex.def Info: Figures/davidson_2005_shen_2009_ignition_delay.png  us
 ed on input line 7.
 (pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
-<Figures/g00000012_x10000006_x10000039_ignition_delay.png, id=401, 510.04553pt 
+<Figures/g00000012_x10000006_x10000039_ignition_delay.png, id=411, 510.04553pt 
 x 364.60216pt>
 File: Figures/g00000012_x10000006_x10000039_ignition_delay.png Graphic file (ty
 pe png)
@@ -2045,7 +2014,7 @@ pe png)
 Package pdftex.def Info: Figures/g00000012_x10000006_x10000039_ignition_delay.p
 ng  used on input line 15.
 (pdftex.def)             Requested size: 352.8155pt x 252.20998pt.
-<Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png, id=402, 
+<Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png, id=418, 
 510.04553pt x 364.60216pt>
 File: Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png Grap
 hic file (type png)
@@ -2053,9 +2022,18 @@ hic file (type png)
 Package pdftex.def Info: Figures/x10001041_x10001066_x10001056_x10001024_x_igni
 tion_delay.png  used on input line 22.
 (pdftex.def)             Requested size: 352.8155pt x 252.20998pt.
-)
+
 
 [21
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2063,10 +2041,52 @@ tion_delay.png  used on input line 22.
 
 [22 <./Figures/g00000012_x10000006_x10000039_ignition_delay.png> <./Figures/x10
 001041_x10001066_x10001056_x10001024_x_ignition_delay.png>]
+<Figures/IDT_plot_x10000020.png, id=441, 510.04553pt x 366.04755pt>
+File: Figures/IDT_plot_x10000020.png Graphic file (type png)
+<use Figures/IDT_plot_x10000020.png>
+Package pdftex.def Info: Figures/IDT_plot_x10000020.png  used on input line 33.
 
-[23]
+(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
 
-[24
+
+LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 34.
+
+<Figures/IDT_plot_x10001084.png, id=442, 591.1686pt x 366.04755pt>
+File: Figures/IDT_plot_x10001084.png Graphic file (type png)
+<use Figures/IDT_plot_x10001084.png>
+Package pdftex.def Info: Figures/IDT_plot_x10001084.png  used on input line 39.
+
+(pdftex.def)             Requested size: 352.8155pt x 218.46286pt.
+
+LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 40.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 40.
+
+<Figures/IDT_plot_x10000023.png, id=443, 510.04553pt x 366.04755pt>
+File: Figures/IDT_plot_x10000023.png Graphic file (type png)
+<use Figures/IDT_plot_x10000023.png>
+Package pdftex.def Info: Figures/IDT_plot_x10000023.png  used on input line 45.
+
+(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
+
+LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 46.
+
+)
+
+[23 <./Figures/IDT_plot_x10000020.png>]
+
+[24 <./Figures/IDT_plot_x10001084.png> <./Figures/IDT_plot_x10000023.png>]
+
+[25]
+
+[26
 
 
 
@@ -2075,256 +2095,16 @@ tion_delay.png  used on input line 22.
 \openout2 = `Chapters/70_Summary.aux'.
 
  (./Chapters/70_Summary.tex
-chapter 6.
-LaTeX Font Info:    Trying to load font information for TS1+aer on input line 2
-1.
-LaTeX Font Info:    No file TS1aer.fd. on input line 21.
+chapter 5.
+)
 
-LaTeX Font Warning: Font shape `TS1/aer/m/n' undefined
-(Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textbullet' on input line 21.
-
-
-
-[25
+[27
 
 
 
 ]
-File: Figures/TUM_Logo_cmyk.pdf Graphic file (type pdf)
-<use Figures/TUM_Logo_cmyk.pdf>
-Package pdftex.def Info: Figures/TUM_Logo_cmyk.pdf  used on input line 31.
-(pdftex.def)             Requested size: 220.50885pt x 116.21513pt.
 
-
-[26{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for T1+aett on input line 5
-8.
-
-(c:/texlive/2024/texmf-dist/tex/latex/ae/t1aett.fd
-File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-)
-LaTeX Info: Symbol \textmu not provided by
-            font family aer in TS1 encoding.
-            Default family used instead on input line 58.
-
-
-[27]
-
-LaTeX Warning: Citation 'ISO80000' on page 28 undefined on input line 79.
-
-
-Overfull \hbox (6.06888pt too wide) in paragraph at lines 82--83
-\T1/aett/m/n/10.95 de / pub / tex / graphics / pgf / base / doc / pgfmanual . p
-df$[] \T1/aer/m/n/10.95 and []$\T1/aett/m/n/10.95 http : / / pgfplots . sourcef
-orge .
- []
-
-Package pgfplots info on input line 96: Overriding colorspace to cmyk due to xc
-olor configuration.
-
-
-[28]
-Package pgfplots info on input line 122: Overriding colorspace to cmyk due to x
-color configuration.
-Package pgfplots info on input line 122: Using 'lua backend=false' for axis: ym
-ode=log unsupported (yet).
-PGFPlots: reading {Data/SFPlot.csv}
-Package pgfplots info on input line 141: Overriding colorspace to cmyk due to x
-color configuration.
-Package pgfplots info on input line 141: Using 'lua backend=false' for axis: ym
-ode=log unsupported (yet).
-PGFPlots: reading {Data/SFPlot.csv}
-
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
- unbounded coords=jump). 
-Package pgfplots info on input line 163: Overriding colorspace to cmyk due to x
-color configuration.
-PGFPlots: reading {Data/ngram.csv}
-PGFPlots: reading {Data/ngram.csv}
-NOTE: coordinate (1925,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1926,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1927,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1928,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1929,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1930,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1931,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1932,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1933,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1934,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1935,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1936,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1937,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1938,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1939,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1940,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1941,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1942,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1943,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1944,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1945,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1946,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1947,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1948,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1949,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-PGFPlots: reading {Data/ngram.csv}
-NOTE: coordinate (1966,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1967,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1968,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1969,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1970,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1971,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1972,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1973,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1974,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1975,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1976,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1977,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1978,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1979,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1980,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1981,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1982,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1983,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1984,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1985,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1986,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1987,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1988,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1989,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1990,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1991,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1992,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1993,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1994,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1995,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1996,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1997,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1998,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (1999,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2000,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2001,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2002,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2003,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2004,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2005,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2006,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2007,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-NOTE: coordinate (2008,NaN) has been dropped because it is unbounded (in y). (s
-ee also unbounded coords=jump). 
-Package pgfplots info on input line 180: Overriding colorspace to cmyk due to x
-color configuration.
-PGFPlots: reading {Data/ngram.csv}
-
-
-[29]
-
-[30])
-
-[31]
-
-[32
+[28
 
 
 
@@ -2336,13 +2116,13 @@ PGFPlots: reading {Data/ngram.csv}
 chapter A.
 )
 
-[33
+[29
 
 
 
 ]
 
-[34
+[30
 
 
 
@@ -2354,13 +2134,13 @@ chapter A.
 chapter B.
 )
 
-[35
+[31
 
 
 
 ]
 
-[36
+[32
 
 
 
@@ -2370,20 +2150,42 @@ chapter B.
 
  (./Chapters/90_Bibliography.tex
 
-[37
+[33
 
 
 
 ]
 
-[38
+[34
 
 
 ]
 chapter C.
+LaTeX Font Info:    Trying to load font information for T1+aett on input line 4
+.
+(c:/texlive/2024/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 
-[39]
+[35]
+
+[36]
+Overfull \hbox (15.25995pt too wide) in paragraph at lines 4--4
+[]\T1/aer/m/n/10.95 J. Her-zler and C. Nau-mann, ``Shock-tube study of the ig-n
+i-tion of methane/ethane/hydrogen
+ []
+
+
+
+[37])
+
+[38]
+
+[39
+
+
+
+]
 
 [40
 
@@ -2403,11 +2205,7 @@ Overfull \hbox (1.4929pt too wide) in paragraph at lines 25--92
 
 
 
-
-
-
-] (./Thesis.aux (./Chapters/04_Nomenclature.aux)
-(./Chapters/10_Introduction.aux) (./Chapters/20_Theory.aux)
+] (./Thesis.aux (./Chapters/10_Introduction.aux) (./Chapters/20_Theory.aux)
 (./Chapters/30_ModelAndMethod.aux) (./Chapters/40_Implementation.aux)
 (./Chapters/50_Results.aux) (./Chapters/70_Summary.aux)
 (./Chapters/92_AppendixA.aux) (./Chapters/93_AppendixBFlowCharts.aux)
@@ -2416,9 +2214,6 @@ Overfull \hbox (1.4929pt too wide) in paragraph at lines 25--92
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
@@ -2431,41 +2226,36 @@ Package biblatex Warning: Please rerun LaTeX.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 31 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 56258 strings out of 473200
- 1334251 string characters out of 5720278
- 2414264 words of memory out of 5000000
- 78359 multiletter control sequences out of 15000+600000
- 611974 words of font info for 147 fonts, out of 8000000 for 9000
+ 55632 strings out of 473200
+ 1320393 string characters out of 5720278
+ 2388203 words of memory out of 5000000
+ 77770 multiletter control sequences out of 15000+600000
+ 603018 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,20n,110p,10917b,2884s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmb1
-0.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:
-/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2
-024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2024/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmib10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
-b><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsl10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
-><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texl
-ive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Thesis.pdf (61 pages, 1744509 bytes).
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb><c:/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2024/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2024/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+b10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c
+:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsl10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2
+024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Thesis.pdf (55 pages, 2299807 bytes).
 PDF statistics:
- 858 PDF objects out of 1000 (max. 8388607)
- 721 compressed objects within 8 object streams
- 174 named destinations out of 1000 (max. 500000)
- 662 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 908 PDF objects out of 1000 (max. 8388607)
+ 764 compressed objects within 8 object streams
+ 170 named destinations out of 1000 (max. 500000)
+ 629 words of extra memory for PDF output out of 10000 (max. 10000000)
 
