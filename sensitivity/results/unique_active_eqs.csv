@@ -1,6 +1,10 @@
 equation
+2 H + M <=> H2 + M
 H + O2 (+M) <=> HO2 (+M)
 H + O2 <=> O + OH
 H2 + O <=> H + OH
 H2 + OH <=> H + H2O
 H + HO2 <=> 2 OH
+C + OH <=> CO + H
+H + HCO <=> CO + H2
+HCO + O <=> CO + OH

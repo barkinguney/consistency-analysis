@@ -32,8 +32,6 @@ for idt_data_folder in idt_data_folders:
     df.fillna(value= "", inplace=True)
     idt_data_df = pd.concat([idt_data_df, df], ignore_index=True)
 
-idt_data_df.to_csv("sensitivity/results/idt_data_for_sensitivity_analysis.csv", index=False)
-
 
 
 # n=0

@@ -380,6 +380,8 @@ if __name__ == "__main__":
     if_df = pd.DataFrame()
 
     per_condition_output_dir = Path("sensitivity/results/per_condition_sensitivity")
+    for file in per_condition_output_dir.glob("*"):
+        file.unlink()
 
     for condition_idx, operating_condition in enumerate(operating_conditions_df.itertuples(index=False)):
         
@@ -415,7 +417,7 @@ if __name__ == "__main__":
         
         #now we can calculate impact factors
         # If I vary parameter 𝑖 over its full uncertainty range, how much could IDT change?”
-        impact_threshold = 0.05 # 
+        impact_threshold = 0.07 # 
         temp_df["operating_condition"] = str(operating_condition)
         temp_df["if"] = np.abs(c) * temp_df["f_value"] * 2  #* np.log(10)  # factor of 2 because we consider +/-f_value range
         temp_df["rank"] = temp_df["if"].rank(ascending=False, method="first")
