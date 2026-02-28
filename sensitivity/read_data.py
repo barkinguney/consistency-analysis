@@ -96,6 +96,8 @@ class IDTExperiment:
     ignition_type: Optional[IgnitionType]
     common_properties: Dict[str, Any]
     common_property_units: Dict[str, Optional[str]]
+    bibliography_author: Optional[str]
+    bibliography_year: Optional[str]
     
 @dataclass
 class IgnitionType:
@@ -103,6 +105,22 @@ class IgnitionType:
     type: Optional[str]
     amount: Optional[str]
     units: Optional[str]
+
+
+def _author_before_first_comma(author: Optional[str]) -> str:
+    """Return author text truncated before the first comma."""
+    if not author:
+        return ""
+    author = author.strip()
+    for idx, ch in enumerate(author):
+        if ch == ",":
+            return author[:idx].strip()
+    return author
+
+
+def _clean_author_letters_only(author: str) -> str:
+    """Keep only letters from author text and remove whitespace."""
+    return "".join(ch for ch in author if ch.isalpha())
 
 
 def parse_idt_xml(path: Union[str, Path]) -> IDTExperiment:
@@ -125,6 +143,15 @@ def parse_idt_xml(path: Union[str, Path]) -> IDTExperiment:
     file_author = _child_text(exp, "fileAuthor")
     file_doi = _child_text(exp, "fileDOI")
     experiment_type = _child_text(exp, "experimentType")
+
+    bibliography_author = None
+    bibliography_year = None
+    bib_link = _find_first(exp, "bibliographyLink")
+    if bib_link is not None:
+        details_el = _find_first(bib_link, "details")
+        if details_el is not None:
+            bibliography_author = _child_text(details_el, "author")
+            bibliography_year = _child_text(details_el, "year")
 
     apparatus = _find_first(exp, "apparatus")
     apparatus_kind = _child_text(apparatus, "kind") if apparatus is not None else None
@@ -256,6 +283,8 @@ def parse_idt_xml(path: Union[str, Path]) -> IDTExperiment:
         ignition_type=ignition_type,
         common_properties=common_properties,
         common_property_units=common_property_units,
+        bibliography_author=bibliography_author,
+        bibliography_year=bibliography_year,
     )
 
 
@@ -568,7 +597,7 @@ def add_phi_to_xml_copy(
     return out_path
 
 
-def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str = "gri30.yaml") -> "pd.DataFrame":
+def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str = "gri30.yaml") -> Any:
     """
     Extract IDT data from all XML files in a folder into a pandas DataFrame.
     
@@ -603,6 +632,10 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
             
             # Calculate phi using Cantera
             phi = calculate_phi(exp.initial_composition)
+            short_author = _author_before_first_comma(exp.bibliography_author)
+            short_author = _clean_author_letters_only(short_author)
+            year_str = (exp.bibliography_year or "").strip()
+            author_year = f"{short_author}{year_str}" if short_author and year_str else (short_author or year_str)
             
             # Extract units from data group properties
             T_units = ""
@@ -653,6 +686,7 @@ def extract_idt_data_to_dataframe(folder_path: Union[str, Path], mechanism: str 
                         "ignition_type": exp.ignition_type.type,
                         "ignition_amount": ignition_amount_conv,
                         "ignition_units": ignition_units_conv,
+                        "author_year": author_year,
                         "filename": file_path.name
                     })
         except Exception as e:

@@ -1,6 +1,6 @@
 \chapter{Methodology}\label{Chap:ProblemFormulation}
 
-
+Source code can be found at: https://github.com/barkinguney/consistency-analysis
 
 \section{Experimental Shock Tube IDT Uncertainty}
 Every dataset in TUMKIN needs to contain appropriate uncertainties. If authors don't report uncertainties for experimental data, uncertainties are calculated using the Uncertainty Quantification(UQ) module of TUMKIN.
@@ -78,7 +78,7 @@ The uncertainty parameter f is defined as:
 	=
 	\log_{10}\!\left(\frac{k_0(T)}{k_{\mathrm{low}}(T)}\right)
 \end{equation}
-Where $k_0$ is the best fit of the rate coefficient, $k_low$ and $k_up$ are the lower and the upper bounds respectively [8].  This gives a temperature dependent uncertainty factor f(T). Temperature dependence of f(T) is usually low. To simplify further analysis, mean value of f(T) is selected as constant f. When rate coefficients need to be sampled in further anylysis, they are sampled from the interval 
+Where $k_0$ is the best fit of the rate coefficient, $k_low$ and $k_up$ are the lower and the upper bounds respectively \cite{nagy_uncertainty_2015}.  This gives a temperature dependent uncertainty factor f(T). Temperature dependence of f(T) is usually low. To simplify further analysis, mean value of f(T) is selected as constant f. When rate coefficients need to be sampled in further anylysis, they are sampled from the interval 
 $\left[k_0\left(T\right)/{10}^f\left(T\right),k_0\left(T\right)\ast{10}^f\left(T\right)\right]$. In practice this can be achieved by multiplying the pre exponantial factor A witha  multiplier sampled from $\left[\left(T\right)/{10}^f\left(T\right),\left(T\right)\ast{10}^f\left(T\right)\right]$.
 Which preserves the shape of the k(T) curve and only scales it. 
 
@@ -97,8 +97,8 @@ Consistency methods, that check for a given dataset of experimental ignition del
 \end{figure}
 
 \subsection{Sensitivity analysis}
-For a given QoI, the model responses are sensitive to only a small subset of parameters. These parameters, referred to as active parameters, dominate the response behavior, a phenomenon referred to as effect sparsity [15]. Employing a sensitivity analysis method to identify these active parameters and using only these active parameters in further analysis improves computational feasibility. 
-In [11] active parameters are identified by sampling the prior uncertainty region using space-filling designs like Latin hypercube sampling [16] or Sobol quasi-random sequence [17], and evaluating the original model at those points. A linear regression model Sl is then fitted to approximate the QoI as a function of the parameters.
+For a given QoI, the model responses are sensitive to only a small subset of parameters. These parameters, referred to as active parameters, dominate the response behavior, a phenomenon referred to as effect sparsity \cite{frenklach_optimization_1992}. Employing a sensitivity analysis method to identify these active parameters and using only these active parameters in further analysis improves computational feasibility. 
+In \cite{li_development_nodate} active parameters are identified by sampling the prior uncertainty region using space-filling designs like Latin hypercube sampling \cite{mckay_comparison_1979} or Sobol quasi-random sequence \cite{sobol_distribution_1967}, and evaluating the original model at those points. A linear regression model Sl is then fitted to approximate the QoI as a function of the parameters.
 \begin{equation}
 	S_l = \sum_{i=1}^{n} c_i x_i + c_0
 \end{equation}
@@ -108,9 +108,11 @@ The resulting regression coefficients define impact factors, which estimate how 
 	\mathrm{IF}_i = \left|c_i\right| \,\left(u_i - l_i\right)
 	= \left|c_i\right| \,\Delta x_i
 \end{equation}
-Active parameters are selected by screening the ranked impact factors with a preset threshold [11]. Depending on the use case sensitivity analysis or uncertainty analysis, $S_l$ or $\ \mathrm{I}Fi$ is used to rank parameters.
+Active parameters are selected by screening the ranked impact factors with a preset threshold \cite{li_development_nodate}. Depending on the use case sensitivity analysis or uncertainty analysis, $S_l$ or $\ \mathrm{I}Fi$ is used to rank parameters.
+
+\subsection{B2BDC Integration}
 
 \section{Data Sources}
 When TUMKIN is up  and running, uncertainty quantification and consistency analysis codes described in this thesis will use the data available in TUMKIN. The following sources has been used in the mean time to develop these modules, and  could be imported into TUMKIN if suitable. 
-Kinetics database RESPECTH  [2] collect IDT, laminar flame speed, and concentration measurement s for various fuels. They are reported in their xml format.  For testing the modules developed in this thesis I have used the RESPECTH data for shock tube IDT data for ethylene, Syngas and Hydrogen. 
+Kinetics database RESPECTH  \cite{turanyi_respecth_2025} collect IDT, laminar flame speed, and concentration measurement s for various fuels. They are reported in their xml format.  For testing the modules developed in this thesis I have used the RESPECTH data for shock tube IDT data for ethylene, Syngas and Hydrogen. 
 Currently Most comprehensive collection of reaction rates and Arrhenius parameters is the NIST Kinetics Database [20]. That contain many literature sources for every reaction. However, they don’t allow access to their database from code, no API or anything. It is the most comprehensive source, however, must be accessed manually. Reaction Mechanism Generator (RMG) on the other hand also contains a kinetics database that is openly accessible. For this thesis Arrhenius parameter data s taken from RMG database. To algorithmically extract kinetics data from RMG for a given reaction, SMILES or INCHI representations of the products and reactants are necessary. So, a species database that map between the widely accepted SMILES, INCHI representations and Cantera species name, and composition is necessary. An example format can be seen in OPTIMA++.  Species names for the same species can be different across mechanism files if they are consistent within the mechanism. This is however not suitable for TUMKIN database. So before ingesting Mechanism files into TUMKIN it should be validated that species in mechanism can unambiguously be found in the TUMKIN species data base. This validating step is not in the scope of this thesis however is necessary for TUMKIN.

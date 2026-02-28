@@ -161,13 +161,13 @@ def extract_surrogate_training_data(
     valid_samples = []
     for i, sample in enumerate(X):
         multiply_rates(gas, sample, active_reactions_idx)
-        idt = calc_IDT_constV(gas, operating_condition, t_max=idt_t_max, debug=False)
+        idt = calc_IDT_constV(gas, operating_condition, t_max=idt_t_max, save_time_history_plot=False, debug=False)
         if idt < idt_t_max*0.99:
             y.append(np.log(idt))
             valid_samples.append(sample)
         else:
             pass
-            #print(f"Sample {i} failed to ignite! Skipping...")
+            print(f"Sample {i} failed to ignite for operating condition {operating_condition}! Skipping...")
         
         if (i+1) % 50 == 0:
             print(f"Evaluated {i+1}/{len(X)} samples")

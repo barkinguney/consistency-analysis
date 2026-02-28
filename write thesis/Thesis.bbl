@@ -1047,6 +1047,168 @@
       \endverb
       \keyw{consistency}
     \endentry
+    \entry{frenklach_optimization_1992}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7e302a1c41e136f097ef185fe8a75c85}{%
+           family={Frenklach},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cce09707befb1515471f6653e5d141b7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hai},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f92bf66e60af99ee4c42910521de31ba}{%
+           family={Rabinowitz},
+           familyi={R\bibinitperiod},
+           given={Martin\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{164ee33bcacd468a1f65e5ed7b80bbf1}
+      \strng{fullhash}{aa471ccef6d28ceb0401859ef1aecb90}
+      \strng{fullhashraw}{aa471ccef6d28ceb0401859ef1aecb90}
+      \strng{bibnamehash}{aa471ccef6d28ceb0401859ef1aecb90}
+      \strng{authorbibnamehash}{aa471ccef6d28ceb0401859ef1aecb90}
+      \strng{authornamehash}{164ee33bcacd468a1f65e5ed7b80bbf1}
+      \strng{authorfullhash}{aa471ccef6d28ceb0401859ef1aecb90}
+      \strng{authorfullhashraw}{aa471ccef6d28ceb0401859ef1aecb90}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A method of systematic optimization, solution mapping, as applied to a large-scale dynamic model is presented. The basis of the technique is parameterization of model responses in terms of model parameters by simple algebraic expressions. These expressions are obtained by computer experiments arranged in a factorial design. The developed parametrized responses are then used in a joint multiparameter multi-data-set optimization. A brief review of the mathematical background of the technique is given. The concept of active parameters is discussed. The technique is applied to determine an optimum set of parameters for a methane combustion mechanism. Five independent responses----comprising ignition delay times, pre-ignition methyl radical concentration profiles, and laminar premixed flame velocities-were optimized with respect to thirteen reaction rate parameters. The numerical predictions of the optimized model are compared to those computed with several recent literature mechanisms. The utility of the solution mapping technique in situations where the optimum is not unique is also demonstrated.}
+      \field{issn}{03601285}
+      \field{journaltitle}{Progress in Energy and Combustion Science}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Optimization and analysis of large chemical kinetic mechanisms using the solution mapping method—combustion of methane}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{18}
+      \field{year}{1992}
+      \field{urldateera}{ce}
+      \field{pages}{47\bibrangedash 73}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1016/0360-1285(92)90032-V
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\P2UQCFPV\\Frenklach et al. - 1992 - Optimization and analysis of large chemical kinetic mechanisms using the solution mapping method—com.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/036012859290032V
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/036012859290032V
+      \endverb
+      \keyw{mechanism and data}
+    \endentry
+    \entry{mckay_comparison_1979}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=495d7b990bd7dbae419f7c61deab9163}{%
+           family={McKay},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=d4e765ee961e8b2a668274b0b7b319a8}{%
+           family={Beckman},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f9f4256bee518e284db8e54994e5dd48}{%
+           family={Conover},
+           familyi={C\bibinitperiod},
+           given={W.\bibnamedelimi J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3743b508e10ad02ea915a4f7e06c5e24}
+      \strng{fullhash}{cad1771d8ffdf33ec868c98b051e0ca9}
+      \strng{fullhashraw}{cad1771d8ffdf33ec868c98b051e0ca9}
+      \strng{bibnamehash}{cad1771d8ffdf33ec868c98b051e0ca9}
+      \strng{authorbibnamehash}{cad1771d8ffdf33ec868c98b051e0ca9}
+      \strng{authornamehash}{3743b508e10ad02ea915a4f7e06c5e24}
+      \strng{authorfullhash}{cad1771d8ffdf33ec868c98b051e0ca9}
+      \strng{authorfullhashraw}{cad1771d8ffdf33ec868c98b051e0ca9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00401706}
+      \field{journaltitle}{Technometrics}
+      \field{month}{5}
+      \field{number}{2}
+      \field{title}{A {Comparison} of {Three} {Methods} for {Selecting} {Values} of {Input} {Variables} in the {Analysis} of {Output} from a {Computer} {Code}}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{21}
+      \field{year}{1979}
+      \field{urldateera}{ce}
+      \field{pages}{239}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.2307/1268522
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/1268522?origin=crossref
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/1268522?origin=crossref
+      \endverb
+      \keyw{mechanism and data}
+    \endentry
+    \entry{sobol_distribution_1967}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=4f39994b217444280f50a1941cc047d6}{%
+           family={Sobol'},
+           familyi={S\bibinitperiod},
+           given={I.M},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{4f39994b217444280f50a1941cc047d6}
+      \strng{fullhash}{4f39994b217444280f50a1941cc047d6}
+      \strng{fullhashraw}{4f39994b217444280f50a1941cc047d6}
+      \strng{bibnamehash}{4f39994b217444280f50a1941cc047d6}
+      \strng{authorbibnamehash}{4f39994b217444280f50a1941cc047d6}
+      \strng{authornamehash}{4f39994b217444280f50a1941cc047d6}
+      \strng{authorfullhash}{4f39994b217444280f50a1941cc047d6}
+      \strng{authorfullhashraw}{4f39994b217444280f50a1941cc047d6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00415553}
+      \field{journaltitle}{USSR Computational Mathematics and Mathematical Physics}
+      \field{month}{1}
+      \field{number}{4}
+      \field{title}{On the distribution of points in a cube and the approximate evaluation of integrals}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{7}
+      \field{year}{1967}
+      \field{urldateera}{ce}
+      \field{pages}{86\bibrangedash 112}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1016/0041-5553(67)90144-9
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0041555367901449
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0041555367901449
+      \endverb
+      \keyw{mechanism and data}
+    \endentry
     \entry{shen_shock_2009}{article}{}{}
       \name{author}{3}{}{%
         {{hash=b4cea0aad19186a0b4d0f6d575a12280}{%
@@ -1076,8 +1238,8 @@
       \strng{authornamehash}{41166e15539eac8d00a133e19d8c477f}
       \strng{authorfullhash}{9868a37dc2477a5aa6f0580a9a358ad0}
       \strng{authorfullhashraw}{9868a37dc2477a5aa6f0580a9a358ad0}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The auto-ignition of toluene/air mixtures was studied in a shock tube at temperatures of 1021–1400 K, pressures of 10–61 atm, and equivalence ratios of U = 1.0, 0.5, and 0.25. Ignition times were measured using endwall OH* emission and sidewall piezoelectric pressure measurements. The measured pressure time-histories do not show signiﬁcant pre-ignition energy release, in agreement with the rapid compression machine study of Mittal and Sung [G. Mittal, C.-J. Sung, Combust. Flame 150 (2007) 355–368] and disagreement with the shock tube study of Davidson et al. [D.F. Davidson, B.M. Gauthier, R.K. Hanson, Proc. Combust. Inst. 30 (2005) 1175–1182]. Kinetic modeling predictions from three detailed mechanisms are compared. Sensitivity analysis indicates that the reaction of toluene (C6H5CH3) and the benzyl radical (C6H5CH2) with molecular oxygen are important and examination of the rate coeﬃcients for these reactions suggests that improved rate parameters for the multi-channel C6H5CH2 + O2 reaction may improve model predictions.}
@@ -1136,8 +1298,8 @@
       \strng{authornamehash}{8dee5d60c5935e7baf66def6586d14cd}
       \strng{authorfullhash}{2218b82df0e617caa1729129f3cd3488}
       \strng{authorfullhashraw}{2218b82df0e617caa1729129f3cd3488}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Ignition delay times were measured in a shock tube for iso-octane/air and toluene/air at conditions similar to those found in homogeneous charge compression ignition (HCCI) engines. Initial reﬂected shock conditions spanned the following ranges: temperature 855–1269 K, pressure 14–59 atm, and equivalence ratios / of 0.5 and 1 in synthetic air. Ignition delay times were measured using sidewall pressure via piezo-electric transducers and conﬁrmed with OH* and CH* emission measurements. The iso-octane ignition delay times are in excellent agreement with existing measurements by Fieweger et al. [Proc. Combust. Inst. 25 (1994) 1579; Combust. Flame 109 (1997) 599] and modeling by Ogink and Golovitchev [SAE Technical Paper Series, 2001, Paper No. 2001-01-3614]. No comparable high-pressure data exist for toluene/air, and modeling by Pitz et al. [U.S. Sections of the Combustion Institute 2nd Joint Spring Meeting, 2001, Paper 253] and Dagaut et al. [Fuel 81 (2002) 173] signiﬁcantly over-predicts the toluene/air ignition delay times at / = 1. The large pressure range of the current measurements permits determination of the pressure dependence of ignition delay time at the temperatures and pressures of direct interest in HCCI engine simulations. Detailed examination of the pressure–time proﬁles shows evidence of signiﬁcant pre-ignition energy release in both the iso-octane/air and toluene/air systems. Using current detailed mechanisms, the rate of this energy release is not correctly predicted either in iso-octane/air or toluene/air at temperatures above 850 K.}
@@ -1192,8 +1354,8 @@
       \strng{authornamehash}{9c5a1bc24a0b3f27bf5b58913eb57b09}
       \strng{authorfullhash}{9c5a1bc24a0b3f27bf5b58913eb57b09}
       \strng{authorfullhashraw}{9c5a1bc24a0b3f27bf5b58913eb57b09}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{15407489}
@@ -1410,8 +1572,8 @@
       \strng{authornamehash}{602871e68f8265617136b049dfa93e48}
       \strng{authorfullhash}{bcd990635b39387d451ee76093b303b4}
       \strng{authorfullhashraw}{bcd990635b39387d451ee76093b303b4}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0748-4658, 1533-3876}
@@ -1499,8 +1661,8 @@
       \strng{authornamehash}{8f8b189638cda240c15f040af5a4f348}
       \strng{authorfullhash}{415a0cf72e7fdbbfdce007c8107e4f12}
       \strng{authorfullhashraw}{415a0cf72e7fdbbfdce007c8107e4f12}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Laminar flame speeds and ignition delay times have been measured for hydrogen and various compositions of H2/CO (syngas) at elevated pressures and elevated temperatures. Two constant-volume cylindrical vessels were used to visualize the spherical growth of the flame through the use of a schlieren optical setup to measure the laminar flame speed of the mixture. Hydrogen experiments were performed at initial pressures up to 10 atm and initial temperatures up to 443 K. A syngas composition of 50/50 by volume was chosen to demonstrate the effect of carbon monoxide on H2−O2 chemical kinetics at standard temperature and pressures up to 10 atm. All atmospheric mixtures were diluted with standard air, while all elevated-pressure experiments were diluted with a He:O2 of 7:1 to minimize instabilities. The laminar flame speed measurements of hydrogen and syngas are compared to available literature data over a wide range of equivalence ratios where good agreement can be seen with several data sets. Additionally, an improved chemical kinetics model is shown for all conditions within the current study. The model and the data presented herein agree well, which demonstrates the continual, improved accuracy of the chemical kinetic model. A high-pressure shock tube was used to measure ignition delay times for several baseline compositions of syngas at three pressures across a wide range of temperatures. The compositions of syngas (H2/CO) by volume presented in this study included 80/20, 50/50, 40/60, 20/80, and 10/90, all of which are compared to previously published ignition delay times from a hydrogen-oxygen mixture to demonstrate the effect of carbon monoxide addition. Generally, an increase in carbon monoxide increases the ignition delay time, but there does seem to be a pressure dependency. At low temperatures and pressures higher than about 12 atm, the ignition delay times appear to be indistinguishable with an increase in carbon monoxide. However, at high temperatures the relative composition of H2 and CO has a strong influence on ignition delay times. Model agreement is good across the range of the study, particularly at the elevated pressures. Also, an increase in carbon monoxide causes the activation energy of the mixture to decrease.}
@@ -1545,8 +1707,8 @@
       \strng{authorfullhash}{c179efa2875fcce2d4b7c5664bb58fbc}
       \strng{authorfullhashraw}{c179efa2875fcce2d4b7c5664bb58fbc}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Other Initial composition: H2 CO O2 Ar}

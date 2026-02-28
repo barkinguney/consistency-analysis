@@ -1,15 +1,12 @@
-T5,T5_units,P5,P5_units,composition,phi,tau,tau_units,pressure_rise,pressure_rise_units,ignition_type,ignition_target,ignition_amount,ignition_units,filename,exp_unc
-918.0,K,103351.5,Pa,"H2:0.058683, O2:0.02947, Ar:0.911847",0.9956396335256192,0.00362,s,,,max,OH*;,,,g00000012.xml,15.96
-1199.0,K,94000.0,Pa,"H2:0.1254, O2:0.0157, Ar:0.8589",3.9936305732484083,0.000414,s,,,max,OHEX;,,,x10001017.xml,24.41
-1142.0,K,507000.0,Pa,"H2:0.0174, CO:0.0174, O2:0.0347, Ar:0.9306",0.5014409221902016,0.000108,s,,,max,OHEX;,,,x10001025.xml,23.44
-1017.0,K,419000.00000000006,Pa,"H2:0.1254, O2:0.0157, Ar:0.8589",3.9936305732484083,0.000928,s,,,max,OHEX;,,,x10001016.xml,33.77
-1068.0,K,1598000.0,Pa,"H2:0.0174, CO:0.0174, O2:0.0347, Ar:0.9306",0.5014409221902016,0.001861,s,,,max,OHEX;,,,x10001024_x.xml,19.33
-1204.0,K,1470000.0,Pa,"H2:0.1254, O2:0.0157, Ar:0.8589",3.9936305732484083,4.6e-05,s,,,max,OHEX;,,,x10001015.xml,41.02
-1929.0,K,33842.55,Pa,"H2:0.01, O2:0.03, Ar:0.96",0.16666666666666669,3.4299999999999993e-05,s,,,max,OH;,,,x10000027_x.xml,80.0
-1698.0,K,120000.0,Pa,"H2:0.1254, O2:0.0157, Ar:0.8589",3.9936305732484083,7.9e-05,s,,,max,OHEX;,,,x10001017.xml,24.41
-1649.0,K,413000.0,Pa,"H2:0.003, CO:0.0562, O2:0.0296, Ar:0.9112",1.0,8.9e-05,s,,,max,OHEX;,,,x10001022.xml,18.23
-1611.0,K,130000.0,Pa,"H2:0.1254, O2:0.0157, Ar:0.8589",3.9936305732484083,8.2e-05,s,,,max,OHEX;,,,x10001017.xml,24.41
-2070.0,K,141855.0,Pa,"H2:0.0005, CO:0.1217, O2:0.01, Ar:0.8678",6.11,0.000108,s,,,concentration,CO2;,1.6605390000000003e-11,kmol/m3,x10001052.xml,80.0
-2246.0,K,101000.0,Pa,"H2:0.0017, CO:0.033, O2:0.0347, Ar:0.9306",0.5,0.000326,s,,,max,OHEX;,,,x10001029.xml,18.09
-2620.0,K,176305.5,Pa,"H2:0.00049, CO:0.0328, O2:0.0101, Ar:0.95661",1.6480198019801982,5.6999999999999996e-05,s,,,concentration,CO2;,1.328431e-11,kmol/m3,x10001050.xml,80.0
-2565.0,K,190491.0,Pa,"H2:0.0005, CO:0.1217, O2:0.01, Ar:0.8678",6.11,4.2e-05,s,,,concentration,CO2;,1.6605390000000003e-11,kmol/m3,x10001052.xml,80.0
+T5,T5_units,P5,P5_units,composition,phi,tau,tau_units,pressure_rise,pressure_rise_units,ignition_type,ignition_target,ignition_amount,ignition_units,author_year,filename,exp_unc
+1246.0,K,1649571.0,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,4.6e-05,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,39.75
+1172.0,K,1291893.75,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.00015099999999999998,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,33.83
+1158.0,K,1320264.75,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.000203,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,39.07
+1148.0,K,1268589.0,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.000252,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,37.31
+1138.0,K,1369914.0,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.000335,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,46.98
+1125.0,K,1389165.75,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.000603,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,41.1
+1116.0,K,1288854.0,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.0007599999999999999,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,34.95
+1110.0,K,1391192.25,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.001162,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,36.58
+1107.0,K,1311145.5,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.001482,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,28.92
+1102.0,K,1338503.25,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.00163,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,31.65
+1098.0,K,1343569.5,Pa,"H2:0.0075, O2:0.0125, Ar:0.98",0.3,0.0018599999999999999,s,,,baseline min intercept from d/dt,OH*;,,,Keromnes2013,x10000034.xml,31.91

@@ -1,16 +1,17 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Flowchart.}}{1}{figure.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces This is the description that appears under the image.}}{15}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Flowchart.}}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces This is the description that appears under the image.}}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Flowchart.}}{18}{figure.caption.14}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparison of calculated IDT uncertainties for a stoichiometric toluene/air mixture. IDT measurements are from two different facilities \blx@tocontentsinit {0}\cite {shen_shock_2009}\blx@tocontentsinit {0}\cite {davidson_shock_2005} over similar temperature range. P$\sim $50 atm.}}{21}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Comparison of calculated IDT uncertainties for $H_2/O_2/Ar$ mixtures. IDT measurements are from sources \blx@tocontentsinit {0}\cite {herzler_shock-tube_2009} \blx@tocontentsinit {0}\cite {chemical_kinetics_laboratory_fujimoto_2017} \blx@tocontentsinit {0}\cite {keromnes_experimental_2013}.$\phi = 1.0, P\sim 1.4 atm$.}}{22}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison of calculated IDT uncertainties for diluted syngas/oxidizer mixtures. IDT measurements are from sources \blx@tocontentsinit {0}\cite {kalitan_ignition_2007} \blx@tocontentsinit {0}\cite {krejci_laminar_2012} \blx@tocontentsinit {0}\cite {herzler_shock-tube_2009} \blx@tocontentsinit {0}\cite {chemical_kinetics_laboratory_c_2017}$\phi = 0.5, P\sim 15 atm$.}}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison of Cantera IDT simulation with experimental measurement \blx@tocontentsinit {0}\cite {good_cantera} IDT Type: dP/dt max.}}{23}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison of Cantera IDT simulation with experimental measurement \blx@tocontentsinit {0}\cite {good_cantera} IDT Type: d($OH^*$)/dt max.}}{24}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Comparison of Cantera IDT simulation with experimental measurement \blx@tocontentsinit {0}\cite {good_cantera} IDT Type: OH max.}}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Comparison of calculated IDT uncertainties for a stoichiometric toluene/air mixture. IDT measurements are from two different facilities \blx@tocontentsinit {0}\cite {shen_shock_2009}\blx@tocontentsinit {0}\cite {davidson_shock_2005} over similar temperature range. P$\sim $50 atm.}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Comparison of calculated IDT uncertainties for $H_2/O_2/Ar$ mixtures. IDT measurements are from sources \blx@tocontentsinit {0}\cite {herzler_shock-tube_2009} \blx@tocontentsinit {0}\cite {chemical_kinetics_laboratory_fujimoto_2017} \blx@tocontentsinit {0}\cite {keromnes_experimental_2013}.$\phi = 1.0, P\sim 1.4 atm$.}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison of calculated IDT uncertainties for diluted syngas/oxidizer mixtures. IDT measurements are from sources \blx@tocontentsinit {0}\cite {kalitan_ignition_2007} \blx@tocontentsinit {0}\cite {krejci_laminar_2012} \blx@tocontentsinit {0}\cite {herzler_shock-tube_2009} \blx@tocontentsinit {0}\cite {chemical_kinetics_laboratory_c_2017}$\phi = 0.5, P\sim 15 atm$.}}{23}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison of Cantera IDT simulation with experimental measurement \blx@tocontentsinit {0}\cite {good_cantera} IDT Type: dP/dt max.}}{23}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison of Cantera IDT simulation with experimental measurement \blx@tocontentsinit {0}\cite {good_cantera} IDT Type: d($OH^*$)/dt max.}}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Comparison of Cantera IDT simulation with experimental measurement \blx@tocontentsinit {0}\cite {good_cantera} IDT Type: OH max.}}{24}{figure.caption.20}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

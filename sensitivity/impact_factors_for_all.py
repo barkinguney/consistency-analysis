@@ -327,23 +327,51 @@ if __name__ == "__main__":
     for idt_data_folder in idt_data_folders:
         idt_data_df = pd.concat([idt_data_df, read_data.extract_idt_data_to_dataframe(idt_data_folder)], ignore_index=True)
     
+    # delete rows where ignition target contains "OH"
+    #idt_data_df = idt_data_df[~idt_data_df["ignition_target"].str.contains("OH", case=False, na=False)]
+    
+    
+    which_data = "good_data"
+    
+    if which_data == "all_data":
+        operating_conditions_df = stratified_sample_operating_conditions(idt_data_df, n_T_bins=3, n_logP_bins=3, n_phi_bins=3, cap_per_bin=1, random_state=42)
+    elif which_data == "good_data":
+        valid_filenames = {f"x100000{a}.xml" for a in range(34, 35)} # range(33, 42) keromnes2013
+        idt_data_df = idt_data_df[idt_data_df["filename"].apply(lambda x: Path(x).name in valid_filenames)]
+        operating_conditions_df = idt_data_df
+    elif which_data == "good_data_+_1_bad_data":
+        pass
+    
     idt_data_df.to_csv("sensitivity/results/idt_data_for_sensitivity_analysis.csv", index=False)
-    operating_conditions_df = stratified_sample_operating_conditions(idt_data_df, n_T_bins=3, n_logP_bins=3, n_phi_bins=3, cap_per_bin=1, random_state=42)
-    for condition in operating_conditions_df.itertuples(index=False):
-        unc_file_name = Path(condition.filename).stem + f".csv"
+    
+    
+    
+    operating_conditions_df["exp_unc"] = np.nan
+    for condition in operating_conditions_df.itertuples(index=True):
+        unc = 80.0
+        unc_file_name = Path(condition.filename).stem + ".csv"
         for idt_unc_data_folder in idt_unc_data_folders:
             unc_file_path = Path(idt_unc_data_folder) / unc_file_name
             if unc_file_path.exists():
                 unc_df = pd.read_csv(unc_file_path)
-                
-                if (unc_df["expanded_relative"] > 80.0).any():
-                    unc = 80.0
-                else:
-                    cond =  unc_df[unc_df['T5_K'] == condition.T5]
-                    unc = cond["expanded_relative"].values[0]
-                operating_conditions_df.loc[operating_conditions_df["filename"] == condition.filename, "exp_unc"] = unc  
+
+                if {"T5_K", "expanded_relative"}.issubset(unc_df.columns):
+                    t5_values = unc_df["T5_K"].to_numpy(dtype=float)
+                    expanded = unc_df["expanded_relative"].to_numpy(dtype=float)
+                    matches = np.isclose(t5_values, float(condition.T5), rtol=0.0, atol=1e-6)
+
+                    if matches.any():
+                        unc = float(expanded[np.flatnonzero(matches)[0]])
+                    elif len(unc_df) > 0:
+                        nearest_idx = int(np.abs(t5_values - float(condition.T5)).argmin())
+                        unc = float(expanded[nearest_idx])
+
+                unc = min(unc, 80.0)
                 break
-    operating_conditions_df["exp_unc"] = operating_conditions_df["exp_unc"].fillna(80.0)         
+
+        operating_conditions_df.at[condition.Index, "exp_unc"] = unc
+
+    operating_conditions_df["exp_unc"] = operating_conditions_df["exp_unc"].fillna(80.0)
     operating_conditions_df.to_csv("sensitivity/results/operating_conditions.csv", index=False)
     print(operating_conditions_df.columns.tolist())
 
@@ -387,7 +415,7 @@ if __name__ == "__main__":
         
         #now we can calculate impact factors
         # If I vary parameter 𝑖 over its full uncertainty range, how much could IDT change?”
-        impact_threshold = 0.1 # 
+        impact_threshold = 0.05 # 
         temp_df["operating_condition"] = str(operating_condition)
         temp_df["if"] = np.abs(c) * temp_df["f_value"] * 2  #* np.log(10)  # factor of 2 because we consider +/-f_value range
         temp_df["rank"] = temp_df["if"].rank(ascending=False, method="first")
@@ -406,11 +434,11 @@ if __name__ == "__main__":
     if_df.reset_index(drop=True, inplace=True)
     # now we aggragete impact factors over operating conditions
     #if a reaction is low impact in all operating conditoions its inactive
-    inactive_type = "not_top5_in_any"
+    inactive_type = "low_impact_in_all"
     if inactive_type == "low_impact_in_all":
         inactive_eqs = if_df.groupby("equation")["low_impact"].sum().eq(len(operating_conditions_df))
     if inactive_type == "not_top5_in_any":
-        inactive_eqs = if_df.groupby("equation")["rank"].min().gt(5)
+        inactive_eqs = if_df.groupby("equation")["rank"].min().gt(3)
     if_df["inactive"] = if_df["equation"].map(inactive_eqs).fillna(False)
     active_df = if_df[~if_df["inactive"]].copy()
     #active_df['rank'] = active_df.groupby("operating_condition")["if"].rank(ascending=False, method="first")

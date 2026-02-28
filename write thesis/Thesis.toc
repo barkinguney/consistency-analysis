@@ -41,17 +41,21 @@
 \contentsline {section}{\numberline {3.3}Cantera IDT Simulations}{17}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Consistency analysis}{18}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Sensitivity analysis}{18}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}B2BDC Integration}{19}{subsection.3.4.2}%
 \contentsline {section}{\numberline {3.5}Data Sources}{19}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Results and Discussion}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Experimental Uncertainty of Shock Tube IDT Data}{21}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}shen vs davidson}{21}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Syngas}{21}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Cantera Shock Tube IDT Simulations}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Consistency Analysis}{25}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Sensitivity Analysis}{25}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Surrogate Model}{25}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}B2BDC}{25}{subsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}Reaction Mechanisms}{25}{subsubsection.4.3.3.1}%
+\contentsline {section}{\numberline {4.1}Bad Data}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Good Data}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Good Data + 1-2 Bad data}{21}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Experimental Uncertainty of Shock Tube IDT Data}{21}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}shen vs davidson}{21}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Syngas}{21}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Cantera Shock Tube IDT Simulations}{21}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Consistency Analysis}{25}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Sensitivity Analysis}{25}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Surrogate Model}{25}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}B2BDC}{25}{subsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.1}Reaction Mechanisms}{25}{subsubsection.4.6.3.1}%
 \contentsline {chapter}{\numberline {5}Conclusion and Outlook}{27}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Outlook}{27}{section.5.1}%
 \contentsline {chapter}{\numberline {A}Appendix}{29}{appendix.A}%

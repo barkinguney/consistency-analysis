@@ -13,7 +13,7 @@ import copy
 import os
 import plotly.graph_objects as go
 from pathlib import Path
-
+from datetime import datetime
 
 def apply_reference_plot_style() -> None:
     plt.style.use("seaborn-v0_8-whitegrid")
@@ -182,6 +182,9 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
             xaxis=dict(range=[0, tau * 1.5]),
             template="plotly_white"
         )
+       
+        # now = datetime.now()
+        # timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
         fig.write_html(f"{results_path}/time_history_{operating_condition[0]}{operating_condition[1]}_{operating_condition[2]}{operating_condition[3]}.html")
         
     def calc_idt_from_type(time_history, ignition_target, ignition_type, simple=True):
@@ -234,6 +237,9 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
                     tau = calc_baseline_min_intercept_tau(time_history.P, time_history.t, "P")
                 else:         
                     raise ValueError(f"Warning: Unknown ignition_type {ignition_type}")
+            # elif ignition targaet contains "OH"    
+            elif "OH" in ignition_target:
+                tau = time_history.t[np.argmax(np.gradient(time_history.T, time_history.t))]
             else:
                 if ignition_type == "max":
                     "TODO: looks good but test to make sure IDT calc good"
@@ -254,7 +260,7 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
                     
                     # print(f"Computed max-based IDT for species {ignition_target}. Global max conc: {global_max}, Max-based tau: {max_tau}, Selected tau: {tau}")
                     tau = time_history.t[np.nanargmax(time_history.concentrations[:, species_idxs[ignition_target]])]
-                    print(f"Computed max-based IDT for species {ignition_target}. Max-based tau: {tau}")
+                    #print(f"Computed max-based IDT for species {ignition_target}. Max-based tau: {tau}")
                 elif ignition_type == "d/dt max":
                     "TODO: looks good but test to make sure IDT calc good"
                     # print(reactor.phase.species_names)
@@ -266,7 +272,7 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
                     target_conc = ignition_amount
                     tau = time_history.t[np.nanargmin(np.abs(float(target_conc) - time_history.concentrations[:, species_idxs[ignition_target]]))]
                     tau = tau * 1000 # x1000 here fixes it. it means somethig is wron with units
-                    print(f"Computed concentration-based IDT at {target_conc} for species {ignition_target}")
+                    #print(f"Computed concentration-based IDT at {target_conc} for species {ignition_target}")
                 elif ignition_type =="relative concentration":
                     "TODO: looks good but test to make sure IDT calc good"
                     # ignition when target species conc > ((target species conc at t=0) + ignition_amount * (max conc - target species conc at t=0))
@@ -287,7 +293,7 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
                     # ratio = (species_conc_history[idx]- threshold_conc)/(species_conc_history[idx]-species_conc_history[idx-1])
                     # tau = time_history.t[idx] - ((time_history.t[idx]-time_history.t[idx-1])*ratio)
                     tau = time_history.t[idx]
-                    print(f"Computed relative concentration-based IDT at {ignition_amount*100:.1f}% increase for species {ignition_target}., tau: {tau:.3e} s")
+                    #print(f"Computed relative concentration-based IDT at {ignition_amount*100:.1f}% increase for species {ignition_target}., tau: {tau:.3e} s")
                 elif ignition_type =="baseline min intercept from d/dt":
                     species_conc_history = time_history.concentrations[:, species_idxs[ignition_target]]
                     tau = calc_baseline_min_intercept_tau(species_conc_history, time_history.t, ignition_target)
@@ -474,12 +480,18 @@ def plot_IDT_vs_T(gas, operating_conditions_df, output_path=None, interactive = 
     os.makedirs(results_path, exist_ok=True)
     
     scaled_inverse_T5 = [1000.0 / T for T in T5_list]
-    experiment_label = str(operating_conditions_df["filename"].iloc[0])
+    
     first_row = operating_conditions_df.iloc[0]
     ignition_type = first_row["ignition_type"] if "ignition_type" in operating_conditions_df.columns else first_row.iloc[8]
     ignition_target = first_row["ignition_target"] if "ignition_target" in operating_conditions_df.columns else first_row.iloc[9]
     composition = first_row["composition"] if "composition" in operating_conditions_df.columns else first_row.iloc[4]
-    plot_title = f"IDT Type: {ignition_type}, IDT Target: {ignition_target}, {composition}"
+    phi = first_row["phi"] if "phi" in operating_conditions_df.columns else None
+    pressure = operating_conditions_df["P5"].mean()
+    author_year = first_row["author_year"] if "author_year" in operating_conditions_df.columns else None
+    # convert pascal to atm 
+    pressure_atm = pressure / 101325
+    plot_title = f"{composition}, φ = {phi:.1f}, P ~ {pressure_atm:.1f} atm"
+    experiment_label = author_year
     
     if interactive:
         fig = go.Figure()

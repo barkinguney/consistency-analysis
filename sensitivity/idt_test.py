@@ -6,6 +6,7 @@ from scipy.stats import qmc
 from scipy import linalg
 import time
 import copy
+from pathlib import Path
 
 import read_data
 import cantera_related_functions
@@ -55,20 +56,21 @@ idt_data_df.to_csv("sensitivity/results/idt_data_for_sensitivity_analysis.csv", 
         
 
 
+valid_filenames = {f"x100000{a}.xml" for a in range(33, 42)}
+idt_data_df = idt_data_df[idt_data_df["filename"].apply(lambda x: Path(x).name in valid_filenames)]
 for key, group in idt_data_df.groupby('filename'):
     print(key)
-    if (group["ignition_type"].iloc[0] == "baseline min intercept from d/dt" ):
-        ignition_type = group["ignition_type"].iloc[0]
-        xml_name = group["filename"].iloc[0].split(".")[0]
-        fuel_name = group["composition"].iloc[0].split(":")[0]
-        results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}"
-        cantera_related_functions.plot_IDT_vs_T(
-            gas,
-            group,
-            output_path=results_path,
-            interactive=False,
-            save_time_history_plots=False,
-        )
+    ignition_type = group["ignition_type"].iloc[0]
+    xml_name = group["filename"].iloc[0].split(".")[0]
+    fuel_name = group["composition"].iloc[0].split(":")[0]
+    results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}"
+    cantera_related_functions.plot_IDT_vs_T(
+        gas,
+        group,
+        output_path=results_path,
+        interactive=False,
+        save_time_history_plots=False,
+    )
     
 # for key, group in idt_data_df.groupby('filename'):
 #     print(key)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.24)  27 FEB 2026 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.24)  28 FEB 2026 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1808,12 +1808,6 @@ ogo_cmyk.pdf>])
 
 
 [8] (./Thesis.lof
-Overfull \hbox (30.62523pt too wide) in paragraph at lines 11--11
- [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
-r-i-men-tal mea-sure-ment [] 
- []
-
-
 Overfull \hbox (30.62523pt too wide) in paragraph at lines 12--12
  [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
 r-i-men-tal mea-sure-ment [] 
@@ -1821,6 +1815,12 @@ r-i-men-tal mea-sure-ment []
 
 
 Overfull \hbox (30.62523pt too wide) in paragraph at lines 13--13
+ [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
+r-i-men-tal mea-sure-ment [] 
+ []
+
+
+Overfull \hbox (30.62523pt too wide) in paragraph at lines 14--14
  [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
 r-i-men-tal mea-sure-ment [] 
  []
@@ -1860,6 +1860,10 @@ r-i-men-tal mea-sure-ment []
 
  (./Chapters/10_Introduction.tex
 chapter 1.
+File: Figures/TUM_Logo_cmyk.pdf Graphic file (type pdf)
+<use Figures/TUM_Logo_cmyk.pdf>
+Package pdftex.def Info: Figures/TUM_Logo_cmyk.pdf  used on input line 16.
+(pdftex.def)             Requested size: 352.8155pt x 185.94661pt.
 )
 
 [1
@@ -1968,7 +1972,7 @@ chapter 3.
 ]
 
 [14]
-<Figures/impacting_factors.png, id=372, 692.5875pt x 513.92pt>
+<Figures/impacting_factors.png, id=382, 692.5875pt x 513.92pt>
 File: Figures/impacting_factors.png Graphic file (type png)
 <use Figures/impacting_factors.png>
 Package pdftex.def Info: Figures/impacting_factors.png  used on input line 33.
@@ -1998,30 +2002,66 @@ Package pdftex.def Info: Figures/TUM_Logo_cmyk.pdf  used on input line 94.
 
  (./Chapters/50_Results.tex
 chapter 4.
-<Figures/davidson_2005_shen_2009_ignition_delay.png, id=406, 510.04553pt x 366.
+<Figures/davidson_2005_shen_2009_ignition_delay.png, id=426, 510.04553pt x 366.
 04755pt>
 File: Figures/davidson_2005_shen_2009_ignition_delay.png Graphic file (type png
 )
 <use Figures/davidson_2005_shen_2009_ignition_delay.png>
 Package pdftex.def Info: Figures/davidson_2005_shen_2009_ignition_delay.png  us
-ed on input line 7.
+ed on input line 11.
 (pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
-<Figures/g00000012_x10000006_x10000039_ignition_delay.png, id=411, 510.04553pt 
+<Figures/g00000012_x10000006_x10000039_ignition_delay.png, id=431, 510.04553pt 
 x 364.60216pt>
 File: Figures/g00000012_x10000006_x10000039_ignition_delay.png Graphic file (ty
 pe png)
 <use Figures/g00000012_x10000006_x10000039_ignition_delay.png>
 Package pdftex.def Info: Figures/g00000012_x10000006_x10000039_ignition_delay.p
-ng  used on input line 15.
+ng  used on input line 19.
 (pdftex.def)             Requested size: 352.8155pt x 252.20998pt.
-<Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png, id=418, 
+<Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png, id=438, 
 510.04553pt x 364.60216pt>
 File: Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png Grap
 hic file (type png)
 <use Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png>
 Package pdftex.def Info: Figures/x10001041_x10001066_x10001056_x10001024_x_igni
-tion_delay.png  used on input line 22.
+tion_delay.png  used on input line 26.
 (pdftex.def)             Requested size: 352.8155pt x 252.20998pt.
+<Figures/IDT_plot_x10000020.png, id=447, 510.04553pt x 366.04755pt>
+File: Figures/IDT_plot_x10000020.png Graphic file (type png)
+<use Figures/IDT_plot_x10000020.png>
+Package pdftex.def Info: Figures/IDT_plot_x10000020.png  used on input line 37.
+
+(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
+
+LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 38.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 38.
+
+<Figures/IDT_plot_x10001084.png, id=448, 591.1686pt x 366.04755pt>
+File: Figures/IDT_plot_x10001084.png Graphic file (type png)
+<use Figures/IDT_plot_x10001084.png>
+Package pdftex.def Info: Figures/IDT_plot_x10001084.png  used on input line 43.
+
+(pdftex.def)             Requested size: 352.8155pt x 218.46286pt.
+
+LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 44.
+
+<Figures/IDT_plot_x10000023.png, id=449, 510.04553pt x 366.04755pt>
+File: Figures/IDT_plot_x10000023.png Graphic file (type png)
+<use Figures/IDT_plot_x10000023.png>
+Package pdftex.def Info: Figures/IDT_plot_x10000023.png  used on input line 49.
+
+(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
+
+LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 50.
+
 
 
 [21
@@ -2037,52 +2077,15 @@ tion_delay.png  used on input line 22.
 
 
 
- <./Figures/davidson_2005_shen_2009_ignition_delay.png>]
+]
 
-[22 <./Figures/g00000012_x10000006_x10000039_ignition_delay.png> <./Figures/x10
-001041_x10001066_x10001056_x10001024_x_ignition_delay.png>]
-<Figures/IDT_plot_x10000020.png, id=441, 510.04553pt x 366.04755pt>
-File: Figures/IDT_plot_x10000020.png Graphic file (type png)
-<use Figures/IDT_plot_x10000020.png>
-Package pdftex.def Info: Figures/IDT_plot_x10000020.png  used on input line 33.
+[22 <./Figures/davidson_2005_shen_2009_ignition_delay.png> <./Figures/g00000012
+_x10000006_x10000039_ignition_delay.png>]
 
-(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
+[23 <./Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png> <.
+/Figures/IDT_plot_x10000020.png>]
 
-
-LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 34.
-
-
-LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 34.
-
-<Figures/IDT_plot_x10001084.png, id=442, 591.1686pt x 366.04755pt>
-File: Figures/IDT_plot_x10001084.png Graphic file (type png)
-<use Figures/IDT_plot_x10001084.png>
-Package pdftex.def Info: Figures/IDT_plot_x10001084.png  used on input line 39.
-
-(pdftex.def)             Requested size: 352.8155pt x 218.46286pt.
-
-LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 40.
-
-
-LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 40.
-
-<Figures/IDT_plot_x10000023.png, id=443, 510.04553pt x 366.04755pt>
-File: Figures/IDT_plot_x10000023.png Graphic file (type png)
-<use Figures/IDT_plot_x10000023.png>
-Package pdftex.def Info: Figures/IDT_plot_x10000023.png  used on input line 45.
-
-(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
-
-LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 46.
-
-
-LaTeX Warning: Citation 'good_cantera' on page 23 undefined on input line 46.
-
-)
-
-[23 <./Figures/IDT_plot_x10000020.png>]
-
-[24 <./Figures/IDT_plot_x10001084.png> <./Figures/IDT_plot_x10000023.png>]
+[24 <./Figures/IDT_plot_x10001084.png> <./Figures/IDT_plot_x10000023.png>])
 
 [25]
 
@@ -2195,11 +2198,6 @@ i-tion of methane/ethane/hydrogen
 \openout2 = `Chapters/99_Statement.aux'.
 
  (./Chapters/99_Statement.tex)
-Overfull \hbox (1.4929pt too wide) in paragraph at lines 25--92
-[]|  \T1/aer/m/n/10.95 Mu-nich, De-cemter 1, 2016 | [] |  
- []
-
-
 
 [41
 
@@ -2214,24 +2212,17 @@ Overfull \hbox (1.4929pt too wide) in paragraph at lines 25--92
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please rerun LaTeX.
-
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55632 strings out of 473200
- 1320393 string characters out of 5720278
- 2388203 words of memory out of 5000000
- 77770 multiletter control sequences out of 15000+600000
+ 55659 strings out of 473200
+ 1321302 string characters out of 5720278
+ 2388991 words of memory out of 5000000
+ 77789 multiletter control sequences out of 15000+600000
  603018 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,20n,110p,10917b,2884s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2252,10 +2243,10 @@ s/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/
 texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2
 024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Thesis.pdf (55 pages, 2299807 bytes).
+Output written on Thesis.pdf (55 pages, 2301592 bytes).
 PDF statistics:
- 908 PDF objects out of 1000 (max. 8388607)
- 764 compressed objects within 8 object streams
- 170 named destinations out of 1000 (max. 500000)
- 629 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 951 PDF objects out of 1000 (max. 8388607)
+ 806 compressed objects within 9 object streams
+ 178 named destinations out of 1000 (max. 500000)
+ 661 words of extra memory for PDF output out of 10000 (max. 10000000)
 
