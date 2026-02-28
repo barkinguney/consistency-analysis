@@ -1,0 +1,2 @@
+A,n,Ea,T0,Tmin,Tmax,Pmin,Pmax,Library,comment,Type,efficiencies,reaction
+30000000.000000004,0.0,0.0,1.0,,,,,Klippenstein_Glarborg2016,,Arrhenius,,HCO + O <=> CO + OH

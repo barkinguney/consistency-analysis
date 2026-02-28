@@ -404,7 +404,7 @@ if __name__ == "__main__":
             pickle.dump(fit_save, f)
             
     
-    max_uncertainty_factor = 0.5
+    max_uncertainty_factor = 2.0
     unc_factor_df = pd.DataFrame(out_unc_factor, columns=["Reaction", "Uncertainty Factor"])
     unc_factor_df["Uncertainty Factor"] = unc_factor_df["Uncertainty Factor"].clip(upper=max_uncertainty_factor)
     unc_factor_df["Uncertainty Factor"] = unc_factor_df["Uncertainty Factor"].fillna(max_uncertainty_factor)

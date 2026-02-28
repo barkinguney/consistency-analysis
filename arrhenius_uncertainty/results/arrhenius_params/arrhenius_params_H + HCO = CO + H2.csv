@@ -1,0 +1,9 @@
+A,n,Ea,T0,Tmin,Tmax,Pmin,Pmax,Library,comment,Type,efficiencies,reaction
+110000000.00000001,0.0,0.0,1.0,,,,,Klippenstein_Glarborg2016,,Arrhenius,,H + HCO <=> CO + H2
+73400000.00000001,0.0,0.0,1.0,,,,,NIST_Fluorine/CH2F2/full,,Arrhenius,,H + HCO <=> CO + H2
+85920000.00000001,0.0,0.0,1.0,,,,,2-BTP/full,,Arrhenius,,H + HCO <=> CO + H2
+90300000.00000001,0.0,0.0,1.0,,,,,combustion_core/version2,,Arrhenius,,H + HCO <=> CO + H2
+120000000.00000001,0.0,0.0,1.0,,,,,JetSurF1.0,"07YOU/WANG
+Reactions of HCO",Arrhenius,,H + HCO <=> CO + H2
+72300000.00000001,0.0,0.0,1.0,,,,,Dooley/methylformate_all_ARHEbathgas,,Arrhenius,,H + HCO <=> CO + H2
+84820000.00000001,0.0,0.0,1.0,,,,,FFCM1(-),,Arrhenius,,H + HCO <=> CO + H2
