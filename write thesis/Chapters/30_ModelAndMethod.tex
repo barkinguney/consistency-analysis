@@ -3,35 +3,21 @@
 Source code can be found at: https://github.com/barkinguney/consistency-analysis
 
 \section{Experimental Shock Tube IDT Uncertainty}
-Every dataset in TUMKIN needs to contain appropriate uncertainties. If authors don't report uncertainties for experimental data, uncertainties are calculated using the Uncertainty Quantification(UQ) module of TUMKIN.
-https://github.com/barkinguney/reaction-data-consistency-thesis
+Every dataset in TUMKIN needs to contain appropriate uncertainties. If authors don't report uncertainties for experimental data, uncertainties are estimated using the algorihm proposed by \cite{UQ_barkin} 
 
-Reliable kinetic modeling and data-driven optimization require experimental databases with quantified uncertainties, yet more than 90\% of published ignition-delay time (IDT) datasets report none, which limits machine learning and statistical calibration. This work presents an automated algorithm to reconstruct uncertainty for shock-tube (ST) ignition-delay times when it is not reported in the original publication.
 
-The method follows GUM and NIST guidance and separates uncertainty into systematic (Type-B) and random (Type-A) components. The combined standard uncertainty is defined as the square root of the sum of the squared systematic and random contributions, and the expanded uncertainty is reported with a coverage factor k=2 , corresponding to approximately 95\% confidence.
-
-The systematic uncertainty captures device- and condition-specific biases in shock-tube IDT measurements and is treated as epistemic. Departures from an idealized zero-dimensional post-reflected-shock model are quantified by identifying dominant facility and operational non-idealities. Fourteen impacting factors describing hardware, operating conditions, diagnostics, and ignition-delay definition are selected to define proximity to an “ideal case.” A baseline systematic error of 5\% at 95\% confidence is assigned to this quasi-ideal reference.
-
-Deviations from the ideal metrics are mapped to incremental penalties using a modified Harrington desirability function, which retains low sensitivity near the ideal point and saturation for large deviations. The individual penalties are aggregated to yield the total systematic uncertainty. This approach operationalizes systematic uncertainty in cases where rigorous multi-laboratory statistical evaluation is not feasible.
-
-Random uncertainty is obtained by propagating uncertainties in input parameters, such as reflected-shock temperature, pressure, and equivalence ratio, through an analytical ignition-delay correlation using the law of uncertainty propagation. Manufacturer specifications, calibration data, or reasonable estimates are used when uncertainties are not explicitly reported.
-
-The workflow outputs combined and expanded uncertainties with standardized and traceable bounds suitable for database integration. The method is demonstrated on published shock-tube datasets, where expanded combined uncertainties between approximately 15\% and 25\% are obtained, with the largest relative uncertainties occurring for very short and very long ignition delays.
-
-The proposed procedure enables standardized uncertainty reporting for shock-tube IDTs and supports database ingestion, data-consistency analysis, Bayesian parameter estimation, and mechanism optimization. The implementation is prepared for integration into the developing TUMKIN chemical-kinetics cyber-infrastructure at the Technical University of Munich.
 
 
 
 
 
 \subsection{Systematic Uncertainty}
-Systematic uncertainties are calculated by evaluating how much the experimental conditions deviate from ideal shock tube parameters. This is achieved using Harrington Desirability Functions, which transform nonidealities into a dimensionless penalty scale. 1.1 Penalty Calculation for Impacting Factors (IFs)For each impacting factor $\mu_{actual}$, a penalty $\delta_i$ is calculated based on its proximity to an ideal range $[L, U]$. If the value falls within the range, the penalty is zero. If it falls outside, the penalty increases exponentially:$$x_i = \frac{\mu_{ideal} - \mu_{actual}}{\mu_{ideal}}$$$$\xi_i = 1 - \exp(-x_i^2)$$$$\delta_i = \delta_0 \cdot \xi_i$$
-Where $\delta_0$ is a scaling constant (set to 5.0 in this study). For boolean factors (e.g., presence of impurities or tailoring), a fixed binary penalty is applied when the condition is not met.1.2 Total Systematic ErrorThe total systematic relative error for a specific data point, $\varepsilon_{sys}$, is the sum of penalties from fixed experimental factors and the specific ignition delay time (IDT) measurement:$$\varepsilon_{sys} = \sum \delta_{fixed} + \delta_{IDT} + \delta_0$$This relative error is then converted into an absolute systematic variance:$$u_{sys}^2 = \left( \frac{\tau \cdot \varepsilon_{sys}}{100 \cdot 2} \right)^2$$
+
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Figures/impacting_factors.png}
-	\caption{This is the description that appears under the image.}
+	\caption{caption.}
 	\label{fig:ifs}
 \end{figure}
 

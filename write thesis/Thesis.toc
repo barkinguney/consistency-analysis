@@ -12,53 +12,45 @@
 \contentsline {section}{\numberline {2.1}Background}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Nonlinear Least Squares}{3}{subsection.2.1.1}%
 \contentsline {section}{\numberline {2.2}Chemical Kinetics Database}{3}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Uncertainty Quantification in Combustion}{3}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Uncertainty Quantification in Combustion}{4}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Uncertainty of reaction mechanisms}{4}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Sensitivity Analysis}{5}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Surrogate Models}{5}{section.2.6}%
+\contentsline {section}{\numberline {2.5}Sensitivity Analysis}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Surrogate Models}{6}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Consistency Analysis}{6}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}MUM-PCE}{6}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}B2BDC}{6}{subsection.2.7.2}%
-\contentsline {section}{\numberline {2.8}TUMKIN Implementations}{6}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Data Submission Protocol}{6}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Sensitivity Analysis}{7}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Consistency Analysis}{7}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}Possible Methods for consistency Analysis}{7}{subsection.2.8.4}%
-\contentsline {subsubsection}{\numberline {2.8.4.1}Bayesian History Matching}{7}{subsubsection.2.8.4.1}%
-\contentsline {subsubsection}{\numberline {2.8.4.2}B2BDC Scalar Consistency Measure}{7}{subsubsection.2.8.4.2}%
-\contentsline {subsubsection}{\numberline {2.8.4.3}B2BDC Vector consistency Measure}{9}{subsubsection.2.8.4.3}%
-\contentsline {subsubsection}{\numberline {2.8.4.4}F-Test}{9}{subsubsection.2.8.4.4}%
-\contentsline {subsubsection}{\numberline {2.8.4.5}MUMPCE}{9}{subsubsection.2.8.4.5}%
-\contentsline {subsection}{\numberline {2.8.5}Model Discrepency}{11}{subsection.2.8.5}%
-\contentsline {subsubsection}{\numberline {2.8.5.1}Consistency Check}{11}{subsubsection.2.8.5.1}%
-\contentsline {subsection}{\numberline {2.8.6}Reaction Mechanism Optimization}{11}{subsection.2.8.6}%
-\contentsline {subsection}{\numberline {2.8.7}wants/constraints}{12}{subsection.2.8.7}%
-\contentsline {subsection}{\numberline {2.8.8}todo}{12}{subsection.2.8.8}%
-\contentsline {chapter}{\numberline {3}Methodology}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Experimental Shock Tube IDT Uncertainty}{13}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Systematic Uncertainty}{14}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {2.7.1}Misc}{7}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Anomaly Detection / Gross Error Detection}{8}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Bayesian Approaches}{9}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}MUM-PCE}{10}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}B2BDC}{11}{subsection.2.7.5}%
+\contentsline {section}{\numberline {2.8}TUMKIN Implementations}{11}{section.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.0.1}Bayesian History Matching}{11}{subsubsection.2.8.0.1}%
+\contentsline {subsubsection}{\numberline {2.8.0.2}B2BDC Scalar Consistency Measure}{11}{subsubsection.2.8.0.2}%
+\contentsline {subsubsection}{\numberline {2.8.0.3}MUMPCE}{13}{subsubsection.2.8.0.3}%
+\contentsline {chapter}{\numberline {3}Methodology}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Experimental Shock Tube IDT Uncertainty}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Systematic Uncertainty}{15}{subsection.3.1.1}%
 \contentsline {section}{\numberline {3.2}Arrhenius Parameters Uncertainty}{16}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Cantera IDT Simulations}{17}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Consistency analysis}{18}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Sensitivity analysis}{18}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.1}Sensitivity analysis}{19}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}B2BDC Integration}{19}{subsection.3.4.2}%
 \contentsline {section}{\numberline {3.5}Data Sources}{19}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Results and Discussion}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Bad Data}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Good Data}{21}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Good Data + 1-2 Bad data}{21}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Experimental Uncertainty of Shock Tube IDT Data}{21}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}shen vs davidson}{21}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Syngas}{21}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Cantera Shock Tube IDT Simulations}{21}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Consistency Analysis}{25}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Sensitivity Analysis}{25}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Surrogate Model}{25}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}B2BDC}{25}{subsection.4.6.3}%
-\contentsline {subsubsection}{\numberline {4.6.3.1}Reaction Mechanisms}{25}{subsubsection.4.6.3.1}%
-\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Outlook}{27}{section.5.1}%
-\contentsline {chapter}{\numberline {A}Appendix}{29}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Program Flowcharts}{31}{appendix.B}%
-\contentsline {chapter}{\numberline {C}References}{35}{appendix.C}%
+\contentsline {section}{\numberline {4.1}B2BDC Consistency}{21}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Good Data}{21}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Good Data + 1-2 Bad data}{21}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Experimental Uncertainty of Shock Tube IDT Data}{25}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}shen vs davidson}{25}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Syngas}{25}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Cantera Shock Tube IDT Simulations}{27}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Consistency Analysis}{29}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Sensitivity Analysis}{29}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Surrogate Model}{29}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}B2BDC}{29}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}Reaction Mechanisms}{29}{subsubsection.4.4.3.1}%
+\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Outlook}{31}{section.5.1}%
+\contentsline {chapter}{\numberline {A}Appendix}{33}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Program Flowcharts}{35}{appendix.B}%
+\contentsline {chapter}{\numberline {C}References}{39}{appendix.C}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

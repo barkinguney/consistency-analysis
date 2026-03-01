@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.24)  28 FEB 2026 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.24)  1 MAR 2026 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1808,19 +1808,19 @@ ogo_cmyk.pdf>])
 
 
 [8] (./Thesis.lof
-Overfull \hbox (30.62523pt too wide) in paragraph at lines 12--12
+Overfull \hbox (30.62523pt too wide) in paragraph at lines 16--16
  [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
 r-i-men-tal mea-sure-ment [] 
  []
 
 
-Overfull \hbox (30.62523pt too wide) in paragraph at lines 13--13
+Overfull \hbox (30.62523pt too wide) in paragraph at lines 17--17
  [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
 r-i-men-tal mea-sure-ment [] 
  []
 
 
-Overfull \hbox (30.62523pt too wide) in paragraph at lines 14--14
+Overfull \hbox (30.62523pt too wide) in paragraph at lines 18--18
  [][] [][]\T1/aer/m/n/10.95 Comparison of Can-tera IDT sim-u-la-tion with ex-pe
 r-i-men-tal mea-sure-ment [] 
  []
@@ -1891,8 +1891,8 @@ chapter 2.
 ]
 
 [4]
-Overfull \hbox (78.44887pt too wide) in paragraph at lines 43--45
-\T1/aer/m/n/10.95 bounds re-spec-tively [[]8[]]. Rate co-ef-fi-cients are then 
+Overfull \hbox (78.44887pt too wide) in paragraph at lines 56--58
+\T1/aer/m/n/10.95 bounds re-spec-tively [[]9[]]. Rate co-ef-fi-cients are then 
 sam-pled from the in-ter-val $[]$.
  []
 
@@ -1900,93 +1900,88 @@ sam-pled from the in-ter-val $[]$.
 
 [5]
 
-LaTeX Warning: Citation 'UQ_barkin' on page 6 undefined on input line 69.
+LaTeX Warning: Citation 'cantera' on page 6 undefined on input line 66.
 
 
-LaTeX Warning: Citation 'cantera' on page 6 undefined on input line 73.
+LaTeX Warning: Citation 'ralph c. smith book' on page 6 undefined on input line
+ 70.
 
 
 
 [6]
 
-LaTeX Warning: Citation 'Arun Hegde' on page 7 undefined on input line 75.
+[7]
 
+[8]
+
+[9]
+
+[10]
 
 LaTeX Warning: Citation 'Consistency Analysis for Massively Inconsistent Datase
-ts in Bound-to-Bound Data Collaboration^^C' on page 7 undefined on input line 8
-3.
+ts in Bound-to-Bound Data Collaboration^^C' on page 11 undefined on input line 
+158.
 
 
 LaTeX Warning: Citation 'Application of Bound-to-Bound Data Collaboration appro
 ach for development and uncertainty quantification of a reduced char combustion
- model' on page 7 undefined on input line 85.
+ model' on page 11 undefined on input line 160.
 
 
-Overfull \hbox (970.55977pt too wide) in paragraph at lines 82--86
+Overfull \hbox (970.55977pt too wide) in paragraph at lines 157--161
 \T1/aer/m/n/10.95 Bound-to-Bound Data Col-lab-o-ra-tion (B2BDC) [][] 
  []
 
 
 
-[7]
-Overfull \hbox (3.94073pt too wide) in paragraph at lines 98--99
+[11]
+Overfull \hbox (3.94073pt too wide) in paragraph at lines 173--174
 []\T1/aer/m/n/10.95 In ap-plied com-bus-tion mod-el-ing, B2BDC is used within a
  struc-tured uncertainty-quantification
  []
 
 
 
-[8]
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 113.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 113.
-
-
-[9]
-
-[10]
-
-LaTeX Warning: Citation 'ralph c. smith book' on page 11 undefined on input lin
-e 150.
-
-
-
-[11])
-
 [12]
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 188.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 188.
+
+
+[13])
+
+[14]
 \openout2 = `Chapters/30_ModelAndMethod.aux'.
 
  (./Chapters/30_ModelAndMethod.tex
 chapter 3.
 
+LaTeX Warning: Citation 'UQ_barkin' on page 15 undefined on input line 6.
 
-[13
-
-
-
-
-
-
-
-]
-
-[14]
-<Figures/impacting_factors.png, id=382, 692.5875pt x 513.92pt>
+<Figures/impacting_factors.png, id=409, 692.5875pt x 513.92pt>
 File: Figures/impacting_factors.png Graphic file (type png)
 <use Figures/impacting_factors.png>
-Package pdftex.def Info: Figures/impacting_factors.png  used on input line 33.
+Package pdftex.def Info: Figures/impacting_factors.png  used on input line 19.
 (pdftex.def)             Requested size: 352.8155pt x 261.80557pt.
 
 
-[15 <./Figures/impacting_factors.png>]
+[15
+
+
+
+
+
+
+
+ <./Figures/impacting_factors.png>]
 
 [16]
 
 [17]
 File: Figures/TUM_Logo_cmyk.pdf Graphic file (type pdf)
 <use Figures/TUM_Logo_cmyk.pdf>
-Package pdftex.def Info: Figures/TUM_Logo_cmyk.pdf  used on input line 94.
+Package pdftex.def Info: Figures/TUM_Logo_cmyk.pdf  used on input line 80.
 (pdftex.def)             Requested size: 352.8155pt x 185.94661pt.
 
 
@@ -2002,66 +1997,26 @@ Package pdftex.def Info: Figures/TUM_Logo_cmyk.pdf  used on input line 94.
 
  (./Chapters/50_Results.tex
 chapter 4.
-<Figures/davidson_2005_shen_2009_ignition_delay.png, id=426, 510.04553pt x 366.
-04755pt>
-File: Figures/davidson_2005_shen_2009_ignition_delay.png Graphic file (type png
-)
-<use Figures/davidson_2005_shen_2009_ignition_delay.png>
-Package pdftex.def Info: Figures/davidson_2005_shen_2009_ignition_delay.png  us
-ed on input line 11.
-(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
-<Figures/g00000012_x10000006_x10000039_ignition_delay.png, id=431, 510.04553pt 
-x 364.60216pt>
-File: Figures/g00000012_x10000006_x10000039_ignition_delay.png Graphic file (ty
-pe png)
-<use Figures/g00000012_x10000006_x10000039_ignition_delay.png>
-Package pdftex.def Info: Figures/g00000012_x10000006_x10000039_ignition_delay.p
-ng  used on input line 19.
-(pdftex.def)             Requested size: 352.8155pt x 252.20998pt.
-<Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png, id=438, 
-510.04553pt x 364.60216pt>
-File: Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png Grap
-hic file (type png)
-<use Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png>
-Package pdftex.def Info: Figures/x10001041_x10001066_x10001056_x10001024_x_igni
-tion_delay.png  used on input line 26.
-(pdftex.def)             Requested size: 352.8155pt x 252.20998pt.
-<Figures/IDT_plot_x10000020.png, id=447, 510.04553pt x 366.04755pt>
-File: Figures/IDT_plot_x10000020.png Graphic file (type png)
-<use Figures/IDT_plot_x10000020.png>
-Package pdftex.def Info: Figures/IDT_plot_x10000020.png  used on input line 37.
-
-(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
-
-LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 38.
-
-
-LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 38.
-
-<Figures/IDT_plot_x10001084.png, id=448, 591.1686pt x 366.04755pt>
-File: Figures/IDT_plot_x10001084.png Graphic file (type png)
-<use Figures/IDT_plot_x10001084.png>
-Package pdftex.def Info: Figures/IDT_plot_x10001084.png  used on input line 43.
-
-(pdftex.def)             Requested size: 352.8155pt x 218.46286pt.
-
-LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 44.
-
-
-LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 44.
-
-<Figures/IDT_plot_x10000023.png, id=449, 510.04553pt x 366.04755pt>
-File: Figures/IDT_plot_x10000023.png Graphic file (type png)
-<use Figures/IDT_plot_x10000023.png>
-Package pdftex.def Info: Figures/IDT_plot_x10000023.png  used on input line 49.
-
-(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
-
-LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 50.
-
-
-LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 50.
-
+<Figures/b2bdc/good_inner.png, id=462, 973.13562pt x 547.04375pt>
+File: Figures/b2bdc/good_inner.png Graphic file (type png)
+<use Figures/b2bdc/good_inner.png>
+Package pdftex.def Info: Figures/b2bdc/good_inner.png  used on input line 12.
+(pdftex.def)             Requested size: 441.01772pt x 247.91197pt.
+<Figures/b2bdc/good_outer.png, id=463, 969.6225pt x 543.53062pt>
+File: Figures/b2bdc/good_outer.png Graphic file (type png)
+<use Figures/b2bdc/good_outer.png>
+Package pdftex.def Info: Figures/b2bdc/good_outer.png  used on input line 18.
+(pdftex.def)             Requested size: 441.01772pt x 247.21558pt.
+<Figures/b2bdc/bad_inner.png, id=464, 971.12813pt x 548.0475pt>
+File: Figures/b2bdc/bad_inner.png Graphic file (type png)
+<use Figures/b2bdc/bad_inner.png>
+Package pdftex.def Info: Figures/b2bdc/bad_inner.png  used on input line 29.
+(pdftex.def)             Requested size: 441.01772pt x 248.87697pt.
+<Figures/b2bdc/bad_outer.png, id=465, 979.15813pt x 551.05875pt>
+File: Figures/b2bdc/bad_outer.png Graphic file (type png)
+<use Figures/b2bdc/bad_outer.png>
+Package pdftex.def Info: Figures/b2bdc/bad_outer.png  used on input line 35.
+(pdftex.def)             Requested size: 441.01772pt x 248.20116pt.
 
 
 [21
@@ -2079,17 +2034,87 @@ LaTeX Warning: Citation 'good_cantera' on page 21 undefined on input line 50.
 
 ]
 
-[22 <./Figures/davidson_2005_shen_2009_ignition_delay.png> <./Figures/g00000012
-_x10000006_x10000039_ignition_delay.png>]
+[22 <./Figures/b2bdc/good_inner.png> <./Figures/b2bdc/good_outer.png>]
 
-[23 <./Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png> <.
-/Figures/IDT_plot_x10000020.png>]
+[23 <./Figures/b2bdc/bad_inner.png>]
 
-[24 <./Figures/IDT_plot_x10001084.png> <./Figures/IDT_plot_x10000023.png>])
+[24 <./Figures/b2bdc/bad_outer.png>]
+<Figures/davidson_2005_shen_2009_ignition_delay.png, id=495, 510.04553pt x 366.
+04755pt>
+File: Figures/davidson_2005_shen_2009_ignition_delay.png Graphic file (type png
+)
+<use Figures/davidson_2005_shen_2009_ignition_delay.png>
+Package pdftex.def Info: Figures/davidson_2005_shen_2009_ignition_delay.png  us
+ed on input line 45.
+(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
+<Figures/g00000012_x10000006_x10000039_ignition_delay.png, id=500, 510.04553pt 
+x 364.60216pt>
+File: Figures/g00000012_x10000006_x10000039_ignition_delay.png Graphic file (ty
+pe png)
+<use Figures/g00000012_x10000006_x10000039_ignition_delay.png>
+Package pdftex.def Info: Figures/g00000012_x10000006_x10000039_ignition_delay.p
+ng  used on input line 53.
+(pdftex.def)             Requested size: 352.8155pt x 252.20998pt.
+<Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png, id=507, 
+510.04553pt x 364.60216pt>
+File: Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png Grap
+hic file (type png)
+<use Figures/x10001041_x10001066_x10001056_x10001024_x_ignition_delay.png>
+Package pdftex.def Info: Figures/x10001041_x10001066_x10001056_x10001024_x_igni
+tion_delay.png  used on input line 60.
+(pdftex.def)             Requested size: 352.8155pt x 252.20998pt.
 
-[25]
 
-[26
+[25 <./Figures/davidson_2005_shen_2009_ignition_delay.png>]
+
+[26 <./Figures/g00000012_x10000006_x10000039_ignition_delay.png> <./Figures/x10
+001041_x10001066_x10001056_x10001024_x_ignition_delay.png>]
+<Figures/IDT_plot_x10000020.png, id=528, 510.04553pt x 366.04755pt>
+File: Figures/IDT_plot_x10000020.png Graphic file (type png)
+<use Figures/IDT_plot_x10000020.png>
+Package pdftex.def Info: Figures/IDT_plot_x10000020.png  used on input line 71.
+
+(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 27 undefined on input line 72.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 27 undefined on input line 72.
+
+<Figures/IDT_plot_x10001084.png, id=529, 591.1686pt x 366.04755pt>
+File: Figures/IDT_plot_x10001084.png Graphic file (type png)
+<use Figures/IDT_plot_x10001084.png>
+Package pdftex.def Info: Figures/IDT_plot_x10001084.png  used on input line 77.
+
+(pdftex.def)             Requested size: 352.8155pt x 218.46286pt.
+
+LaTeX Warning: Citation 'good_cantera' on page 27 undefined on input line 78.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 27 undefined on input line 78.
+
+<Figures/IDT_plot_x10000023.png, id=530, 510.04553pt x 366.04755pt>
+File: Figures/IDT_plot_x10000023.png Graphic file (type png)
+<use Figures/IDT_plot_x10000023.png>
+Package pdftex.def Info: Figures/IDT_plot_x10000023.png  used on input line 83.
+
+(pdftex.def)             Requested size: 352.8155pt x 253.20981pt.
+
+LaTeX Warning: Citation 'good_cantera' on page 27 undefined on input line 84.
+
+
+LaTeX Warning: Citation 'good_cantera' on page 27 undefined on input line 84.
+
+)
+
+[27 <./Figures/IDT_plot_x10000020.png>]
+
+[28 <./Figures/IDT_plot_x10001084.png> <./Figures/IDT_plot_x10000023.png>]
+
+[29]
+
+[30
 
 
 
@@ -2099,42 +2124,6 @@ _x10000006_x10000039_ignition_delay.png>]
 
  (./Chapters/70_Summary.tex
 chapter 5.
-)
-
-[27
-
-
-
-]
-
-[28
-
-
-
-
-]
-\openout2 = `Chapters/92_AppendixA.aux'.
-
- (./Chapters/92_AppendixA.tex
-chapter A.
-)
-
-[29
-
-
-
-]
-
-[30
-
-
-
-
-]
-\openout2 = `Chapters/93_AppendixBFlowCharts.aux'.
-
- (./Chapters/93_AppendixBFlowCharts.tex
-chapter B.
 )
 
 [31
@@ -2149,9 +2138,11 @@ chapter B.
 
 
 ]
-\openout2 = `Chapters/90_Bibliography.aux'.
+\openout2 = `Chapters/92_AppendixA.aux'.
 
- (./Chapters/90_Bibliography.tex
+ (./Chapters/92_AppendixA.tex
+chapter A.
+)
 
 [33
 
@@ -2162,6 +2153,40 @@ chapter B.
 [34
 
 
+
+
+]
+\openout2 = `Chapters/93_AppendixBFlowCharts.aux'.
+
+ (./Chapters/93_AppendixBFlowCharts.tex
+chapter B.
+)
+
+[35
+
+
+
+]
+
+[36
+
+
+
+
+]
+\openout2 = `Chapters/90_Bibliography.aux'.
+
+ (./Chapters/90_Bibliography.tex
+
+[37
+
+
+
+]
+
+[38
+
+
 ]
 chapter C.
 LaTeX Font Info:    Trying to load font information for T1+aett on input line 4
@@ -2170,27 +2195,23 @@ LaTeX Font Info:    Trying to load font information for T1+aett on input line 4
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 
-[35]
+[39]
 
-[36]
+[40]
+
+[41]
+
+[42]
 Overfull \hbox (15.25995pt too wide) in paragraph at lines 4--4
 []\T1/aer/m/n/10.95 J. Her-zler and C. Nau-mann, ``Shock-tube study of the ig-n
 i-tion of methane/ethane/hydrogen
  []
 
+)
 
+[43]
 
-[37])
-
-[38]
-
-[39
-
-
-
-]
-
-[40
+[44
 
 
 
@@ -2199,7 +2220,10 @@ i-tion of methane/ethane/hydrogen
 
  (./Chapters/99_Statement.tex)
 
-[41
+[45
+
+
+
 
 
 
@@ -2212,17 +2236,26 @@ i-tion of methane/ethane/hydrogen
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                Thesis
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55659 strings out of 473200
- 1321302 string characters out of 5720278
- 2388991 words of memory out of 5000000
- 77789 multiletter control sequences out of 15000+600000
+ 55743 strings out of 473200
+ 1324624 string characters out of 5720278
+ 2390691 words of memory out of 5000000
+ 77855 multiletter control sequences out of 15000+600000
  603018 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,20n,110p,10917b,2884s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2243,10 +2276,10 @@ s/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/
 texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2
 024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Thesis.pdf (55 pages, 2301592 bytes).
+Output written on Thesis.pdf (59 pages, 2829120 bytes).
 PDF statistics:
- 951 PDF objects out of 1000 (max. 8388607)
- 806 compressed objects within 9 object streams
- 178 named destinations out of 1000 (max. 500000)
- 661 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1024 PDF objects out of 1200 (max. 8388607)
+ 867 compressed objects within 9 object streams
+ 196 named destinations out of 1000 (max. 500000)
+ 617 words of extra memory for PDF output out of 10000 (max. 10000000)
 

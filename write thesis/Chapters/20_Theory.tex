@@ -7,6 +7,19 @@
 \section{Chemical Kinetics Database}
 TUMKIN, a chemical kinetic data infrastructure currently under development aims to incorporate databases and tools to facilitate analysis and optimization of reaction mechanisms of wide range of fuels. The idea is based on Process Informatics Model (PrIMe) created by Frenklach and coworkers which  was a data infrastructure concentrating on data management, data uncertainty, and data consistency. \cite{frenklach_transforming_2007} However PrIMe website is not active. TUMKIN aims to revive and expand on PrIMe. A similar effort is RESPECTH \cite{turanyi_respecth_2025}. Their database contains direct and indirect experimental measurements for various fuels. Relevant for this thesis are the indirect shock tube ignition delay time measurements for Ethylene, Syngas and Hydrogen. \cite{su_comparison_2024}\cite{varga_development_2016}\cite{varga_optimization_2015} They also share computer programs for various tasks around analysis and optimization of kinetics. Reaction Mechanism Generator (RMG) is an automatic chemical reaction mechanism generator that constructs kinetic models composed of elementary chemical reaction steps using a general understanding of how molecules react. RMG database contain kinetics information for many reactions from various sources and datasets. \cite{johnson_rmg_2022}
 
+
+\cite{pelucchi_addressing_2019}Pelucchi et al. describe a shift in combustion chemistry from handmade validation to the development of "methods able to automatically validate the generated models". Key aspects of their discussion include:
++1
+Need for Automation: The "many-model" problem—where numerous mechanisms representing the same fuels use different rate constants and pathways—creates an "increased need of comparisons with experimental data to improve the reliability and performances of the models".
+Validation Approach: Validation is defined as the "match between such amount of experiments and models," where "model estimations are compared with measurements obtained in defined conditions".
+Quantitative Methodology: They propose a "quantitative, comprehensive approach to estimate the agreement between models and experimental data" that accounts for the "distance between measurements and predictions," "shapes of the interpolating curves," and "possible shifts on the independent variable".
+Curve Matching: The paper details a "Curve Matching approach for the automatic assessment of kinetic models" which is intended to include "experimental error and define normalization processes" to ensure applicability across different models and conditions.
++1
+Data Management: The authors emphasize that "effective algorithms and codes to compare models and measurements are required" alongside standardized data formats (such as RKD or YAML) to ensure "consistency, accountability, traceability, and accuracy".
+
+
+
+
 \section{Uncertainty Quantification in Combustion}
 Uncertainty quantification (UQ) is the science for quantification and minimization of uncertainties with computer experiments and simulation. \cite{wang_combustion_2015} The approach to developing detailed kinetic models (mechanisms) of fuel combustion involves compiling a set of elementary reactions whose rate parameters may be determined from individual rate measurements, reaction-rate theory, or a combination of both. These methods have uncertainties. A widely used method is sensitivity analysis. UQ is closely related to sensitivity analysis, and in many ways, UQ is a natural extension of sensitivity analysis. A basic objective of UQ is to analyze the uncertainty in the model response because of model parameters being uncertain, including forward uncertainty quantification and propagation and an inverse problem leading to model uncertainty constraining. When treated as a Bayesian inference problem, UQ aids the development of predictive kinetic models by constraining models with data and yielding estimates for the confidence of a model to make predictions outside of the thermodynamic regimes where the model has been tested. \cite{wang_combustion_2015}
 
@@ -50,6 +63,80 @@ Local sensitivity analysis is a method where the response of the model to small 
 In the B2BDC framework, surrogate models are constructed using a solution-mapping approach over the prior uncertainty region. Active parameters are first identified through impact-factor screening and the surrogate is built only in this reduced parameter space. Training data are generated using space-filling designs, and the original model is evaluated at each design point. Polynomial, quadratic, or rational quadratic surrogate models are then fitted by minimizing either $L_2 or L_\infty$ norms. Rational quadratic surrogates are used when polynomial models are insufficiently accurate, and their coefficients are obtained through semidefinite programming \cite{li_development_nodate}.
 
 \section{Consistency Analysis}
+Given a reaction mechanism, chemical kinetics simulation software like Cantera\cite{cantera} can simulate combustion, and predict properties like ignition delay time(IDT), laminar flame speed(LFS), etc. These properties are also measured in real life combustion experiments, and reported together with quantified uncertainties. A good reaction model should be able to predict these properties accurately under same operating conditions as the physical experiment(temperature, pressure, stoichiometric ratio, mixture content). Consistency analysis in this context are methods to validate simulation and experimental results against each other by finding a suitable set of model parameters that best explain the experiment data within their uncertainty intervals. If some data can't be explained by to model, this can suggest either the data is bad, or the model is bad.  
+
+\subsection{Misc}
+
+\cite{ralph c. smith book}
+check the residuals of model v data for given mechanism for structure. If residuals are biased, model doesnt capture everything.
+solution 1: add an model discrepency term. fit it as a polynomial. 
+solution 2 : (bayes land)  
+
+if model descrepency is due to shortcomings of experiments(i.e scneario dependent) we would expect it to work best when modeled as different functions for different QoIs. however if it is a shortcoming of the model(ie. missing reactions) a  single function(e.g polynomial) fit or a single prior distrubition of the discrepency should be enought to partially compensate.?? at least me thinks thta way. 
+
+
+Shortcomings of previous work can be due to model discrepancies. Reaction mechanism does not contain all chemical reactions relevant to the combustion processs of interest. Because omitting reactions in the mecahnisms makes the computanations easier and and if there a re reactions that are not tknow to be in the combustion process it wouldn’t be in there any ways. So we assume it is not possible to improve the model to compenstate for the discrepancy. Instead I will develeop a statistical method to try to partially identify and partially compensate this discrepancy. One such method 
+
+\cite{kennedy_bayesian_2001}. Model discrepency. Kennedy and O'Hagan (2001) provide a foundational Bayesian framework for the calibration of computer models that explicitly accounts for various sources of uncertainty, most notably model inadequacy. In their formulation, they recognize that "no model is perfect" and define the discrepancy as follows:
+They further specify that "model inadequacy [is] the difference between the true mean value of the real world process and the code output at the true values of the inputs". This term captures the reality that "even if there is no parameter uncertainty... the predicted value will not equal the true value of the process". To address this, their Bayesian technique "attempt[s] to correct for any inadequacy of the model which is revealed by a discrepancy between the observed data and the model predictions from even the best-fitting parameter values". They implement this by "modelling both the computer code output and model inadequacy" using Gaussian processes.
+
+
+\cite{abdar_review_2021} Is a review of deep learning approaches to uncertainty quantification from various fields and methods. 
+This study provides a comprehensive review of recent advances in uncertainty quantification (UQ) methods used in deep learning and investigates the application of these methods in reinforcement learning. It highlights how UQ methods used along different machine learning and deep learning techniques can significantly increase the reliability of their results. By reviewing most recent articles published on quantifying uncertainty in artificial intelligence, this paper serves as a comprehensive guide to navigating this fast-growing research field.
+
+
+\subsection{Anomaly Detection / Gross Error Detection}
+
+\cite{ridzuan_review_2019}"Data cleansing offers a better data quality which will be a great help for the organization to make sure their data is ready for the analyzing phase. This paper reviews the data cleansing process, the challenge of data cleansing for big data and the available data cleansing methods. Data cleansing process mainly consists of identifying the errors, detecting the errors and corrects them. Ensuring the accuracy and relevancy of data will drive the business a step ahead from their competitors."
+
+\cite{el-hakim_step-by-step_nodate}"The technique developed at NRC for gross-error detection is composed of four steps. Each step deals with errors of a certain magnitude and nature such as errors in point identification or errors in the control points. Non-statistical approaches are employed for the first three types of gross errors and a rigorous statistical method (data snooping) for the fourth type. The final step, which deals with small observation errors of magnitudes larger than the random range, consists in applying a sensitive statistical test (data snooping). Using the OEEPE test blocks, which include all types of errors (intentionally introduced), the above procedure was applied and proved to be effective."
+
+
+\cite{rousseeuw_anomaly_2018}Real-world datasets often contain anomalous cases, also known as outliers. A useful tool for this purpose is robust statistics, which aims to detect the outliers by first fitting the majority of the data and then flagging data points that deviate from it. To avoid the masking and swamping effects of classical methods, the goal of robust statistics is to find a fit which is close to the fit we would have found without the outliers. Outliers are then identified by their large 'deviation' (e.g., its distance or residual) from that robust fit.+3In the multivariate case, a robust measure of location $\hat{\mu}$ and scatter $\hat{\Sigma}$ can be used to compute robust distances for any point $x$:
+\begin{equation}
+	RD(x,\hat{\mu},\hat{\Sigma})=\sqrt{(x-\hat{\mu})^{T}\hat{\Sigma}^{-1}(x-\hat{\mu})} \text{ }
+\end{equation}
+Robust estimates can be obtained via the Minimum Covariance Determinant (MCD) method, which looks for those $h$ observations in the dataset whose classical covariance matrix has the lowest possible determinant. Alternatively, in a linear regression setting, the Least Trimmed Squares (LTS) estimator identifies outliers by minimizing the sum of the $h$ smallest squared residuals:
+\begin{equation}
+	\text{minimize} \sum_{i=1}^{h} (r^{2}){(i)} \text{ }
+\end{equation}
+where $(r^{2}){(1)} < (r^{2}){(2)} < ... < (r^{2}){(n)}$ are the ordered squared residuals.
+
+
+
+\cite{chandola_anomaly_2009}As established in the survey by Chandola et al. (2009), the following text provides a foundational overview of anomaly detection suitable for the state-of-the-art section of a thesis:"Anomaly detection refers to the problem of finding patterns in data that do not conform to expected behavior. These non-conforming patterns are often referred to as anomalies, outliers, discordant observations, exceptions, aberrations, surprises, peculiarities or contaminants in different application domains. The importance of anomaly detection is due to the fact that anomalies in data translate to significant (and often critical) actionable information in a wide variety of application domains. At an abstract level, an anomaly is defined as a pattern that does not conform to expected normal behavior. A straightforward anomaly detection approach, therefore, is to define a region representing normal behavior and declare any observation in the data which does not belong to this normal region as an anomaly."+4For consistency analysis involving statistical comparisons between observed and expected values, the survey highlights the use of the $\chi^{2}$ statistic:"The value of the $\chi^{2}$ statistic is determined as:
+\begin{equation}
+	\chi^{2}=\sum_{i=1}^{n}\frac{(X_{i}-E_{i})^{2}}{E_{i}}
+\end{equation}
+where $X_{i}$ is the observed value of the $i_{th}$ variable, $E_{i}$ is the expected value of the $i_{th}$ variable (obtained from the training data) and $n$ [is the number of variables]."
+
+	
+
+
+
+\subsection{Bayesian Approaches}
+
+
+\cite{bell_bayesian_2018}Bell et al. First-principles Markov Chain Monte Carlo sampling is used to investigate uncertainty quantification and uncertainty propagation in parameters describing hydrogen kinetics. Rather than finding the best fit to kinetic parameters, our goal is to characterize the distribution of parameters that are consistent with a given set of experimental data. The resulting distribution identifies strong positive and negative correlations and several non-Gaussian characteristics. These results indicate the degree to which parameters consistent with the target experiments constrain predicted behavior in different combustion regimes.
+
+\cite{braman_bayesian_2013}Braman et al. (2013) utilize a Bayesian framework to investigate the capabilities of syngas combustion models through the quantification of uncertainties. This framework, given a set of experimental data, "allows for the calibration of model parameters, determination of uncertainty in those parameters, propagation of that uncertainty into simulations, as well as determination of model evidence from a set of candidate syngas models". The state of knowledge about a parameter value is represented by a probability density function (PDF), which is updated according to Bayes' theorem:+4\begin{equation}P_{post}(\theta|d)=\frac{P_{prior}(\theta)\pi(\theta;d)}{\int P_{prior}(\theta)\pi(\theta;d)d\theta}\end{equation}where $P_{prior}$ is the prior PDF, $P_{post}$ is the posterior PDF, and $\pi(\theta;d)$ is the likelihood function. The likelihood function "quantifies the level of agreement between the model and the data for specific values of the parameters". For model comparison, the authors employ the evidence function, which "measures the consistency of the model and the data considering the entire parameter space":+2\begin{equation}\pi_{evid}(M_{i};d)=\int P_{prior}(\theta_{i}|M_{i})\pi(\theta_{i},M_{i};d)d\theta_{i}\end{equation}The study evaluates this approach with a "particular focus on kinetics parameter calibration and evidence-based chemistry model comparison" using laminar flame speed measurements from high pressure experiments.
+
+
+\cite{yousefian_bayesian_2021}A novel toolchain is developed for Bayesian inference and uncertainty quantification (UQ) studies in practical hydrogen-enriched and lean-premixed combustion systems. The methodology implements an integrated chemical reactor network (CRN), non-intrusive polynomial chaos expansion using the point collocation method (NIPCE-PCM), and the Markov Chain Monte Carlo (MCMC) method. This framework is designed to characterize epistemic uncertainties in the modelling process, such as heat transfer, and to quantify the variability of input parameters through a two-step Bayesian calibration to maximize the agreement between model predictions and measurements.+4The stochastic process for quantities of interest (QoI), $\hat{y}$, is represented using a polynomial chaos expansion (PCE) defined as:
+\begin{equation}
+	\hat{y} = \sum_{i=1}^{p} \alpha_{i} \Psi_{i}(\theta)
+\end{equation}
+where $\theta$ is the vector of uncertain input parameters and $\Psi_{i}(\theta)$ represents multivariate polynomials. To reconcile experiments with the model, Bayes' theorem is implemented to transform a prior probability distribution, $P(\theta)$, for unknown parameters into a posterior distribution, $P(\theta|y)$:
+\begin{equation}
+	P(\theta|y) = \frac{\mathcal{L}(\theta)P(\theta)}{\int \mathcal{L}(\theta)P(\theta)d\theta}
+\end{equation}
+where $P(y)$ is experimental data and $\mathcal{L}(\theta) = P(y|\theta)$ represents a likelihood function.
+
+
+
+
+
+
 \subsection{MUM-PCE}
 In MUM-PCE, the uncertainty in the rate parameters of an as-compiled model is first quantified using stochastic spectral expansion and polynomial chaos techniques. The model is then constrained against global combustion experiments through solution mapping and least-squares optimization, combined with a consistency-screening procedure to identify incompatible experimental targets. The uncertainty of the constrained (posterior) model is subsequently calculated using an inverse spectral technique and propagated to a range of combustion conditions. \cite{sheen_method_2011} 
 \subsection{B2BDC}
@@ -61,20 +148,8 @@ Bound-to-Bound Data Collaboration (B2BDC) provides a natural framework for addre
 
 
 \section{TUMKIN Implementations}
-\subsection{Data Submission Protocol}
-Data submission protocol for experimental shock tube data is developed. Data should be given as described in template.json 
-  
 
 
-\cite{UQ_barkin}  
-
-\subsection{Sensitivity Analysis}
-\subsection{Consistency Analysis}
-Given a reaction mechanism, chemical kinetics simulation software like Cantera\cite{cantera} can simulate combustion, and predict properties like ignition delay time(IDT), laminar flame speed(LFS), etc. These properties are also measured in real life combustion experiments, and reported together with quantified uncertainties. A good reaction model should be able to predict these properties accurately under same operating conditions as the physical experiment(temperature, pressure, stoichiometric ratio, mixture content). Consistency analysis in this context are methods to validate simulation and experimental results against each other by finding a suitable set of model parameters that best explain the experiment data within their uncertainty intervals. If some data can't be explained by to model, this can suggest either the data is bad, or the model is bad.  
-\subsection{Possible Methods for consistency Analysis}
-In the example given in this B2BDC paper \cite{Arun Hegde} Scalar consistency measure is enough to identify a feasible set for slightly inconsistent datasets, while a more detailed Vector consistency measure is necessary for highly inconsistent datasets. Since we are developing this consistency analysis to be implemented in TUMKIN, we want it to follow some practical considerations. 
-- Work on different kinds of datasets.(different degrees of inconsistency, sensitivity analysis for large mecahnisms) 
-- Take domain knowledge from user as needed. 
 -  
 \subsubsection{Bayesian History Matching}
 Implausibility metric
@@ -101,8 +176,8 @@ When datasets are inconsistent, B2BDC provides diagnostic tools to identify the 
 
 Overall, B2BDC constitutes an optimization-based approach to model validation and uncertainty quantification, in which a model is considered predictive when its outcomes are accompanied by rigorously determined uncertainty bounds, and increased predictivity corresponds to more narrowly bounded interval estimations.
 
-\subsubsection{B2BDC Vector consistency Measure}
-\subsubsection{F-Test}
+
+
 \subsubsection{MUMPCE}
 Reliable simulations of reacting flow systems require a well-characterized, detailed chemical model as a foundation; however, the inherent uncertainties in the rate data leave a model characterized by a kinetic rate parameter space which will be persistently finite in its size. Without a careful analysis of how this uncertainty space propagates into the model predictions, those predictions can at best be trusted only semi-quantitatively. To address this issue, the Method of Uncertainty Minimization using Polynomial Chaos Expansions (MUM-PCE) is proposed to quantify and constrain these uncertainties.
 
@@ -146,33 +221,8 @@ Model constraining is formulated as a least-squares optimization problem in whic
 Finally, uncertainty minimization is performed by interpreting the objective function as a joint probability density function for the rate parameters and deriving a covariance matrix for the posterior model. The reduction in uncertainty arises from strong coupling among rate parameters as the model becomes constrained by the experimental targets. Fundamental limitations remain due to the size, accuracy, and information content of available combustion data sets.
 
 
-\subsection{Model Discrepency}
-\cite{ralph c. smith book}
-check the residuals of model v data for given mechanism for structure. If residuals are biased, model doesnt capture everything.
-solution 1: add an model discrepency term. fit it as a polynomial. 
-solution 2 : (bayes land)  
-
-if model descrepency is due to shortcomings of experiments(i.e scneario dependent) we would expect it to work best when modeled as different functions for different QoIs. however if it is a shortcoming of the model(ie. missing reactions) a  single function(e.g polynomial) fit or a single prior distrubition of the discrepency should be enought to partially compensate.?? at least me thinks thta way. 
 
 
-Shortcomings of previous work can be due to model discrepancies. Reaction mechanism does not contain all chemical reactions relevant to the combustion processs of interest. Because omitting reactions in the mecahnisms makes the computanations easier and and if there a re reactions that are not tknow to be in the combustion process it wouldn’t be in there any ways. So we assume it is not possible to improve the model to compenstate for the discrepancy. Instead I will develeop a statistical method to try to partially identify and partially compensate this discrepancy. One such method   
-
-\subsubsection{Consistency Check}
-First step of consistency analysis is to check for a given reaction model, whether its predictions fall within the uncertainties of experimental data. 
-
-\subsection{Reaction Mechanism Optimization}
-
-Mechanism with reaction rates spanning different orders of magnitude are stiff.
-
-
-\subsection{wants/constraints}
-- should be integrated into TUMKIN. that means c++/rust. and reliable libraries
-- consistency analysis should be able to run with minimal human intervention. ideally no need to choose which reactions to optimize?
-
-
-\subsection{todo}
-
-- check the bib of mcmc paper
 
 
 

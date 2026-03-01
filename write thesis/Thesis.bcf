@@ -2379,53 +2379,67 @@
     <bcf:citekey order="16" intorder="1">varga_development_2016</bcf:citekey>
     <bcf:citekey order="17" intorder="1">varga_optimization_2015</bcf:citekey>
     <bcf:citekey order="18" intorder="1">johnson_rmg_2022</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">wang_combustion_2015</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">pelucchi_addressing_2019</bcf:citekey>
     <bcf:citekey order="20" intorder="1">wang_combustion_2015</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">nagy_uncertainty_2015</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">prager_uncertainty_2013</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">tomlin_role_2013</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">sheen_method_2011</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">iavarone_application_2018</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">hegde_consistency_2018</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">UQ_barkin</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">cantera</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">Arun Hegde</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">Consistency Analysis for Massively Inconsistent Datasets in Bound-to-Bound Data Collaboration^^C</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">Application of Bound-to-Bound Data Collaboration approach for development and uncertainty quantification of a reduced char combustion model</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">ralph c. smith book</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">nagy_uncertainty_2015</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">frenklach_optimization_1992</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">mckay_comparison_1979</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">sobol_distribution_1967</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">wang_combustion_2015</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">nagy_uncertainty_2015</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">prager_uncertainty_2013</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">tomlin_role_2013</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">cantera</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">ralph c. smith book</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">kennedy_bayesian_2001</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">abdar_review_2021</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">ridzuan_review_2019</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">el-hakim_step-by-step_nodate</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">rousseeuw_anomaly_2018</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">chandola_anomaly_2009</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">bell_bayesian_2018</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">braman_bayesian_2013</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">yousefian_bayesian_2021</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">sheen_method_2011</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">iavarone_application_2018</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">hegde_consistency_2018</bcf:citekey>
     <bcf:citekey order="40" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">turanyi_respecth_2025</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">shen_shock_2009</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">davidson_shock_2005</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">shen_shock_2009</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">davidson_shock_2005</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">herzler_shock-tube_2009</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">chemical_kinetics_laboratory_fujimoto_2017</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">keromnes_experimental_2013</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">herzler_shock-tube_2009</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">chemical_kinetics_laboratory_fujimoto_2017</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">keromnes_experimental_2013</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">kalitan_ignition_2007</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">krejci_laminar_2012</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">herzler_shock-tube_2009</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">chemical_kinetics_laboratory_c_2017</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">kalitan_ignition_2007</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">krejci_laminar_2012</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">herzler_shock-tube_2009</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">chemical_kinetics_laboratory_c_2017</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">good_cantera</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">Consistency Analysis for Massively Inconsistent Datasets in Bound-to-Bound Data Collaboration^^C</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">Application of Bound-to-Bound Data Collaboration approach for development and uncertainty quantification of a reduced char combustion model</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">UQ_barkin</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">nagy_uncertainty_2015</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">frenklach_optimization_1992</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">mckay_comparison_1979</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">sobol_distribution_1967</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">turanyi_respecth_2025</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">wang_1_nodate-1</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">wang_1_nodate-1</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">shen_shock_2009</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">davidson_shock_2005</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">shen_shock_2009</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">davidson_shock_2005</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">herzler_shock-tube_2009</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">chemical_kinetics_laboratory_fujimoto_2017</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">herzler_shock-tube_2009</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">chemical_kinetics_laboratory_fujimoto_2017</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">kalitan_ignition_2007</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">krejci_laminar_2012</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">herzler_shock-tube_2009</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">chemical_kinetics_laboratory_c_2017</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">kalitan_ignition_2007</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">krejci_laminar_2012</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">herzler_shock-tube_2009</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">chemical_kinetics_laboratory_c_2017</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">good_cantera</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">good_cantera</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">good_cantera</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">good_cantera</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">good_cantera</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">good_cantera</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
