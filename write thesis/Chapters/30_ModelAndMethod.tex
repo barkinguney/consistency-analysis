@@ -3,9 +3,29 @@
 Source code can be found at: https://github.com/barkinguney/consistency-analysis
 
 \section{Experimental Shock Tube IDT Uncertainty}
-Every dataset in TUMKIN needs to contain appropriate uncertainties. If authors don't report uncertainties for experimental data, uncertainties are estimated using the algorihm proposed by \cite{UQ_barkin} 
+
+Every dataset in TUMKIN needs to contain appropriate uncertainties. If published sources don't report uncertainties for experimental data, uncertainties are estimated using the algorihm proposed by \cite{UQ_barkin} 
 
 
+The approach is aligned with the Guide to the Expression of Uncertainty in Measurement (GUM) [17], Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results [18]. The base principle follows from [17] and [18]: ``the result of a measurement is only an approximation or estimate of the value of the specific quantity subject to measurement, that is, the measurand, $y$, and thus the result is complete only when accompanied by a quantitative statement of its uncertainty''.
+
+The reporting uncertainty is the expanded uncertainty $U$ together with the coverage factor $k$ used to obtain it, or report combined uncertainty $u_c$, which represents the estimated standard deviation of the result.
+
+The reporting a measurement result and its uncertainty, include the information of all components of standard uncertainty, which may be grouped into two categories according to the method used to estimate their numerical values: type A, those which are evaluated by statistical methods, i.e. the corresponding component of uncertainty arising from a random effect; type B, those which are evaluated by means other than the statistical analysis of series of observations. In our analysis we will use a simple correspondence between the classification of uncertainty components into categories A and B and the commonly used classification of uncertainty components as ``random'', denoted $\sigma_r(y)$, and ``systematic,'' denoted $\sigma_{\delta}(y)$. The combined standard uncertainty is calculated as the square root of the sum of the variances from systematic and random components
+\begin{equation}
+	u_c(y) = \sqrt{\sigma_{\delta}(y)^2 + \sigma_r(y)^2}
+\end{equation}
+$\sigma_r(y)^2$ is estimated combining the individual standard uncertainties $\sigma_i$ of the uncertainty components applying the law of uncertainty propagation.
+
+The \textit{systematic error} $\sigma_{\delta}(y)$ captures device- and condition-specific biases in $\tau_{ign}$ measurements in shock tubes. As these conditions are typically modelled using a 0-D mathematical framework that accounts solely for chemical processes behind of shock wave, i.e. an ideal case. Alternative IDT modeling approaches are outside the present scope. To evaluate $\sigma_{\delta}(y)$ we developed a statistical procedure that quantifies the departure from this idealization. Concretely: (i) we identify the dominant facility/operating-condition factors provoke non-idealities behind of shock wave; (ii) construct estimators for each factor's contribution to $\sigma_{\delta}(y)$; (iii) define a quasi-ideal reference regime—a subset of facilities/conditions that meet strict criteria—and assign to this reference a baseline systematic error of 5\%; (v) establish the quantitative metric of deviation from reference case; and (iv) for factors outside the reference, we compute incremental penalties and aggregate these contributions to obtain $\sigma_{\delta}(y)$. This construction makes explicit the assumption that a small, irreducible systematic component ($\approx$5\%) exists even under best-case conditions, with additional bias driven by quantifiable departures from the ideal case. Consequently, the systematic error, we will evaluate, can be classified as an ``offset or zero setting error''.
+
+Because rigorous, quantitative assessments of systematic error in $\tau_{ign}$ data remain scarce, the primary focus of this work is on addressing this gap; details follow in the next sections.
+
+The final uncertainty is expressed as a coverage interval, where U is the expanded uncertainty obtained by multiplying $u_c(y)$ by a coverage factor, $k$. Thus
+\begin{equation}
+	U = k u_c(y)
+\end{equation}
+and it is confidently believed that $y - U \le Y \le y + U$, which is commonly written as $Y = y \pm U$. To be consistent with current international practice, the value of $k$ to be used for calculating U is, by convention, $k = 2$.
 
 
 
@@ -14,36 +34,138 @@ Every dataset in TUMKIN needs to contain appropriate uncertainties. If authors d
 \subsection{Systematic Uncertainty}
 
 
+Guided by non-ideality phenomena in shock tubes, 14 input/operating factors (IFs) are selected, Figure~\ref{fig:ifs}, that determine proximity to the 0-D ``ideal case'', i.e., conditions under which $\tau_{ign}$ can be described with the 0-D mathematical model. A quasi-ideal reference is defined by fixing each factor to its target metric $\boldsymbol{\mu}_i^0$ Figure~\ref{fig:ifs} and assign a baseline systematic error $\delta^0 = 5\%$ at 95\% confidence. This baseline represents the irreducible risk under best-case conditions; deviations from $\boldsymbol{\mu}_i^0$ are treated separately.
+
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Figures/impacting_factors.png}
-	\caption{caption.}
+	\caption{Impacting factors (IF) and target metrics for the ``ideal case'' $\delta_0 = 5\%$ (95\% confidence).}
 	\label{fig:ifs}
 \end{figure}
 
+GUM-consistent recipe to turn Type-B systematic term $\delta$ into a combined uncertainty $u_c(y)$, eq. (1), with Type-A random. So, calculated in this section $\delta$ tis systematic expanded relative uncertainty will be later transformed in the systematic standard uncertainty.
 
-\begin{flalign}
-	\begin{split}
-		\sigma_i^2(\tau_{ign}) &= \left( z_2^C z_3^D A \exp \left( \frac{B}{z_1} \right) \cdot \left( -\frac{B}{z_1^2} \right) \right)^2 \cdot u^2(z_1) + \left( C A \exp \left( \frac{B}{z_1} \right) z_2^{C-1} z_3^D \right)^2 \cdot u^2(z_2) \\
-		& + \left( D A \exp \left( \frac{B}{z_1} \right) z_2^C z_3^{D-1} \right)^2 \cdot u^2(z_3) + \left( \exp \left( \frac{B}{z_1} \right) z_2^C z_3^D \right)^2 \cdot u^2(A) \\
-		& + \left( \frac{1}{z_1} A \exp \left( \frac{B}{z_1} \right) z_2^C z_3^D \right)^2 \cdot u^2(B) + \left( A \exp \left( \frac{B}{z_1} \right) z_2^C \ln(z_2) z_3^D \right)^2 \cdot u^2(C) \\
-		& + \left( A \exp \left( \frac{B}{z_1} \right) z_2^C z_3^D \ln(z_3) \right)^2 \cdot u^2(D)
-	\end{split} &
-\end{flalign}
+We calibrate the systematic error against a quasi-ideal reference through departures of IFs from its reference target. Assuming the independence of all other IFs these departures are mapped to incremental penalties via a smooth ``undesirability'' transform, and aggregated as
+\begin{equation}
+	\delta = \delta^0 + \sum_{i=1}^{N} \delta_i = \delta^0(1 + \sum_{i=1}^{N} \xi_i), \quad \delta_i = \delta^0 \xi_i \ , \ \ i = 1, \dots, N,
+\end{equation}
+where $N$ is the number of IFs, and $\xi_i \in [0,1)$ quantifies the penalty induced by the deviation of $\mu_i$ from the ideal $\mu_i^0$. 
+
+To define and $\xi_i$, we use a two-sided, smaller-is-better modification of Harrington's desirability concept [48] [49] retaining low sensitivity near the ideal point and saturation for large deviations (Fig. 4):
+\begin{equation}
+	\xi_i = 1 - e^{-(x_i^2)}
+\end{equation}
+\begin{equation}
+	x_i = (\mu_i^0 - \mu_i)/\mu_i^0 \ .
+\end{equation}
+
+For binary IFs (e.g., tailoring, inserts, CRV, dilution, impurities), we map an unfavorable setting to the conservative lower edge of the ``satisfactory'' band, grey color in Fig. 4, i.e. $\xi_i = e^{-1} \cong 0.37$, if ``no'' and to $\xi_i=0$ if ``yes'' for $\text{IF}_{4,5,6,10,13}$. For $\text{IF}_{11}$ it is otherwise. 
+
+As the test time ($\text{IF}_9$) is strongly correlated with $\text{T}_5$ and $\text{P}_5$, we retain $\text{IF}_9$ in the systematic term and exclude $\text{T}_5$ and $\text{P}_5$ from $\delta$ (their uncertainties enter the random part later). We also exclude $\text{IF}_{14}$ ($\text{P}_1$) due to a lack of quantitative evidence.
+
+\subsection{Random Uncertainty}
+
+%- Section from Screenshot 020100 ---
+The measured value should be reported along with an estimate of the total combined standard uncertainty, sum of systematic error and random error. Formally, the rigorous approach to evaluate the random error of a measurement would require the repetition of the same measurement for a significant number of times, what is non-realistic to perform in praxis or from the rules for differentiating the measurement model describing the indirect measured target. In this case, the measured data set is approximated with the function of several parameters and the standard deviation of a measurand is calculated as the positive square root of the combined variance, $u_c^2(y)$, assuming independence of input parameters [17]:
+\begin{equation}
+	u_c^2(y) = \sum_{i=1}^{N} \left( \frac{\partial f}{\partial z_i} \right)^2 u^2(z_i) + 2 \sum_{i=1}^{N-1} \sum_{j=i+1}^{N} \frac{\partial f}{\partial z_i} \frac{\partial f}{\partial z_j} u(z_i) u(z_j) r(z_i, z_j),
+\end{equation}
+where $z_i$ are parameters of the function $f$; $u^2(z_i)$ is the standard uncertainty of parameters; $r(z_i, z_j)$ is the estimated correlation coefficient.
+
+To describe the set of measured IDT data we used the function proposed by A. Lifshitz and co-authors for data processing [19]:
+\begin{equation}
+	\label{eq:model}
+	\tau_{ign} = f(z_i, A, B, C, D) = A \exp \left( \frac{B}{z_1} \right) z_2^C z_3^D.
+\end{equation}
+Here $z_1 = T_5$ is the temperature behind the shock wave, $z_2 = P_5$ is the pressure behind the shock wave, and $z_3 = \varphi$ stoichiometric ratio, fuel/oxygen. $A, B, C, D$ -- parameters of approximation.
+
+
+We apply eqs. (4) and (5) under assumptions $A, B, C, D, T_5, P_5$, and $\varphi$ are not correlated parameters and terms with parameter correlations can be neglected.
+
+% --- Section from Screenshot 020122 ---
+In this case
+\begin{align}
+	\label{eq:propagation}
+	\sigma_i^2(\tau_{ign}) &= \left( z_2^C z_3^D A \exp \left( \frac{B}{z_1} \right) \cdot \left( -\frac{B}{z_1^2} \right) \right)^2 \cdot u^2(z_1) + \left( C A \exp \left( \frac{B}{z_1} \right) z_2^{C-1} z_3^D \right)^2 \cdot u^2(z_2) \nonumber \\
+	&+ \left( D A \exp \left( \frac{B}{z_1} \right) z_2^C z_3^{D-1} \right)^2 \cdot u^2(z_3) + \left( \exp \left( \frac{B}{z_1} \right) z_2^C z_3^D \right)^2 \cdot u^2(A) \nonumber \\
+	&+ \left( \frac{1}{z_1} A \exp \left( \frac{B}{z_1} \right) z_2^C z_3^D \right)^2 \cdot u^2(B) + \left( A \exp \left( \frac{B}{z_1} \right) z_2^C \ln(z_2) z_3^D \right)^2 \cdot u^2(C) \nonumber \\
+	&+ \left( A \exp \left( \frac{B}{z_1} \right) z_2^C z_3^D \ln(z_3) \right)^2 \cdot u^2(D)
+\end{align}
+The standard uncertainty of input parameters $u^2(z_i)$, i.e. manufacture's specifications, calibration, and other certificates should be reported in a paper. If it is not so it can be evaluated from the available information, analogy, etc. 
+
+Weighted Least Squares (WLS) regression is used to calculate best A,B,C,D parameters and their uncertainties $u^2(A), u^2(B), u^2(C), u^2(D)$. If all data points in a data set have very similar values for any of the variables T5, P5, $\phi$ the fit is multicollinear. This makes the calculated uncertainties meaningless. This is especially common for $\phi$ since an IDT dataset usually contains measurements at constant $\phi$. To prevent this, if a variable has constant value across the dataset, Equation~\ref{eq:model} is modified to set the corresponding parameter B,C or D set to 1. In the case of constant $\phi$, Equation~\ref{eq:model} becomes:
+\begin{equation}
+	\tau_{ign} = f(z_i, A, B, C) = A \exp \left( \frac{B}{z_1} \right) z_2^C z_3.
+\end{equation}
+Equation~\ref{eq:propagation}, that propagates parameter uncertainties to $\tau_{ign}$ uncertainty is also recalculated with the new parameter set A,B,C.
+
+
+Normally, $T_5, P_5$, and $\varphi$ are reported in a paper with uncertainty interval given as
+\begin{equation}
+	Z = z \pm U(z).
+\end{equation}
+Assuming normal distribution of $x_i$ and 95\% of confidence interval one can interpret $U_i$ as uncertainty interval
+\begin{equation}
+	U(z_i) = 2 \sqrt{u_c^2(z_i)}
+\end{equation}
+and the standard uncertainty of parameters can be calculated as
+\begin{equation}
+	u^2(z_i) = \frac{U^2(z_i)}{4}.
+\end{equation}
+
+% --- Section from Screenshot 020224 ---
+The standard uncertainty of a set of IDT data can be calculated from the sum of systematic and random uncertainties, Table 2 and eq. (6)
+\begin{equation}
+	u_{ci}(\tau_{ign}) = \sqrt{\sigma_{\delta_i}^2 + \sigma_i^2(\tau_{ign})}
+\end{equation}
+$\sigma_{\delta_i}^2$ is the standard systematic deviation. As we interpret $\delta$ as normal, 95\% expanded, we obtain:
+\begin{equation}
+	\sigma_{\delta_i}^2 = \left[ \tau_{ign} * \left( \frac{\delta_i/2}{100} \right) \right]^2
+\end{equation}
+The final uncertainty interval of the measured set will be calculated as (in the case of normal distribution of $x_i$ and 95\% of confidence interval):
+\begin{equation}
+	Ui(\tau_{ign}) = 2(u_{ci}(\tau_{ign}))
+\end{equation}
+Finally, data accepted for the further analysis and model testing, fitting and optimization are reported as:
+\begin{equation}
+	Y^{exp} = \tau_{ign}^m \pm U(\tau_{ign})
+\end{equation}
+where $\tau_{ign}^m$ is measured value of the IDT.
+
+For the same experimental set from the study [50], we calculate now the random error applying described procedure. Uncertainty of input parameters were calculated with data reported in the paper of S. Saxena et al. [50]: reflected shock temperature and pressure uncertainties are $\pm 1\%$ and $\pm 1.5\%$ respectively; uncertainty in test gas composition before shock heating was estimated to be less than 0.5\%.
 
 \section{Arrhenius Parameters Uncertainty}
-Different sources report different values for the Arrhenius parameters or rate coefficients for the same reaction. Therefore, it is important to take all this information into account when analysing and optimizing reaction mechanisms. Kinetics databases like NIST chemical kinetics database and RMG database will be used to collect kinetics data, and calculate least squares fit to determine best parameters, and their distribution, specified by the covariance matrix of the least squares fit. Standard deviations of the parameters will be used to determine uncertainty bounds of the rate coefficients.
+Different literature sources report different values for the Arrhenius parameters or rate coefficients for the same reaction. Therefore, it is important to take all this information into account when analysing and optimizing reaction mechanisms. This package collects kinetic data from a database and assigns a single uncertainty factor f to each reaction, using the collected data.  
 
-Workflow is as follows. For a given reaction equation string, reactant and product species are determined by comparing the string to known species. SMILES representations of the species are used to search RMG database libraries for matching sources. For every matching source, reaction rate coefficient is evaluated at fixed points in the valid temperature range of the source. In the RMG database most sources do not specify the valid temperature range of the reported kinetics data. In that case  reaction rate coefficient is evaluate over a wide temperature range of 300K-3100K. Valid temperature ranges not being available for most sources is not ideal and is one of the downsides of the RMG database. Collected kinetics data, and rate coefficients evaluated at fixed intervals within the temperature range are saved further processing. Currently RMG kinetics types of Arrhenius, MultiArrhenius, ThirdBody are supported. For future development PDepArrhenius should be added. Currently efficencies of ThirdBody reactions are not considered. 
+
+
+\subsection{Data Collection}
+To evaluate the uncertainty of a specific reaction, all instances of that reaction across all loaded kinetic libraries in the RMG (Reaction Mechanism Generator) database are identified. Reactant and product species are determined by comparing the reaction equation string to known species. SMILES representations of the species are used to search RMG database libraries for matching sources. For every match, rate coefficients $k(T)$ are evaluated across a grid of the valid temperature range of each reaction. A downside of RMG database is very few sources include a valid temperature range for the reported kinetic parameters. In that case a standardized temperature grid $T \in [300, 3100]$\,K is used to collect rate coefficient data. Collected kinetics data, and rate coefficients evaluated at fixed intervals within the temperature range are saved further processing. Currently RMG kinetics types of Arrhenius, MultiArrhenius, ThirdBody are supported. For future development, support for PDepArrhenius should be added. Currently efficencies of ThirdBody reactions are not considered.
+
+
+
+\subsection{Uncertainty Factor}
+
+The modified Arrhenius equation is expressed as:
+\begin{equation}
+	k(T) = A T^n \exp\left(-\frac{E_a}{RT}\right)
+\end{equation}
+
+To perform a robust statistical fit across multiple orders of magnitude, equation is transformed into logarithmic space. 
+\begin{equation}
+	\ln k(T) = \ln A + n \ln T - \frac{E_a}{RT}
+\end{equation}
 
 In standard Arrhenius fitting parameters (A,n,$E_a$) are usually highly correlated. 
+\begin{equation}
+\ln k(T) = \beta_0 + n \ln\left(\frac{T}{T_{ref}}\right) - \frac{E_a}{R} \left(\frac{1}{T} - \frac{1}{T_{ref}}\right)
+\end{equation}
 
-$$\ln k(T) = \beta_0 + n \ln\left(\frac{T}{T_{ref}}\right) - \frac{E_a}{R} \left(\frac{1}{T} - \frac{1}{T_{ref}}\right)$$
-
-The rate expression is transformed into a log linear model centered around a reference temperature, which is geometric mean of temperature unless otherwise specified. The parameters $(\beta_0, n, E_a)$ are solved using a Non-Linear Least Squares approach. The resulting covariance matrix in the reparameterized space, $\Sigma_{\beta}$, is then mapped back to the original $( \log_{10} A, n, E_a )$ space using the Jacobian transformation matrix $J$:
-
-$$\Sigma_{\theta} = J \Sigma_{\beta} J^T$$
-
+The rate expression is transformed into a log linear model centered around a reference temperature, which is geometric mean of temperature unless otherwise specified. The parameters $(\beta_0, n, E_a)$ are solved using a Nonlinear Least Squares approach, minimizing the residual sum of squares (RSS) between the library data and the model. The resulting covariance matrix in the reparameterized space, $\Sigma_{\beta}$, is then mapped back to the original $( \log_{10} A, n, E_a )$ space using the Jacobian transformation matrix $J$:
+\begin{equation}
+\Sigma_{\theta} = J \Sigma_{\beta} J^T
+\end{equation}
 Diagonal entries of the covariance matrix of the least squares fit give parameter standard deviations $s\left(\log_{10}{\left(A\right)}\right), s\left(n\right), s\left(E_a\right)$, which are used to calculate lower and upper uncertainty bounds for rate coefficients.
 \begin{equation}
 	k_{\mathrm{low}}(T) =
@@ -66,7 +188,12 @@ The uncertainty parameter f is defined as:
 \end{equation}
 Where $k_0$ is the best fit of the rate coefficient, $k_low$ and $k_up$ are the lower and the upper bounds respectively \cite{nagy_uncertainty_2015}.  This gives a temperature dependent uncertainty factor f(T). Temperature dependence of f(T) is usually low. To simplify further analysis, mean value of f(T) is selected as constant f. When rate coefficients need to be sampled in further anylysis, they are sampled from the interval 
 $\left[k_0\left(T\right)/{10}^f\left(T\right),k_0\left(T\right)\ast{10}^f\left(T\right)\right]$. In practice this can be achieved by multiplying the pre exponantial factor A witha  multiplier sampled from $\left[\left(T\right)/{10}^f\left(T\right),\left(T\right)\ast{10}^f\left(T\right)\right]$.
-Which preserves the shape of the k(T) curve and only scales it. 
+Which preserves the shape of the k(T) curve and only scales it.
+\begin{equation}
+	f_{final} =  \max_{T} f(T)
+\end{equation}
+This uncertainty factor provides a single, conservative metric to quantify uncertainty of the reaction rate coefficient across the entire temperature range.
+ 
 
 \section{Cantera IDT Simulations}
 Cantera is a 0D and 1D chemical kinetics simulation software. To simulate shock tube IDT, constant volume batch reactors are used. Ignition delay times to be simulated for a given operating conditions T5, P5 phi and mechanism. The exact measurement or simulation time of IDT vary based on IDT definition.  Using the same IDT definition as reported by the physical experiment to calculate simulated IDT would yield the closest results to physical experiment. the The ignition types that can be handled by this IDT simulation code are a follow. Following the format described by RESPECTH shock tube IDT measurements, ignition type is comprised of attributes, target, type, amount and unit . Target can be pressure, temperature or concentration. Type can be “max”, “d/dt max”, “baseline max/min intercept from d/dt“, “concentration”, “relative concentration”, and “relative increase”. ”max” means IDT is at the maximum of the target property. “d/dt max” means IDT is at the maximum gradient of target property. “baseline max/min intercept from d/dt“ means the time when the max d/dt line intercepts the baseline value of target property. “concentration”: IDT is at the time target property reaches a specified concentration value. “relative concentration”: IDT is at the time when the concentration of the target property relative to its maximum concentration reach the specified value. “relative increase”:IDT is at the time when the value of  the target property increases by a given relative amount compared to its value at t=0.  Amount attribute is only used when type are “concentration”, “relative concentration” or “relative increase”. Unit attribute is only used when the type is  “concentration”, “relative concentration” or “relative increase”. Unit should have the value “unitless” for relative types.  
