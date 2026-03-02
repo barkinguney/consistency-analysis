@@ -38,8 +38,8 @@
       \strng{authornamehash}{7e302a1c41e136f097ef185fe8a75c85}
       \strng{authorfullhash}{7e302a1c41e136f097ef185fe8a75c85}
       \strng{authorfullhashraw}{7e302a1c41e136f097ef185fe8a75c85}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The present frontier of combustion chemistry is the development of predictive reaction models, namely, chemical kinetics models capable of accurate numerical predictions with quantiﬁable uncertainties. While the usual factors like deﬁcient knowledge of reaction pathways and insuﬃcient accuracy of individual measurements and/or theoretical calculations impede progress, the key obstacle is the inconsistency of accumulating data and proliferating reaction mechanisms. Process Informatics introduces a new paradigm. It relies on three major components: proper organization of scientiﬁc data, availability of scientiﬁc tools for analysis and processing of these data, and engagement of the entire scientiﬁc community in the data collection and analysis. The proper infrastructure will enable a new form of scientiﬁc method by considering the entire content of information available, assessing and assuring mutual scientiﬁc consistency of the data, rigorously assessing data uncertainty, identifying problems with the available data, evaluating model predictability, suggesting new experimental and theoretical work with the highest possible impact, reaching community consensus, and merging the assembled data into new knowledge.}
@@ -124,8 +124,8 @@
       \strng{authornamehash}{3b67148bb675ee26adf8ea5dcdd1383e}
       \strng{authorfullhash}{779f40c2b24cb81ea4cd4a95bb128aff}
       \strng{authorfullhashraw}{779f40c2b24cb81ea4cd4a95bb128aff}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Abstract Description of a large number of datasets related to gas-phase reaction kinetics (Re), high-resolution molecular spectroscopy (Spec), and thermochemistry (Th), called , is presented. The datasets contain accurate and validated experimental, empirical, and computed, machine-searchable data, and, whenever possible, the corresponding metadata. data and the accompanying utility codes can be used in several engineering and scientific fields either separately or simultaneously, such as simulation of combustion reactions, atmospheres of planets and exoplanets, and stellar and interstellar environments.}
@@ -201,8 +201,8 @@
       \strng{authornamehash}{e625c22bfff9ecd85db348af4152a01e}
       \strng{authorfullhash}{3f3c8bdd4d1922ffcf22b84be0be6766}
       \strng{authorfullhashraw}{3f3c8bdd4d1922ffcf22b84be0be6766}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00102180}
@@ -511,6 +511,7 @@
       \strng{authornamehash}{5d466fd4fe0d5186f162f75d81807909}
       \strng{authorfullhash}{286719205471b0e31ead6f8f21f22af3}
       \strng{authorfullhashraw}{286719205471b0e31ead6f8f21f22af3}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -602,6 +603,82 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/B9780444640871000152
       \endverb
       \keyw{IDT UQ}
+    \endentry
+    \entry{ramalli_data_2021}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=c716d07f5e08816359f3e6644b7c77d2}{%
+           family={Ramalli},
+           familyi={R\bibinitperiod},
+           given={Edoardo},
+           giveni={E\bibinitperiod}}}%
+        {{hash=0fdef915f0462bea84308c49afa5dd74}{%
+           family={Scalia},
+           familyi={S\bibinitperiod},
+           given={Gabriele},
+           giveni={G\bibinitperiod}}}%
+        {{hash=33b209ad31e199f2a06c87e0929b059b}{%
+           family={Pernici},
+           familyi={P\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod}}}%
+        {{hash=99a4b984a348c2a8e9b9003554c04100}{%
+           family={Stagni},
+           familyi={S\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7df8941823ede2f1b51021ff640fc6f0}{%
+           family={Cuoci},
+           familyi={C\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3870383c3e37d16d54eba6a12f1bdca9}{%
+           family={Faravelli},
+           familyi={F\bibinitperiod},
+           given={Tiziano},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{5a01a6c431f1fe65ce9df207b30e6249}
+      \strng{fullhash}{fa89d4c6d58a376004c4770b79d71aef}
+      \strng{fullhashraw}{fa89d4c6d58a376004c4770b79d71aef}
+      \strng{bibnamehash}{fa89d4c6d58a376004c4770b79d71aef}
+      \strng{authorbibnamehash}{fa89d4c6d58a376004c4770b79d71aef}
+      \strng{authornamehash}{5a01a6c431f1fe65ce9df207b30e6249}
+      \strng{authorfullhash}{fa89d4c6d58a376004c4770b79d71aef}
+      \strng{authorfullhashraw}{fa89d4c6d58a376004c4770b79d71aef}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The development of scientific predictive models has been of great interest over the decades. A scientific model is capable of forecasting domain outcomes without the necessity of performing expensive experiments. In particular, in combustion kinetics, the model can help improving the combustion facilities and the fuel efficiency reducing the pollutants. At the same time, the amount of available scientific data has increased and helped speeding up the continuous cycle of model improvement and validation. This has also opened new opportunities for leveraging a large amount of data to support knowledge extraction. However, experiments are affected by several data quality problems since they are a collection of information over several decades of research, each characterized by different representation formats and reasons of uncertainty. In this context, it is necessary to develop an automatic data ecosystem capable of integrating heterogeneous information sources while maintaining a quality repository. We present an innovative approach to data quality management from the chemical engineering domain, based on an available prototype of a scientific framework, SciExpeM, which has been significantly extended. We identified a new methodology from the model development research process that systematically extracts knowledge from the experimental data and the predictive model. In the paper, we show how our general framework could support the model development process, and save precious research time also in other experimental domains with similar characteristics, i.e., managing numerical data from experiments.}
+      \field{issn}{2624-909X}
+      \field{journaltitle}{Frontiers in Big Data}
+      \field{month}{9}
+      \field{shorttitle}{Data {Ecosystems} for {Scientific} {Experiments}}
+      \field{title}{Data {Ecosystems} for {Scientific} {Experiments}: {Managing} {Combustion} {Experiments} and {Simulation} {Analyses} in {Chemical} {Engineering}}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{4}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{663410}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fdata.2021.663410
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\CPKH4FD8\\Ramalli et al. - 2021 - Data Ecosystems for Scientific Experiments Managing Combustion Experiments and Simulation Analyses.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/articles/10.3389/fdata.2021.663410/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/articles/10.3389/fdata.2021.663410/full
+      \endverb
+      \keyw{data ecosystem}
     \endentry
     \entry{wang_combustion_2015}{article}{}{}
       \name{author}{2}{}{%
@@ -702,8 +779,8 @@
       \strng{authornamehash}{7a9905cef951c7fd59eb30b698a69411}
       \strng{authorfullhash}{12c43a25fe5cd3baaa91860062ad878a}
       \strng{authorfullhashraw}{12c43a25fe5cd3baaa91860062ad878a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Re-evaluation of the temperature-dependent uncertainty parameter f(T) of elementary reactions is proposed by considering all available direct measurements and theoretical calculations. A procedure is presented for making f(T) consistent with the form of the recommended Arrhenius expression. The corresponding uncertainty domain of the transformed Arrhenius parameters (ln A, n, E/R) is convex and centrally symmetric around the mean parameter set. The f(T) function can be stored efﬁciently using the covariance matrix of the transformed Arrhenius parameters. The calculation of the uncertainty of a backward rate coefﬁcient from the uncertainty of the forward rate coefﬁcient and thermodynamic data is discussed. For many rate coefﬁcients, a large number of experimental and theoretical determinations are available, and a normal distribution can be assumed for the uncertainty of ln k. If little information is available for the rate coefﬁcient, equal probability of the transformed Arrhenius parameters within their domain of uncertainty (i.e. uniform distribution) can be assumed. Algorithms are provided for sampling the transformed Arrhenius parameters with either normal or uniform distributions. A suite of computer codes is presented that allows the straightforward application of these methods. For 22 important elementary reactions of the H2 and syngas (wet CO) combustion systems, the Arrhenius parameters and 3rd body collision efﬁciencies were collected from experimental, theoretical and review publications. For each elementary reaction, kmin and kmax limits were determined at several temperatures within a deﬁned range of temperature. These rate coefﬁcient limits were used to obtain a consistent uncertainty function f(T) and to calculate the covariance matrix of the transformed Arrhenius parameters.}
@@ -772,8 +849,8 @@
       \strng{authornamehash}{6a217051f4c02501fec816d1f87bda37}
       \strng{authorfullhash}{0d870aade635417363a7ad3f0126a75e}
       \strng{authorfullhashraw}{0d870aade635417363a7ad3f0126a75e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We study correlations among uncertain Arrhenius rate parameters in a chemical model for hydrocarbon fuel-air combustion. We consider correlations induced by the use of rate rules for modeling reaction rate constants, as well as those resulting from ﬁtting rate expressions to empirical measurements. We focus on homogeneous ignition in a fuel-air mixture at constant-pressure. We outline a general methodology for this analysis using polynomial chaos and Bayesian inference methods. We examine the uncertainties in both the Arrhenius parameters and in predicted ignition time, outlining the role of correlations, and considering both accuracy and computational eﬃciency.}
@@ -823,8 +900,8 @@
       \strng{authornamehash}{f23a277860adf30aa239c7ccc82f3e3b}
       \strng{authorfullhash}{f23a277860adf30aa239c7ccc82f3e3b}
       \strng{authorfullhashraw}{f23a277860adf30aa239c7ccc82f3e3b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Models play an important role in improving our understanding of combustion processes and more and more are able to assist in the design of advanced energy conversion devices. Due to constant improvements in computing power and techniques such as automatic kinetic mechanism generation, we have the ability to represent combustion processes with increasing levels of detail. This is particularly true for kinetic processes where complex mechanisms are being developed which describe the oxidation of both conventional and alternative fuels. These mechanisms may comprise of up to hundreds of species and thousands of reactions with thermo-kinetic data derived from a wide variety of sources including direct measurements, global combustion experiments, and theoretical calculations. However, signiﬁcant uncertainties in the data used to parametrise combustion models still exist. These input uncertainties propagate through models of combustion devices leading to uncertainties in the prediction of key combustion properties. In order to improve conﬁdence in these models to the extent where they can successfully be used in design, input uncertainties need to be reduced as far as possible. This requires focussing eﬀorts on those parameters which drive predictive uncertainty, which may be identiﬁed through sensitivity analysis. The paper will describe the methodologies available for the sensitivity and uncertainty analysis of combustion models with examples focussed on chemical kinetics. It will then discuss how such techniques can be incorporated into strategies for model improvement and will try to provide some future perspectives on how we can proceed in this direction as a research community.}
@@ -854,6 +931,78 @@
       \endverb
       \keyw{UQ}
     \endentry
+    \entry{tomlin_evaluation_2014}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=f23a277860adf30aa239c7ccc82f3e3b}{%
+           family={Tomlin},
+           familyi={T\bibinitperiod},
+           given={Alison\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=7439cf3cd28abdf56d897b673d5afa2f}{%
+           family={Agbro},
+           familyi={A\bibinitperiod},
+           given={Edirin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9e7ac8895cdd27651bddd2a6b75a57e8}{%
+           family={Nevrlý},
+           familyi={N\bibinitperiod},
+           given={Václav},
+           giveni={V\bibinitperiod}}}%
+        {{hash=1c6b4cccf7ae7940ea0668bceede132d}{%
+           family={Dlabka},
+           familyi={D\bibinitperiod},
+           given={Jakub},
+           giveni={J\bibinitperiod}}}%
+        {{hash=10a710a3dbbeb09bd3fceabd9001e6c1}{%
+           family={Vašinek},
+           familyi={V\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{91320e6e98526be2dc43db5487d6a6e0}
+      \strng{fullhash}{c713deb3f1f2d6615e97657aa79dfd06}
+      \strng{fullhashraw}{c713deb3f1f2d6615e97657aa79dfd06}
+      \strng{bibnamehash}{c713deb3f1f2d6615e97657aa79dfd06}
+      \strng{authorbibnamehash}{c713deb3f1f2d6615e97657aa79dfd06}
+      \strng{authornamehash}{91320e6e98526be2dc43db5487d6a6e0}
+      \strng{authorfullhash}{c713deb3f1f2d6615e97657aa79dfd06}
+      \strng{authorfullhashraw}{c713deb3f1f2d6615e97657aa79dfd06}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{ABSTRACT A global uncertainty analysis is performed for three current mechanisms describing the low‐temperature oxidation of dimethyl ether (Aramco Mech 1.3, Metcalfe et al., Int J Chem Kinet 2013, 45, 638–675; Zheng et al., Proc Combust Inst 2005, 30, 1101–1109; Liu et al., Combust Flame 2013, 160, 2654–2668) with application to simulations of species concentrations (CH 2 O, H 2 O 2 , CH 3 OCHO) corresponding to existing data from an atmospheric pressure flow reactor and high‐pressure ignition delays. When incorporating uncertainties in reaction rates within a global sampling approach, the distributions of predicted targets can span several orders of magnitude. The experimental profiles, however, fall within the predictive uncertainty limits. A variance‐based sensitivity analysis is then undertaken using high dimensional model representations. The main contributions to predictive uncertainties come from the CH 3 OCH 2  + O 2 system, with isomerization, propagation, chain‐branching, secondary OH formation, and peroxy–peroxy reactions all playing a role. The response surface describing the relationship between sampled reaction rates and predicted outputs is complex in all cases. Higher order interactions between parameters contribute significantly to output variance, and no single reaction channel dominates for any of the conditions studied. Sensitivity scatter plots illustrate that many different parameter combinations could lead to good agreement with specific sets of experimental data. The Aramco scheme is then updated based on data from a recent study by Eskola et al. ( J Phys Chem A, in press), which presents quite different temperature and pressure dependencies for the rates of CH 3 OCH 2 O 2 → CH 2 OCH 2 O 2 H and CH 2 OCH 2 O 2 H → OH+2CH 2 O compared with currently used values and includes well skipping channels. The updates from Eskola worsen the agreement with experiments when used in isolation. However, if the rate of the CH 2 OCH 2 O 2 H + O 2 channel is subsequently reduced, very good agreement can be achieved. Owing to the complex nature of the response surface, the tuning of this channel remains speculative. Further detailed studies of the temperature and pressure dependence of the CH 3 OCH 2 O 2  + O 2 , CH 2 OCH 2 O 2 H + O 2 system are recommended to reduce uncertainties within current dimethyl ether mechanisms for low‐temperature conditions.}
+      \field{issn}{0538-8066, 1097-4601}
+      \field{journaltitle}{International Journal of Chemical Kinetics}
+      \field{month}{11}
+      \field{number}{11}
+      \field{shorttitle}{Evaluation of {Combustion} {Mechanisms} {Using} {Global} {Uncertainty} and {Sensitivity} {Analyses}}
+      \field{title}{Evaluation of {Combustion} {Mechanisms} {Using} {Global} {Uncertainty} and {Sensitivity} {Analyses}: {A} {Case} {Study} for {Low}‐{Temperature} {Dimethyl} {Ether} {Oxidation}}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{46}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \field{pages}{662\bibrangedash 682}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1002/kin.20877
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\DPUIYVZT\\Tomlin et al. - 2014 - Evaluation of Combustion Mechanisms Using Global Uncertainty and Sensitivity Analyses A Case Study.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/10.1002/kin.20877
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/10.1002/kin.20877
+      \endverb
+      \keyw{include}
+    \endentry
     \entry{li_development_nodate}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=be861748ae913367498f7cbc4ba69a0a}{%
@@ -870,8 +1019,8 @@
       \strng{authornamehash}{be861748ae913367498f7cbc4ba69a0a}
       \strng{authorfullhash}{be861748ae913367498f7cbc4ba69a0a}
       \strng{authorfullhashraw}{be861748ae913367498f7cbc4ba69a0a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Development of {Statistical} and {Deterministic} {Approaches} to {Uncertainty} {Quantification} under {Bound}-to-{Bound} {Data} {Collaboration}}
@@ -886,6 +1035,103 @@
       \verb https://escholarship.org/uc/item/4ts9p04c
       \endverb
       \keyw{B2BDC}
+    \endentry
+    \entry{cantera}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=c44a6b02c4175dfc3508514c36102e7d}{%
+           family={Goodwin},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=2765fb4b88377c1da05e759be31dc426}{%
+           family={Moffat},
+           familyi={M\bibinitperiod},
+           given={Harry\bibnamedelima K.},
+           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=10d164a605ceef80426ea0814b960ca5}{%
+           family={Schoegl},
+           familyi={S\bibinitperiod},
+           given={Ingmar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=5e6514b4a950465d90eed8d9f64e7cb0}{%
+           family={Speth},
+           familyi={S\bibinitperiod},
+           given={Raymond\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=920e6bbb675b390009a2238455b7c11e}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Bryan\bibnamedelima W.},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{24d16c47e96b7735646bb90dd400bba9}
+      \strng{fullhash}{e51704beef8a196bf350da26db198bc7}
+      \strng{fullhashraw}{e51704beef8a196bf350da26db198bc7}
+      \strng{bibnamehash}{e51704beef8a196bf350da26db198bc7}
+      \strng{authorbibnamehash}{e51704beef8a196bf350da26db198bc7}
+      \strng{authornamehash}{24d16c47e96b7735646bb90dd400bba9}
+      \strng{authorfullhash}{e51704beef8a196bf350da26db198bc7}
+      \strng{authorfullhashraw}{e51704beef8a196bf350da26db198bc7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.cantera.org}}
+      \field{note}{Version 3.2.0}
+      \field{title}{Cantera: An Object-oriented Software Toolkit for Chemical Kinetics, Thermodynamics, and Transport Processes}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.5281/zenodo.17620923
+      \endverb
+    \endentry
+    \entry{smith_uncertainty_2024}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=fabaa75c178763573d5117d9f580b329}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Ralph\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Philadelphia, PA}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
+      }
+      \strng{namehash}{fabaa75c178763573d5117d9f580b329}
+      \strng{fullhash}{fabaa75c178763573d5117d9f580b329}
+      \strng{fullhashraw}{fabaa75c178763573d5117d9f580b329}
+      \strng{bibnamehash}{fabaa75c178763573d5117d9f580b329}
+      \strng{authorbibnamehash}{fabaa75c178763573d5117d9f580b329}
+      \strng{authornamehash}{fabaa75c178763573d5117d9f580b329}
+      \strng{authorfullhash}{fabaa75c178763573d5117d9f580b329}
+      \strng{authorfullhashraw}{fabaa75c178763573d5117d9f580b329}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-1-61197-783-7 978-1-61197-784-4}
+      \field{month}{1}
+      \field{shorttitle}{Uncertainty {Quantification}}
+      \field{title}{Uncertainty {Quantification}: {Theory}, {Implementation}, and {Applications}, {Second} {Edition}}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1137/1.9781611977844
+      \endverb
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/book/10.1137/1.9781611977844
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/book/10.1137/1.9781611977844
+      \endverb
     \endentry
     \entry{kennedy_bayesian_2001}{article}{}{}
       \name{author}{2}{}{%
@@ -1122,8 +1368,8 @@
       \strng{authornamehash}{866a4b41c4001fb28b4113d9be44bd63}
       \strng{authorfullhash}{866a4b41c4001fb28b4113d9be44bd63}
       \strng{authorfullhashraw}{866a4b41c4001fb28b4113d9be44bd63}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Th:e technique developed at NRC for gross-error detection is composed of four steps. Each step deals with errors of a certain magnitude and nature such as errors in point identification or errors in the control points. The order of applying this procedure is of great importance. Thefinal step, which deals with small observation errors of magnitudes larger than the random range, consists in applying a sensitive statistical test (data snooping). A special bundle adjustment program has been developed with a built-in automatic gross-error detector employing the data snooping approach. The program computes the exact values of the redundancy numbers for each image point. Using the OEEPE test blocks, which include all types of errors (intentionally introduced), the above procedure was applied and proved to be effective.}
@@ -1157,8 +1403,8 @@
       \strng{authornamehash}{ad0ba6862b8930b916c4a775cc424ccd}
       \strng{authorfullhash}{ad0ba6862b8930b916c4a775cc424ccd}
       \strng{authorfullhashraw}{ad0ba6862b8930b916c4a775cc424ccd}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Real data often contain anomalous cases, also known as outliers. These may spoil the resulting analysis but they may also contain valuable information. In either case, the ability to detect such anomalies is essential. A useful tool for this purpose is robust statistics, which aims to detect the outliers by first fitting the majority of the data and then flagging data points that deviate from it. We present an overview of several robust methods and the resulting graphical outlier detection tools. We discuss robust procedures for univariate, low‐dimensional, and high‐dimensional data, such as estimating location and scatter, linear regression, principal component analysis, classification, clustering, and functional data analysis. Also the challenging new topic of cellwise outliers is introduced. WIREs Data Mining Knowl Discov 2018, 8:e1236. doi: 10.1002/widm.1236 This article is categorized under: Algorithmic Development {>} Spatial and Temporal Data Mining Technologies {>} Classification Technologies {>} Structure Discovery and Clustering Technologies {>} Visualization}
@@ -1218,8 +1464,8 @@
       \strng{authornamehash}{3843f6427d6ca01b54e95297405107bb}
       \strng{authorfullhash}{135c55bbecd240d054a5541e3cf77609}
       \strng{authorfullhashraw}{135c55bbecd240d054a5541e3cf77609}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Anomaly detection is an important problem that has been researched within diverse research areas and application domains. Many anomaly detection techniques have been specifically developed for certain application domains, while others are more generic. This survey tries to provide a structured and comprehensive overview of the research on anomaly detection. We have grouped existing techniques into different categories based on the underlying approach adopted by each technique. For each category we have identified key assumptions, which are used by the techniques to differentiate between normal and anomalous behavior. When applying a given technique to a particular domain, these assumptions can be used as guidelines to assess the effectiveness of the technique in that domain. For each category, we provide a basic anomaly detection technique, and then show how the different existing techniques in that category are variants of the basic technique. This template provides an easier and more succinct understanding of the techniques belonging to each category. Further, for each category, we identify the advantages and disadvantages of the techniques in that category. We also provide a discussion on the computational complexity of the techniques since it is an important issue in real application domains. We hope that this survey will provide a better understanding of the different directions in which research has been done on this topic, and how techniques developed in one area can be applied in domains for which they were not intended to begin with.}
@@ -1248,6 +1494,62 @@
       \endverb
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/1541880.1541882
+      \endverb
+      \keyw{anomaly detection}
+    \endentry
+    \entry{tong_detection_1995}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5188badbd60e018207e62a24c15f49ff}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={Hongwei},
+           giveni={H\bibinitperiod}}}%
+        {{hash=952991c9486092e48dda74611de2b7f7}{%
+           family={Crowe},
+           familyi={C\bibinitperiod},
+           given={Cameron\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b4c3adbdab0744b23d0dd0630630406e}
+      \strng{fullhash}{b4c3adbdab0744b23d0dd0630630406e}
+      \strng{fullhashraw}{b4c3adbdab0744b23d0dd0630630406e}
+      \strng{bibnamehash}{b4c3adbdab0744b23d0dd0630630406e}
+      \strng{authorbibnamehash}{b4c3adbdab0744b23d0dd0630630406e}
+      \strng{authornamehash}{b4c3adbdab0744b23d0dd0630630406e}
+      \strng{authorfullhash}{b4c3adbdab0744b23d0dd0630630406e}
+      \strng{authorfullhashraw}{b4c3adbdab0744b23d0dd0630630406e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Statistical testing provides a tool for engineers and operators to judge the valididty of process measurements and data reconciliation. Univeriate, maximum power and chisquare tests have been widely used for this purpose. Their performance, however, has not always been satisfactory. A new class of test statistics for detection and identification of gross errors is presented based on principal component analysis and is compared to the other statistics. It is shown that the new test is capable of detecting gross erros of smallmaginitudes and has substantial power to correctly identify the variables in error, when the other tests fail.}
+      \field{issn}{0001-1541, 1547-5905}
+      \field{journaltitle}{AIChE Journal}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Detection of gross erros in data reconciliation by principal component analysis}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{41}
+      \field{year}{1995}
+      \field{urldateera}{ce}
+      \field{pages}{1712\bibrangedash 1722}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1002/aic.690410711
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\32K47QFF\\Tong and Crowe - 1995 - Detection of gross erros in data reconciliation by principal component analysis.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.690410711
+      \endverb
+      \verb{url}
+      \verb https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.690410711
       \endverb
       \keyw{anomaly detection}
     \endentry
@@ -1293,8 +1595,8 @@
       \strng{authornamehash}{3afa29b6a675dcba061639b7bfd44466}
       \strng{authorfullhash}{a9b8f77cef379f6bd8fc5753d4e8c9f0}
       \strng{authorfullhashraw}{a9b8f77cef379f6bd8fc5753d4e8c9f0}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{First-principles Markov Chain Monte Carlo sampling is used to investigate uncertainty quantiﬁcation and uncertainty propagation in parameters describing hydrogen kinetics. Speciﬁcally, we sample the posterior distribution of thirty-one parameters focusing on the H2O2 and HO2 reactions resulting from conditioning on ninety-one experiments. Established literature values are used for the remaining parameters in the mechanism. The samples are computed using an aﬃne invariant sampler starting with broad, noninformative priors. Autocorrelation analysis shows that O(1M) samples are suﬃcient to obtain a reasonable sampling of the posterior. The resulting distribution identiﬁes strong positive and negative correlations and several non-Gaussian characteristics. Using samples drawn from the posterior, we investigate the impact of parameter uncertainty on the prediction of two more complex ﬂames: a 2D premixed ﬂame kernel and the ignition of a hydrogen jet issuing into a heated chamber. The former represents a combustion regime similar to the target experiments used to calibrate the mechanism and the latter represents a diﬀerent combustion regime. For the premixed ﬂame, the net amount of product after a given time interval has a standard deviation of less than 2\% whereas the standard deviation of the ignition time for the jet is more than 10\%. The samples used for these studies are posted online. These results indicate the degree to which parameters consistent with the target experiments constrain predicted behavior in diﬀerent combustion regimes. This process provides a framework for both identifying reactions for further study from candidate mechanisms as well as combining uncertainty quantiﬁcation and propagation to, ultimately, tie uncertainty in laboratory ﬂame experiments to uncertainty in end-use numerical predictions of more complicated scenarios.}
@@ -1349,8 +1651,8 @@
       \strng{authornamehash}{c1907048ff09fc646cfd491354150d5f}
       \strng{authorfullhash}{26eb5950fcab529ef7b4015a807a8614}
       \strng{authorfullhashraw}{26eb5950fcab529ef7b4015a807a8614}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1364-7830, 1741-3559}
@@ -1628,6 +1930,234 @@
       \endverb
       \keyw{B2BDC}
     \endentry
+    \entry{Slavinskaya2026}{unpublished}{}{}
+      \name{author}{4}{}{%
+        {{hash=2e9e92202d7d1c112fd78dcf70b7c0de}{%
+           family={Slavinskaya},
+           familyi={S\bibinitperiod},
+           given={Nadezda},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6dbe3563b933b3d29b563ba9bbb2cef6}{%
+           family={Guney},
+           familyi={G\bibinitperiod},
+           given={Barkin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7b163ec6fd8aecd8178a01a7a3aeac7d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hongxin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8d1c42161a752d5b6292e5cb6a46c42b}{%
+           family={Jocher},
+           familyi={J\bibinitperiod},
+           given={Agnes},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Technical University of Munich, School of Engineering}%
+        {Design}%
+      }
+      \list{location}{1}{%
+        {Garching, Germany}%
+      }
+      \strng{namehash}{31ea905db9521d052ded9a72f54d7262}
+      \strng{fullhash}{1ccbcba150833d43cc51b311b23ad682}
+      \strng{fullhashraw}{1ccbcba150833d43cc51b311b23ad682}
+      \strng{bibnamehash}{1ccbcba150833d43cc51b311b23ad682}
+      \strng{authorbibnamehash}{1ccbcba150833d43cc51b311b23ad682}
+      \strng{authornamehash}{31ea905db9521d052ded9a72f54d7262}
+      \strng{authorfullhash}{1ccbcba150833d43cc51b311b23ad682}
+      \strng{authorfullhashraw}{1ccbcba150833d43cc51b311b23ad682}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Submitted to the 41st International Symposium on Combustion}
+      \field{title}{Uncertainty quantification in data management: error assessment for ignition delay times measured in shock tubes}
+      \field{year}{2026}
+    \endentry
+    \entry{GUM2008}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=b1439abdfe160482b4cdeec639fd2806}{%
+           family={{BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP and OIML}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Joint Committee for Guides in Metrology (JCGM)}%
+      }
+      \strng{namehash}{b1439abdfe160482b4cdeec639fd2806}
+      \strng{fullhash}{b1439abdfe160482b4cdeec639fd2806}
+      \strng{fullhashraw}{b1439abdfe160482b4cdeec639fd2806}
+      \strng{bibnamehash}{b1439abdfe160482b4cdeec639fd2806}
+      \strng{authorbibnamehash}{b1439abdfe160482b4cdeec639fd2806}
+      \strng{authornamehash}{b1439abdfe160482b4cdeec639fd2806}
+      \strng{authorfullhash}{b1439abdfe160482b4cdeec639fd2806}
+      \strng{authorfullhashraw}{b1439abdfe160482b4cdeec639fd2806}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{JCGM 100:2008}
+      \field{title}{Evaluation of measurement data - Guide to the expression of uncertainty in measurement (GUM)}
+      \field{year}{2008}
+    \endentry
+    \entry{NIST1297}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=77904d9affa7a41f527d077427b5e034}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Barry\bibnamedelima N.},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=266ef608976b2f1f59b579c31c62a57e}{%
+           family={Kuyatt},
+           familyi={K\bibinitperiod},
+           given={Chris\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {National Institute of Standards}%
+        {Technology}%
+      }
+      \list{location}{1}{%
+        {Washington, D.C.}%
+      }
+      \strng{namehash}{22e756136ac3ea0fad0975b49202d25e}
+      \strng{fullhash}{22e756136ac3ea0fad0975b49202d25e}
+      \strng{fullhashraw}{22e756136ac3ea0fad0975b49202d25e}
+      \strng{bibnamehash}{22e756136ac3ea0fad0975b49202d25e}
+      \strng{authorbibnamehash}{22e756136ac3ea0fad0975b49202d25e}
+      \strng{authornamehash}{22e756136ac3ea0fad0975b49202d25e}
+      \strng{authorfullhash}{22e756136ac3ea0fad0975b49202d25e}
+      \strng{authorfullhashraw}{22e756136ac3ea0fad0975b49202d25e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{NIST Technical Note 1297}
+      \field{title}{Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results}
+      \field{type}{techreport}
+      \field{year}{1994}
+    \endentry
+    \entry{Harrington1965}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=abe4b5d2e5cd274bbfc089b48d464ea9}{%
+           family={Harrington},
+           familyi={H\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{abe4b5d2e5cd274bbfc089b48d464ea9}
+      \strng{fullhash}{abe4b5d2e5cd274bbfc089b48d464ea9}
+      \strng{fullhashraw}{abe4b5d2e5cd274bbfc089b48d464ea9}
+      \strng{bibnamehash}{abe4b5d2e5cd274bbfc089b48d464ea9}
+      \strng{authorbibnamehash}{abe4b5d2e5cd274bbfc089b48d464ea9}
+      \strng{authornamehash}{abe4b5d2e5cd274bbfc089b48d464ea9}
+      \strng{authorfullhash}{abe4b5d2e5cd274bbfc089b48d464ea9}
+      \strng{authorfullhashraw}{abe4b5d2e5cd274bbfc089b48d464ea9}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial Quality Control}
+      \field{number}{10}
+      \field{title}{The Desirability Function}
+      \field{volume}{21}
+      \field{year}{1965}
+      \field{pages}{494\bibrangedash 498}
+      \range{pages}{5}
+    \endentry
+    \entry{derringer_simultaneous_1980}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=778a2dc489d0a1af2acbf98fd87f02fc}{%
+           family={Derringer},
+           familyi={D\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5651158893481af53e7436b81d1fa709}{%
+           family={Suich},
+           familyi={S\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{7ad5da52ccc5516bd67fdad24e1050ff}
+      \strng{fullhash}{7ad5da52ccc5516bd67fdad24e1050ff}
+      \strng{fullhashraw}{7ad5da52ccc5516bd67fdad24e1050ff}
+      \strng{bibnamehash}{7ad5da52ccc5516bd67fdad24e1050ff}
+      \strng{authorbibnamehash}{7ad5da52ccc5516bd67fdad24e1050ff}
+      \strng{authornamehash}{7ad5da52ccc5516bd67fdad24e1050ff}
+      \strng{authorfullhash}{7ad5da52ccc5516bd67fdad24e1050ff}
+      \strng{authorfullhashraw}{7ad5da52ccc5516bd67fdad24e1050ff}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065, 2575-6230}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{month}{10}
+      \field{number}{4}
+      \field{title}{Simultaneous {Optimization} of {Several} {Response} {Variables}}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{12}
+      \field{year}{1980}
+      \field{urldateera}{ce}
+      \field{pages}{214\bibrangedash 219}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1080/00224065.1980.11980968
+      \endverb
+      \verb{urlraw}
+      \verb https://www.tandfonline.com/doi/full/10.1080/00224065.1980.11980968
+      \endverb
+      \verb{url}
+      \verb https://www.tandfonline.com/doi/full/10.1080/00224065.1980.11980968
+      \endverb
+    \endentry
+    \entry{Lifshitz1997}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9e5b5e4b9968027c62d32e9009586fe0}{%
+           family={Lifshitz},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d8d442cdc9c0bc768d21707d232c65de}{%
+           family={Tamburu},
+           familyi={T\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1e205b32347b01c15900c339daf5e02a}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={H.\bibnamedelimi F.},
+           giveni={H\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{5dfbf823588c627016c18a95d1daf317}
+      \strng{fullhash}{23a003257fe452acf7365f1bf28a2ff0}
+      \strng{fullhashraw}{23a003257fe452acf7365f1bf28a2ff0}
+      \strng{bibnamehash}{23a003257fe452acf7365f1bf28a2ff0}
+      \strng{authorbibnamehash}{23a003257fe452acf7365f1bf28a2ff0}
+      \strng{authornamehash}{5dfbf823588c627016c18a95d1daf317}
+      \strng{authorfullhash}{23a003257fe452acf7365f1bf28a2ff0}
+      \strng{authorfullhashraw}{23a003257fe452acf7365f1bf28a2ff0}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Chemical Kinetics}
+      \field{number}{11}
+      \field{title}{Ignition of acetonitrile. Kinetic modeling}
+      \field{volume}{29}
+      \field{year}{1997}
+      \field{pages}{839\bibrangedash 849}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1002/(SICI)1097-4601(1997)29:11<839::AID-KIN5>3.0.CO;2-H
+      \endverb
+    \endentry
     \entry{frenklach_optimization_1992}{article}{}{}
       \name{author}{3}{}{%
         {{hash=7e302a1c41e136f097ef185fe8a75c85}{%
@@ -1790,6 +2320,40 @@
       \endverb
       \keyw{mechanism and data}
     \endentry
+    \entry{j_a_manion_r_e_huie_r_d_levin_d_r_burgess_jr_v_l_orkin_w_tsang_w_s_mcgivern_j_w_hudgens_v_d_knyazev_d_b_atkinson_e_chai_a_m_tereza_c-y_lin_t_c_allison_w_g_mallard_f_westley_j_t_herron_r_f_hampson_and_d_h_frizzell_nist_nodate}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=001a331c0d37a4e5a28186d0be697109}{%
+           family={{J. A. Manion, R. E. Huie, R. D. Levin, D. R. Burgess Jr., V. L. Orkin, W. Tsang, W. S. McGivern, J. W. Hudgens, V. D. Knyazev, D. B. Atkinson, E. Chai, A. M. Tereza, C.-Y. Lin, T. C. Allison, W. G. Mallard, F. Westley, J. T. Herron, R. F. Hampson, and D. H. Frizzell}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{001a331c0d37a4e5a28186d0be697109}
+      \strng{fullhash}{001a331c0d37a4e5a28186d0be697109}
+      \strng{fullhashraw}{001a331c0d37a4e5a28186d0be697109}
+      \strng{bibnamehash}{001a331c0d37a4e5a28186d0be697109}
+      \strng{authorbibnamehash}{001a331c0d37a4e5a28186d0be697109}
+      \strng{authornamehash}{001a331c0d37a4e5a28186d0be697109}
+      \strng{authorfullhash}{001a331c0d37a4e5a28186d0be697109}
+      \strng{authorfullhashraw}{001a331c0d37a4e5a28186d0be697109}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NIST Standard Reference Database 17, Version 7.0 (Web Version), Release 1.6.8, Data version 2015.09, National Institute of Standards and Technology, Gaithersburg, Maryland, 20899-8320. Web address: https://kinetics.nist.gov/}
+      \field{title}{{NIST} {Chemical} {Kinetics} {Database}}
+      \field{urlday}{17}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb NIST Chemical Kinetics Database:C\:\\Users\\barki\\Zotero\\storage\\N6QTPPKU\\citation.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://kinetics.nist.gov/
+      \endverb
+      \verb{url}
+      \verb https://kinetics.nist.gov/
+      \endverb
+    \endentry
     \entry{wang_1_nodate-1}{article}{}{}
       \name{author}{6}{}{%
         {{hash=7b163ec6fd8aecd8178a01a7a3aeac7d}{%
@@ -1835,8 +2399,8 @@
       \strng{authorfullhash}{6e5382ed3d9a8dd39f03963e135a7502}
       \strng{authorfullhashraw}{6e5382ed3d9a8dd39f03963e135a7502}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{1 {A} {Joint} {Hydrogen} and {Syngas} {Chemical} {Kinetic} {Model} {Optimized} by 2 {Particle} {Swarm} {Optimization}}
@@ -1928,8 +2492,8 @@
       \strng{authornamehash}{1ca9f97ccf69a2cb312a1da5dff818f0}
       \strng{authorfullhash}{1fdefe472a3536ed0a6a3d7995ea4337}
       \strng{authorfullhashraw}{1fdefe472a3536ed0a6a3d7995ea4337}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00102180}
@@ -1987,8 +2551,8 @@
       \strng{authornamehash}{41166e15539eac8d00a133e19d8c477f}
       \strng{authorfullhash}{9868a37dc2477a5aa6f0580a9a358ad0}
       \strng{authorfullhashraw}{9868a37dc2477a5aa6f0580a9a358ad0}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The auto-ignition of toluene/air mixtures was studied in a shock tube at temperatures of 1021–1400 K, pressures of 10–61 atm, and equivalence ratios of U = 1.0, 0.5, and 0.25. Ignition times were measured using endwall OH* emission and sidewall piezoelectric pressure measurements. The measured pressure time-histories do not show signiﬁcant pre-ignition energy release, in agreement with the rapid compression machine study of Mittal and Sung [G. Mittal, C.-J. Sung, Combust. Flame 150 (2007) 355–368] and disagreement with the shock tube study of Davidson et al. [D.F. Davidson, B.M. Gauthier, R.K. Hanson, Proc. Combust. Inst. 30 (2005) 1175–1182]. Kinetic modeling predictions from three detailed mechanisms are compared. Sensitivity analysis indicates that the reaction of toluene (C6H5CH3) and the benzyl radical (C6H5CH2) with molecular oxygen are important and examination of the rate coeﬃcients for these reactions suggests that improved rate parameters for the multi-channel C6H5CH2 + O2 reaction may improve model predictions.}
@@ -2047,8 +2611,8 @@
       \strng{authornamehash}{8dee5d60c5935e7baf66def6586d14cd}
       \strng{authorfullhash}{2218b82df0e617caa1729129f3cd3488}
       \strng{authorfullhashraw}{2218b82df0e617caa1729129f3cd3488}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Ignition delay times were measured in a shock tube for iso-octane/air and toluene/air at conditions similar to those found in homogeneous charge compression ignition (HCCI) engines. Initial reﬂected shock conditions spanned the following ranges: temperature 855–1269 K, pressure 14–59 atm, and equivalence ratios / of 0.5 and 1 in synthetic air. Ignition delay times were measured using sidewall pressure via piezo-electric transducers and conﬁrmed with OH* and CH* emission measurements. The iso-octane ignition delay times are in excellent agreement with existing measurements by Fieweger et al. [Proc. Combust. Inst. 25 (1994) 1579; Combust. Flame 109 (1997) 599] and modeling by Ogink and Golovitchev [SAE Technical Paper Series, 2001, Paper No. 2001-01-3614]. No comparable high-pressure data exist for toluene/air, and modeling by Pitz et al. [U.S. Sections of the Combustion Institute 2nd Joint Spring Meeting, 2001, Paper 253] and Dagaut et al. [Fuel 81 (2002) 173] signiﬁcantly over-predicts the toluene/air ignition delay times at / = 1. The large pressure range of the current measurements permits determination of the pressure dependence of ignition delay time at the temperatures and pressures of direct interest in HCCI engine simulations. Detailed examination of the pressure–time proﬁles shows evidence of signiﬁcant pre-ignition energy release in both the iso-octane/air and toluene/air systems. Using current detailed mechanisms, the rate of this energy release is not correctly predicted either in iso-octane/air or toluene/air at temperatures above 850 K.}
@@ -2364,6 +2928,117 @@
       \verb http://respecth.chem.elte.hu/respecth/reac/CombustionData.php?filedoi=10.24388/x10001024_x
       \endverb
     \endentry
+    \entry{bhaskaran_shock_1973}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=3422cc57128a396b9b863aa95c3a5a91}{%
+           family={Bhaskaran},
+           familyi={B\bibinitperiod},
+           given={K.A.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ffc357495987a43128c017fae193e31f}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={M.C.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=af7ec88b6569d10ce1bcababe66e78f2}{%
+           family={Just},
+           familyi={J\bibinitperiod},
+           given={Th.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d227290a516015e55faa881d139621e9}
+      \strng{fullhash}{1031fe6d495e593f87ae4a6ecb190724}
+      \strng{fullhashraw}{1031fe6d495e593f87ae4a6ecb190724}
+      \strng{bibnamehash}{1031fe6d495e593f87ae4a6ecb190724}
+      \strng{authorbibnamehash}{1031fe6d495e593f87ae4a6ecb190724}
+      \strng{authornamehash}{d227290a516015e55faa881d139621e9}
+      \strng{authorfullhash}{1031fe6d495e593f87ae4a6ecb190724}
+      \strng{authorfullhashraw}{1031fe6d495e593f87ae4a6ecb190724}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00102180}
+      \field{journaltitle}{Combustion and Flame}
+      \field{month}{8}
+      \field{number}{1}
+      \field{title}{Shock tube study of the effect of unsymmetric dimethyl hydrazine on the ignition characteristics of hydrogen-air mixtures}
+      \field{urlday}{27}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{21}
+      \field{year}{1973}
+      \field{urldateera}{ce}
+      \field{pages}{45\bibrangedash 48}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1016/0010-2180(73)90005-9
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0010218073900059
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0010218073900059
+      \endverb
+    \endentry
+    \entry{pang_experimental_2009}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f4d49617aed0e7923e34944ee26da125}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={G.A.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=aa98a63a4b7e3ca57c95eeec98016a53}{%
+           family={Davidson},
+           familyi={D\bibinitperiod},
+           given={D.F.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b162c91f69c671572deb689f753af622}{%
+           family={Hanson},
+           familyi={H\bibinitperiod},
+           given={R.K.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{57c27778ac0ba8504e39bdb7713c03b2}
+      \strng{fullhash}{4bddc4bdb5f65a585404bce836c9e764}
+      \strng{fullhashraw}{4bddc4bdb5f65a585404bce836c9e764}
+      \strng{bibnamehash}{4bddc4bdb5f65a585404bce836c9e764}
+      \strng{authorbibnamehash}{4bddc4bdb5f65a585404bce836c9e764}
+      \strng{authornamehash}{57c27778ac0ba8504e39bdb7713c03b2}
+      \strng{authorfullhash}{4bddc4bdb5f65a585404bce836c9e764}
+      \strng{authorfullhashraw}{4bddc4bdb5f65a585404bce836c9e764}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{15407489}
+      \field{journaltitle}{Proceedings of the Combustion Institute}
+      \field{number}{1}
+      \field{title}{Experimental study and modeling of shock tube ignition delay times for hydrogen–oxygen–argon mixtures at low temperatures}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{32}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \field{pages}{181\bibrangedash 188}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.proci.2008.06.014
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1540748908000230
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1540748908000230
+      \endverb
+    \endentry
     \entry{wang_comprehensive_2021}{article}{}{}
       \name{author}{6}{}{%
         {{hash=7b163ec6fd8aecd8178a01a7a3aeac7d}{%
@@ -2511,20 +3186,137 @@
       \endverb
       \keyw{mechanism and data}
     \endentry
+    \entry{johnson_rmg_2022-1}{article}{}{}
+      \name{author}{17}{}{%
+        {{hash=a4c5e53a38f473e3ac06bdc8d5a53006}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Matthew\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=eb20daa7bd8fb16e06cdb6dfb9b3b1da}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Xiaorui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7e39b70e235bb2cfd51cb77c8d6b73c7}{%
+           family={Grinberg\bibnamedelima Dana},
+           familyi={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Alon},
+           giveni={A\bibinitperiod}}}%
+        {{hash=39b6013b4763e4411a65d778759188a9}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Yunsie},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=5709b376cca13638f62e8c1dcd120adb}{%
+           family={Farina},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c192e2d004e6bdd308918a7d1e71ad09}{%
+           family={Gillis},
+           familyi={G\bibinitperiod},
+           given={Ryan\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=86a39f2dede83dfc83f945972c169479}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Mengjie},
+           giveni={M\bibinitperiod}}}%
+        {{hash=36feaa96f39847b860ce4fd97ad2e862}{%
+           family={Yee},
+           familyi={Y\bibinitperiod},
+           given={Nathan\bibnamedelima W.},
+           giveni={N\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=c96d3c85134ceb8919f9ddf1e68d5cf0}{%
+           family={Blondal},
+           familyi={B\bibinitperiod},
+           given={Katrin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=14356050add11c2903c19d471c033536}{%
+           family={Mazeau},
+           familyi={M\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod}}}%
+        {{hash=fc7697582f935e6e50958fc826ac5cd5}{%
+           family={Grambow},
+           familyi={G\bibinitperiod},
+           given={Colin\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=bf18236d970b20cd76bafcc4dc044992}{%
+           family={Payne},
+           familyi={P\bibinitperiod},
+           given={A.\bibnamedelimi Mark},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c64ec38a49a6886a41adb172a678ff88}{%
+           family={Spiekermann},
+           familyi={S\bibinitperiod},
+           given={Kevin\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=64374d2349bc8212db67e50330456c1a}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Hao-Wei},
+           giveni={H\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=06b25512183525ddb286847a1497a066}{%
+           family={Goldsmith},
+           familyi={G\bibinitperiod},
+           given={C.\bibnamedelimi Franklin},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=85c794dda1d4e77e8b2345454135f0ef}{%
+           family={West},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=6f18552ff0ae36edff9a8d9012dd1ce8}{%
+           family={Green},
+           familyi={G\bibinitperiod},
+           given={William\bibnamedelima H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{5d466fd4fe0d5186f162f75d81807909}
+      \strng{fullhash}{286719205471b0e31ead6f8f21f22af3}
+      \strng{fullhashraw}{286719205471b0e31ead6f8f21f22af3}
+      \strng{bibnamehash}{5d466fd4fe0d5186f162f75d81807909}
+      \strng{authorbibnamehash}{5d466fd4fe0d5186f162f75d81807909}
+      \strng{authornamehash}{5d466fd4fe0d5186f162f75d81807909}
+      \strng{authorfullhash}{286719205471b0e31ead6f8f21f22af3}
+      \strng{authorfullhashraw}{286719205471b0e31ead6f8f21f22af3}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1549-9596, 1549-960X}
+      \field{journaltitle}{Journal of Chemical Information and Modeling}
+      \field{month}{10}
+      \field{number}{20}
+      \field{title}{{RMG} {Database} for {Chemical} {Property} {Prediction}}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{62}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{4906\bibrangedash 4915}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1021/acs.jcim.2c00965
+      \endverb
+      \verb{file}
+      \verb Submitted Version:C\:\\Users\\barki\\Zotero\\storage\\CUJ2CNE4\\Johnson et al. - 2022 - RMG Database for Chemical Property Prediction.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pubs.acs.org/doi/10.1021/acs.jcim.2c00965
+      \endverb
+      \verb{url}
+      \verb https://pubs.acs.org/doi/10.1021/acs.jcim.2c00965
+      \endverb
+    \endentry
   \enddatalist
-  \missing{Application of Bound-to-Bound Data Collaboration approach for development and uncertainty quantification of a reduced char combustion model}
-  \missing{Consistency Analysis for Massively Inconsistent Datasets in Bound-to-Bound Data Collaboration^^C}
-  \missing{Derringer}
-  \missing{GUM}
-  \missing{Harrington}
-  \missing{Lifshitz}
-  \missing{NIST}
-  \missing{UQ_barkin}
-  \missing{asda}
-  \missing{cantera}
-  \missing{good_cantera}
-  \missing{nist_kinetic}
-  \missing{ralph c. smith book}
 \endrefsection
 \endinput
 

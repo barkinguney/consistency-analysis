@@ -2371,40 +2371,38 @@
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
     <bcf:datasource type="file" datatype="bibtex" glob="false">literature.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">manuals.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="17" intorder="1">frenklach_transforming_2007</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">turanyi_respecth_2025</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">su_comparison_2024</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">varga_development_2016</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">varga_optimization_2015</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">johnson_rmg_2022</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">pelucchi_addressing_2019</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">wang_combustion_2015</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">wang_combustion_2015</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">nagy_uncertainty_2015</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">prager_uncertainty_2013</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">tomlin_role_2013</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">cantera</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">ralph c. smith book</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">kennedy_bayesian_2001</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">abdar_review_2021</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">ridzuan_review_2019</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">el-hakim_step-by-step_nodate</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">rousseeuw_anomaly_2018</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">chandola_anomaly_2009</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">bell_bayesian_2018</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">braman_bayesian_2013</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">yousefian_bayesian_2021</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">sheen_method_2011</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">hegde_consistency_2018</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">hegde_consistency_2018</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">frenklach_transforming_2007</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">turanyi_respecth_2025</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">su_comparison_2024</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">varga_development_2016</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">varga_optimization_2015</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">johnson_rmg_2022</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">pelucchi_addressing_2019</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">ramalli_data_2021</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">wang_combustion_2015</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">wang_combustion_2015</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">nagy_uncertainty_2015</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">prager_uncertainty_2013</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">tomlin_role_2013</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">tomlin_evaluation_2014</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">cantera</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">ridzuan_review_2019</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">rousseeuw_anomaly_2018</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">chandola_anomaly_2009</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">tong_detection_1995</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">bell_bayesian_2018</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">braman_bayesian_2013</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">yousefian_bayesian_2021</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">sheen_method_2011</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">sheen_method_2011</bcf:citekey>
     <bcf:citekey order="45" intorder="1">hegde_consistency_2018</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">hegde_consistency_2018</bcf:citekey>
     <bcf:citekey order="47" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">hegde_consistency_2018</bcf:citekey>
     <bcf:citekey order="49" intorder="1">li_development_nodate</bcf:citekey>
     <bcf:citekey order="50" intorder="1">li_development_nodate</bcf:citekey>
     <bcf:citekey order="51" intorder="1">li_development_nodate</bcf:citekey>
@@ -2416,82 +2414,86 @@
     <bcf:citekey order="57" intorder="1">li_development_nodate</bcf:citekey>
     <bcf:citekey order="58" intorder="1">li_development_nodate</bcf:citekey>
     <bcf:citekey order="59" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">russi_uncertainty_2010</bcf:citekey>
-    <bcf:citekey order="60" intorder="2">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">hegde_consistency_2018</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">russi_uncertainty_2010</bcf:citekey>
+    <bcf:citekey order="62" intorder="2">li_development_nodate</bcf:citekey>
     <bcf:citekey order="63" intorder="1">hegde_consistency_2018</bcf:citekey>
     <bcf:citekey order="64" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">hegde_consistency_2018</bcf:citekey>
     <bcf:citekey order="66" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="66" intorder="2">russi_uncertainty_2010</bcf:citekey>
     <bcf:citekey order="67" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">Consistency Analysis for Massively Inconsistent Datasets in Bound-to-Bound Data Collaboration^^C</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">Application of Bound-to-Bound Data Collaboration approach for development and uncertainty quantification of a reduced char combustion model</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">UQ_barkin</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">GUM</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">NIST</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">GUM</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">NIST</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">Harrington</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">Derringer</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">GUM</bcf:citekey>
-    <bcf:citekey order="78" intorder="1">Lifshitz</bcf:citekey>
-    <bcf:citekey order="79" intorder="1">nagy_uncertainty_2015</bcf:citekey>
-    <bcf:citekey order="80" intorder="1">frenklach_optimization_1992</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">mckay_comparison_1979</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">sobol_distribution_1967</bcf:citekey>
-    <bcf:citekey order="84" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="85" intorder="1">turanyi_respecth_2025</bcf:citekey>
-    <bcf:citekey order="86" intorder="1">nist_kinetic</bcf:citekey>
-    <bcf:citekey order="87" intorder="1">wang_1_nodate-1</bcf:citekey>
-    <bcf:citekey order="88" intorder="1">keromnes_experimental_2013</bcf:citekey>
-    <bcf:citekey order="89" intorder="1">wang_1_nodate-1</bcf:citekey>
-    <bcf:citekey order="90" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="91" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="68" intorder="2">russi_uncertainty_2010</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">smith_uncertainty_2024</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">kennedy_bayesian_2001</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">johnson_rmg_2022</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">turanyi_respecth_2025</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">Slavinskaya2026</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">GUM2008</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">NIST1297</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">GUM2008</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">NIST1297</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">Harrington1965</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">derringer_simultaneous_1980</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">GUM2008</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">Lifshitz1997</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">nagy_uncertainty_2015</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">frenklach_optimization_1992</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">mckay_comparison_1979</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">sobol_distribution_1967</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">turanyi_respecth_2025</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">j_a_manion_r_e_huie_r_d_levin_d_r_burgess_jr_v_l_orkin_w_tsang_w_s_mcgivern_j_w_hudgens_v_d_knyazev_d_b_atkinson_e_chai_a_m_tereza_c-y_lin_t_c_allison_w_g_mallard_f_westley_j_t_herron_r_f_hampson_and_d_h_frizzell_nist_nodate</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">wang_1_nodate-1</bcf:citekey>
     <bcf:citekey order="92" intorder="1">keromnes_experimental_2013</bcf:citekey>
-    <bcf:citekey order="93" intorder="1">keromnes_experimental_2013</bcf:citekey>
-    <bcf:citekey order="94" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">wang_1_nodate-1</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">li_development_nodate</bcf:citekey>
     <bcf:citekey order="95" intorder="1">keromnes_experimental_2013</bcf:citekey>
     <bcf:citekey order="96" intorder="1">keromnes_experimental_2013</bcf:citekey>
-    <bcf:citekey order="97" intorder="1">li_development_nodate</bcf:citekey>
-    <bcf:citekey order="98" intorder="1">shen_shock_2009</bcf:citekey>
-    <bcf:citekey order="99" intorder="1">davidson_shock_2005</bcf:citekey>
-    <bcf:citekey order="100" intorder="1">shen_shock_2009</bcf:citekey>
-    <bcf:citekey order="101" intorder="1">davidson_shock_2005</bcf:citekey>
-    <bcf:citekey order="102" intorder="1">herzler_shock-tube_2009</bcf:citekey>
-    <bcf:citekey order="103" intorder="1">chemical_kinetics_laboratory_fujimoto_2017</bcf:citekey>
-    <bcf:citekey order="104" intorder="1">keromnes_experimental_2013</bcf:citekey>
-    <bcf:citekey order="105" intorder="1">herzler_shock-tube_2009</bcf:citekey>
-    <bcf:citekey order="106" intorder="1">chemical_kinetics_laboratory_fujimoto_2017</bcf:citekey>
-    <bcf:citekey order="107" intorder="1">keromnes_experimental_2013</bcf:citekey>
-    <bcf:citekey order="108" intorder="1">kalitan_ignition_2007</bcf:citekey>
-    <bcf:citekey order="109" intorder="1">krejci_laminar_2012</bcf:citekey>
-    <bcf:citekey order="110" intorder="1">herzler_shock-tube_2009</bcf:citekey>
-    <bcf:citekey order="111" intorder="1">chemical_kinetics_laboratory_c_2017</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">li_development_nodate</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">shen_shock_2009</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">davidson_shock_2005</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">shen_shock_2009</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">davidson_shock_2005</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">herzler_shock-tube_2009</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">chemical_kinetics_laboratory_fujimoto_2017</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">keromnes_experimental_2013</bcf:citekey>
+    <bcf:citekey order="109" intorder="1">herzler_shock-tube_2009</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">chemical_kinetics_laboratory_fujimoto_2017</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">keromnes_experimental_2013</bcf:citekey>
     <bcf:citekey order="112" intorder="1">kalitan_ignition_2007</bcf:citekey>
     <bcf:citekey order="113" intorder="1">krejci_laminar_2012</bcf:citekey>
     <bcf:citekey order="114" intorder="1">herzler_shock-tube_2009</bcf:citekey>
     <bcf:citekey order="115" intorder="1">chemical_kinetics_laboratory_c_2017</bcf:citekey>
-    <bcf:citekey order="116" intorder="1">johnson_rmg_2022</bcf:citekey>
-    <bcf:citekey order="117" intorder="1">johnson_rmg_2022</bcf:citekey>
-    <bcf:citekey order="118" intorder="1">johnson_rmg_2022</bcf:citekey>
-    <bcf:citekey order="119" intorder="1">johnson_rmg_2022</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">kalitan_ignition_2007</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">krejci_laminar_2012</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">herzler_shock-tube_2009</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">chemical_kinetics_laboratory_c_2017</bcf:citekey>
     <bcf:citekey order="120" intorder="1">johnson_rmg_2022</bcf:citekey>
     <bcf:citekey order="121" intorder="1">johnson_rmg_2022</bcf:citekey>
     <bcf:citekey order="122" intorder="1">johnson_rmg_2022</bcf:citekey>
     <bcf:citekey order="123" intorder="1">johnson_rmg_2022</bcf:citekey>
     <bcf:citekey order="124" intorder="1">johnson_rmg_2022</bcf:citekey>
     <bcf:citekey order="125" intorder="1">johnson_rmg_2022</bcf:citekey>
-    <bcf:citekey order="126" intorder="1">asda</bcf:citekey>
-    <bcf:citekey order="127" intorder="1">asda</bcf:citekey>
-    <bcf:citekey order="128" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="129" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="130" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="131" intorder="1">good_cantera</bcf:citekey>
-    <bcf:citekey order="132" intorder="1">wang_comprehensive_2021</bcf:citekey>
-    <bcf:citekey order="133" intorder="1">wang_uncertainty_2024</bcf:citekey>
+    <bcf:citekey order="126" intorder="1">johnson_rmg_2022</bcf:citekey>
+    <bcf:citekey order="127" intorder="1">johnson_rmg_2022</bcf:citekey>
+    <bcf:citekey order="128" intorder="1">bhaskaran_shock_1973</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">bhaskaran_shock_1973</bcf:citekey>
+    <bcf:citekey order="130" intorder="1">kalitan_ignition_2007</bcf:citekey>
+    <bcf:citekey order="131" intorder="1">kalitan_ignition_2007</bcf:citekey>
+    <bcf:citekey order="132" intorder="1">pang_experimental_2009</bcf:citekey>
+    <bcf:citekey order="133" intorder="1">pang_experimental_2009</bcf:citekey>
+    <bcf:citekey order="134" intorder="1">wang_comprehensive_2021</bcf:citekey>
+    <bcf:citekey order="135" intorder="1">wang_uncertainty_2024</bcf:citekey>
+    <bcf:citekey order="136" intorder="1">j_a_manion_r_e_huie_r_d_levin_d_r_burgess_jr_v_l_orkin_w_tsang_w_s_mcgivern_j_w_hudgens_v_d_knyazev_d_b_atkinson_e_chai_a_m_tereza_c-y_lin_t_c_allison_w_g_mallard_f_westley_j_t_herron_r_f_hampson_and_d_h_frizzell_nist_nodate</bcf:citekey>
+    <bcf:citekey order="137" intorder="1">johnson_rmg_2022-1</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

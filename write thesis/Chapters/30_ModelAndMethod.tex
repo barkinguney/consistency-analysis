@@ -1,21 +1,19 @@
 \chapter{Methodology}\label{Chap:ProblemFormulation}
-
+The packages implemented in this thesis have been developed considering the needs of the currently under development TUMKIN chemical kinetics data infrastructure.  Kinetics database and the IDT database shown in Figure~\ref{fig:flow2} currently refer to RMG Database \cite{johnson_rmg_2022}, and RESPECTH IDT shock tube database \cite{turanyi_respecth_2025}. Once these packages get integrated into TUMKIN, these databases will bereplaced with the interal TUMKIN database. The next step of uncertainty estimation for IDT data and for reaction rate coefficients are not dependent on any operating condition or reaction mechanism. They can therefore be run once on the database, and the results stored. Sensitivity Analysis step requires, a reaction mechanism .yaml file and conditions at which sensitivity and consequently consistency analyses will be conducted. Sensitivity analysis results in a set of active reactions. User can specify their own active reactions if they want to. Unless otherwise specified, RRCs and RRC uncertainties will be taken from the evaluated uncertainties if enough sources exist. For reactions that cant be assigned uncertainties this way, RRC from the user supplied mechansim will be used. The user has the option to interject their own RRC and uncertainty factors if they want to. After this step quadratic surrogate models for each operating conditoin is created by the B2BDC toolbox. Which is subsequently used in consistency analysis. A detailed explanation of the process is given in the following sections. Source code for the packages can be found at: https://github.com/barkinguney/consistency-analysis
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{Figures/flow2.png}
-	\caption{Flowchart.}
+	\caption{Flow diagram showing the steps for consistency analysis.}
 	\label{fig:flow2}
 \end{figure}
-
-Source code can be found at: https://github.com/barkinguney/consistency-analysis
 
 \section{Experimental Shock Tube IDT Uncertainty}
 \label{sec:idt_unc}
 
-Every dataset in TUMKIN needs to contain appropriate uncertainties. If published sources don't report uncertainties for experimental data, uncertainties are estimated using the algorihm proposed by \cite{UQ_barkin} 
+Every dataset in TUMKIN needs to contain appropriate uncertainties. If published sources don't report uncertainties for experimental data, uncertainties are estimated using the algorihm proposed by \cite{Slavinskaya2026}
 
 
-The approach is aligned with the Guide to the Expression of Uncertainty in Measurement (GUM) \cite{GUM}, Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results \cite{NIST}. The base principle follows from \cite{GUM} and \cite{NIST}: ``the result of a measurement is only an approximation or estimate of the value of the specific quantity subject to measurement, that is, the measurand, $y$, and thus the result is complete only when accompanied by a quantitative statement of its uncertainty''.
+The approach is aligned with the Guide to the Expression of Uncertainty in Measurement (GUM) \cite{GUM2008}, Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results \cite{NIST1297}. The base principle follows from \cite{GUM2008} and \cite{NIST1297}: ``the result of a measurement is only an approximation or estimate of the value of the specific quantity subject to measurement, that is, the measurand, $y$, and thus the result is complete only when accompanied by a quantitative statement of its uncertainty''.
 
 The reporting uncertainty is the expanded uncertainty $U$ together with the coverage factor $k$ used to obtain it, or report combined uncertainty $u_c$, which represents the estimated standard deviation of the result.
 
@@ -61,7 +59,7 @@ The systematic error is calibrated against a quasi-ideal reference through depar
 \end{equation}
 where $N$ is the number of IFs, and $\xi_i \in [0,1)$ quantifies the penalty induced by the deviation of $\mu_i$ from the ideal $\mu_i^0$. 
 
-To define and $\xi_i$, a two-sided, smaller-is-better modification of Harrington's desirability concept \cite{Harrington} \cite{Derringer} retaining low sensitivity near the ideal point and saturation for large deviations is used:
+To define and $\xi_i$, a two-sided, smaller-is-better modification of Harrington's desirability concept \cite{Harrington1965} \cite{derringer_simultaneous_1980} retaining low sensitivity near the ideal point and saturation for large deviations is used:
 \begin{equation}
 	\xi_i = 1 - e^{-(x_i^2)}
 \end{equation}
@@ -76,14 +74,14 @@ As the test time ($\text{IF}_9$) is strongly correlated with $\text{T}_5$ and $\
 \subsection{Random Uncertainty}
 
 %- Section from Screenshot 020100 ---
-The measured value should be reported along with an estimate of the total combined standard uncertainty, sum of systematic error and random error. Formally, the rigorous approach to evaluate the random error of a measurement would require the repetition of the same measurement for a significant number of times, what is non-realistic to perform in praxis or from the rules for differentiating the measurement model describing the indirect measured target. In this case, the measured data set is approximated with the function of several parameters and the standard deviation of a measurand is calculated as the positive square root of the combined variance, $u_c^2(y)$, assuming independence of input parameters \cite{GUM}:
+The measured value should be reported along with an estimate of the total combined standard uncertainty, sum of systematic error and random error. Formally, the rigorous approach to evaluate the random error of a measurement would require the repetition of the same measurement for a significant number of times, what is non-realistic to perform in praxis or from the rules for differentiating the measurement model describing the indirect measured target. In this case, the measured data set is approximated with the function of several parameters and the standard deviation of a measurand is calculated as the positive square root of the combined variance, $u_c^2(y)$, assuming independence of input parameters \cite{GUM2008}:
 \begin{equation}
 	\label{eq:prop}
 	u_c^2(y) = \sum_{i=1}^{N} \left( \frac{\partial f}{\partial z_i} \right)^2 u^2(z_i) + 2 \sum_{i=1}^{N-1} \sum_{j=i+1}^{N} \frac{\partial f}{\partial z_i} \frac{\partial f}{\partial z_j} u(z_i) u(z_j) r(z_i, z_j),
 \end{equation}
 where $z_i$ are parameters of the function $f$; $u^2(z_i)$ is the standard uncertainty of parameters; $r(z_i, z_j)$ is the estimated correlation coefficient.
 
-To describe the set of measured IDT data the function proposed by A. Lifshitz and co-authors for data processing is used\cite{Lifshitz}:
+To describe the set of measured IDT data the function proposed by A. Lifshitz and co-authors for data processing is used\cite{Lifshitz1997}:
 \begin{equation}
 	\label{eq:model}
 	\tau_{ign} = f(z_i, A, B, C, D) = A \exp \left( \frac{B}{z_1} \right) z_2^C z_3^D.
@@ -125,7 +123,7 @@ and the standard uncertainty of parameters can be calculated as
 \end{equation}
 
 % --- Section from Screenshot 020224 ---
-The standard uncertainty of a set of IDT data can be calculated from the sum of systematic and random uncertainties, eq. (6)
+The standard uncertainty of a set of IDT data can be calculated from the sum of systematic and random uncertainties
 \begin{equation}
 	u_{ci}(\tau_{ign}) = \sqrt{\sigma_{\delta_i}^2 + \sigma_i^2(\tau_{ign})}
 \end{equation}
@@ -145,7 +143,7 @@ where $\tau_{ign}^m$ is measured value of the IDT.
 
 In addition to the facility specific information needed for systematic error calculation, measurement uncertainties for T5,P5 and $\phi$ also need to be reported by papers for accurate uncertainty estimation. If they are not reported, a default values of $\pm 1\%$ is used for each in this thesis. 
 
-\section{Arrhenius Parameters Uncertainty}
+\section{Arrhenius Parameter Uncertainty}
 Different literature sources report different values for the Arrhenius parameters or rate coefficients for the same reaction. Therefore, it is important to take all this information into account when analysing and optimizing reaction mechanisms. This package collects kinetic data from a database and assigns a single uncertainty factor f to each reaction, using the collected data.  
 
 
@@ -212,7 +210,7 @@ Cantera is a 0D and 1D chemical kinetics simulation software. To simulate shock 
 
 \section{Consistency analysis}
 
-Consistency methods, that check for a given dataset of experimental ignition delay time measurements and a mechanism with parameter bounds, whether experiments and mechanism are consistent with each other.
+Consistency methods, that check for a given dataset of experimental ignition delay time measurements and a mechanism with parameter bounds, whether experiments and mechanism are consistent with each other. B2BDC is used as the consistency analysis method in this thesis. 
 
 
 
@@ -230,10 +228,12 @@ The resulting regression coefficients define impact factors, which estimate how 
 \end{equation}
 Active parameters are selected by screening the ranked impact factors with a user set threshold \cite{li_development_nodate}. If the IF of a reaction at an operating condition is low, that reaction is considered "low impact". If a reaction is low impact accross all operating conditions, it is then flagged "inactive". All "active" reactions are considered for further analysis. It is possible to specify whether ${IF}_i$ or $|c_i|$ should be used to select active parameters. Using ${IF}_i$ would include information about the size of parameter uncertainty in determining active reactions. 
 
-\subsection{Surrogate Models}
+\subsection{Polynomial Surrogate Modeling for B2BDC}
+
+
 \subsection{B2BDC Integration}
 
 \section{Data Sources}
 When TUMKIN is up  and running, uncertainty quantification and consistency analysis codes described in this thesis will use the data available in TUMKIN. The following sources has been used in the mean time to develop these modules, and  could be imported into TUMKIN if suitable. 
 Kinetics database RESPECTH  \cite{turanyi_respecth_2025} collect IDT, laminar flame speed, and concentration measurement s for various fuels. They are reported in their xml format.  For testing the modules developed in this thesis I have used the RESPECTH data for shock tube IDT data for ethylene, Syngas and Hydrogen. 
-Currently Most comprehensive collection of reaction rates and Arrhenius parameters is the NIST Kinetics Database \cite{nist_kinetic}. That contain many literature sources for every reaction. However, they don’t allow access to their database from code, no API or anything. It is the most comprehensive source, however, must be accessed manually. Reaction Mechanism Generator (RMG) on the other hand also contains a kinetics database that is openly accessible. For this thesis Arrhenius parameter data s taken from RMG database. To algorithmically extract kinetics data from RMG for a given reaction, SMILES or INCHI representations of the products and reactants are necessary. So, a species database that map between the widely accepted SMILES, INCHI representations and Cantera species name, and composition is necessary. An example format can be seen in OPTIMA++.  Species names for the same species can be different across mechanism files if they are consistent within the mechanism. This is however not suitable for TUMKIN database. So before ingesting Mechanism files into TUMKIN it should be validated that species in mechanism can unambiguously be found in the TUMKIN species data base. This validating step is not in the scope of this thesis however is necessary for TUMKIN.
+Currently Most comprehensive collection of reaction rates and Arrhenius parameters is the NIST Kinetics Database 	\cite{j_a_manion_r_e_huie_r_d_levin_d_r_burgess_jr_v_l_orkin_w_tsang_w_s_mcgivern_j_w_hudgens_v_d_knyazev_d_b_atkinson_e_chai_a_m_tereza_c-y_lin_t_c_allison_w_g_mallard_f_westley_j_t_herron_r_f_hampson_and_d_h_frizzell_nist_nodate}. That contain many literature sources for every reaction. However, they don’t allow access to their database from code, no API or anything. It is the most comprehensive source, however, must be accessed manually. Reaction Mechanism Generator (RMG) on the other hand also contains a kinetics database that is openly accessible. For this thesis Arrhenius parameter data s taken from RMG database. To algorithmically extract kinetics data from RMG for a given reaction, SMILES or INCHI representations of the products and reactants are necessary. So, a species database that map between the widely accepted SMILES, INCHI representations and Cantera species name, and composition is necessary. An example format can be seen in OPTIMA++.  Species names for the same species can be different across mechanism files if they are consistent within the mechanism. This is however not suitable for TUMKIN database. So before ingesting Mechanism files into TUMKIN it should be validated that species in mechanism can unambiguously be found in the TUMKIN species data base. This validating step is not in the scope of this thesis however is necessary for TUMKIN.

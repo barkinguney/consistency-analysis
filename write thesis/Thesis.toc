@@ -1,57 +1,44 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Acknowledgements}{I}{section*.1}%
-\contentsline {chapter}{Abstract}{III}{section*.3}%
-\contentsline {chapter}{Kurzzusammenfassung}{V}{section*.5}%
-\contentsline {chapter}{List of Figures}{IX}{section*.8}%
-\contentsline {chapter}{List of Tables}{XI}{section*.10}%
+\contentsline {chapter}{Abstract}{I}{section*.1}%
+\contentsline {chapter}{List of Figures}{V}{section*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Problem Statement}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Objectives}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Objectives}{2}{section.1.3}%
 \contentsline {chapter}{\numberline {2}Background and State of the Art}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Background}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Nonlinear Least Squares}{3}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Chemical Kinetics Database}{3}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Uncertainty Quantification in Combustion}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Uncertainty of reaction mechanisms}{4}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Sensitivity Analysis}{6}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Surrogate Models}{6}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Consistency Analysis}{6}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Misc}{7}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Anomaly Detection / Gross Error Detection}{8}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Bayesian Approaches}{9}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}MUM-PCE}{10}{subsection.2.7.4}%
-\contentsline {section}{\numberline {2.8}Bound-to-Bound Data Collaboration (B2BDC)}{11}{section.2.8}%
-\contentsline {section}{\numberline {2.9}TUMKIN Implementations}{13}{section.2.9}%
-\contentsline {subsubsection}{\numberline {2.9.0.1}Bayesian History Matching}{13}{subsubsection.2.9.0.1}%
-\contentsline {subsubsection}{\numberline {2.9.0.2}B2BDC Scalar Consistency Measure}{13}{subsubsection.2.9.0.2}%
-\contentsline {subsubsection}{\numberline {2.9.0.3}MUMPCE}{15}{subsubsection.2.9.0.3}%
-\contentsline {chapter}{\numberline {3}Methodology}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Experimental Shock Tube IDT Uncertainty}{18}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Systematic Uncertainty}{19}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Random Uncertainty}{21}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Arrhenius Parameters Uncertainty}{23}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Data Collection}{23}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Uncertainty Factor}{24}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Cantera IDT Simulations}{25}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Consistency analysis}{26}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Sensitivity analysis}{26}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Surrogate Models}{27}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}B2BDC Integration}{27}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Data Sources}{27}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Results and Discussion}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}B2BDC Consistency}{29}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Good Data}{29}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Good Data + 1-2 Bad data}{29}{subsection.4.1.2}%
+\contentsline {section}{\numberline {2.1}Chemical Kinetics Databases}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Uncertainty Quantification in Combustion}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Uncertainty of Reaction Mechanisms}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Sensitivity Analysis}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Surrogate Models}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Consistency Analysis}{6}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Anomaly Detection / Gross Error Detection}{7}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Bayesian Approaches}{8}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Bound-to-Bound Data Collaboration (B2BDC)}{10}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Model discrepancy}{12}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Methodology}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Experimental Shock Tube IDT Uncertainty}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Systematic Uncertainty}{16}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Random Uncertainty}{17}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Arrhenius Parameters Uncertainty}{20}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Data Collection}{20}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Uncertainty Factor}{20}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Cantera IDT Simulations}{22}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Consistency analysis}{22}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Sensitivity analysis}{23}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Polynomial Surrogate Modeling for B2BDC}{23}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}B2BDC Integration}{23}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Data Sources}{23}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Results and Discussion}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}B2BDC Consistency}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Consistent Dataset}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Inconsistent Dataset}{25}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Uncertainty of Shock Tube IDT Data}{30}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}shen vs davidson}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Syngas}{30}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Reaction rate coefficient uncertainty}{37}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Cantera Shock Tube IDT Simulations}{37}{section.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.0.1}Reaction Mechanisms}{40}{subsubsection.4.4.0.1}%
-\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{41}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Outlook}{41}{section.5.1}%
-\contentsline {chapter}{\numberline {A}Appendix}{43}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Program Flowcharts}{45}{appendix.B}%
-\contentsline {chapter}{\numberline {C}References}{49}{appendix.C}%
+\contentsline {subsection}{\numberline {4.2.2}Syngas}{32}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Reaction Rate Coefficient Uncertainty}{32}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Cantera Shock Tube IDT Simulations}{36}{section.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.0.1}Reaction Mechanisms}{36}{subsubsection.4.4.0.1}%
+\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{39}{chapter.5}%
+\contentsline {chapter}{\numberline {1}References}{41}{chapter.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

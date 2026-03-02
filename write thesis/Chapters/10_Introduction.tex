@@ -4,16 +4,28 @@
 
 
 \section{Motivation}
+The development of accurate chemical kinetic mechanisms is fundamental to the design and optimization of sustainable energy systems and advanced aerospace propulsion. Modern combustion research has transitioned from manually validated models toward automated frameworks
+
+Current efforts, such as the TUMKIN infrastructure, aim to revive and expand upon foundational data collaboration concepts like PrIMe. The objective is to create a comprehensive environment that facilitates the analysis, optimization, and uncertainty quantification of reaction mechanisms across a wide range of fuels.
 
 
 
 \section{Problem Statement}
+A primary challenge in chemical kinetics is the inherent uncertainty in both experimental data and model parameters. Reaction rate coefficients (RRCs) often vary across literature sources due to different fitting techniques or theoretical calculations, leading to significant spreads in predicted combustion properties. Simultaneously, experimental measurements—such as shock tube ignition delay times (IDT)—are subject to systematic and random uncertainties that must be rigorously quantified to be useful for model validation.If a reaction model fails to accurately predict experimental results within established uncertainty intervals, it indicates a fundamental inconsistency. This inconsistency may arise from "bad" experimental data, such as gross errors or outliers. Traditional validation methods often struggle to distinguish between these two sources of error, particularly when dealing with large-scale datasets and multivariate parameter spaces.
 
 \section{Objectives}
+The primary objective of this thesis is to implement a systematic workflow for evaluating data consistency in the context of reaction model optimization. This involves the integration of experimental data with predictive simulations to identify and rectify inconsistencies. The specific goals are as follows:
+
+Develop a methodology to calculate uncertainty factors for reaction rate coefficients by performing nonlinear least squares fits on data. Implement and test the methodology on kinetics databases. 
+
+Implement a method to quantify the systematic and random uncertainties of shock tube ignition delay time measurements.
+
+Perform consistency analysis using the Bound-to-Bound Data Collaboration (B2BDC) framework to establish a feasible parameter region where model predictions and experimental observations overlap within their deterministic bounds.
+
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.4\textwidth]{Figures/flow1.png}
-	\caption{Flowchart.}
+	\caption{Flow diagram overview of the workflow of this thesis.}
 	\label{fig:flowchart1}
 \end{figure}
