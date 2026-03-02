@@ -127,37 +127,30 @@ Uncertainty factors have been calculated using all available libraries in RMG da
 \section{Cantera Shock Tube IDT Simulations}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Figures/IDT_plot_x10000020.png}
-	\caption{Comparison of Cantera IDT simulation with experimental measurement \cite{good_cantera} IDT Type: dP/dt max.}
+	\includegraphics[width=0.8\textwidth]{Figures/cantera/bhaskaran1973.png}
+	\caption{Comparison of Cantera IDT simulation with experimental measurement \cite{asda} IDT Type: dP/dt max.}
 	\label{fig:good_cantera}
 \end{figure}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Figures/IDT_plot_x10001084.png}
+	\includegraphics[width=0.8\textwidth]{Figures/cantera/kalitan2007.png}
 	\caption{Comparison of Cantera IDT simulation with experimental measurement \cite{good_cantera} IDT Type: d($OH^*$)/dt max.}
 	\label{fig:bad_cantera}
 \end{figure}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Figures/IDT_plot_x10000023.png}
+	\includegraphics[width=0.8\textwidth]{Figures/cantera/pang2009.png}
 	\caption{Comparison of Cantera IDT simulation with experimental measurement \cite{good_cantera} IDT Type: OH max.}
 	\label{fig:pressure_rise_cantera}
 \end{figure}
 
-Current implementation of Cantera IDT simulation is tested with all available Syngas and Hydrogen IDT data from RESPETCH database. \ref{fig:good_cantera}, \ref{fig:bad_cantera}, \ref{fig:pressure_rise_cantera} show some example comparisons from that dataset. 
+Current implementation of Cantera IDT simulation is tested with all available Syngas and Hydrogen IDT data from RESPETCH database. Figure~\ref{fig:good_cantera}, Figure~\ref{fig:bad_cantera}, Figure~\ref{fig:pressure_rise_cantera} show some example comparisons from that dataset. 
 
-\ref{fig:pressure_rise_cantera} illustrates the discrepency between constant volume reactor Cantera simulation and the real shock tube experiment, where boundary layer buildup reduces the effective volume. This pressure rise should be compensated for in simulation to get more accurate IDT simulations. However in the RESPETCH syngas/hydrogen IDT datasets, pressure rise is rarely reported. It would be valuable for TUMKIN database to be more comprehensive.  
+Figure~\ref{fig:pressure_rise_cantera} illustrates the discrepency between constant volume reactor Cantera simulation and the real shock tube experiment, where boundary layer buildup reduces the effective volume. This pressure rise should be compensated for in simulation to get more accurate IDT simulations. However in the RESPETCH syngas/hydrogen IDT datasets, pressure rise is rarely reported. It would be valuable for TUMKIN database to be more comprehensive.  
 
 
-\section{Consistency Analysis}
-
-\subsection{Sensitivity Analysis}
-
-\subsection{Surrogate Model}
-
-\subsection{B2BDC}
 
 \subsubsection{Reaction Mechanisms}
-Reaction mechanisms used to validate the software developed in this thesis are Ethylene [18] and Combined Hydrogen Syngas [19]. Reported Chemkin input, transport and thermos files are converted to yaml by Cantera Chemkin to YAML conversion (c2kyaml).
+Reaction mechanisms used to validate the software developed in this thesis are Ethylene \cite{wang_comprehensive_2021} and Combined Hydrogen Syngas \cite{wang_uncertainty_2024}.
 
 

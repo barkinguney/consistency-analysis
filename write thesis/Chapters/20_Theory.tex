@@ -78,7 +78,7 @@ if model descrepency is due to shortcomings of experiments(i.e scneario dependen
 Shortcomings of previous work can be due to model discrepancies. Reaction mechanism does not contain all chemical reactions relevant to the combustion processs of interest. Because omitting reactions in the mecahnisms makes the computanations easier and and if there a re reactions that are not tknow to be in the combustion process it wouldn’t be in there any ways. So we assume it is not possible to improve the model to compenstate for the discrepancy. Instead I will develeop a statistical method to try to partially identify and partially compensate this discrepancy. One such method 
 
 \cite{kennedy_bayesian_2001}. Model discrepency. Kennedy and O'Hagan (2001) provide a foundational Bayesian framework for the calibration of computer models that explicitly accounts for various sources of uncertainty, most notably model inadequacy. In their formulation, they recognize that "no model is perfect" and define the discrepancy as follows:
-They further specify that "model inadequacy [is] the difference between the true mean value of the real world process and the code output at the true values of the inputs". This term captures the reality that "even if there is no parameter uncertainty... the predicted value will not equal the true value of the process". To address this, their Bayesian technique "attempt[s] to correct for any inadequacy of the model which is revealed by a discrepancy between the observed data and the model predictions from even the best-fitting parameter values". They implement this by "modelling both the computer code output and model inadequacy" using Gaussian processes.
+They further specify that "model inadequacy is the difference between the true mean value of the real world process and the code output at the true values of the inputs". This term captures the reality that "even if there is no parameter uncertainty... the predicted value will not equal the true value of the process". To address this, their Bayesian technique "attempts to correct for any inadequacy of the model which is revealed by a discrepancy between the observed data and the model predictions from even the best-fitting parameter values". They implement this by "modelling both the computer code output and model inadequacy" using Gaussian processes.
 
 
 \cite{abdar_review_2021} Is a review of deep learning approaches to uncertainty quantification from various fields and methods. 
@@ -108,7 +108,7 @@ where $(r^{2}){(1)} < (r^{2}){(2)} < ... < (r^{2}){(n)}$ are the ordered squared
 \begin{equation}
 	\chi^{2}=\sum_{i=1}^{n}\frac{(X_{i}-E_{i})^{2}}{E_{i}}
 \end{equation}
-where $X_{i}$ is the observed value of the $i_{th}$ variable, $E_{i}$ is the expected value of the $i_{th}$ variable (obtained from the training data) and $n$ [is the number of variables]."
+where $X_{i}$ is the observed value of the $i_{th}$ variable, $E_{i}$ is the expected value of the $i_{th}$ variable (obtained from the training data) and $n$ is the number of variables."
 
 	
 
@@ -139,8 +139,50 @@ where $P(y)$ is experimental data and $\mathcal{L}(\theta) = P(y|\theta)$ repres
 
 \subsection{MUM-PCE}
 In MUM-PCE, the uncertainty in the rate parameters of an as-compiled model is first quantified using stochastic spectral expansion and polynomial chaos techniques. The model is then constrained against global combustion experiments through solution mapping and least-squares optimization, combined with a consistency-screening procedure to identify incompatible experimental targets. The uncertainty of the constrained (posterior) model is subsequently calculated using an inverse spectral technique and propagated to a range of combustion conditions. \cite{sheen_method_2011} 
-\subsection{B2BDC}
-Bound-to-Bound Data Collaboration (B2BDC) provides a natural framework for addressing both forward and inverse uncertainty quantification problems, in which QOI models are constrained by related experimental observations with interval uncertainty. B2BDC models uncertainty deterministically and the notion of validity is encapsulated in the consistency measure, and a collection of models, experimental observations, and parameter bounds determines a feasible region in the parameter space. If the feasible region is nonempty, the dataset is said to be consistent, whereas an empty feasible set indicates that models and data are fundamentally at odds. B2BDC is used to determine the consistency between a numerical model and an experimental dataset and to achieve reduction of the uncertainty, via inference from the data \cite{iavarone_application_2018} \cite{hegde_consistency_2018}. A MATLAB implementation of B2BDC is provided by \cite{li_development_nodate}.
+
+
+\section{Bound-to-Bound Data Collaboration (B2BDC)}
+
+Bound-to-Bound Data Collaboration (B2BDC) provides a natural framework for addressing both forward and inverse uncertainty quantification problems \cite{hegde_consistency_2018}. In this approach, quantity of interest (QOI) models are constrained by related experimental observations with interval uncertainty \cite{hegde_consistency_2018}. QOI can be for example ignition delay time, laminar flame speed or species concentrations . Uncertainties in model parameters and experimental data are characterized by deterministic bounds and propagated to bounds of prediction uncertainty, resonating ``Bound-to-Bound'' in the name \cite{li_development_nodate}.
+
+A collection of models and observations is termed a dataset and carves out a feasible region in the parameter space \cite{hegde_consistency_2018}. The framework considers a set of $n$ uncertain model parameters, denoted as $x = [x_1, x_2, \dots, x_n]^T \in \mathbb{R}^n$ \cite{li_development_nodate}. Prior knowledge about these parameters is typically expressed as independent interval bounds:
+\begin{equation}
+	l_i \le x_i \le u_i, \quad i = 1, \dots, n
+\end{equation}
+\cite{li_development_nodate} which defines a hypercube $\mathcal{H}$ in the parameter space \cite{li_development_nodate}. In the context of this thesis parameters are reaction rate coefficients. And their interval bounds will be calculated by statistical analysis of various kinetics data sources. 
+
+Experimental observations are represented by models $M_e(x)$ and their corresponding experimental uncertainty bounds $[L_e, U_e]$ \cite{li_development_nodate}. In this thesis, the  experimental observation of interest is the ignition delay time. Uncertainty bounds on experimental ignition delay times are estimated by the method that will be described in Section~\ref{sec:idt_unc}. The requirement that model predictions must lie within experimental uncertainty generates inequality constraints on model parameters:
+\begin{equation}
+	L_e \le M_e(x) \le U_e, \quad e \in \mathcal{E}
+\end{equation}
+\cite{li_development_nodate} where $\mathcal{E}$ is the set of experimental indices \cite{li_development_nodate}. It is therefore important to assign model parameter intervals and experiment uncertainty bounds carefully. When experimental uncertainty bounds or model parameter intervals are too loose, the model would always be able to explain the data, so consistency analysis loses sits meaning. The collection of all such constraints defines a region in the model parameter space termed the feasible set $\mathcal{F}$:
+\begin{equation}
+	\mathcal{F} = \{x \in \mathcal{H} \mid L_e \le M_e(x) \le U_e, \forall e \in \mathcal{E}\}
+\end{equation}
+\cite{li_development_nodate}.
+
+The agreement/disagreement among models and data is determined by inspecting whether there exist parameter vectors in the feasible set: The dataset is consistent if the feasible set is not empty and inconsistent otherwise \cite{li_development_nodate}. Numerically, examination of dataset consistency is accomplished by calculating a quantity termed the Scalar Consistency Measure (SCM), $C_{D,S}$. In the implementation of \cite{li_development_nodate} SCM is calculated as an interval by two different optimization methods. When inner and outer bound solutions are both positive, SCM also has to be positive, therefore a feasible set exists. Conversely if inner and outer bound solutions are both negative, SCM is negative and no feasible set of parameters exist. If the inner bound solution is negative and outer bound solution positive, in that case SCM is unable to conclude consistency. 
+
+The SCM is defined as the solution to the following constrained optimization problem:
+\begin{align}
+	C_{D,S} = \max_{x \in \mathcal{H}, \gamma \in \mathbb{R}} & \quad \gamma \\
+	\text{subject to} & \quad L_e + \gamma \delta_e \le M_e(x) \le U_e - \gamma \delta_e, \quad \forall e \in \mathcal{E}
+\end{align}
+\cite{li_development_nodate} where $\delta_e = \frac{U_e - L_e}{2}$ represents the half-width of the experimental uncertainty interval \cite{li_development_nodate}. The dataset is inconsistent if the scalar consistency measure is negative ($C_{D,S} < 0$) and consistent otherwise ($C_{D,S} \ge 0$) \cite{li_development_nodate}.
+
+Prediction uncertainty for an unmeasured QOI, $M_p(x)$, is computed by finding the minimum and maximum values of the prediction model within the feasible set \cite{li_development_nodate}:
+\begin{align}
+	L_{pred} &= \min_{x \in \mathcal{F}} M_p(x) \\
+	U_{pred} &= \max_{x \in \mathcal{F}} M_p(x)
+\end{align}
+
+\cite{li_development_nodate}. The interval $[L_{pred}, U_{pred}]$ represents the ``collaborative'' prediction, as it utilizes the combined information from the prior parameter bounds and the entire experimental dataset to constrain the possible values of the QOI \cite{russi_uncertainty_2010, li_development_nodate}.
+
+In real-world applications, it is often the case that collections of models and observations are inconsistent \cite{hegde_consistency_2018}. To identify which models and/or observations are problematic, the Vector Consistency Measure (VCM) strategy aims to recover dataset consistency by relaxing the fewest experimental uncertainty bounds \cite{li_development_nodate}. The VCM approach introduces a vector of relaxation coefficients to investigate datasets with numerous sources of inconsistency \cite{hegde_consistency_2018}. VCM can make predictions on which parameter intervals or experimental bounds need to relayed in order to achieve consistency. It can also be useful in the case where SCM is inconclusive. VCM can suggest relaxations that achieve consistency.  
+
+The constrained optimization problems involved in B2BDC are generally nonconvex and difficult to solve globally as nonlinear optimization solvers usually converge to a local optimum \cite{li_development_nodate}. To address this, solution mapping techniques are used to create polynomial and rational quadratic surrogate models \cite{li_development_nodate}. With these surrogates, convex relaxation techniques (such as semidefinite programming) are used to derive provable, conservative bounds on the solution of the original nonconvex problems \cite{li_development_nodate, russi_uncertainty_2010}. Another practical benefit of using surrogate models is that they are a lot cheaper to evaluate then Cantera of Chemkin models. A MATLAB implementation of B2BDC is provided by \cite{li_development_nodate}.
+
+
 
 
 

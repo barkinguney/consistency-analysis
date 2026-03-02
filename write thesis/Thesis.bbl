@@ -286,8 +286,8 @@
       \strng{authorfullhash}{fae876f414aedec28e096e91f4367226}
       \strng{authorfullhashraw}{fae876f414aedec28e096e91f4367226}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0538-8066, 1097-4601}
@@ -382,8 +382,8 @@
       \strng{authorfullhash}{2bec0c1b7ca4c89040c142f362fe6db3}
       \strng{authorfullhashraw}{2bec0c1b7ca4c89040c142f362fe6db3}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{15407489}
@@ -511,8 +511,8 @@
       \strng{authornamehash}{5d466fd4fe0d5186f162f75d81807909}
       \strng{authorfullhash}{286719205471b0e31ead6f8f21f22af3}
       \strng{authorfullhashraw}{286719205471b0e31ead6f8f21f22af3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1549-9596, 1549-960X}
@@ -573,8 +573,8 @@
       \strng{authornamehash}{7d20a2ddf8d2f1b2e866d6c71afa9596}
       \strng{authorfullhash}{8ad1de5e329cf89ecc91e8f73263920e}
       \strng{authorfullhashraw}{8ad1de5e329cf89ecc91e8f73263920e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{booktitle}{Computer {Aided} {Chemical} {Engineering}}
@@ -911,8 +911,8 @@
       \strng{authornamehash}{28f4267f44922ae2d7c973a01282db93}
       \strng{authorfullhash}{28f4267f44922ae2d7c973a01282db93}
       \strng{authorfullhashraw}{28f4267f44922ae2d7c973a01282db93}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We consider prediction and uncertainty analysis for systems which are approximated using complex mathematical models. Such models, implemented as computer codes, are often generic in the sense that by a suitable choice of some of the model's input parameters the code can be used to predict the behaviour of the system in a variety of speci®c applications. However, in any speci®c application the values of necessary parameters may be unknown. In this case, physical observations of the system in the speci®c context are used to learn about the unknown parameters. The process of ®tting the model to the observed data by adjusting the parameters is known as calibration. Calibration is typically effected by ad hoc ®tting, and after calibration the model is used, with the ®tted input values, to predict the future behaviour of the system. We present a Bayesian calibration technique which improves on this traditional approach in two respects. First, the predictions allow for all sources of uncertainty, including the remaining uncertainty over the ®tted parameters. Second, they attempt to correct for any inadequacy of the model which is revealed by a discrepancy between the observed data and the model predictions from even the best-®tting parameter values. The method is illustrated by using data from a nuclear radiation release at Tomsk, and from a more complex simulated nuclear accident exercise.}
@@ -1017,8 +1017,8 @@
       \strng{authornamehash}{9011afea887f73771688fa87a3c26e65}
       \strng{authorfullhash}{9e632e89846ef393916dfc2c489d906b}
       \strng{authorfullhashraw}{9e632e89846ef393916dfc2c489d906b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Uncertainty quantification (UQ) methods play a pivotal role in reducing the impact of uncertainties during both optimization and decision making processes. They have been applied to solve a variety of real-world problems in science and engineering. Bayesian approximation and ensemble learning techniques are two widely-used types of uncertainty quantification (UQ) methods. In this regard, researchers have proposed different UQ methods and examined their performance in a variety of applications such as computer vision (e.g., selfdriving cars and object detection), image processing (e.g., image restoration), medical image analysis (e.g., medical image classification and segmentation), natural language processing (e.g., text classification, social media texts and recidivism risk-scoring), bioinformatics, etc. This study reviews recent advances in UQ methods used in deep learning, investigates the application of these methods in reinforcement learning, and highlights fundamental research challenges and directions associated with UQ.}
@@ -1073,8 +1073,8 @@
       \strng{authornamehash}{6c1597ae8fa46a8fe25ef2447c4764cd}
       \strng{authorfullhash}{6c1597ae8fa46a8fe25ef2447c4764cd}
       \strng{authorfullhashraw}{6c1597ae8fa46a8fe25ef2447c4764cd}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Massive amounts of data are available for the organization which will influence their business decision. Data collected from the various resources are dirty and this will affect the accuracy of prediction result. Data cleansing offers a better data quality which will be a great help for the organization to make sure their data is ready for the analyzing phase. However, the amount of data collected by the organizations has been increasing every year, which is making most of the existing methods no longer suitable for big data. Data cleansing process mainly consists of identifying the errors, detecting the errors and corrects them. Despite the data need to be analyzed quickly, the data cleansing process is complex and time-consuming in order to make sure the cleansed data have a better quality of data. The importance of domain expert in data cleansing process is undeniable as verification and validation are the main concerns on the cleansed data. This paper reviews the data cleansing process, the challenge of data cleansing for big data and the available data cleansing methods.}
@@ -1122,8 +1122,8 @@
       \strng{authornamehash}{866a4b41c4001fb28b4113d9be44bd63}
       \strng{authorfullhash}{866a4b41c4001fb28b4113d9be44bd63}
       \strng{authorfullhashraw}{866a4b41c4001fb28b4113d9be44bd63}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Th:e technique developed at NRC for gross-error detection is composed of four steps. Each step deals with errors of a certain magnitude and nature such as errors in point identification or errors in the control points. The order of applying this procedure is of great importance. Thefinal step, which deals with small observation errors of magnitudes larger than the random range, consists in applying a sensitive statistical test (data snooping). A special bundle adjustment program has been developed with a built-in automatic gross-error detector employing the data snooping approach. The program computes the exact values of the redundancy numbers for each image point. Using the OEEPE test blocks, which include all types of errors (intentionally introduced), the above procedure was applied and proved to be effective.}
@@ -1409,8 +1409,8 @@
       \strng{authornamehash}{33d87d51a31a26ab2b2aef42cfb7ceb6}
       \strng{authorfullhash}{e49b329f9e6e37479c73b1eecd462148}
       \strng{authorfullhashraw}{e49b329f9e6e37479c73b1eecd462148}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{03603199}
@@ -1464,8 +1464,8 @@
       \strng{authornamehash}{f49d8942773ceb0a9b6402926e914e07}
       \strng{authorfullhash}{f49d8942773ceb0a9b6402926e914e07}
       \strng{authorfullhashraw}{f49d8942773ceb0a9b6402926e914e07}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Reliable simulations of reacting ﬂow systems require a well-characterized, detailed chemical model as a foundation. Accuracy of such a model can be assured, in principle, by systematic studies of individual rate coefﬁcients. However, the inherent uncertainties in the rate data leave a model still characterized by a kinetic rate parameter space which will be persistently ﬁnite in its size. Without a careful analysis of how this uncertainty space propagates into the model predictions, those predictions can at best be trusted only semi-quantitatively. In this work, we propose the Method of Uncertainty Minimization using Polynomial Chaos Expansions (MUM-PCE) to quantify and constrain these uncertainties. An as-compiled, detailed H2/CO/C1–C4 kinetic model and a set of ethylene combustion data are used as an example. In this method, the uncertainty in the rate parameters of the as-compiled model is quantiﬁed. Then, the model is subjected to a rigorous mathematical analysis by constraining the rate coefﬁcients against the combustion data, as well as a consistency-screening process. Lastly, the uncertainty of the constrained model is calculated using an inverse spectral technique, and then propagated into a range of simulation conditions to demonstrate the utilities and limitations of the method.}
@@ -1495,101 +1495,6 @@
       \verb https://linkinghub.elsevier.com/retrieve/pii/S0010218011001568
       \endverb
       \keyw{UQ}
-    \endentry
-    \entry{iavarone_application_2018}{article}{}{}
-      \name{author}{10}{}{%
-        {{hash=bdcb7d2791067609789f80d68e807d0d}{%
-           family={Iavarone},
-           familyi={I\bibinitperiod},
-           given={Salvatore},
-           giveni={S\bibinitperiod}}}%
-        {{hash=df80abd46ff3906f14697bd73eec3147}{%
-           family={Oreluk},
-           familyi={O\bibinitperiod},
-           given={James},
-           giveni={J\bibinitperiod}}}%
-        {{hash=6625c7df0f39e4c9db55ab46e3d52322}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={Sean\bibnamedelima T.},
-           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-        {{hash=983ffe9f05efa3d2c4e52101593429a6}{%
-           family={Hegde},
-           familyi={H\bibinitperiod},
-           given={Arun},
-           giveni={A\bibinitperiod}}}%
-        {{hash=be861748ae913367498f7cbc4ba69a0a}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Wenyu},
-           giveni={W\bibinitperiod}}}%
-        {{hash=e3808333c7b9c364a09bddd88a58ab78}{%
-           family={Packard},
-           familyi={P\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod}}}%
-        {{hash=7e302a1c41e136f097ef185fe8a75c85}{%
-           family={Frenklach},
-           familyi={F\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=e18705cb9ba678959d0715d7f246391f}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={Philip\bibnamedelima J.},
-           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=621d6334519fd0b1f56f267f55c6d379}{%
-           family={Contino},
-           familyi={C\bibinitperiod},
-           given={Francesco},
-           giveni={F\bibinitperiod}}}%
-        {{hash=3b9f17af25f5aa22c579af224a2009d1}{%
-           family={Parente},
-           familyi={P\bibinitperiod},
-           given={Alessandro},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{81747da3a4c5986d0b956be09ba52116}
-      \strng{fullhash}{61f22b6aabdd1d6445bf4c330194ea8c}
-      \strng{fullhashraw}{61f22b6aabdd1d6445bf4c330194ea8c}
-      \strng{bibnamehash}{81747da3a4c5986d0b956be09ba52116}
-      \strng{authorbibnamehash}{81747da3a4c5986d0b956be09ba52116}
-      \strng{authornamehash}{81747da3a4c5986d0b956be09ba52116}
-      \strng{authorfullhash}{61f22b6aabdd1d6445bf4c330194ea8c}
-      \strng{authorfullhashraw}{61f22b6aabdd1d6445bf4c330194ea8c}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The development of eﬃcient industrial oxy-coal boilers can be signiﬁcantly aided by Computational Fluid Dynamics (CFD) tools, as far as ﬁdelity in modeling coal combustion is also complemented by feasible computational costs. Reduced and predictive models are the most suitable for this application scale. Reduced models feature predictivity when they are validated against a broad range of experiments and targeted by Uncertainty Quantiﬁcation (UQ) procedures. This work proposes a numerical procedure that uses Bound-to-Bound Data Collaboration (B2B-DC) to derive a reduced char combustion model describing transport phenomena and reactions between char carbon and O2, CO2 and H2O, in both conventional and oxy-conditions. The approach determines the consistency between a numerical model and an experimental dataset. The latter is made up of the experiments carried out in an optically accessible laminar entrained ﬂow reactor, operated by Sandia National Laboratories. The procedure follows ﬁve steps towards predictive modeling capability, namely: quantiﬁcation of the uncertainty in the experiments, via instrument veriﬁcation and modeling; development of a physics model and continuous improvement of its ﬁdelity, via model-form uncertainty; identiﬁcation of the uncertain and most sensitive parameters and of their prior bounds; sampling of the initial uncertain parameter space and training of a surrogate model; validation of the physics model via inference from the data. The last step, also known as inverse problem, is performed by applying the Bound-to-Bound Data Collaboration approach. A char combustion model is found consistent with the experimental data and its validity stands for conventional and oxy-combustion conditions. It accounts for heterogeneous reactions at the particle surface, mass transport of species in the particle boundary layer, pore diﬀusion and surface area changes. The consistent reduced model overcomes the diﬀerences in mass transport and kinetics observed in the experimental campaign. A reduction of the initial degree of uncertainty in both model and experiments is achieved.}
-      \field{issn}{00162361}
-      \field{journaltitle}{Fuel}
-      \field{month}{11}
-      \field{title}{Application of {Bound}-to-{Bound} {Data} {Collaboration} approach for development and uncertainty quantification of a reduced char combustion model}
-      \field{urlday}{18}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{volume}{232}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \field{pages}{769\bibrangedash 779}
-      \range{pages}{11}
-      \verb{doi}
-      \verb 10.1016/j.fuel.2018.05.113
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\PGB94PXW\\Iavarone et al. - 2018 - Application of Bound-to-Bound Data Collaboration approach for development and uncertainty quantifica.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0016236118309360
-      \endverb
-      \verb{url}
-      \verb https://linkinghub.elsevier.com/retrieve/pii/S0016236118309360
-      \endverb
-      \keyw{B2BDC}
     \endentry
     \entry{hegde_consistency_2018}{article}{}{}
       \name{author}{5}{}{%
@@ -1630,8 +1535,8 @@
       \strng{authornamehash}{422b0caf2ed4ab7c3a036f0bb8a5c166}
       \strng{authorfullhash}{96fcc3dab8afdf2d2ff2eef9f815b8b1}
       \strng{authorfullhashraw}{96fcc3dab8afdf2d2ff2eef9f815b8b1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Bound-to-bound data collaboration provides a natural framework for addressing both forward and inverse uncertainty quantiﬁcation problems. In this approach, quantity of interest models are constrained by related experimental observations with interval uncertainty. A collection of such models and observations is termed a dataset and carves out a feasible region in the parameter space. If a dataset has a nonempty feasible set, it is said to be consistent. In real-world applications, it is often the case that collections of models and observations are inconsistent. Revealing the source of this inconsistency, i.e., identifying which models and/or observations are problematic, is essential before a dataset can be used for prediction. To address this issue, we introduce a constraint relaxation–based approach, termed the vector consistency measure, for investigating datasets with numerous sources of inconsistency. The beneﬁts of this vector consistency measure over a previous method of consistency analysis are demonstrated in two realistic gas combustion examples.}
@@ -1662,6 +1567,67 @@
       \endverb
       \keyw{consistency}
     \endentry
+    \entry{russi_uncertainty_2010}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a77414e9529edfd880dfa452ffd15b98}{%
+           family={Russi},
+           familyi={R\bibinitperiod},
+           given={Trent},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6f75de3ad4c8f91b374f9bff22a10e95}{%
+           family={Packard},
+           familyi={P\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7e302a1c41e136f097ef185fe8a75c85}{%
+           family={Frenklach},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{134b0b95116878209f9bc2d4bbbde014}
+      \strng{fullhash}{099d7722c835e5a5bf1a78184cb3d378}
+      \strng{fullhashraw}{099d7722c835e5a5bf1a78184cb3d378}
+      \strng{bibnamehash}{099d7722c835e5a5bf1a78184cb3d378}
+      \strng{authorbibnamehash}{099d7722c835e5a5bf1a78184cb3d378}
+      \strng{authornamehash}{134b0b95116878209f9bc2d4bbbde014}
+      \strng{authorfullhash}{099d7722c835e5a5bf1a78184cb3d378}
+      \strng{authorfullhashraw}{099d7722c835e5a5bf1a78184cb3d378}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{00092614}
+      \field{journaltitle}{Chemical Physics Letters}
+      \field{month}{10}
+      \field{number}{1-3}
+      \field{shorttitle}{Uncertainty quantification}
+      \field{title}{Uncertainty quantification: {Making} predictions of complex reaction systems reliable}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{499}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.cplett.2010.09.009
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\9GJJ9Y3M\\Russi et al. - 2010 - Uncertainty quantification Making predictions of complex reaction systems reliable.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0009261410012212
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0009261410012212
+      \endverb
+      \keyw{B2BDC}
+    \endentry
     \entry{frenklach_optimization_1992}{article}{}{}
       \name{author}{3}{}{%
         {{hash=7e302a1c41e136f097ef185fe8a75c85}{%
@@ -1691,8 +1657,8 @@
       \strng{authornamehash}{164ee33bcacd468a1f65e5ed7b80bbf1}
       \strng{authorfullhash}{aa471ccef6d28ceb0401859ef1aecb90}
       \strng{authorfullhashraw}{aa471ccef6d28ceb0401859ef1aecb90}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A method of systematic optimization, solution mapping, as applied to a large-scale dynamic model is presented. The basis of the technique is parameterization of model responses in terms of model parameters by simple algebraic expressions. These expressions are obtained by computer experiments arranged in a factorial design. The developed parametrized responses are then used in a joint multiparameter multi-data-set optimization. A brief review of the mathematical background of the technique is given. The concept of active parameters is discussed. The technique is applied to determine an optimum set of parameters for a methane combustion mechanism. Five independent responses----comprising ignition delay times, pre-ignition methyl radical concentration profiles, and laminar premixed flame velocities-were optimized with respect to thirteen reaction rate parameters. The numerical predictions of the optimized model are compared to those computed with several recent literature mechanisms. The utility of the solution mapping technique in situations where the optimum is not unique is also demonstrated.}
@@ -1749,8 +1715,8 @@
       \strng{authornamehash}{3743b508e10ad02ea915a4f7e06c5e24}
       \strng{authorfullhash}{cad1771d8ffdf33ec868c98b051e0ca9}
       \strng{authorfullhashraw}{cad1771d8ffdf33ec868c98b051e0ca9}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00401706}
@@ -1796,8 +1762,8 @@
       \strng{authornamehash}{4f39994b217444280f50a1941cc047d6}
       \strng{authorfullhash}{4f39994b217444280f50a1941cc047d6}
       \strng{authorfullhashraw}{4f39994b217444280f50a1941cc047d6}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00415553}
@@ -1868,8 +1834,9 @@
       \strng{authornamehash}{9b7dc5117392f69f09bca4bad5b68a25}
       \strng{authorfullhash}{6e5382ed3d9a8dd39f03963e135a7502}
       \strng{authorfullhashraw}{6e5382ed3d9a8dd39f03963e135a7502}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{1 {A} {Joint} {Hydrogen} and {Syngas} {Chemical} {Kinetic} {Model} {Optimized} by 2 {Particle} {Swarm} {Optimization}}
@@ -1961,8 +1928,8 @@
       \strng{authornamehash}{1ca9f97ccf69a2cb312a1da5dff818f0}
       \strng{authorfullhash}{1fdefe472a3536ed0a6a3d7995ea4337}
       \strng{authorfullhashraw}{1fdefe472a3536ed0a6a3d7995ea4337}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00102180}
@@ -2020,8 +1987,8 @@
       \strng{authornamehash}{41166e15539eac8d00a133e19d8c477f}
       \strng{authorfullhash}{9868a37dc2477a5aa6f0580a9a358ad0}
       \strng{authorfullhashraw}{9868a37dc2477a5aa6f0580a9a358ad0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The auto-ignition of toluene/air mixtures was studied in a shock tube at temperatures of 1021–1400 K, pressures of 10–61 atm, and equivalence ratios of U = 1.0, 0.5, and 0.25. Ignition times were measured using endwall OH* emission and sidewall piezoelectric pressure measurements. The measured pressure time-histories do not show signiﬁcant pre-ignition energy release, in agreement with the rapid compression machine study of Mittal and Sung [G. Mittal, C.-J. Sung, Combust. Flame 150 (2007) 355–368] and disagreement with the shock tube study of Davidson et al. [D.F. Davidson, B.M. Gauthier, R.K. Hanson, Proc. Combust. Inst. 30 (2005) 1175–1182]. Kinetic modeling predictions from three detailed mechanisms are compared. Sensitivity analysis indicates that the reaction of toluene (C6H5CH3) and the benzyl radical (C6H5CH2) with molecular oxygen are important and examination of the rate coeﬃcients for these reactions suggests that improved rate parameters for the multi-channel C6H5CH2 + O2 reaction may improve model predictions.}
@@ -2080,8 +2047,8 @@
       \strng{authornamehash}{8dee5d60c5935e7baf66def6586d14cd}
       \strng{authorfullhash}{2218b82df0e617caa1729129f3cd3488}
       \strng{authorfullhashraw}{2218b82df0e617caa1729129f3cd3488}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Ignition delay times were measured in a shock tube for iso-octane/air and toluene/air at conditions similar to those found in homogeneous charge compression ignition (HCCI) engines. Initial reﬂected shock conditions spanned the following ranges: temperature 855–1269 K, pressure 14–59 atm, and equivalence ratios / of 0.5 and 1 in synthetic air. Ignition delay times were measured using sidewall pressure via piezo-electric transducers and conﬁrmed with OH* and CH* emission measurements. The iso-octane ignition delay times are in excellent agreement with existing measurements by Fieweger et al. [Proc. Combust. Inst. 25 (1994) 1579; Combust. Flame 109 (1997) 599] and modeling by Ogink and Golovitchev [SAE Technical Paper Series, 2001, Paper No. 2001-01-3614]. No comparable high-pressure data exist for toluene/air, and modeling by Pitz et al. [U.S. Sections of the Combustion Institute 2nd Joint Spring Meeting, 2001, Paper 253] and Dagaut et al. [Fuel 81 (2002) 173] signiﬁcantly over-predicts the toluene/air ignition delay times at / = 1. The large pressure range of the current measurements permits determination of the pressure dependence of ignition delay time at the temperatures and pressures of direct interest in HCCI engine simulations. Detailed examination of the pressure–time proﬁles shows evidence of signiﬁcant pre-ignition energy release in both the iso-octane/air and toluene/air systems. Using current detailed mechanisms, the rate of this energy release is not correctly predicted either in iso-octane/air or toluene/air at temperatures above 850 K.}
@@ -2136,8 +2103,8 @@
       \strng{authornamehash}{9c5a1bc24a0b3f27bf5b58913eb57b09}
       \strng{authorfullhash}{9c5a1bc24a0b3f27bf5b58913eb57b09}
       \strng{authorfullhashraw}{9c5a1bc24a0b3f27bf5b58913eb57b09}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{15407489}
@@ -2185,8 +2152,8 @@
       \strng{authorfullhash}{c179efa2875fcce2d4b7c5664bb58fbc}
       \strng{authorfullhashraw}{c179efa2875fcce2d4b7c5664bb58fbc}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Other Initial composition: H2 O2 Ar}
@@ -2240,8 +2207,8 @@
       \strng{authornamehash}{602871e68f8265617136b049dfa93e48}
       \strng{authorfullhash}{bcd990635b39387d451ee76093b303b4}
       \strng{authorfullhashraw}{bcd990635b39387d451ee76093b303b4}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0748-4658, 1533-3876}
@@ -2329,8 +2296,8 @@
       \strng{authornamehash}{8f8b189638cda240c15f040af5a4f348}
       \strng{authorfullhash}{415a0cf72e7fdbbfdce007c8107e4f12}
       \strng{authorfullhashraw}{415a0cf72e7fdbbfdce007c8107e4f12}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Laminar flame speeds and ignition delay times have been measured for hydrogen and various compositions of H2/CO (syngas) at elevated pressures and elevated temperatures. Two constant-volume cylindrical vessels were used to visualize the spherical growth of the flame through the use of a schlieren optical setup to measure the laminar flame speed of the mixture. Hydrogen experiments were performed at initial pressures up to 10 atm and initial temperatures up to 443 K. A syngas composition of 50/50 by volume was chosen to demonstrate the effect of carbon monoxide on H2−O2 chemical kinetics at standard temperature and pressures up to 10 atm. All atmospheric mixtures were diluted with standard air, while all elevated-pressure experiments were diluted with a He:O2 of 7:1 to minimize instabilities. The laminar flame speed measurements of hydrogen and syngas are compared to available literature data over a wide range of equivalence ratios where good agreement can be seen with several data sets. Additionally, an improved chemical kinetics model is shown for all conditions within the current study. The model and the data presented herein agree well, which demonstrates the continual, improved accuracy of the chemical kinetic model. A high-pressure shock tube was used to measure ignition delay times for several baseline compositions of syngas at three pressures across a wide range of temperatures. The compositions of syngas (H2/CO) by volume presented in this study included 80/20, 50/50, 40/60, 20/80, and 10/90, all of which are compared to previously published ignition delay times from a hydrogen-oxygen mixture to demonstrate the effect of carbon monoxide addition. Generally, an increase in carbon monoxide increases the ignition delay time, but there does seem to be a pressure dependency. At low temperatures and pressures higher than about 12 atm, the ignition delay times appear to be indistinguishable with an increase in carbon monoxide. However, at high temperatures the relative composition of H2 and CO has a strong influence on ignition delay times. Model agreement is good across the range of the study, particularly at the elevated pressures. Also, an increase in carbon monoxide causes the activation energy of the mixture to decrease.}
@@ -2375,8 +2342,8 @@
       \strng{authorfullhash}{c179efa2875fcce2d4b7c5664bb58fbc}
       \strng{authorfullhashraw}{c179efa2875fcce2d4b7c5664bb58fbc}
       \field{extraname}{2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{annotation}{Other Initial composition: H2 CO O2 Ar}
@@ -2397,13 +2364,166 @@
       \verb http://respecth.chem.elte.hu/respecth/reac/CombustionData.php?filedoi=10.24388/x10001024_x
       \endverb
     \endentry
+    \entry{wang_comprehensive_2021}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=7b163ec6fd8aecd8178a01a7a3aeac7d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hongxin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2e9e92202d7d1c112fd78dcf70b7c0de}{%
+           family={Slavinskaya},
+           familyi={S\bibinitperiod},
+           given={Nadezda},
+           giveni={N\bibinitperiod}}}%
+        {{hash=dc9dd2dec4d48de2ad2683ebf1bc827c}{%
+           family={Kanz},
+           familyi={K\bibinitperiod},
+           given={Aziza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d64d649cf9f7372cb69f0afc12fd1e1f}{%
+           family={Auyelkhankyzy},
+           familyi={A\bibinitperiod},
+           given={Moldir},
+           giveni={M\bibinitperiod}}}%
+        {{hash=11deb2bb3ba4252cb7c1e6c9a5dd6f4c}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yiting},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=830644b0f5f9622479e9e407708497de}{%
+           family={Haidn},
+           familyi={H\bibinitperiod},
+           given={Oskar},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{9b7dc5117392f69f09bca4bad5b68a25}
+      \strng{fullhash}{78d7c283bf3495e18b1f104e949150ad}
+      \strng{fullhashraw}{78d7c283bf3495e18b1f104e949150ad}
+      \strng{bibnamehash}{78d7c283bf3495e18b1f104e949150ad}
+      \strng{authorbibnamehash}{78d7c283bf3495e18b1f104e949150ad}
+      \strng{authornamehash}{9b7dc5117392f69f09bca4bad5b68a25}
+      \strng{authorfullhash}{78d7c283bf3495e18b1f104e949150ad}
+      \strng{authorfullhashraw}{78d7c283bf3495e18b1f104e949150ad}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A revision and upgrade of the ethylene (C2H4) oxidation kinetic sub-mechanism were carried as a next step in the optimization of the C{<}3 chemistry, which is a base for the upcoming PAH sub-model improvement. The main emphasis of the work was focused on the assessment of uncertainties of the thermo-kinetical and experimental data used to achieve the reasonable model parameter corrections. The principal targets of mechanism extension and update are: inspection of the reaction rate coefficients with accounting recently published pressure-dependent reactions and analysis of reaction paths related to the C2H4 low-temperature oxidation and the formation of aromatic precursors. The experimental data (auto-ignition, premixed laminar flame speeds, and concentration profiles) with evaluated uncertainty and consistency were used for model optimization. The uncertainty bounds of the key reaction rate coefficients were evaluated from the statistical treatment of the published data, which provided constraints in the reaction rate parameters. The rate parameters of 57 reactions of C2H4 and key intermediates were optimized. The revised reaction mechanism demonstrates a good agreement with the majority of the existing experimental data. Results of the sensitivity and rate of production analyses were performed for several kinetic mechanisms from the literature and compared to visualize the variations and ambiguity in the importance of reaction paths and highlight the problems in mechanism optimization and integration.}
+      \field{issn}{00162361}
+      \field{journaltitle}{Fuel}
+      \field{month}{9}
+      \field{title}{A comprehensive kinetic modeling study of ethylene combustion with data uncertainty analysis}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{299}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{120833}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.fuel.2021.120833
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\77IHUIHR\\Wang et al. - 2021 - A comprehensive kinetic modeling study of ethylene combustion with data uncertainty analysis.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0016236121007109
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0016236121007109
+      \endverb
+      \keyw{mechanism and data}
+    \endentry
+    \entry{wang_uncertainty_2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=7b163ec6fd8aecd8178a01a7a3aeac7d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hongxin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a638efaae6131b86edf79be4d91ffadd}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Gongrui},
+           giveni={G\bibinitperiod}}}%
+        {{hash=91a89b7eb6e6db50b273ddc4c45d0c90}{%
+           family={Aizhan},
+           familyi={A\bibinitperiod},
+           given={Nugymanova},
+           giveni={N\bibinitperiod}}}%
+        {{hash=830644b0f5f9622479e9e407708497de}{%
+           family={Haidn},
+           familyi={H\bibinitperiod},
+           given={Oskar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=c2a85be404214339bd75ed77d10a6562}{%
+           family={Slavinskaya},
+           familyi={S\bibinitperiod},
+           given={Nadja},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{9b7dc5117392f69f09bca4bad5b68a25}
+      \strng{fullhash}{c7ae5f2235a40da3725ab6099287988c}
+      \strng{fullhashraw}{c7ae5f2235a40da3725ab6099287988c}
+      \strng{bibnamehash}{c7ae5f2235a40da3725ab6099287988c}
+      \strng{authorbibnamehash}{c7ae5f2235a40da3725ab6099287988c}
+      \strng{authornamehash}{9b7dc5117392f69f09bca4bad5b68a25}
+      \strng{authorfullhash}{c7ae5f2235a40da3725ab6099287988c}
+      \strng{authorfullhashraw}{c7ae5f2235a40da3725ab6099287988c}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The exponential growth of contemporary chemical kinetics data coupled with the potential inherent high uncertainty poses significant challenges for developing chemical kinetic models. To obtain a high-quality dataset for the optimization of H2 and syngas oxidation model, this study developed a framework for data consistency analysis and uncertainty analysis of chemical kinetic data. The framework combines simulations based on solving conservation equations, data-driven metaheuristic algorithms, and statistical analysis. Over 2000 experimental data points, including ignition delay times measured in shock tubes, laminar flame speeds, and concentration profiles measured in perfectly stirred reactors and plug flow reactors, were collected and used to construct the experimental dataset. Seventeen parameters of a detailed H2 and syngas oxidation model were selected to build the reaction rate constant (RRC) dataset. The initially estimated experimental uncertainties and RRC uncertainty factors were updated by slack variables in the iterative algorithm. Some high-uncertainty data were identified and excluded from the optimization dataset. The final experimental dataset achieves data consistency, and the feasible parameter set of RRC shows good prediction capability. The experimental data with high uncertainties were highlighted, and the uncertainty sources were analyzed.}
+      \field{issn}{03603199}
+      \field{journaltitle}{International Journal of Hydrogen Energy}
+      \field{month}{8}
+      \field{title}{Uncertainty quantification and data consistency analysis for the development of hydrogen and syngas oxidation model}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{79}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{456\bibrangedash 467}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.ijhydene.2024.06.410
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\barki\\Zotero\\storage\\GI8K6C7X\\Wang et al. - 2024 - Uncertainty quantification and data consistency analysis for the development of hydrogen and syngas.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0360319924026491
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0360319924026491
+      \endverb
+      \keyw{mechanism and data}
+    \endentry
   \enddatalist
   \missing{Application of Bound-to-Bound Data Collaboration approach for development and uncertainty quantification of a reduced char combustion model}
-  \missing{Arun Hegde}
   \missing{Consistency Analysis for Massively Inconsistent Datasets in Bound-to-Bound Data Collaboration^^C}
+  \missing{Derringer}
+  \missing{GUM}
+  \missing{Harrington}
+  \missing{Lifshitz}
+  \missing{NIST}
   \missing{UQ_barkin}
+  \missing{asda}
   \missing{cantera}
   \missing{good_cantera}
+  \missing{nist_kinetic}
   \missing{ralph c. smith book}
 \endrefsection
 \endinput
