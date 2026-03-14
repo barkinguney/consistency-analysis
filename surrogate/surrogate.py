@@ -162,7 +162,7 @@ def extract_surrogate_training_data(
     for i, sample in enumerate(X):
         multiply_rates(gas, sample, active_reactions_idx)
         idt = calc_IDT_constV(gas, operating_condition, t_max=idt_t_max, save_time_history_plot=False, debug=False)
-        if idt < idt_t_max*0.99:
+        if idt < idt_t_max:
             y.append(np.log(idt))
             valid_samples.append(sample)
         else:
@@ -215,7 +215,7 @@ def build_idt_surrogate(
     for i, sample in enumerate(X):
         multiply_rates(gas, sample, active_reactions_idx)
         idt = calc_IDT_constV(gas, operating_condition, t_max=idt_t_max, debug=False)
-        if idt < idt_t_max*0.99:
+        if idt < idt_t_max:
             y.append(np.log(idt))
             valid_samples.append(sample)
         else:
@@ -281,8 +281,8 @@ if __name__ == "__main__":
     # we need to create a surrogate for each operating condition and QOI (IDT)
     
     mechanism = 'Supplementary-3_syngas.yaml'
-    unc_factors_df = pd.read_csv("arrhenius_uncertainty/results/uncertainty_factors.csv")
-    ls_fit_path = Path("arrhenius_uncertainty/results/ls_fits")
+    unc_factors_df = pd.read_csv("RRC_uncertainty/results/uncertainty_factors.csv")
+    ls_fit_path = Path("RRC_uncertainty/results/ls_fits")
     operating_conditions = pd.read_csv("sensitivity/results/operating_conditions.csv")
     output_dir = Path("surrogate/results")
     output_dir_training = Path("surrogate/data/training")  # For B2BDC training data
@@ -296,9 +296,10 @@ if __name__ == "__main__":
     operating_conditions = operating_conditions.fillna("")
     operating_conditions["exp_id"] = (
         operating_conditions["filename"].astype(str).str.replace(".xml", "", regex=False)
-        + "_"
+        + "."
         + operating_conditions["T5"].astype(int).astype(str)
     )
+    operating_conditions["exp_id"] = operating_conditions["exp_id"] + "." + (operating_conditions.groupby("exp_id").cumcount() + 1).astype(str)
     active_reactions = unc_factors_df['Reaction'].tolist()
     active_reactions_idx = [i for i, rxn in enumerate(ct.Solution(mechanism).reactions()) if rxn.equation in active_reactions]
     unc_factors_df['Uncertainty Factor'].fillna(0.5, inplace=True)# if no f, f=1

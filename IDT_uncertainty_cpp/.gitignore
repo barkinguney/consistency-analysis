@@ -1,0 +1,7 @@
+.venv*
+build/
+.vscode/
+libs/
+*.xml
+*.csv
+*.pyc

@@ -5,7 +5,7 @@ from pprint import pprint
 import numpy as np 
 import pandas as pd
 
-uncertainty_factors = pd.read_csv("arrhenius_uncertainty/results/uncertainty_factors.csv")
+uncertainty_factors = pd.read_csv("RRC_uncertainty/results/uncertainty_factors.csv")
 conditions = pd.read_csv("sensitivity/results/operating_conditions.csv")
 #surrogate_data = pd.read_csv("")
 
@@ -22,9 +22,10 @@ conditions["exp_unc"] = conditions["exp_unc"] / 100.0
 
 conditions["exp_id"] = (
     conditions["filename"].astype(str).str.replace(".xml", "", regex=False) + 
-    "_" + 
+    "." + 
     conditions["T5"].astype(int).astype(str)
 )
+conditions["exp_id"] = conditions["exp_id"] + "." + (conditions.groupby("exp_id").cumcount() + 1).astype(str)
 conditions = conditions.drop(columns=["filename", "composition"])
 conditions = conditions.rename(columns={"T5": "T", "P5": "P", "tau":"exp_idt"})
 print(conditions)

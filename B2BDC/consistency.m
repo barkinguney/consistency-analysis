@@ -90,9 +90,9 @@ ds.Variables
 isConsistent = ds.isConsistent;
 ds.plotConsistencySensitivity
 
-deletedUnits = ds.deleteUnit([1,2,3,4,5,6,7,8,9,10]);
-tryConsistentAgain = ds.isConsistent
-ds.plotConsistencySensitivity
+%deletedUnits = ds.deleteUnit([12,13]);
+%tryConsistentAgain = ds.isConsistent
+%ds.plotConsistencySensitivity
 
 cm = ds.ConsistencyMeasure;
 
@@ -103,7 +103,7 @@ fprintf(fid, 'Units added: %d\n', nUnitsAdded);
 fprintf(fid, 'Fit method: %s\n', fitMethod);
 fprintf(fid, 'QoI space: log(IDT)\n');
 fprintf(fid, 'Is consistent: %d\n', isConsistent);
-fprintf(fid, 'Is tryConsistentAgain: %d\n', tryConsistentAgain);
+%fprintf(fid, 'Is tryConsistentAgain: %d\n', tryConsistentAgain);
 fprintf(fid, 'Consistency measure:\n');
 fprintf(fid, '%s\n', evalc('disp(cm)'));
 
@@ -122,6 +122,7 @@ save(fullfile(outputDir, 'consistency_results.mat'), ...
 fprintf('B2BDC consistency completed.\n');
 fprintf('Units added: %d\n', nUnitsAdded);
 fprintf('Is consistent: %d\n', isConsistent);
+%fprintf('Is consistent after removing constraints: %d\n', tryConsistentAgain);
 fprintf('Report: %s\n', reportFile);
 
 out = struct();

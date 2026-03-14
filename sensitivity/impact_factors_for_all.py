@@ -281,9 +281,10 @@ def save_sensitivity_outputs_for_condition(temp_df, condition_idx, operating_con
     plt.xlabel("Sensitivity value (impact factor)")
 
     if hasattr(operating_condition, "T5") and hasattr(operating_condition, "P5") and hasattr(operating_condition, "phi"):
+        P5_atm = operating_condition.P5 / 101325.0
         plt.title(
             f"Top {min(top_n, len(condition_df))} sensitivity reactions | Condition {condition_idx} "
-            f"(T5={operating_condition.T5:.1f} K, P5={operating_condition.P5:.3f}, phi={operating_condition.phi:.3f})"
+            f"(T5={operating_condition.T5:.1f} K, P5={P5_atm:.1f} atm, phi={operating_condition.phi:.1f})"
         )
     else:
         plt.title(f"Top {min(top_n, len(condition_df))} sensitivity reactions | Condition {condition_idx}")

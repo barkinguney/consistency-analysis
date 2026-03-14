@@ -150,42 +150,59 @@ def calc_IDT_constV(gas, operating_condition, t_max = 0.1, save_time_history_plo
         fuel_name = operating_condition[4].split(":")[0]
         results_path = f"results/idt/plots/{fuel_name}/{xml_name}"
         os.makedirs(results_path, exist_ok=True)
-        if False:
-            plt.figure()
-            plt.plot(time_history.t, getattr(time_history, ignition_target))
-            plt.xlabel('Time (s)')
-            plt.ylabel(ignition_target)
-            plt.xlim(0, tau*1.5)
-            plt.axvline(x=tau, color='r', linestyle='--', label=f'Ignition Delay Time: {tau:.6f} s')
-            plt.title(f"Time History of {ignition_target} for Operating Condition: {operating_condition}")
-            plt.savefig(f"{results_path}/time_history_{operating_condition[0]}{operating_condition[1]}_{operating_condition[2]}{operating_condition[3]}.svg")
-        
-        fig = go.Figure()
-        fig.add_trace(
-            go.Scatter(
-                x=time_history.t,
-                y=getattr(time_history, ignition_target),
-                mode="lines",
-                name=ignition_target
-            )
-        )
-        fig.add_vline(
+        species_idxs = get_species_indices(reactor.phase)
+
+        if ignition_target == "T":
+            y_values = time_history.T
+            y_label = "Temperature [K]"
+        elif ignition_target == "P":
+            y_values = time_history.P / 101325.0
+            y_label = "Pressure [atm]"
+        else:
+            y_values = time_history.concentrations[:, species_idxs[ignition_target]]
+            y_label = f"{ignition_target} Concentration [kmol/m3]"
+
+        apply_reference_plot_style()
+        fig, ax = plt.subplots(figsize=(7.2, 5.2))
+
+        series_color = "#1f77b4"
+        idt_color = "#d62728"
+        ax.plot(time_history.t, y_values, color=series_color, linewidth=1.8, label=ignition_target)
+        ax.axvline(
             x=tau,
-            line=dict(color="red", dash="dash"),
-            annotation_text=f"IDT = {tau:.6f} s",
-            annotation_position="top"
+            color=idt_color,
+            linestyle="--",
+            linewidth=1.2,
+            label=f"IDT = {tau:.3e} s",
         )
-        fig.update_layout(
-            title=f"Time History of {ignition_target} for Operating Condition: {operating_condition}",
-            xaxis_title="Time (s)",
-            yaxis_title=ignition_target,
-            xaxis=dict(range=[0, tau * 1.5]),
-            template="plotly_white"
-        )
-       
-        # now = datetime.now()
-        # timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
-        fig.write_html(f"{results_path}/time_history_{operating_condition[0]}{operating_condition[1]}_{operating_condition[2]}{operating_condition[3]}.html")
+
+        max_x = tau * 1.5 if np.isfinite(tau) and tau > 0 else float(time_history.t[-1])
+        phi_value = getattr(operating_condition, "phi", None)
+        pressure_atm = float(P5) / 101325.0
+        if phi_value is not None and phi_value != "":
+            title_text = f"{composition}, phi = {float(phi_value):.1f}, P ~ {pressure_atm:.1f} atm, T = {float(T5):.0f} K"
+        else:
+            title_text = f"{composition}, P ~ {pressure_atm:.1f} atm, T = {float(T5):.0f} K"
+
+        ax.set_xlim(0, max_x)
+        ax.set_xlabel("Time (s)")
+        ax.set_ylabel(y_label)
+        ax.set_title(title_text, pad=10)
+
+        legend = ax.legend(loc="best", frameon=True)
+        legend.get_frame().set_alpha(0.92)
+        legend.get_frame().set_edgecolor("#DDDDDD")
+
+        ax.grid(True, which="major", axis="both")
+        ax.minorticks_on()
+        ax.grid(True, which="minor", linestyle=":", linewidth=0.45, alpha=0.6)
+        ax.margins(x=0.02, y=0.08)
+        fig.tight_layout()
+
+        output_stem = f"{results_path}/time_history_{operating_condition[0]}{operating_condition[1]}_{operating_condition[2]}{operating_condition[3]}"
+        fig.savefig(f"{output_stem}.png")
+        fig.savefig(f"{output_stem}.svg")
+        plt.close(fig)
         
     def calc_idt_from_type(time_history, ignition_target, ignition_type, simple=True):
         #problems

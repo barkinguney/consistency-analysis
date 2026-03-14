@@ -54,36 +54,53 @@ for idt_data_folder in idt_data_folders:
         
 
 
-valid_filenames = {f"x100000{a}.xml" for a in range(33, 42)}
-idt_data_df = idt_data_df[idt_data_df["filename"].apply(lambda x: Path(x).name in valid_filenames)]
-for key, group in idt_data_df.groupby('filename'):
-    print(key)
-    ignition_type = group["ignition_type"].iloc[0]
-    xml_name = group["filename"].iloc[0].split(".")[0]
-    fuel_name = group["composition"].iloc[0].split(":")[0]
-    results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}"
-    cantera_related_functions.plot_IDT_vs_T(
-        gas,
-        group,
-        output_path=results_path,
-        interactive=False,
-        save_time_history_plots=False,
-    )
-    
+# valid_filenames = {f"x100000{a}.xml" for a in range(33, 42)}
+# idt_data_df = idt_data_df[idt_data_df["filename"].apply(lambda x: Path(x).name in valid_filenames)]
 # for key, group in idt_data_df.groupby('filename'):
 #     print(key)
-#     if "x10001084" in key:
-#         ignition_type = group["ignition_type"].iloc[0]
-#         xml_name = group["filename"].iloc[0].split(".")[0]
-#         fuel_name = group["composition"].iloc[0].split(":")[0]
-#         results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}_simple"
-#         cantera_related_functions.plot_IDT_vs_T(
-#             gas,
-#             group,
-#             output_path=results_path,
-#             interactive=False,
-#             save_time_history_plots=False,
-#         )
+#     ignition_type = group["ignition_type"].iloc[0]
+#     xml_name = group["filename"].iloc[0].split(".")[0]
+#     fuel_name = group["composition"].iloc[0].split(":")[0]
+#     results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}"
+#     cantera_related_functions.plot_IDT_vs_T(
+#         gas,
+#         group,
+#         output_path=results_path,
+#         interactive=False,
+#         save_time_history_plots=False,
+#     )
+
+
+# idt_data_df = pd.read_csv("sensitivity/results/operating_conditions.csv")
+# idt_data_df = idt_data_df.fillna(value= "", inplace=False)
+# for key, group in idt_data_df.groupby('filename'):
+#     print(key)
+#     ignition_type = group["ignition_type"].iloc[0]
+#     xml_name = group["filename"].iloc[0].split(".")[0]
+#     fuel_name = group["composition"].iloc[0].split(":")[0]
+#     results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}/bad"
+#     cantera_related_functions.plot_IDT_vs_T(
+#         gas,
+#         group,
+#         output_path=results_path,
+#         interactive=False,
+#         save_time_history_plots=False,
+    # )
+    
+for key, group in idt_data_df.groupby('filename'):
+    print(key)
+    if group["filename"].iloc[0] == "x10000020.xml":
+        ignition_type = group["ignition_type"].iloc[0]
+        xml_name = group["filename"].iloc[0].split(".")[0]
+        fuel_name = group["composition"].iloc[0].split(":")[0]
+        results_path = f"results/idt/plots/{fuel_name}/{ignition_type}/{xml_name}"
+        cantera_related_functions.plot_IDT_vs_T(
+            gas,
+            group,
+            output_path=results_path,
+            interactive=False,
+            save_time_history_plots=True,
+        )
     
 
 
