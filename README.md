@@ -1,28 +1,17 @@
 # Data Consistency Evaluation for Reaction Model Optimization
 
-Collection of tools to support reaction mechanism optimization.
+Collection of uncertainty evaluation, consistency analysis and similation tools to support reaction mechanism optimization.
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Modules](#modules)
   - [Experimental Shock Tube Ignition Delay Time Uncertainty Evaluation](#experimental-shock-tube-ignition-delay-time-uncertainty-evaluation)
   - [Reaction Rate Coefficient Uncertainty Evaluation](#reaction-rate-coefficient-uncertainty-evaluation)
   - [Cantera Ignition Delay Time Simulation](#cantera-ignition-delay-time-simulation)
   - [B2BDC Consistency Analysis](#b2bdc-consistency-analysis)
-  - [Sensitivity Analysis](#sensitivity-analysis)
-  - [Surrogate Generation](#surrogate-generation)
+- [Installation](#installation)
 - [Known Issues](#known-issues)
 
-## Installation
-
-- You need to have MATLAB installed with a working MATLAB license whenever executing MATLAB code from Python.
-- `python -m pip install matlabengine` — requires you to have the latest MATLAB version installed. If not, you can specify your MATLAB version, e.g. `matlabengine-25.2.2`.
-- The following MATLAB toolboxes need to be installed manually inside the correct MATLAB version:
-  - Statistics and Machine Learning Toolbox
-  - Optimization Toolbox
-  - [CVX](https://cvxr.com/cvx/download)
-  - [SeDuMi](https://github.com/sqlp/sedumi)
 
 ## Modules
 
@@ -54,8 +43,9 @@ Performs Model-Data consistency analysis using the Bound-to-Bound Data Collabora
  For detailed description, see:[`B2BDC/README.md`](B2BDC/README.md)
 
 
+## Installation
 
-
+See respective module README.
 
 ## Known Issues
 
